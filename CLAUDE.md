@@ -78,8 +78,10 @@ avisa o Thiago para corrigir este arquivo.
 
 ## Na sessão em nuvem (Claude Code na web)
 
-- **Credenciais:** `GEMINI_API_KEY` e `FAL_KEY` vêm das variáveis do
-  ambiente. Se faltarem, pare e avise o Thiago; nunca peça chave no chat.
+- **Credenciais:** as chaves vêm do ambiente, como credencial de API (a
+  sessão não vê a chave) ou como as variáveis `GEMINI_API_KEY` e `FAL_KEY`.
+  Antes do lote, confira o acesso com `ensaio.py --listar-modelos`; se a API
+  recusar, pare e avise o Thiago. Nunca peça chave no chat.
 - **Dependências:** se `import PIL` ou `import numpy` falhar, rode
   `pip install pillow numpy` antes do ensaio.
 - **Entrega:** envie a prancha de entrega como arquivo na própria conversa,

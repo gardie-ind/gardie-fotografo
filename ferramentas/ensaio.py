@@ -643,7 +643,19 @@ def checar_credenciais(motores):
     erros = []
     if any(m["tipo"] == "gemini" for m in motores):
         try:
-            gerar_imagem.load_cfg()
+            key, _ = gerar_imagem.load_cfg()
+            if not key:
+                # nuvem sem chave local: confirma com uma chamada gratuita que a
+                # credencial do ambiente chega à API antes de gastar o ensaio
+                req = urllib.request.Request(
+                    "https://generativelanguage.googleapis.com/v1beta/models?pageSize=1")
+                try:
+                    urllib.request.urlopen(req, timeout=30).read()
+                except urllib.error.HTTPError as e:
+                    erros.append(gerar_imagem.erro_de_acesso(e.code, key)
+                                 or "Gemini respondeu HTTP %s ao conferir o acesso." % e.code)
+                except OSError as e:
+                    erros.append("Gemini inacessível pela rede do ambiente: %s" % e)
         except SystemExit as e:
             erros.append(str(e))
     if any(m["tipo"] in ("kontext", "seedream") for m in motores):
@@ -814,11 +826,12 @@ def listar_modelos():
     modelos, token = [], None
     while True:
         req = urllib.request.Request(url + ("&pageToken=%s" % token if token else ""))
-        req.add_header("x-goog-api-key", key)
+        gerar_imagem.autenticar(req, key)
         try:
             data = json.loads(urllib.request.urlopen(req, timeout=60).read().decode())
         except urllib.error.HTTPError as e:
-            raise SystemExit("Erro HTTP %s: %s" % (e.code, e.read().decode(errors="replace")[:400]))
+            acesso = gerar_imagem.erro_de_acesso(e.code, key)
+            raise SystemExit(acesso or "Erro HTTP %s: %s" % (e.code, e.read().decode(errors="replace")[:400]))
         modelos += data.get("models", [])
         token = data.get("nextPageToken")
         if not token:

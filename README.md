@@ -35,6 +35,16 @@ As credenciais ficam fora do repositório, em `~/.config/gardie/` (no Windows,
 - `shopify.json`: `{"store": "...myshopify.com", "client_id": "...", "client_secret": "..."}`
 
 Também é possível usar as variáveis de ambiente `GEMINI_API_KEY` e `FAL_KEY`.
+
+Na nuvem (Claude Code na web), as chaves ficam no ambiente da sessão. A forma
+preferida é a credencial de API, que a sessão nunca vê:
+
+- Gemini: site `generativelanguage.googleapis.com`, cabeçalho
+  `x-goog-api-key`, sem prefixo;
+- fal: sites `fal.run` e `*.fal.run`, cabeçalho `Authorization`, prefixo `Key`.
+
+Sem credencial de API no plano, use as variáveis acima. Na rede do ambiente,
+libere também `fal.media` e `*.fal.media`, de onde o fal entrega as imagens.
 No Shopify, as alternativas são `SHOPIFY_STORE`, `SHOPIFY_CLIENT_ID` e
 `SHOPIFY_CLIENT_SECRET`, ou `SHOPIFY_ADMIN_TOKEN`.
 

@@ -28,17 +28,39 @@ CFG = os.path.expanduser("~/.config/gardie/gemini.json")
 MIME = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}
 
 
+def na_nuvem():
+    """Sessão do Claude Code na nuvem. Lá a chave pode ser uma credencial de API
+    do ambiente: o proxy a anexa à requisição e a sessão nunca a vê."""
+    return os.environ.get("CLAUDE_CODE_REMOTE", "").strip().lower() == "true"
+
+
 def load_cfg():
-    """(chave, modelo padrão). GEMINI_API_KEY no ambiente vence o arquivo de config."""
+    """(chave, modelo padrão). GEMINI_API_KEY no ambiente vence o arquivo de config.
+    Na nuvem, sem chave local, devolve chave vazia e conta com a credencial do ambiente."""
     c = {}
     if os.path.exists(CFG):
         with open(CFG, encoding="utf-8-sig") as f:
             c = json.load(f)
     key = os.environ.get("GEMINI_API_KEY", "").strip() or c.get("api_key", "")
-    if not key:
+    if not key and not na_nuvem():
         raise SystemExit("Credencial Gemini ausente: defina GEMINI_API_KEY ou crie %s "
                          "com {\"api_key\": \"...\"}" % CFG)
     return key, c.get("image_model", "gemini-3-pro-image")
+
+
+def autenticar(req, key):
+    """Chave no cabeçalho x-goog-api-key (nunca na URL). Sem chave, segue sem
+    cabeçalho: na nuvem, o proxy anexa a credencial de API do ambiente."""
+    if key:
+        req.add_header("x-goog-api-key", key)
+
+
+def erro_de_acesso(codigo, key):
+    if codigo in (401, 403) and not key:
+        return ("A API do Gemini recusou a chamada sem chave (HTTP %d). Na nuvem, cadastre no "
+                "ambiente a credencial de API para generativelanguage.googleapis.com (cabeçalho "
+                "x-goog-api-key, sem prefixo) ou a variável GEMINI_API_KEY." % codigo)
+    return None
 
 
 def ref_part(path):
@@ -55,13 +77,17 @@ def gerar(prompt, out, refs=None, aspect="16:9", model=None):
         "contents": [{"parts": parts}],
         "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": aspect}},
     }
-    url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent?key=%s" % (model, key)
+    url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % model
     req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST")
     req.add_header("Content-Type", "application/json")
+    autenticar(req, key)
     try:
         resp = urllib.request.urlopen(req, timeout=180)
     except urllib.error.HTTPError as e:
         msg = e.read().decode(errors="replace")
+        acesso = erro_de_acesso(e.code, key)
+        if acesso:
+            raise SystemExit(acesso)
         if e.code == 429 and "free_tier" in msg:
             raise SystemExit("FATURAMENTO desabilitado: o free tier nao gera imagem. "
                              "Habilite billing no projeto Google Cloud e tente de novo.")

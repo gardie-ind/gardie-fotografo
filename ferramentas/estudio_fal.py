@@ -55,19 +55,34 @@ MODELO_KONTEXT = "fal-ai/flux-pro/kontext/max"
 MODELO_SEEDREAM = "fal-ai/bytedance/seedream/v4/edit"
 
 
+def na_nuvem():
+    """Sessão do Claude Code na nuvem: a chave pode ser uma credencial de API do
+    ambiente, que o proxy anexa à requisição sem a sessão ver."""
+    return os.environ.get("CLAUDE_CODE_REMOTE", "").strip().lower() == "true"
+
+
 def chave():
-    """FAL_KEY no ambiente vence o arquivo de config."""
+    """FAL_KEY no ambiente vence o arquivo de config. Na nuvem, sem chave local,
+    devolve "" e conta com a credencial de API do ambiente."""
     k = os.environ.get("FAL_KEY", "").strip()
     if k:
         return k
     if not os.path.exists(CFG):
+        if na_nuvem():
+            return ""
         raise SystemExit("Credencial fal ausente: defina FAL_KEY ou crie %s com "
                          "{\"api_key\": \"...\"} (chave em fal.ai/dashboard/keys)" % CFG)
     with open(CFG, encoding="utf-8-sig") as f:
         k = (json.load(f).get("api_key") or "").strip()
-    if not k:
+    if not k and not na_nuvem():
         raise SystemExit("Credencial fal ausente: %s sem \"api_key\"" % CFG)
     return k
+
+
+def _autenticar(req, key):
+    """Sem chave, segue sem cabeçalho: na nuvem o proxy anexa Authorization: Key ..."""
+    if key:
+        req.add_header("Authorization", "Key %s" % key)
 
 
 def data_uri(path):
@@ -79,12 +94,16 @@ def data_uri(path):
 def _req(url, body=None, key=None):
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body else None,
                                  method="POST" if body else "GET")
-    req.add_header("Authorization", "Key %s" % key)
+    _autenticar(req, key)
     if body:
         req.add_header("Content-Type", "application/json")
     try:
         return json.loads(urllib.request.urlopen(req, timeout=120).read().decode())
     except urllib.error.HTTPError as e:
+        if e.code in (401, 403) and not key:
+            raise SystemExit("O fal recusou a chamada sem chave (HTTP %d). Na nuvem, cadastre no "
+                             "ambiente a credencial de API para fal.run e *.fal.run (cabeçalho "
+                             "Authorization, prefixo Key) ou a variável FAL_KEY." % e.code)
         raise SystemExit("Erro HTTP %s em %s: %s" % (e.code, url, e.read().decode(errors="replace")[:600]))
 
 
@@ -100,7 +119,7 @@ def _cancelar(sub, key):
     if not sub.get("cancel_url"):
         return
     req = urllib.request.Request(sub["cancel_url"], method="PUT")
-    req.add_header("Authorization", "Key %s" % key)
+    _autenticar(req, key)
     try:
         urllib.request.urlopen(req, timeout=30).read()
     except Exception:
