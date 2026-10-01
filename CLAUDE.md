@@ -76,6 +76,23 @@ avisa o Thiago para corrigir este arquivo.
 
    Toda mudança no critério cita a linha de calibragem que a originou.
 
+## Na sessão em nuvem (Claude Code na web)
+
+- **Credenciais:** `GEMINI_API_KEY` e `FAL_KEY` vêm das variáveis do
+  ambiente. Se faltarem, pare e avise o Thiago; nunca peça chave no chat.
+- **Dependências:** se `import PIL` ou `import numpy` falhar, rode
+  `pip install pillow numpy` antes do ensaio.
+- **Entrega:** envie a prancha de entrega como arquivo na própria conversa,
+  para o Thiago ver no app. Isso substitui o link de revisão do Shopify.
+- **Nada pode se perder:** o contêiner é apagado depois de um tempo parado,
+  e `_versoes/` não vai para o git. Antes de entregar um lote, copie para
+  `lotes/<data>-<produto>/` só as candidatas que você aprovou, a prancha de
+  entrega, o `manifesto.json` e o `mapa.json`, faça commit e envie para o
+  branch da sessão. Depois do veredito, mova as "publicaria" para
+  `aprovadas/`, apague `lotes/<data>-<produto>/`, atualize o placar e o
+  critério e abra (ou atualize) o PR para a `main`. O merge é por squash,
+  para as candidatas descartadas não entrarem no histórico da `main`.
+
 ## Onde fica cada coisa
 
 | Caminho | O que é |
