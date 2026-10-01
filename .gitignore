@@ -1,0 +1,16 @@
+# Material de trabalho (limpeza: CLAUDE.md)
+_versoes/
+_crops/
+_descartados/
+ensaios/**/_versoes/
+
+# Credenciais (ficam em ~/.config/gardie/)
+*secret*
+*credenciais*
+*.key
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
