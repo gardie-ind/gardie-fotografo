@@ -141,6 +141,14 @@ peça é sempre o da still.
   - topo do sino ÷ disco: 0,19;
   - pivô → topo do disco (onde a cúpula encontra o disco) ÷ disco: 0,36 na
     still; ≈0,41 com a câmera mais baixa (foto frontal real).
+  - cabeça (lidas na `capa/classique-lux-cromado-ligado-capa-r1`, linha
+    horizontal pelo centro, lote de 2026-10-01): Ø vidro ÷ Ø cabeça 0,73;
+    largura do difusor ÷ Ø cabeça 0,092 (81 e 78 px dos dois lados, centrado);
+    aro ÷ Ø cabeça ≈0,044. Na vertical da capa (cabeça em 3/4), o difusor de
+    cima é mais largo que o de baixo (≈0,087 e ≈0,070): a perspectiva desloca
+    o anel, então compare cada lado com a referência de ângulo parecido.
+  - LED da still ligada (halo logo por dentro do anel, B/R ÷ fundo neutro):
+    ≈0,91 a 0,93, entre os 0,78 (4500K) e 1,07 (6000K) das fotos reais.
 - **Demais razões e modelos:** meça na capa no primeiro lote (vidro,
   difusor, aro, fita do garfo, pinos, espessura do disco; braço e placa nos de
   parede) e registre aqui.

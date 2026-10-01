@@ -1,0 +1,1220 @@
+{
+  "ferramenta": "ferramentas/ensaio.py",
+  "criado_em": "2026-10-01T17:06:17",
+  "simulado": false,
+  "produto": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "referencias": [
+    {
+      "original": "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png",
+      "usada": "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png",
+      "metodo": "sem preparo"
+    }
+  ],
+  "aspecto": "1:1",
+  "n_por_motor": 4,
+  "saida": "/home/user/gardie-fotografo/ensaios/_versoes/2026-10-01-classique-lux-cromado-ligado/1x1",
+  "moldura": {
+    "arquivo": "/home/user/gardie-fotografo/receitas/_moldura.txt",
+    "texto": "Professional lifestyle product photo shoot. The first attached image shows the real product: {produto}. Photograph this exact product in a new location: {cena}. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+  },
+  "motores": [
+    {
+      "id": "gemini:gemini-2.5-flash-image",
+      "tipo": "gemini",
+      "modelo": "gemini-2.5-flash-image",
+      "params": {
+        "aspect_ratio": "1:1",
+        "refs_enviadas": 1,
+        "ordem": "imagens antes do texto"
+      },
+      "custo_unit_usd": 0.039
+    },
+    {
+      "id": "gemini:gemini-3-pro-image",
+      "tipo": "gemini",
+      "modelo": "gemini-3-pro-image",
+      "params": {
+        "aspect_ratio": "1:1",
+        "refs_enviadas": 1,
+        "ordem": "imagens antes do texto"
+      },
+      "custo_unit_usd": 0.134
+    },
+    {
+      "id": "kontext",
+      "tipo": "kontext",
+      "modelo": "fal-ai/flux-pro/kontext/max",
+      "params": {
+        "aspect_ratio": "1:1",
+        "refs_enviadas": 1
+      },
+      "custo_unit_usd": 0.08
+    },
+    {
+      "id": "seedream",
+      "tipo": "seedream",
+      "modelo": "fal-ai/bytedance/seedream/v4/edit",
+      "params": {
+        "image_size": {
+          "width": 1280,
+          "height": 1280
+        },
+        "refs_enviadas": 1
+      },
+      "custo_unit_usd": 0.03
+    }
+  ],
+  "receitas": [
+    {
+      "rotulos": "A",
+      "nome": "close-detalhe",
+      "arquivo": "/home/user/gardie-fotografo/receitas/close-detalhe.txt",
+      "cena": "close-up of the upper part of the product, cropped by the frame, in a bright bathroom with pale stone and soft daylight blurred behind; shallow depth of field",
+      "prompts": {
+        "gemini:gemini-2.5-flash-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: close-up of the upper part of the product, cropped by the frame, in a bright bathroom with pale stone and soft daylight blurred behind; shallow depth of field. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: close-up of the upper part of the product, cropped by the frame, in a bright bathroom with pale stone and soft daylight blurred behind; shallow depth of field. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "kontext": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: close-up of the upper part of the product, cropped by the frame, in a bright bathroom with pale stone and soft daylight blurred behind; shallow depth of field. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "seedream": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: close-up of the upper part of the product, cropped by the frame, in a bright bathroom with pale stone and soft daylight blurred behind; shallow depth of field. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 8.4,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 8.2,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.5,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 18.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.6,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.2,
+          "seed": 4735670,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 19.0,
+          "seed": 514340804,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.6,
+          "seed": 112757480,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.3,
+          "seed": 1782675100,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.2,
+          "seed": 416512378,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.6,
+          "seed": 761195624,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.5,
+          "seed": 1341424505,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": 976728235,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        }
+      ],
+      "candidatas": 16
+    },
+    {
+      "rotulos": "B",
+      "nome": "mesa-banheiro-bancada",
+      "arquivo": "/home/user/gardie-fotografo/receitas/mesa-banheiro-bancada.txt",
+      "cena": "the product standing on a white marble bathroom counter beside a large window, soft morning daylight, a folded white towel and a white orchid out of focus; camera at counter height, facing the product",
+      "prompts": {
+        "gemini:gemini-2.5-flash-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a white marble bathroom counter beside a large window, soft morning daylight, a folded white towel and a white orchid out of focus; camera at counter height, facing the product. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a white marble bathroom counter beside a large window, soft morning daylight, a folded white towel and a white orchid out of focus; camera at counter height, facing the product. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "kontext": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a white marble bathroom counter beside a large window, soft morning daylight, a folded white towel and a white orchid out of focus; camera at counter height, facing the product. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "seedream": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a white marble bathroom counter beside a large window, soft morning daylight, a folded white towel and a white orchid out of focus; camera at counter height, facing the product. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 8.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.4,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.4,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.2,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 18.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.8,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.9,
+          "seed": 1825042534,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.7,
+          "seed": 71662326,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.3,
+          "seed": 1612228535,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.3,
+          "seed": 842306831,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 21.6,
+          "seed": 1098067552,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.6,
+          "seed": 73329210,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.1,
+          "seed": 1630779133,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 25.6,
+          "seed": 349285992,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        }
+      ],
+      "candidatas": 16
+    },
+    {
+      "rotulos": "C",
+      "nome": "mesa-banheiro-banheira",
+      "arquivo": "/home/user/gardie-fotografo/receitas/mesa-banheiro-banheira.txt",
+      "cena": "the product standing on a light stone vanity in the foreground of a bright bathroom, a freestanding bathtub and a tall window softly blurred behind, a few folded towels, soft daylight; three-quarter camera angle",
+      "prompts": {
+        "gemini:gemini-2.5-flash-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a light stone vanity in the foreground of a bright bathroom, a freestanding bathtub and a tall window softly blurred behind, a few folded towels, soft daylight; three-quarter camera angle. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a light stone vanity in the foreground of a bright bathroom, a freestanding bathtub and a tall window softly blurred behind, a few folded towels, soft daylight; three-quarter camera angle. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "kontext": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a light stone vanity in the foreground of a bright bathroom, a freestanding bathtub and a tall window softly blurred behind, a few folded towels, soft daylight; three-quarter camera angle. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "seedream": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a light stone vanity in the foreground of a bright bathroom, a freestanding bathtub and a tall window softly blurred behind, a few folded towels, soft daylight; three-quarter camera angle. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 8.2,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.1,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.6,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 18.1,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.9,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 19.4,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.5,
+          "seed": 1311277853,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 21.0,
+          "seed": 582844695,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.2,
+          "seed": 1769862748,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.1,
+          "seed": 1395244715,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.6,
+          "seed": 5210380,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 23.3,
+          "seed": 1362989732,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.4,
+          "seed": 689597314,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.6,
+          "seed": 1988675967,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        }
+      ],
+      "candidatas": 16
+    },
+    {
+      "rotulos": "D",
+      "nome": "mesa-close-base",
+      "arquivo": "/home/user/gardie-fotografo/receitas/mesa-close-base.txt",
+      "cena": "low close-up of the lower part of the product resting on a pale stone counter, the top of the product cropped by the frame, a bright bathroom softly blurred behind, soft daylight",
+      "prompts": {
+        "gemini:gemini-2.5-flash-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: low close-up of the lower part of the product resting on a pale stone counter, the top of the product cropped by the frame, a bright bathroom softly blurred behind, soft daylight. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: low close-up of the lower part of the product resting on a pale stone counter, the top of the product cropped by the frame, a bright bathroom softly blurred behind, soft daylight. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "kontext": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: low close-up of the lower part of the product resting on a pale stone counter, the top of the product cropped by the frame, a bright bathroom softly blurred behind, soft daylight. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "seedream": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: low close-up of the lower part of the product resting on a pale stone counter, the top of the product cropped by the frame, a bright bathroom softly blurred behind, soft daylight. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.2,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.2,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.5,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.8,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 18.6,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.0,
+          "seed": 1030063665,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.3,
+          "seed": 1455565863,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.7,
+          "seed": 984668718,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.0,
+          "seed": 1447513195,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.1,
+          "seed": 1276403341,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": 994464270,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 23.6,
+          "seed": 1957608835,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.5,
+          "seed": 1453993179,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        }
+      ],
+      "candidatas": 16
+    },
+    {
+      "rotulos": "E",
+      "nome": "mesa-papel-de-parede",
+      "arquivo": "/home/user/gardie-fotografo/receitas/mesa-papel-de-parede.txt",
+      "cena": "the product standing on a pale stone console in an elegant dressing nook with tone-on-tone botanical wallpaper in pale sage, a small plain glass perfume bottle, gentle side daylight; eye-level camera, product centered",
+      "prompts": {
+        "gemini:gemini-2.5-flash-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a pale stone console in an elegant dressing nook with tone-on-tone botanical wallpaper in pale sage, a small plain glass perfume bottle, gentle side daylight; eye-level camera, product centered. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a pale stone console in an elegant dressing nook with tone-on-tone botanical wallpaper in pale sage, a small plain glass perfume bottle, gentle side daylight; eye-level camera, product centered. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "kontext": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a pale stone console in an elegant dressing nook with tone-on-tone botanical wallpaper in pale sage, a small plain glass perfume bottle, gentle side daylight; eye-level camera, product centered. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "seedream": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a pale stone console in an elegant dressing nook with tone-on-tone botanical wallpaper in pale sage, a small plain glass perfume bottle, gentle side daylight; eye-level camera, product centered. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 8.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.3,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 6.8,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.8,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.9,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 13.0,
+          "seed": 1594890423,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 18.7,
+          "seed": 1779810093,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.1,
+          "seed": 1305482606,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 12.7,
+          "seed": 1683785399,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 24.0,
+          "seed": 78104255,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 21.2,
+          "seed": 431147641,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.3,
+          "seed": 1648567390,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 27.9,
+          "seed": 1525476299,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        }
+      ],
+      "candidatas": 16
+    },
+    {
+      "rotulos": "F",
+      "nome": "mesa-penteadeira-quarto",
+      "arquivo": "/home/user/gardie-fotografo/receitas/mesa-penteadeira-quarto.txt",
+      "cena": "the product standing at one end of a minimalist pale greige bedroom dressing table, plain glass perfume bottles beside it, sheer curtains and window behind, soft daylight; wide shot showing the whole table",
+      "prompts": {
+        "gemini:gemini-2.5-flash-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing at one end of a minimalist pale greige bedroom dressing table, plain glass perfume bottles beside it, sheer curtains and window behind, soft daylight; wide shot showing the whole table. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing at one end of a minimalist pale greige bedroom dressing table, plain glass perfume bottles beside it, sheer curtains and window behind, soft daylight; wide shot showing the whole table. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "kontext": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing at one end of a minimalist pale greige bedroom dressing table, plain glass perfume bottles beside it, sheer curtains and window behind, soft daylight; wide shot showing the whole table. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+        "seedream": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing at one end of a minimalist pale greige bedroom dressing table, plain glass perfume bottles beside it, sheer curtains and window behind, soft daylight; wide shot showing the whole table. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.6,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.6,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 7.8,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-2.5-flash-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 8.1,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.4,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 17.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.8,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 15.2,
+          "seed": 1251027213,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.5,
+          "seed": 1748436912,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.5,
+          "seed": 1619518706,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "kontext",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 16.5,
+          "seed": 1424270949,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 19.1,
+          "seed": 1194856310,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 24.1,
+          "seed": 1217277263,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 23.6,
+          "seed": 733940041,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        },
+        {
+          "motor": "seedream",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 14.3,
+          "seed": 1825074598,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/classique-lux-cromado-ligado-capa-r1.png"
+          ]
+        }
+      ],
+      "candidatas": 16
+    }
+  ],
+  "custo_estimado_usd": {
+    "previsto": 6.79,
+    "gerado": 6.79
+  },
+  "aviso": "Rótulos -> motor estão em mapa.json; abrir só depois do veredito."
+}
