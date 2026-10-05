@@ -1,0 +1,155 @@
+[
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-1.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-1.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/A3",
+  "motor": "kontext",
+  "receita": "close-detalhe",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-2.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-2.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/A5",
+  "motor": "kontext",
+  "receita": "close-detalhe",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-3.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-3.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/A11",
+  "motor": "gemini:gemini-3-pro-image",
+  "receita": "close-detalhe",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-4.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-4.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/A13",
+  "motor": "kontext",
+  "receita": "close-detalhe",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-5.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-5.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/B4",
+  "motor": "kontext",
+  "receita": "mesa-banheiro-bancada",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-6.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-6.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/B5",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-banheiro-bancada",
+  "retoque": "botão touch removido (interpolação local, sem IA)"
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-7.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-7.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/B12",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-banheiro-bancada",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-8.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-8.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/B15",
+  "motor": "kontext",
+  "receita": "mesa-banheiro-bancada",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-9.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-9.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/C1",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-banheiro-banheira",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-10.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-10.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/C7",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-banheiro-banheira",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-11.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-11.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/C11",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-banheiro-banheira",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-12.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-12.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/D6",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-close-base",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-13.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-13.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/D15",
+  "motor": "kontext",
+  "receita": "mesa-close-base",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-14.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-14.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/E3",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-papel-de-parede",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-15.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-15.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/E13",
+  "motor": "gemini:gemini-2.5-flash-image",
+  "receita": "mesa-papel-de-parede",
+  "retoque": "botão touch removido (interpolação local, sem IA)"
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-16.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-16.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/F3",
+  "motor": "kontext",
+  "receita": "mesa-penteadeira-quarto",
+  "retoque": null
+ },
+ {
+  "local": "aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-17.png",
+  "remoto": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-17.png",
+  "alt": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado",
+  "origem": "lote 2026-10-01 1x1/F9",
+  "motor": "kontext",
+  "receita": "mesa-penteadeira-quarto",
+  "retoque": null
+ }
+]

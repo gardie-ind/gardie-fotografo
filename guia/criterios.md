@@ -14,6 +14,7 @@ confirmou. A classe de um item só muda com a palavra dele.
 | Item | Classe |
 |---|---|
 | a. Forma do produto inteiro: as mesmas peças da referência, na mesma quantidade; nada inventado, faltando, entortado ou "melhorado"; cabeça circular (elipse coerente com o ângulo) | VETO (Thiago, respostas 5 e 6) |
+| a2. Botão ou ícone touch inventado no vidro (o produto não tem): defeito local, apagado no retoque | CORRIGIR SE DER (Thiago, calibragem 2026-10-01, `1x1/B5` e `1x1/E13`) |
 | b. Acabamento igual ao da referência; cromado lê prata, nunca dourado | VETO (padrão — confirmar com o Thiago) |
 | c. LED no mesmo estado (aceso ou apagado) e na mesma cor da referência | VETO (padrão — confirmar com o Thiago) |
 | d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo está certo (10202CR-4). Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
