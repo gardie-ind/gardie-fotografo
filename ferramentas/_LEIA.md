@@ -22,6 +22,7 @@ Credenciais ficam fora do repositório. Vale a variável de ambiente ou o arquiv
 - **`gerar_imagem.py`**: uma chamada ao Gemini (texto + refs; as imagens vão antes do texto). `gerar(prompt, out, refs, aspect, model)`.
 - **`estudio_fal.py`**: fal.ai. Re-render por referência (`rerender_kontext`, `rerender_seedream` com várias refs) e retoque LOCAL por máscara (`recortar` BiRefNet, `mascara-fundo`, `fundo` FLUX Fill, `relight`). Máscara serve só para defeito local, nunca para criar cena.
 - **`inspecao_imagem.py`**: `diff` (a edição mudou algo? <2% = falhou), `crops` (quadrantes em resolução nativa) e `grade` (grade rotulada a cada N px, com zoom e recorte opcionais, para MEDIR proporções contra a referência).
+- **`retoque_local.py`**: retoque local SEM IA para área lisa (vidro, parede): preenche a máscara a partir da borda e devolve o grão; pixels fora da máscara intocados. Uso em `guia/criterios.md` › Retoque.
 - **`curva_vidro.py`**: warp geométrico do reflexo dentro do vidro, sem IA. É utilitário opcional de retoque.
 - **`upload_shopify.py`** / **`shopify_auth.py`**: sobem imagens aprovadas para o Shopify Files e imprimem a URL CDN. Caminhos relativos também são procurados em `aprovadas/`.
 

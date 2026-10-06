@@ -123,6 +123,15 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
     na máscara. Negativos não funcionam.
   - O Fill recusa objeto fino em máscara pequena e, em área aberta, costuma
     inventar outro objeto no lugar.
+- **Área lisa (vidro, parede): retoque local sem IA.** Para apagar um
+  defeito pequeno em área lisa, sem nada a reconstruir (botão touch
+  inventado, texto fantasma sobre o vidro), use
+  `ferramentas/retoque_local.py original.png mascara.png saida.png`. Ele
+  preenche a máscara a partir da borda e devolve o grão do vidro; os pixels
+  fora da máscara não mudam. Valide a máscara com a sobreposição vermelha e
+  rode o `diff` depois, como no Fill. Em área com textura, borda ou reflexo
+  desenhado, use o Fill. (Thiago, 2026-10-05: aceito em `1x1/B5` e
+  `1x1/E13` do lote 2026-10-01, quando o fal estava sem saldo.)
 - **Reflexo (h):** `ferramentas/curva_vidro.py` curva o reflexo existente,
   sem IA, só dentro do círculo do vidro.
 - **Editor de imagem inteira** (Kontext, Seedream ou Gemini em edição):
