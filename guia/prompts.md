@@ -20,6 +20,13 @@ em português, como no anúncio.
    foto deve ter, com a pose da still. A referência principal nunca é uma foto
    de celular (a lente e a cor distorcem), uma imagem gerada por IA (inclui
    `benchmark-ml/` e qualquer aprovada) nem uma imagem retocada.
+   - **Exceção para modelo sem still de estúdio** (Thiago, 2026-10-06): vale a
+     foto da peça física feita no modelo da still (de frente ou em 3/4, produto
+     inteiro, estado do LED da foto pedida), recortada e conferida contra o
+     desenho técnico. Diferença do protótipo para a versão final que o Thiago
+     apontar (ex.: o botão touch do Lumière) é apagada na capa com o retoque
+     local de `guia/criterios.md`. Render só entra se bater com a foto da peça.
+     Vale até existir a still de estúdio.
 2. **O padrão:**
    - fundo branco puro, sem degradê, vinheta, sombra ou reflexo de chão;
    - quadro 1:1, com o produto inteiro e centrado, ocupando cerca de 93% do

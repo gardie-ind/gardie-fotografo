@@ -9,8 +9,8 @@
 - **Nome:** kebab-case, uma cena por arquivo. Com o prefixo `mesa-`, a cena só
   serve a modelos de mesa (o Beauté conta como mesa, apoiado no pé). Sem
   prefixo, serve a qualquer montagem.
-- **Modelos de parede e de ventosa:** ainda não têm receita. Crie a primeira
-  no primeiro lote deles, com o prefixo `parede-` ou `ventosa-`, dizendo onde
+- **Modelos de parede:** `parede-lavabo` e `parede-banheiro-3-4` (lote do Lumière, 2026-10-06). **Ventosa:** ainda não tem receita. Crie a primeira
+  no primeiro lote, com o prefixo `parede-` ou `ventosa-`, dizendo onde
   o produto está fixado (por exemplo, "the product mounted on the wall of a
   bright powder room ...").
 - **Seleção por lote:** o `ensaio.py` não filtra por montagem. Passe só as
@@ -28,4 +28,6 @@
 | `mesa-penteadeira-quarto` | mesa | plano aberto, penteadeira inteira no quadro (testa a escala no ambiente) | 10202CR-3 |
 | `mesa-papel-de-parede` | mesa | aparador diante de um papel de parede elegante | — |
 | `close-detalhe` | qualquer | close da parte de cima, produto cortado pelo quadro | 10202CR-4 |
+| `parede-lavabo` | parede | lavabo, produto inteiro na parede, câmera de frente | — |
+| `parede-banheiro-3-4` | parede | parede de banheiro ao lado da bancada, câmera 3/4 | — |
 | `mesa-close-base` | mesa | close baixo da parte de baixo, topo cortado pelo quadro | 10202CR-5 |

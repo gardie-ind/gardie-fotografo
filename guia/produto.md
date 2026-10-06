@@ -16,7 +16,7 @@ peça é sempre o da still.
 | Mobile Lux | LUX | parede | sim | cromado, ligado e desligado | vídeo (13 s: aceso, cabo pendendo) |
 | Visage Lux | LUX | parede | sim | cromado, ligado e desligado | `visage-lux/` (cabo e traseira; suporte dourado), vídeo |
 | Flex Lux | LUX | parede | sim | cromado, ligado e desligado | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
-| Lumière | LUX | parede, articulado como o Mobile Lux | sim, fio embutido | nenhuma | nenhum (não fotografar) |
+| Lumière | LUX | parede: placa, braço longo e braço curto articulados | sim, fio embutido | nenhuma de estúdio; capa de foto da peça física (exceção abaixo) | `lumiere/` (protótipo em níquel escovado, ligado; desenhos V3) |
 | Flex | Clássica Premium | parede | não | cromado | `flex/` |
 | Flex Cristal | Clássica Premium | parede | não | cromado | — |
 | Mobile | Clássica Premium | parede | não | cromado | — |
@@ -45,6 +45,41 @@ peça é sempre o da still.
   coluna Stills não lista): sem lote, até o Thiago aprovar uma referência
   real daquele acabamento. As fotos douradas do Royale Lux e do Visage Lux são
   apoio, não capa.
+
+## Lumière (pré-lançamento)
+
+Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-capa-r1.png`,
+feita de `lumiere/lumiere-nk-bu-ligado-frontal-aberto.jpg` (foto de celular do
+protótipo, ligado), recortada localmente, com o botão touch apagado.
+
+- **Peças, da parede para fora** (foto e desenho `lumiere/desenhos/A-0001-V3`):
+  placa retangular de cantos arredondados (68 × 120 mm) com 2 tampas redondas
+  (em cima e embaixo) → articulação de 2 cilindros no meio da placa → braço
+  longo reto → cotovelo cilíndrico de 2 segmentos → braço curto → cabeça.
+- **Cabeça:** espelho côncavo 7,5" com aro jateado; o anel de luz é o aro
+  jateado do próprio vidro, por dentro de um aro metálico fino. Vidro claro ÷
+  cabeça ≈ 0,73 na foto frontal; vidro ÷ diâmetro externo do anel de luz = 0,81 (capa r1, ±10%).
+- **Logo:** impresso no vidro, embaixo, com uma linha de texto pequena sob ele.
+- **Touch:** o protótipo tem um botão touch no vidro, acima do logo; a versão
+  final terá o touch na estrutura (posição a confirmar com o Thiago). Na foto:
+  nenhum botão no vidro (botão no vidro = critério a2, apagado no retoque) e
+  nenhum botão inventado na estrutura até a posição ser confirmada.
+- **Suporte (a região que mais alucina no Lumière):** o braço curto entra na
+  lateral da cabeça, perto de baixo, por um cotovelo cilíndrico. Não há garfo
+  em U nem pinos laterais segurando a cabeça (garfo = veto a; 10 de 24 no
+  lote 2026-10-06), nem pescoço vertical sob a cabeça.
+- **Braço longo (eixo da articulação da placa → eixo do cotovelo) ÷ Ø da
+  cabeça:** ≈0,95 com o braço paralelo à parede (`lumiere-nk-bu-ligado-frontal`
+  e vista frontal do desenho). Nunca passa de ≈1,05; menor só com o braço
+  girado para a câmera (na capa r1 ele está escorçado: 0,55).
+- **Cabo:** embutido; cabo à vista é veto (d).
+- **Acabamento da capa:** níquel escovado (NK.BU): metal acetinado, sem o
+  espelhamento do cromado. Os outros acabamentos não têm referência.
+- **Medidas do desenho V3:** conjunto fechado 252,6 × 270,3 mm, cabeça Ø ≈ 205 mm,
+  profundidade 73 mm, 362 mm com o braço esticado. Cabeça ÷ altura da placa: 1,71
+  no desenho e 1,99 na foto frontal (perspectiva do celular perto, a confirmar
+  se o protótipo segue a V3). A tabela de códigos abaixo (152 mm, 33 × 26,5 cm)
+  é anterior à V3.
 
 ## Cabeça dos modelos LUX
 
