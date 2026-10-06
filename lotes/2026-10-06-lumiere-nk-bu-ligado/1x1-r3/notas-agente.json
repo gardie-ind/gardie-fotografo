@@ -1,0 +1,194 @@
+{
+"A7": [
+"passa",
+"LED 0.74; cabeça mais profunda que a peça?"
+],
+"A12": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"A3": [
+"veto",
+"c: LED frio, 0.96 (alvo 4500K = 0,78; limite 0,93)"
+],
+"A16": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"A11": [
+"veto",
+"a: garfo em U e um segundo espelho ao lado"
+],
+"A13": [
+"passa",
+"LED 0.91"
+],
+"A9": [
+"veto",
+"c: LED frio, 0.99 (alvo 4500K = 0,78; limite 0,93)"
+],
+"A1": [
+"passa",
+"LED 0.91"
+],
+"A4": [
+"veto",
+"c: LED frio, 0.94 (alvo 4500K = 0,78; limite 0,93)"
+],
+"A8": [
+"passa",
+"LED 0.85; cabeça mais profunda que a peça?"
+],
+"A6": [
+"passa",
+"LED 0.80"
+],
+"A2": [
+"passa",
+"LED 0.70; cabeça mais profunda que a peça?"
+],
+"A10": [
+"veto",
+"c: LED frio, 0.98 (alvo 4500K = 0,78; limite 0,93)"
+],
+"A14": [
+"veto",
+"c: LED frio, 0.95 (alvo 4500K = 0,78; limite 0,93)"
+],
+"A5": [
+"passa",
+"LED 0.69; cabeça mais profunda que a peça?"
+],
+"A15": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"B7": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"B2": [
+"passa",
+"LED 0.93"
+],
+"B3": [
+"veto",
+"a: suporte extra (roseta) na parede junto à cabeça"
+],
+"B4": [
+"passa",
+"LED 0.74"
+],
+"B13": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"B1": [
+"veto",
+"c: LED frio, 0.95 (alvo 4500K = 0,78; limite 0,93)"
+],
+"B8": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"B16": [
+"passa",
+"LED 0.79"
+],
+"B9": [
+"passa",
+"LED 0.82"
+],
+"B14": [
+"passa",
+"LED 0.80; cabeça mais profunda que a peça?"
+],
+"B11": [
+"veto",
+"c: LED frio, 0.95 (alvo 4500K = 0,78; limite 0,93)"
+],
+"B6": [
+"passa",
+"LED 0.92"
+],
+"B12": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"B5": [
+"passa",
+"LED 0.92"
+],
+"B15": [
+"passa",
+"LED 0.79"
+],
+"B10": [
+"passa",
+"LED 0.67; cabeça mais profunda que a peça?"
+],
+"C7": [
+"veto",
+"a: junta vertical sob a cabeça"
+],
+"C11": [
+"passa",
+"LED não medido (conferir); close com a cabeça cortada"
+],
+"C4": [
+"passa",
+"LED 0.89; gotas na parede (cena)"
+],
+"C2": [
+"passa",
+"LED 0.87; gotas na parede (cena)"
+],
+"C13": [
+"passa",
+"LED 0.89"
+],
+"C6": [
+"veto",
+"a: cabeça sobre a torneira"
+],
+"C8": [
+"veto",
+"a: junta vertical sob a cabeça"
+],
+"C5": [
+"veto",
+"a: cabeça sobre a torneira"
+],
+"C12": [
+"passa",
+"LED 0.88"
+],
+"C15": [
+"passa",
+"LED 0.72"
+],
+"C16": [
+"passa",
+"LED não medido (conferir)"
+],
+"C1": [
+"passa",
+"LED não medido (conferir)"
+],
+"C14": [
+"passa",
+"LED não medido (conferir); m: espelho de parede atrás"
+],
+"C3": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"C10": [
+"veto",
+"a: garfo em U com pinos laterais"
+],
+"C9": [
+"passa",
+"LED 0.81"
+]
+}

@@ -48,8 +48,8 @@ peça é sempre o da still.
 
 ## Lumière (pré-lançamento)
 
-Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-capa-r2.png`
-(a r1 tinha o reflexo verde da lente sobre o braço, que os motores copiaram
+Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-capa-r3.png`
+(vidro limpo; a r2 tinha a sujeira do protótipo; a r1 tinha o reflexo verde da lente sobre o braço, que os motores copiaram
 como uma luva inventada; a r2 neutraliza essa cor),
 feita de `lumiere/lumiere-nk-bu-ligado-frontal-aberto.jpg` (foto de celular do
 protótipo, ligado), recortada localmente, com o botão touch apagado.
@@ -74,6 +74,12 @@ protótipo, ligado), recortada localmente, com o botão touch apagado.
   cabeça:** ≈0,95 com o braço paralelo à parede (`lumiere-nk-bu-ligado-frontal`
   e vista frontal do desenho). Nunca passa de ≈1,05; menor só com o braço
   girado para a câmera (na capa r1 ele está escorçado: 0,55).
+- **LED:** 4500K, branco neutro (Thiago, 2026-10-06). A foto do protótipo não tem
+  branco de referência; confira a cor nas candidatas pelo passo 6 de
+  `guia/criterios.md` com alvo 0,78 (faixa 0,63 a 0,93).
+- **Vidro:** limpo. A foto do protótipo tinha sujeira, que os motores copiaram
+  (rodada r2); a capa r3 tem o vidro limpo, preenchido com o tom do próprio
+  vidro, logo preservado.
 - **Cabo:** embutido; cabo à vista é veto (d).
 - **Acabamento da capa:** níquel escovado (NK.BU): metal acetinado, sem o
   espelhamento do cromado. Os outros acabamentos não têm referência.
