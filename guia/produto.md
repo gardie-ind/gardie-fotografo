@@ -54,26 +54,54 @@ como uma luva inventada; a r2 neutraliza essa cor),
 feita de `lumiere/lumiere-nk-bu-ligado-frontal-aberto.jpg` (foto de celular do
 protótipo, ligado), recortada localmente, com o botão touch apagado.
 
-- **Peças, da parede para fora** (foto e desenho `lumiere/desenhos/A-0001-V3`):
-  placa retangular de cantos arredondados (68 × 120 mm) com 2 tampas redondas
-  (em cima e embaixo) → articulação de 2 cilindros no meio da placa → braço
-  longo reto → cotovelo cilíndrico de 2 segmentos → braço curto → cabeça.
+- **Peças, da parede para fora** (desenhos `lumiere/desenhos/`, V3; conte uma a
+  uma, de frente):
+  1. placa de parede E-0010: retângulo de 68 × 119,6 mm, cantos R8,5, chapa de
+     2 mm com a borda dobrada (6,1 mm de espessura total). Rente à parede.
+  2. 2 tampas redondas (E-0013), uma em cima e uma embaixo, centradas na placa.
+  3. articulação da placa, no meio dela, entre as tampas: mancal superior
+     (E-0014), barril do braço longo e mancal inferior (E-0009), empilhados.
+  4. braço longo: tubo reto Ø 12,7 mm (haste de 192 mm).
+  5. cotovelo: 2 cilindros empilhados (ponteiras do braço longo e do curto).
+  6. braço curto: tubo Ø 12,7 mm (haste de 74 mm), na horizontal.
+  7. rótula central: cilindro vertical preso no CENTRO DA TRASEIRA da cabeça
+     (B-0001), que desce até perto da borda de baixo. De frente fica quase
+     todo escondido atrás da cabeça.
+  8. cabeça: Ø 204,5 mm, aro de lado reto e traseira em cúpula rasa; 43 mm de
+     profundidade sem a rótula (65 mm com ela).
+
+  Nada além disso: garfo, pinos laterais, poste, roseta, segunda placa ou
+  terceira tampa é peça inventada (veto a). Faltar qualquer item visível na
+  vista também é veto a.
+- **Razões (vista de frente, braço paralelo à parede; desenho A-0001):**
+
+  | Razão | Valor | Faixa |
+  |---|---|---|
+  | altura da placa ÷ Ø da cabeça | 0,585 | ±10% |
+  | largura ÷ altura da placa | 0,57 | ±10% |
+  | Ø do tubo do braço ÷ Ø da cabeça | 0,062 | ±20% (tubo fino) |
+  | eixo da placa → eixo do cotovelo ÷ Ø da cabeça | ≈0,99 | ±10%; menor só com o braço girado para a câmera |
+  | Ø da tampa ÷ largura da placa | ≈0,30 | ±15% |
+
+  Em 3/4 ou de lado, meça as alturas (que não encurtam): altura da placa ÷
+  altura da cabeça = 0,585 ±10%.
+- **Placa na parede (veto a):** a face da placa fica no plano da parede. Em
+  3/4, as bordas de cima e de baixo da placa convergem para o mesmo ponto de
+  fuga das juntas horizontais da parede (±3°), e as bordas laterais ficam
+  paralelas às verticais da parede. A espessura visível da placa não passa de
+  0,09 da largura dela (6,1 ÷ 68). Placa girada em relação à parede, saltada
+  dela, em pé como uma caixa ou com sombra de vão por trás: veto.
 - **Cabeça:** espelho côncavo 7,5" com aro jateado; o anel de luz é o aro
   jateado do próprio vidro, por dentro de um aro metálico fino. Vidro claro ÷
   cabeça ≈ 0,73 na foto frontal; vidro ÷ diâmetro externo do anel de luz = 0,81 (capa r1, ±10%).
 - **Logo:** impresso no vidro, embaixo, com uma linha de texto pequena sob ele.
 - **Touch:** o protótipo tem um botão touch no vidro, acima do logo; a versão
-  final terá o touch na estrutura (posição a confirmar com o Thiago). Na foto:
-  nenhum botão no vidro (botão no vidro = critério a2, apagado no retoque) e
-  nenhum botão inventado na estrutura até a posição ser confirmada.
-- **Suporte (a região que mais alucina no Lumière):** o braço curto entra na
-  lateral da cabeça, perto de baixo, por um cotovelo cilíndrico. Não há garfo
-  em U nem pinos laterais segurando a cabeça (garfo = veto a; 10 de 24 no
-  lote 2026-10-06), nem pescoço vertical sob a cabeça.
-- **Braço longo (eixo da articulação da placa → eixo do cotovelo) ÷ Ø da
-  cabeça:** ≈0,95 com o braço paralelo à parede (`lumiere-nk-bu-ligado-frontal`
-  e vista frontal do desenho). Nunca passa de ≈1,05; menor só com o braço
-  girado para a câmera (na capa r1 ele está escorçado: 0,55).
+  final tem o touch no toque da própria estrutura metálica, sem botão visível
+  (Thiago, 2026-10-06). Na foto: nenhum botão no vidro (critério a2, apagado
+  no retoque) e nenhum botão na estrutura.
+- **Suporte (a região que mais alucina no Lumière):** o braço curto prende na
+  rótula central, atrás da cabeça. Não há garfo em U nem pinos laterais
+  (garfo = veto a; 10 de 24 no lote 2026-10-06 r1), nem poste ou torneira.
 - **LED:** 4500K, branco neutro (Thiago, 2026-10-06). A foto do protótipo não tem
   branco de referência; confira a cor nas candidatas pelo passo 6 de
   `guia/criterios.md` com alvo 0,78 (faixa 0,63 a 0,93).

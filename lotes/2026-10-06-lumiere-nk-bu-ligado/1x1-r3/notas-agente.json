@@ -1,7 +1,7 @@
 {
 "A7": [
 "passa",
-"LED 0.74; cabeça mais profunda que a peça?"
+"LED 0.74; cabeça mais profunda que a peça?; placa ÷ cabeça 0.54, braço ÷ cabeça 0.90"
 ],
 "A12": [
 "veto",
@@ -20,32 +20,32 @@
 "a: garfo em U e um segundo espelho ao lado"
 ],
 "A13": [
-"passa",
-"LED 0.91"
+"veto",
+"i: placa ÷ cabeça 0.49 (desenho 0,585; faixa 0,53-0,64); braço ÷ cabeça 0.87 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "A9": [
 "veto",
 "c: LED frio, 0.99 (alvo 4500K = 0,78; limite 0,93)"
 ],
 "A1": [
-"passa",
-"LED 0.91"
+"veto",
+"i: braço ÷ cabeça 0.87 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "A4": [
 "veto",
 "c: LED frio, 0.94 (alvo 4500K = 0,78; limite 0,93)"
 ],
 "A8": [
-"passa",
-"LED 0.85; cabeça mais profunda que a peça?"
+"veto",
+"i: placa ÷ cabeça 0.49 (desenho 0,585; faixa 0,53-0,64); braço ÷ cabeça 0.72 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "A6": [
-"passa",
-"LED 0.80"
+"veto",
+"i: placa ÷ cabeça 0.52 (desenho 0,585; faixa 0,53-0,64); braço ÷ cabeça 0.86 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "A2": [
-"passa",
-"LED 0.70; cabeça mais profunda que a peça?"
+"veto",
+"i: placa ÷ cabeça 0.45 (desenho 0,585; faixa 0,53-0,64); braço ÷ cabeça 0.75 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "A10": [
 "veto",
@@ -56,8 +56,8 @@
 "c: LED frio, 0.95 (alvo 4500K = 0,78; limite 0,93)"
 ],
 "A5": [
-"passa",
-"LED 0.69; cabeça mais profunda que a peça?"
+"veto",
+"i: placa ÷ cabeça 0.52 (desenho 0,585; faixa 0,53-0,64); braço ÷ cabeça 0.79 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "A15": [
 "veto",
@@ -69,15 +69,15 @@
 ],
 "B2": [
 "passa",
-"LED 0.93"
+"LED 0.93; placa ÷ cabeça 0.56, braço ÷ cabeça 0.98"
 ],
 "B3": [
 "veto",
 "a: suporte extra (roseta) na parede junto à cabeça"
 ],
 "B4": [
-"passa",
-"LED 0.74"
+"veto",
+"i: placa ÷ cabeça 0.47 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "B13": [
 "veto",
@@ -93,15 +93,15 @@
 ],
 "B16": [
 "passa",
-"LED 0.79"
+"LED 0.79; placa ÷ cabeça 0.57"
 ],
 "B9": [
-"passa",
-"LED 0.82"
+"veto",
+"i: placa ÷ cabeça 0.47 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "B14": [
-"passa",
-"LED 0.80; cabeça mais profunda que a peça?"
+"veto",
+"i: placa ÷ cabeça 0.47 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "B11": [
 "veto",
@@ -109,7 +109,7 @@
 ],
 "B6": [
 "passa",
-"LED 0.92"
+"LED 0.92; placa ÷ cabeça 0.63, braço ÷ cabeça 0.98"
 ],
 "B12": [
 "veto",
@@ -117,15 +117,15 @@
 ],
 "B5": [
 "passa",
-"LED 0.92"
+"LED 0.92; placa ÷ cabeça 0.56, braço ÷ cabeça 1.04"
 ],
 "B15": [
 "passa",
-"LED 0.79"
+"LED 0.79; placa ÷ cabeça 0.53"
 ],
 "B10": [
-"passa",
-"LED 0.67; cabeça mais profunda que a peça?"
+"veto",
+"i: placa ÷ cabeça 0.46 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "C7": [
 "veto",
@@ -133,19 +133,19 @@
 ],
 "C11": [
 "passa",
-"LED não medido (conferir); close com a cabeça cortada"
+"LED não medido (conferir); close com a cabeça cortada; close só da cabeça, sem placa no quadro"
 ],
 "C4": [
-"passa",
-"LED 0.89; gotas na parede (cena)"
+"veto",
+"i: placa ÷ cabeça 0.50 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "C2": [
-"passa",
-"LED 0.87; gotas na parede (cena)"
+"veto",
+"i: placa ÷ cabeça 0.49 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "C13": [
 "passa",
-"LED 0.89"
+"LED 0.89; placa ÷ cabeça 0.53, braço ÷ cabeça 0.91"
 ],
 "C6": [
 "veto",
@@ -160,24 +160,24 @@
 "a: cabeça sobre a torneira"
 ],
 "C12": [
-"passa",
-"LED 0.88"
+"veto",
+"i: braço ÷ cabeça 0.80 (desenho 0,99; faixa 0,89-1,09)"
 ],
 "C15": [
-"passa",
-"LED 0.72"
+"veto",
+"i: placa ÷ cabeça 0.36 (desenho 0,585; faixa 0,53-0,64); placa cortada pelo quadro e achatada"
 ],
 "C16": [
-"passa",
-"LED não medido (conferir)"
+"veto",
+"i: cabeça cortada pelo quadro; placa ÷ cabeça não mensurável e placa visivelmente grande"
 ],
 "C1": [
-"passa",
-"LED não medido (conferir)"
+"veto",
+"i: placa ÷ cabeça 0.67 (desenho 0,585; faixa 0,53-0,64); placa com aba saltada embaixo (não acompanha a parede)"
 ],
 "C14": [
-"passa",
-"LED não medido (conferir); m: espelho de parede atrás"
+"veto",
+"i: placa ÷ cabeça 0.52 (desenho 0,585; faixa 0,53-0,64)"
 ],
 "C3": [
 "veto",
@@ -188,7 +188,7 @@
 "a: garfo em U com pinos laterais"
 ],
 "C9": [
-"passa",
-"LED 0.81"
+"veto",
+"i: placa ÷ cabeça 0.49 (desenho 0,585; faixa 0,53-0,64)"
 ]
 }
