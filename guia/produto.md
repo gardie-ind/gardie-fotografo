@@ -48,7 +48,9 @@ peça é sempre o da still.
 
 ## Lumière (pré-lançamento)
 
-Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-capa-r1.png`,
+Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-capa-r2.png`
+(a r1 tinha o reflexo verde da lente sobre o braço, que os motores copiaram
+como uma luva inventada; a r2 neutraliza essa cor),
 feita de `lumiere/lumiere-nk-bu-ligado-frontal-aberto.jpg` (foto de celular do
 protótipo, ligado), recortada localmente, com o botão touch apagado.
 

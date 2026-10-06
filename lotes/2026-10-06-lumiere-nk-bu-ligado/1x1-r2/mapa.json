@@ -1,0 +1,578 @@
+{
+  "A1": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A1.png",
+    "tentativa": 1,
+    "seed": 2008118054,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A2": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A2.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A3": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A3.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A4": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A4.png",
+    "tentativa": 4,
+    "seed": 1290578145,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A5": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A5.png",
+    "tentativa": 2,
+    "seed": 466943447,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A6": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A6.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A7": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A7.png",
+    "tentativa": 2,
+    "seed": 30866806,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A8": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A8.png",
+    "tentativa": 3,
+    "seed": 1646630454,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A9": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A9.png",
+    "tentativa": 3,
+    "seed": 1121822979,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A10": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A10.png",
+    "tentativa": 4,
+    "seed": 455487284,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A11": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A11.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A12": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A12.png",
+    "tentativa": 1,
+    "seed": 1733960181,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A13": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A13.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A14": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A14.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A15": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A15.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A16": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-lavabo",
+    "arquivo": "parede-lavabo/A16.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B1": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B1.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B2": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B2.png",
+    "tentativa": 3,
+    "seed": 1178469325,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B3": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B3.png",
+    "tentativa": 4,
+    "seed": 1793839799,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B4": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B4.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B5": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B5.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B6": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B6.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B7": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B7.png",
+    "tentativa": 1,
+    "seed": 2010279525,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B8": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B8.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B9": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B9.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B10": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B10.png",
+    "tentativa": 2,
+    "seed": 1387035519,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B11": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B11.png",
+    "tentativa": 4,
+    "seed": 1716800007,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B12": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B12.png",
+    "tentativa": 2,
+    "seed": 1169247506,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B13": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B13.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B14": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B14.png",
+    "tentativa": 1,
+    "seed": 1245191936,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B15": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B15.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B16": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "parede-banheiro-3-4",
+    "arquivo": "parede-banheiro-3-4/B16.png",
+    "tentativa": 3,
+    "seed": 1877523077,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C1": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C1.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C2": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C2.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C3": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C3.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C4": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C4.png",
+    "tentativa": 1,
+    "seed": 483252462,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C5": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C5.png",
+    "tentativa": 4,
+    "seed": 78895635,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C6": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C6.png",
+    "tentativa": 1,
+    "seed": 826336223,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C7": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C7.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C8": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C8.png",
+    "tentativa": 3,
+    "seed": 1686605933,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C9": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C9.png",
+    "tentativa": 2,
+    "seed": 139356311,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C10": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C10.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C11": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C11.png",
+    "tentativa": 3,
+    "seed": 2004112761,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C12": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C12.png",
+    "tentativa": 2,
+    "seed": 178272262,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C13": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C13.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C14": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C14.png",
+    "tentativa": 4,
+    "seed": 1052975759,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C15": {
+    "motor": "gemini:gemini-2.5-flash-image",
+    "modelo": "gemini-2.5-flash-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C15.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C16": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "close-detalhe",
+    "arquivo": "close-detalhe/C16.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  }
+}
