@@ -48,7 +48,7 @@ peça é sempre o da still.
 
 ## Lumière (pré-lançamento)
 
-Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-capa-r3.png`
+Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-fechado-capa-r4.png` (foto `lumiere-nk-bu-ligado-frontal.jpg`, braço paralelo à parede, botão apagado, vidro limpo; recomendada). Anterior: `referencias/capa/lumiere-nk-bu-ligado-capa-r3.png`
 (vidro limpo; a r2 tinha a sujeira do protótipo; a r1 tinha o reflexo verde da lente sobre o braço, que os motores copiaram
 como uma luva inventada; a r2 neutraliza essa cor),
 feita de `lumiere/lumiere-nk-bu-ligado-frontal-aberto.jpg` (foto de celular do
@@ -109,6 +109,7 @@ protótipo, ligado), recortada localmente, com o botão touch apagado.
   (rodada r2); a capa r3 tem o vidro limpo, preenchido com o tom do próprio
   vidro, logo preservado.
 - **Cabo:** embutido; cabo à vista é veto (d).
+- **Tubo do braço:** no protótipo mede ≈7-8,5 mm (escala da cabeça), contra 12,7 mm no desenho V3 (D-0003/D-0006). A confirmar com o Thiago qual vale; até lá a razão do tubo não veta.
 - **Acabamento da capa:** níquel escovado (NK.BU): metal acetinado, sem o
   espelhamento do cromado. Os outros acabamentos não têm referência.
 - **Medidas do desenho V3:** conjunto fechado 252,6 × 270,3 mm, cabeça Ø ≈ 205 mm,
