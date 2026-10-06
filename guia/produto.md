@@ -99,8 +99,21 @@ protótipo, ligado), recortada localmente, com o botão touch apagado.
   final tem o touch no toque da própria estrutura metálica, sem botão visível
   (Thiago, 2026-10-06). Na foto: nenhum botão no vidro (critério a2, apagado
   no retoque) e nenhum botão na estrutura.
-- **Suporte (a região que mais alucina no Lumière):** o braço curto prende na
-  rótula central, atrás da cabeça. Não há garfo em U nem pinos laterais
+- **Pescoço (rótula central, B-0001; veto a se faltar ou estiver no lugar
+  errado):** cilindro vertical preso no centro da traseira da cabeça, que desce
+  até perto da borda de baixo; o braço curto encaixa na ponta de baixo dele,
+  ATRÁS da cabeça. Consequências medidas:
+  - de frente, o cotovelo fica sob a borda da cabeça (dentro da largura dela) e
+    o braço curto some atrás da cabeça; braço curto entrando na borda lateral
+    do aro é invenção;
+  - em 3/4 ou de lado, o pescoço aparece atrás da cabeça, junto com o braço
+    curto chegando ao centro (`lumiere/lumiere-nk-bu-ligado-3-4.jpg`). Em 3/4
+    sem pescoço visível: veto a;
+  - a capa frontal não mostra o pescoço; os motores não o recebem e o
+    inventam errado. Enquanto não houver referência da traseira, use só
+    receitas frontais para o Lumière.
+- **Suporte (a região que mais alucina no Lumière):** o braço curto prende no
+  pescoço, atrás da cabeça. Não há garfo em U nem pinos laterais
   (garfo = veto a; 10 de 24 no lote 2026-10-06 r1), nem poste ou torneira.
 - **LED:** 4500K, branco neutro (Thiago, 2026-10-06). A foto do protótipo não tem
   branco de referência; confira a cor nas candidatas pelo passo 6 de
