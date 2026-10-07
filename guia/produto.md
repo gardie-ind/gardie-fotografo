@@ -48,6 +48,7 @@ peça é sempre o da still.
 
 ## Lumière (pré-lançamento)
 
+Capa 3/4 (pescoço e braço curto por trás da cabeça, conforme A-0001): `referencias/capa/lumiere-nk-bu-ligado-3-4-capa-r5.png`, para receitas em 3/4.
 Capa por exceção (Thiago, 2026-10-06): `referencias/capa/lumiere-nk-bu-ligado-fechado-capa-r4.png` (foto `lumiere-nk-bu-ligado-frontal.jpg`, braço paralelo à parede, botão apagado, vidro limpo; recomendada). Anterior: `referencias/capa/lumiere-nk-bu-ligado-capa-r3.png`
 (vidro limpo; a r2 tinha a sujeira do protótipo; a r1 tinha o reflexo verde da lente sobre o braço, que os motores copiaram
 como uma luva inventada; a r2 neutraliza essa cor),
@@ -83,8 +84,8 @@ protótipo, ligado), recortada localmente, com o botão touch apagado.
   | eixo da placa → eixo do cotovelo ÷ Ø da cabeça | ≈0,99 | ±10%; menor só com o braço girado para a câmera |
   | Ø da tampa ÷ largura da placa | ≈0,30 | ±15% |
 
-  Em 3/4 ou de lado, meça as alturas (que não encurtam): altura da placa ÷
-  altura da cabeça = 0,585 ±10%.
+  Em 3/4 (como `lumiere-nk-bu-ligado-3-4.jpg`), a cabeça fica mais perto da
+  câmera: altura da placa ÷ altura da cabeça = 0,49 ±10% (medido na foto real).
 - **Placa na parede (veto a):** a face da placa fica no plano da parede. Em
   3/4, as bordas de cima e de baixo da placa convergem para o mesmo ponto de
   fuga das juntas horizontais da parede (±3°), e as bordas laterais ficam
