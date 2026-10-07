@@ -83,6 +83,7 @@ Uma linha por imagem em que o agente e o Thiago discordaram, ou que serve de
 
 | Data | Imagem | Agente | Thiago | Motivo do Thiago | Mudança no critério |
 |---|---|---|---|---|---|
+| 2026-10-07 | todas: Classique Lux 2026-10-01 (as 17 publicaria) e Lumière r1-r5 | — | descartar tudo | nenhuma ficou 100% boa | aprovadas/10202CR e lotes/ removidos; o critério segue sem a medida que separaria as boas (pendente) |
 | 2026-10-06 | Lumière r3: 18 das 26 aprovadas pelo agente | passa | não publicaria (geral) | placa de parede que não acompanha a parede; componentes desproporcionais | guia/produto.md › Lumière: peças contadas pelos desenhos V3, razões medidas (placa ÷ cabeça 0,585 ±10%, braço ÷ cabeça 0,99 ±10%) e placa no plano da parede (veto a). Reaplicado: 8 de 48 passam |
 | premissas (resposta 2) | `benchmark-ml/10202CR/10202CR-4` | — | publicaria | fidelidade do produto; o logo "geroie" e o cabo fora de vista não impedem | âncora: cabo ausente na vista frontal e grafia do logo não são veto (critérios d e g) |
 | 2026-10-01 | `1x1/B5`, `1x1/E13` (gemini-2.5-flash-image) | veto a (botão touch inventado no vidro) | publicaria, com o botão apagado | o botão é defeito local; tamanho e formato estão entre os melhores do lote | critério a2 criado: botão ou ícone touch inventado no vidro é CORRIGIR SE DER |
