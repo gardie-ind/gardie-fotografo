@@ -141,6 +141,27 @@ peça é sempre o da still.
   - topo do sino ÷ disco: 0,19;
   - pivô → topo do disco (onde a cúpula encontra o disco) ÷ disco: 0,36 na
     still; ≈0,41 com a câmera mais baixa (foto frontal real).
+  - Medidas por contorno (lote 2026-10-11, método em
+    `lotes/2026-10-11-classique-lux-cromado/verificacao.md`), na capa
+    `classique-lux-cromado-ligado-capa-r1` (câmera a ≈7°) e nas três fotos
+    frontais reais de `referencias/classique-lux/` (câmera a ≈30°):
+
+    | Razão | Capa | Fotos reais |
+    |---|---|---|
+    | disco ÷ cabeça (eixo maior) | 0,753 | 0,695 a 0,697 |
+    | Ø vidro ÷ cabeça | 0,700 | 0,735 a 0,738 |
+    | difusor ÷ cabeça | 0,109 | 0,079 a 0,086 |
+    | aro ÷ cabeça | 0,041 | 0,046 a 0,052 |
+    | topo do sino (2% do disco abaixo do pivô) ÷ disco | 0,198 | 0,228 a 0,234 |
+    | pivô → disco (1ª linha com ≥97% da base) ÷ disco | 0,354 | 0,296 a 0,302 |
+    | altura dos pinos ÷ altura da cabeça | 0,51 | — |
+    | LED, B/R do halo ÷ branco neutro | 0,98 | 0,78 (4500K) e 1,16 (6000K) |
+
+    Fita do garfo e espessura do disco ainda não foram medidas. Divergências
+    com a leitura em grade, a confirmar com o Thiago: disco ÷ cabeça na still
+    (0,78 na grade, 0,753 aqui) e pivô → disco na foto real (≈0,41 na grade,
+    0,30 aqui; a elipse do disco mostra a câmera da foto real mais alta que a
+    da still, não mais baixa).
 - **Demais razões e modelos:** meça na capa no primeiro lote (vidro,
   difusor, aro, fita do garfo, pinos, espessura do disco; braço e placa nos de
   parede) e registre aqui.

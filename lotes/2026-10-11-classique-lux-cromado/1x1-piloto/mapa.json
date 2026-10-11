@@ -1,0 +1,194 @@
+{
+  "A1": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A1.png",
+    "tentativa": 1,
+    "seed": 2078737826,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A2": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A2.png",
+    "tentativa": 4,
+    "seed": 556779429,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A3": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A3.png",
+    "tentativa": 3,
+    "seed": 2062435226,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A4": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A4.png",
+    "tentativa": 4,
+    "seed": 962474604,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A5": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A5.png",
+    "tentativa": 2,
+    "seed": 886817836,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A6": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A6.png",
+    "tentativa": 1,
+    "seed": 554685900,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A7": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A7.png",
+    "tentativa": 3,
+    "seed": 536845692,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A8": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-bancada",
+    "arquivo": "mesa-banheiro-bancada/A8.png",
+    "tentativa": 2,
+    "seed": 710936615,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B1": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B1.png",
+    "tentativa": 4,
+    "seed": 1887095152,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B2": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B2.png",
+    "tentativa": 4,
+    "seed": 1462314119,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B3": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B3.png",
+    "tentativa": 3,
+    "seed": 1031415575,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B4": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B4.png",
+    "tentativa": 3,
+    "seed": 2137228513,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B5": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B5.png",
+    "tentativa": 2,
+    "seed": 1086050196,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B6": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B6.png",
+    "tentativa": 2,
+    "seed": 1748390573,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B7": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B7.png",
+    "tentativa": 1,
+    "seed": 517924972,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B8": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-close-base",
+    "arquivo": "mesa-close-base/B8.png",
+    "tentativa": 1,
+    "seed": 1370509374,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  }
+}
