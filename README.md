@@ -102,6 +102,8 @@ antes do veredito.
   CDN.
 - `curva_vidro.py`: curva o reflexo dentro do vidro, sem IA (retoque do item
   h de `guia/criterios.md`).
+- `cabo_real.py`: desenha o cabo branco na rota real, sem IA e sem tocar no
+  produto (retoque do item d2 de `guia/criterios.md`).
 
 Se uma docstring divergir de `guia/`, vale o guia.
 

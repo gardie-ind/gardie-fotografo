@@ -116,7 +116,8 @@ peça é sempre o da still.
     10202CR-1, -4 e -5). O que pode aparecer é o cabo sobre a superfície,
     saindo de TRÁS da base, rente a ela (`classique-lux-frontal-*`; vídeo do
     Royale Lux, 13 s). Sem cabo à vista também é real, quando ele segue reto
-    para trás da base.
+    para trás da base, mas com o LED aceso o cabo faz falta
+    (`guia/criterios.md` › d2).
   - **De lado, de trás ou com câmera alta:** a alça cabeça → pivô aparece
     (`classique-lux-lateral`, `-traseira-cabo`, `-virado-para-cima`).
   - Rotas que não existem: cabo por fora do suporte até a tomada; cabo saindo

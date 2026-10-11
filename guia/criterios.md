@@ -16,7 +16,8 @@ confirmou. A classe de um item só muda com a palavra dele.
 | a. Forma do produto inteiro: as mesmas peças da referência, na mesma quantidade; nada inventado, faltando, entortado ou "melhorado"; cabeça circular (elipse coerente com o ângulo) | VETO (Thiago, respostas 5 e 6) |
 | b. Acabamento igual ao da referência; cromado lê prata, nunca dourado | VETO (padrão — confirmar com o Thiago) |
 | c. LED no mesmo estado (aceso ou apagado) e na mesma cor da referência | VETO (padrão — confirmar com o Thiago) |
-| d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo está certo (10202CR-4). Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
+| d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo não reprova (10202CR-4); com o LED aceso, ver d2. Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
+| d2. LED aceso e cabo fora de vista no produto de mesa: o cabo faz falta (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/A1` e `A4`). Acrescente o cabo real no retoque | CORRIGIR SE DER (Thiago) |
 | e. Cabo na rota real do modelo: branco, fino, sem conector inventado, com folga compatível com 1,5 m | VETO (padrão — confirmar com o Thiago) |
 | f. Plug, quando aparece, fiel ao NBR 14136 da referência; mostrar o fio ligado na tomada não é exigido | VETO (Thiago) |
 | f2. Plug solto na bancada com o LED aceso (contradição física) | VETO (padrão — confirmar com o Thiago) |
@@ -87,9 +88,10 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    mesma cena (toalha, parede). Por esse método, as fotos reais dão ≈0,78 em
    4500K e ≈1,07 em 6000K. VETO se a candidata se afastar mais de 0,15 da
    capa, metade dessa distância (padrão — calibrar).
-7. **Cabo e plug (d, e, f):** confira a vista contra `guia/produto.md` › Cabo
-   e plug, que cita as fotos reais de cada vista. Plug visível: compare a
-   forma com `referencias/chicote-eletrico/`.
+7. **Cabo e plug (d, d2, e, f):** confira a vista contra `guia/produto.md` ›
+   Cabo e plug, que cita as fotos reais de cada vista. Plug visível: compare a
+   forma com `referencias/chicote-eletrico/`. LED aceso sem cabo à vista:
+   anote d2.
 8. **Notas (g, h, j, m):** logo, reflexo, ambiente e outros espelhos.
 9. **Registro:** vetada vai para `_descartados/` com o item da tabela e a
    medida que reprovou; aprovada vira candidata ao lote, com as notas.
@@ -124,6 +126,17 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
     inventar outro objeto no lugar.
 - **Reflexo (h):** `ferramentas/curva_vidro.py` curva o reflexo existente,
   sem IA, só dentro do círculo do vidro.
+- **Cabo (d2):** `ferramentas/cabo_real.py` desenha o cabo sem IA, com o
+  perfil medido no cabo da A1 de 2026-10-11, e não toca no produto.
+  - Rota de `guia/produto.md` › Cabo e plug: o 1º ponto fica escondido atrás
+    da base, na direção da saída, e o cabo corre rente à bancada até a borda
+    do quadro, com folga (curva leve, nunca reta esticada).
+  - Largura: 5 mm na escala do Ø da base junto dela, diminuindo para o fundo.
+  - Confira em 8× a saída de trás da base (sem ponta solta nem vão) e, em 1×,
+    se o cabo se lê como cabo.
+  - Em 2026-10-11, o FLUX Fill numa faixa da rota acertou 1 de 16 tentativas
+    (a A1, e com a ponta solta a 10 px da base), e o Kontext em edição pôs
+    plug solto (f2) e mexeu no enquadramento.
 - **Editor de imagem inteira** (Kontext, Seedream ou Gemini em edição):
   recodifica o produto, então a candidata volta ao checklist desde o começo.
 - **Depois de toda edição:** rode

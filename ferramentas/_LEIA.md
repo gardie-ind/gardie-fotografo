@@ -23,6 +23,7 @@ Credenciais ficam fora do repositório. Vale a variável de ambiente ou o arquiv
 - **`estudio_fal.py`**: fal.ai. Re-render por referência (`rerender_kontext`, `rerender_seedream` com várias refs) e retoque LOCAL por máscara (`recortar` BiRefNet, `mascara-fundo`, `fundo` FLUX Fill, `relight`). Máscara serve só para defeito local, nunca para criar cena.
 - **`inspecao_imagem.py`**: `diff` (a edição mudou algo? <2% = falhou), `crops` (quadrantes em resolução nativa) e `grade` (grade rotulada a cada N px, com zoom e recorte opcionais, para MEDIR proporções contra a referência).
 - **`curva_vidro.py`**: warp geométrico do reflexo dentro do vidro, sem IA. É utilitário opcional de retoque.
+- **`cabo_real.py`**: desenha o cabo branco do espelho na rota real (sai de trás da base e corre rente à bancada), sem IA, com o perfil medido num cabo aprovado. O produto passa na frente (alfa do recorte do `estudio_fal.py recortar`) e sai com 0 pixel alterado. `python3 cabo_real.py foto.png recorte.png rota.json saida.png`; o formato do `rota.json` está na docstring.
 - **`upload_shopify.py`** / **`shopify_auth.py`**: sobem imagens aprovadas para o Shopify Files e imprimem a URL CDN. Caminhos relativos também são procurados em `aprovadas/`.
 
 ## Exemplo
