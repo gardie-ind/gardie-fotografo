@@ -86,10 +86,10 @@ peça é sempre o da still.
 
 - **Classique Lux:** garfo em U de fita única que abraça a metade de baixo da
   cabeça, com pinos nas laterais na altura do centro. O garfo se fixa num
-  pivô cromado curto, no topo do sino; o cabo entra por trás dele. Logo
-  abaixo do pivô nasce o sino cromado, sem coluna e sem pescoço. O sino abre
-  numa cúpula sobre o disco cromado, que tem um anel fino de borracha preta
-  embaixo.
+  pivô cromado curto, no topo do sino; o cabo entra nele por cima, vindo de
+  trás da cabeça. Logo abaixo do pivô nasce o sino cromado, sem coluna e sem
+  pescoço. O sino abre numa cúpula sobre o disco cromado, que tem um anel
+  fino de borracha preta embaixo.
 - **Royale Lux:** coluna cilíndrica fina e reta com colarinhos perto do topo e
   da base, garfo em U com pinos laterais e base em cúpula rasa.
 - **Mobile Lux:** placa retangular cromada de parede com 2 tampas redondas,

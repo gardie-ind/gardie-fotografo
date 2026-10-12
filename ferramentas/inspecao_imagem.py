@@ -16,6 +16,14 @@ Uso:
          cada 5) para MEDIR proporções lendo coordenadas. `zoom` amplia antes de
          desenhar (padrão 1; os rótulos continuam em px da imagem original) e o
          recorte opcional limita a região (coordenadas originais).
+  py inspecao_imagem.py colagem capa.png x0,y0,x1,y1 candidata.png x0,y0,x1,y1 escala [saida.png]
+      -> procura o trecho cromado da capa (1ª caixa; no Classique Lux, o miolo
+         do sino) só dentro do mesmo trecho da candidata (2ª caixa, com folga),
+         em escalas de 0,8 a 1,2 × `escala` (Ø da base na candidata ÷ Ø da base
+         na capa, lidos com `grade`), normal e espelhado, e imprime a
+         correlação (NCC). NCC alto = o cromado repete o reflexo da capa: luz
+         de estúdio colada na cena (item h2 de guia/criterios.md). saida.png
+         põe os dois recortes lado a lado, para conferir.
 """
 import sys, os
 import warnings
@@ -118,6 +126,70 @@ def grade(img_p, out_p, passo=50, zoom=1.0, recorte=None):
     return out_p
 
 
+# limiar do item h2 de guia/criterios.md (se divergir, vale o guia)
+LIMIAR_COLAGEM = 0.76
+
+
+def _ncc(I, T):
+    """NCC de T em todas as posições válidas de I (FFT + imagens integrais)."""
+    import numpy as np
+    H, W = I.shape
+    h, w = T.shape
+    Tz = T - T.mean()
+    nT = np.sqrt((Tz ** 2).sum())
+    F = np.fft.rfft2(I, s=(H + h, W + w))
+    G = np.fft.rfft2(Tz[::-1, ::-1], s=(H + h, W + w))
+    c = np.fft.irfft2(F * G, s=(H + h, W + w))[h - 1:H, w - 1:W]
+    S = np.pad(I, ((1, 0), (1, 0))).cumsum(0).cumsum(1)
+    S2 = np.pad(I * I, ((1, 0), (1, 0))).cumsum(0).cumsum(1)
+    soma = lambda A: A[h:, w:] - A[:-h, w:] - A[h:, :-w] + A[:-h, :-w]
+    s1, s2 = soma(S), soma(S2)
+    var = s2 - s1 * s1 / (h * w)
+    r = c / (np.sqrt(np.maximum(var, 1e-6)) * nT + 1e-9)
+    r[var < 25 * h * w] = -1   # trecho liso (desvio < 5 níveis) não é cromado
+    return r
+
+
+def colagem(capa_p, caixa_capa, cand_p, janela, escala, out_p=None):
+    """Quanto o cromado da candidata repete o reflexo da capa (item h2)."""
+    import numpy as np
+    T0 = Image.open(capa_p).convert("L").crop(caixa_capa)
+    cand = Image.open(cand_p).convert("RGB")
+    I = np.asarray(cand.convert("L").crop(janela)).astype(float)
+    melhor = None
+    for e in np.arange(0.8, 1.2001, 0.01) * escala:
+        w, h = int(round(T0.width * e)), int(round(T0.height * e))
+        if w < 8 or h < 8 or w >= I.shape[1] or h >= I.shape[0]:
+            continue
+        for espelho in (False, True):
+            Ti = T0.transpose(Image.FLIP_LEFT_RIGHT) if espelho else T0
+            c = _ncc(I, np.asarray(Ti.resize((w, h), Image.LANCZOS)).astype(float))
+            k = np.unravel_index(np.argmax(c), c.shape)
+            if melhor is None or c[k] > melhor[0]:
+                melhor = (float(c[k]), e / escala, janela[0] + int(k[1]), janela[1] + int(k[0]), w, h, espelho)
+    if melhor is None:
+        raise SystemExit("janela menor que o trecho da capa nessa escala: aumente a janela ou confira a escala")
+    v, e, x, y, w, h, espelho = melhor
+    print("NCC %.3f (escala %.2f x a esperada; em x=%d y=%d, %dx%d; espelhado: %s)" % (v, e, x, y, w, h, "sim" if espelho else "não"))
+    if v >= LIMIAR_COLAGEM:
+        print("VEREDITO: NCC >= %.2f: o cromado repete o reflexo da capa, luz de estúdio colada na cena (h2, VETO)." % LIMIAR_COLAGEM)
+    else:
+        print("VEREDITO: NCC < %.2f: o cromado reflete outra luz, não a da capa." % LIMIAR_COLAGEM)
+    if e < 0.83 or e > 1.17:
+        print("aviso: o melhor casamento ficou na borda das escalas; confira a escala e a janela no recorte.")
+    if out_p:
+        a = Image.open(capa_p).convert("RGB").crop(caixa_capa)
+        b = cand.crop((x, y, x + w, y + h)).resize(a.size, Image.LANCZOS)
+        if espelho:
+            b = b.transpose(Image.FLIP_LEFT_RIGHT)
+        tela = Image.new("RGB", (a.width * 2 + 10, a.height), (255, 255, 255))
+        tela.paste(a, (0, 0))
+        tela.paste(b, (a.width + 10, 0))
+        tela.save(out_p)
+        print(out_p, "(capa | candidata)")
+    return v
+
+
 if __name__ == "__main__":
     if len(sys.argv) < 4:
         print(__doc__)
@@ -137,6 +209,10 @@ if __name__ == "__main__":
         grade(sys.argv[2], sys.argv[3],
               int(extra[0]) if len(extra) > 0 else 50,
               float(extra[1]) if len(extra) > 1 else 1.0, rec)
+    elif sys.argv[1] == "colagem" and len(sys.argv) >= 7:
+        caixa = lambda s: tuple(int(v) for v in s.split(","))
+        colagem(sys.argv[2], caixa(sys.argv[3]), sys.argv[4], caixa(sys.argv[5]), float(sys.argv[6]),
+                sys.argv[7] if len(sys.argv) > 7 else None)
     else:
         print(__doc__)
         sys.exit(1)

@@ -97,7 +97,9 @@ antes do veredito.
   - `diff`, que detecta edição que não mudou nada;
   - `crops`, que gera recortes em resolução nativa;
   - `grade`, que desenha a grade rotulada, com recorte e zoom, para medir
-    proporções.
+    proporções;
+  - `colagem`, que mede se o cromado repete o reflexo da capa (item h2 de
+    `guia/criterios.md`).
 - `upload_shopify.py`: sobe as imagens para o Shopify Files e imprime o link
   CDN.
 - `curva_vidro.py`: curva o reflexo dentro do vidro, sem IA (retoque do item
