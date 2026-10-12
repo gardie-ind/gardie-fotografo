@@ -24,7 +24,7 @@ confirmou. A classe de um item só muda com a palavra dele.
 | g. Logo com a grafia errada, ou ausente (o Thiago publicaria a 10202CR-4 com "geroie") | CORRIGIR SE DER (padrão — confirmar com o Thiago) |
 | g2. Logo fora da posição da capa (no aro, no vidro) | VETO, como a (padrão — confirmar com o Thiago) |
 | h. Física do reflexo (`guia/cena.md`) | CORRIGIR SE DER (Thiago) |
-| h2. Luz de colagem: o cromado repete o reflexo da capa em vez de refletir a cena, e o produto parece recortado do estúdio e colado no ambiente. Medida no passo 5: NCC ≥ 0,76 (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/B5` e `B7`) | VETO (Thiago) |
+| h2. Luz de colagem: o cromado repete o reflexo da capa em vez de refletir a cena, e o produto parece recortado do estúdio e colado no ambiente. Medida no passo 5: NCC do detalhe ≥ 0,32 (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/B5` e `B7`) | VETO (Thiago) |
 | i. Escala e proporções: fiel em TODAS as proporções do produto e no tamanho dele no ambiente | VETO (Thiago) |
 | j. Ambiente (`guia/cena.md`) | CORRIGIR SE DER, com liberdade criativa (Thiago) |
 | k. Montagem e uso reais (`guia/cena.md` › Lugar) | VETO (padrão — confirmar com o Thiago) |
@@ -88,9 +88,12 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
      Classique Lux cromado, o miolo do sino, `700,1110,870,1320`.
    - Janela: o mesmo trecho na candidata, com folga, lido na grade.
    - Escala: Ø da base na candidata ÷ Ø da base na capa (802 px na r1).
-   - NCC ≥ 0,76: VETO h2. No piloto de 2026-10-11, as cópias da capa deram
-     0,79 a 0,96 (B5 e B7, 0,96) e as que refletiam a cena, 0,62 a 0,73
-     (A1 e A4, 0,70) (padrão — calibrar).
+   - A ferramenta compara o detalhe (passa-alta), não a mancha escura que
+     todo sino reflete: sem o filtro, sinos refeitos com a luz da cena deram
+     até 0,82 e se confundiam com as cópias.
+   - NCC ≥ 0,32: VETO h2. No piloto de 2026-10-11, as cópias da capa deram
+     0,40 a 0,84 (B5 0,83 e B7 0,84) e as que refletiam a cena, 0,20 a 0,25
+     (A1 0,20 e A4 0,21) (padrão — calibrar).
 6. **LED (c):** mesmo estado da capa. Para a cor, meça o B/R mediano só em
    pixels não saturados (canal máximo entre 60 e 244): no anel ou, se ele
    estourar, numa faixa de ~3% do Ø logo por dentro dele (o halo no vidro),

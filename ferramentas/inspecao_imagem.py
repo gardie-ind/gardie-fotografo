@@ -21,9 +21,12 @@ Uso:
          do sino) só dentro do mesmo trecho da candidata (2ª caixa, com folga),
          em escalas de 0,8 a 1,2 × `escala` (Ø da base na candidata ÷ Ø da base
          na capa, lidos com `grade`), normal e espelhado, e imprime a
-         correlação (NCC). NCC alto = o cromado repete o reflexo da capa: luz
-         de estúdio colada na cena (item h2 de guia/criterios.md). saida.png
-         põe os dois recortes lado a lado, para conferir.
+         correlação (NCC) do detalhe: as duas imagens passam por um filtro
+         passa-alta (menos o desfoque gaussiano de 6% da largura do trecho),
+         para comparar o desenho do reflexo e não a mancha escura que todo sino
+         tem. NCC alto = o cromado repete o reflexo da capa: luz de estúdio
+         colada na cena (item h2 de guia/criterios.md). saida.png põe os dois
+         recortes lado a lado, para conferir.
 """
 import sys, os
 import warnings
@@ -127,7 +130,8 @@ def grade(img_p, out_p, passo=50, zoom=1.0, recorte=None):
 
 
 # limiar do item h2 de guia/criterios.md (se divergir, vale o guia)
-LIMIAR_COLAGEM = 0.76
+LIMIAR_COLAGEM = 0.32
+PASSA_ALTA = 0.06   # sigma do desfoque subtraído, em fração da largura do trecho
 
 
 def _ncc(I, T):
@@ -146,24 +150,29 @@ def _ncc(I, T):
     s1, s2 = soma(S), soma(S2)
     var = s2 - s1 * s1 / (h * w)
     r = c / (np.sqrt(np.maximum(var, 1e-6)) * nT + 1e-9)
-    r[var < 25 * h * w] = -1   # trecho liso (desvio < 5 níveis) não é cromado
+    r[var < 4 * h * w] = -1    # trecho liso (desvio < 2 níveis no detalhe) não é cromado
     return r
 
 
 def colagem(capa_p, caixa_capa, cand_p, janela, escala, out_p=None):
     """Quanto o cromado da candidata repete o reflexo da capa (item h2)."""
     import numpy as np
+    from PIL import ImageFilter
+    def passa_alta(im, s):
+        return np.asarray(im).astype(float) - np.asarray(im.filter(ImageFilter.GaussianBlur(s))).astype(float)
     T0 = Image.open(capa_p).convert("L").crop(caixa_capa)
     cand = Image.open(cand_p).convert("RGB")
-    I = np.asarray(cand.convert("L").crop(janela)).astype(float)
+    Jl = cand.convert("L").crop(janela)
     melhor = None
     for e in np.arange(0.8, 1.2001, 0.01) * escala:
         w, h = int(round(T0.width * e)), int(round(T0.height * e))
-        if w < 8 or h < 8 or w >= I.shape[1] or h >= I.shape[0]:
+        if w < 8 or h < 8 or w >= Jl.width or h >= Jl.height:
             continue
+        s = max(1.0, PASSA_ALTA * w)
+        I = passa_alta(Jl, s)
         for espelho in (False, True):
-            Ti = T0.transpose(Image.FLIP_LEFT_RIGHT) if espelho else T0
-            c = _ncc(I, np.asarray(Ti.resize((w, h), Image.LANCZOS)).astype(float))
+            Ti = (T0.transpose(Image.FLIP_LEFT_RIGHT) if espelho else T0).resize((w, h), Image.LANCZOS)
+            c = _ncc(I, passa_alta(Ti, s))
             k = np.unravel_index(np.argmax(c), c.shape)
             if melhor is None or c[k] > melhor[0]:
                 melhor = (float(c[k]), e / escala, janela[0] + int(k[1]), janela[1] + int(k[0]), w, h, espelho)
