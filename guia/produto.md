@@ -107,19 +107,24 @@ peça é sempre o da still.
   aparente; cabo pendurado é invenção). Nenhum modelo sem LED tem cabo.
 - **O cabo:** branco, fino (cerca de 5 mm, tipo fio de abajur), com 1,5 m do
   espelho ao plug.
-- **Rota no Classique Lux e no Royale Lux (mesa):** sai da carcaça atrás da
-  cabeça, pelo passa-fio no centro de baixo → faz uma alça curta → entra no
-  pivô, por trás → corre por dentro do suporte → sai por um furo na traseira
-  da base, rente à mesa → segue pela superfície até a tomada.
-  - **De frente ou de 3/4 frontal:** a alça fica escondida atrás da cabeça, e
-    a junção cabeça/sino aparece sem cabo (still; `classique-lux-frontal-*`;
-    10202CR-1, -4 e -5). O que pode aparecer é o cabo sobre a superfície,
-    saindo de TRÁS da base, rente a ela (`classique-lux-frontal-*`; vídeo do
-    Royale Lux, 13 s). Sem cabo à vista também é real, quando ele segue reto
-    para trás da base, mas com o LED aceso o cabo faz falta
-    (`guia/criterios.md` › d2).
+- **Rota no Classique Lux e no Royale Lux (mesa):** sai do meio da traseira
+  da cabeça, logo abaixo do interruptor → desce numa alça curta → entra no
+  pivô, por cima → corre por dentro do suporte → sai por um furo na traseira
+  da base, rente à mesa → segue pela superfície até a tomada
+  (`classique-lux-traseira-cabo`, `-diagonal`, `-diagonal-2`).
+  - **De frente, com a borda da cabeça quase encostada no pivô:** a alça fica
+    escondida atrás da cabeça, e a junção cabeça/sino aparece sem cabo
+    (still; `classique-lux-frontal-*`; 10202CR-1, -4 e -5).
+  - **De 3/4, com vão à vista entre a borda de baixo da cabeça e o pivô:** a
+    alça aparece nesse vão. Ela surge de trás da borda da cabeça, sem ponto
+    de saída à vista, e desce em curva até o topo do pivô, onde entra por
+    cima (Thiago, 2026-10-12, com a rota marcada na `1x1-piloto/A1`).
+  - **Sobre a superfície, de frente ou de 3/4:** o cabo sai de TRÁS da base,
+    rente a ela (`classique-lux-frontal-*`; vídeo do Royale Lux, 13 s). Sem
+    cabo à vista também é real, quando ele segue reto para trás da base, mas
+    com o LED aceso o cabo faz falta (`guia/criterios.md` › d2).
   - **De lado, de trás ou com câmera alta:** a alça cabeça → pivô aparece
-    (`classique-lux-lateral`, `-traseira-cabo`, `-virado-para-cima`).
+    inteira (`classique-lux-lateral`, `-traseira-cabo`, `-virado-para-cima`).
   - Rotas que não existem: cabo por fora do suporte até a tomada; cabo saindo
     do topo da base direto para a parede; cabo na frente do balcão.
 - **Rota nos modelos de parede (Mobile, Visage e Flex Lux):** o cabo sai de

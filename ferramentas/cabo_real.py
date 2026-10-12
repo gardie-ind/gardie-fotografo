@@ -6,7 +6,8 @@ Desenha o cabo branco do espelho sobre a foto, na rota real do modelo
 pela superfície até a borda do quadro. O corpo do cabo é opaco (os veios da
 bancada somem sob ele); fora do corpo, só a sombra escurece a superfície real.
 O produto fica intocado: o cabo passa por trás dele (alfa do recorte) e os
-pixels do produto saem iguais aos da foto.
+pixels do produto saem iguais aos da foto. A alça no ar, da traseira da
+cabeça ao topo do pivô, usa o modo "suspenso" (abaixo).
 
 O perfil transversal foi medido no cabo da A1 do lote 2026-10-11 (Classique
 Lux cromado, publicaria): núcleo claro de ~5 px, +15,6 sobre o mármore, e
@@ -36,6 +37,18 @@ rota.json:
   base       desenha sobre esta imagem em vez da foto (opcional).
   janela     [xa, xb]: o cabo novo vai até xa e se funde à base até xb
              (opcional; serve para emendar um cabo que já existe na base).
+
+Trecho no ar (da traseira da cabeça até o topo do sino), com "suspenso": true:
+  o cabo vira um cilindro iluminado pela luz da cena, sem sombra numa
+  superfície, e só aparece na janela "visivel". Os pontos de controle começam
+  escondidos atrás da cabeça e terminam escondidos no pivô.
+  visivel    máscara PNG: branco = o cabo passa na frente. Padrão: o fundo do
+             recorte (1 - alfa). Passe a máscara do vão quando o recorte o
+             engolir (o BiRefNet preenche o vão entre a cabeça e o garfo): os
+             pixels "do produto" alterados na janela têm de ser só fundo.
+  luz        direção da luz [x, y, z] (x para a direita, y para baixo, z para
+             longe da câmera). Padrão [-0.75, -0.35, -0.55]: janela à esquerda.
+  brilho     [lado da sombra, lado da luz] em níveis (padrão [135, 205]).
 
 Depois, rode `inspecao_imagem.py diff foto.png saida.png saida-mascara.png` e
 leia os recortes do cabo (saída de trás da base, trajeto e borda do quadro).
@@ -139,8 +152,15 @@ def desenhar(foto, recorte, rota, saida):
     rec = Image.open(recorte)
     alfa = np.asarray((rec.getchannel('A') if 'A' in rec.getbands() else rec.convert('L')).resize((W, H))).astype(float) / 255
     prod_duro = alfa > 60 / 255
-    M = iluminacao(original, alfa > 0.2)
-    Ml = np.where(M @ [0.299, 0.587, 0.114] > 50, M @ [0.299, 0.587, 0.114], 200.0)
+    susp = bool(r.get('suspenso'))
+    if susp:
+        if r.get('visivel'):
+            vis = np.asarray(Image.open(r['visivel']).convert('L').resize((W, H))).astype(float) / 255
+        else:
+            vis = 1 - alfa
+    else:
+        M = iluminacao(original, alfa > 0.2)
+        Ml = np.where(M @ [0.299, 0.587, 0.114] > 50, M @ [0.299, 0.587, 0.114], 200.0)
 
     x, y, nx, ny, s, larg, sig = curva(r)
     sem = int(r['semente'])
@@ -185,12 +205,28 @@ def desenhar(foto, recorte, rota, saida):
     sigmap = reduz(sig[jj].reshape(hs, ws))
 
     roi = (slice(y0, y1), slice(x0, x1))
-    Mr, Mlr = M[roi], Ml[roi]
-    tinta = np.array([1.06, 1.0, 0.97])  # branco do PVC, um pouco mais quente que o mármore
-    Pc3 = np.where(Pc[..., None] > 0, Pc[..., None] * tinta, Pc[..., None])
-    grao = np.random.default_rng(sem + 2).normal(0, 0.35, Mr.shape)
-    F1 = A[..., None] * Mr + Pc3 + A[..., None] * grao
-    F2 = (1 - A)[..., None] * (1 + (Ps / Mlr)[..., None])   # quanto do fundo real fica, já com a sombra
+    grao = np.random.default_rng(sem + 2).normal(0, 0.35, (y1 - y0, x1 - x0, 3))
+    if susp:
+        # cilindro: normal = u * (normal no plano da foto) + componente para a câmera
+        u = np.clip(np.where(perto, d / (larg[jj] / 2), 9), -1, 1)
+        nz = -np.sqrt(np.clip(1 - u * u, 0, 1))
+        Lv = np.array(r.get('luz', [-0.75, -0.35, -0.55]), float); Lv /= np.linalg.norm(Lv)
+        Hv = Lv + np.array([0, 0, -1.0]); Hv /= np.linalg.norm(Hv)
+        N = np.stack([u * nx[jj], u * ny[jj], nz], -1)
+        lam = np.clip(N @ Lv, 0, 1); esp = np.clip(N @ Hv, 0, 1) ** 25
+        b0, b1 = r.get('brilho', [135, 205])
+        val = (b0 + (b1 - b0) * lam ** 0.8 + 15 * esp) * (0.88 + 0.12 * np.sqrt(np.clip(1 - u * u, 0, 1)))
+        corpo_s = ((np.abs(np.where(perto, d / (larg[jj] / 2), 9)) <= 1) & perto).astype(float)
+        A = reduz(corpo_s.reshape(hs, ws))
+        Cv = reduz((corpo_s * val).reshape(hs, ws))
+        F1 = Cv[..., None] * np.array(r.get('tinta', [1.0, 1.0, 1.0])) + A[..., None] * grao
+        F2 = np.repeat((1 - A)[..., None], 3, -1)
+    else:
+        Mr, Mlr = M[roi], Ml[roi]
+        tinta = np.array([1.06, 1.0, 0.97])  # branco do PVC, um pouco mais quente que o mármore
+        Pc3 = np.where(Pc[..., None] > 0, Pc[..., None] * tinta, Pc[..., None])
+        F1 = A[..., None] * Mr + Pc3 + A[..., None] * grao
+        F2 = (1 - A)[..., None] * (1 + (Ps / Mlr)[..., None])   # quanto do fundo real fica, já com a sombra
 
     niveis = [0.3, 0.45, 0.6, 0.8, 1.0, 1.3, 1.7]
     def desfoca(a):
@@ -208,15 +244,20 @@ def desenhar(foto, recorte, rota, saida):
     F1b, F2b = desfoca(F1), desfoca(F2 - 1) + 1
     bas = base[roi]
     comp = F1b + F2b * bas
-    ap = alfa[roi][..., None]
-    comp = ap * bas + (1 - ap) * comp   # o cabo passa por trás do produto
+    if susp:
+        vr = vis[roi][..., None]
+        comp = vr * comp + (1 - vr) * bas   # fora da janela, o produto fica na frente
+    else:
+        ap = alfa[roi][..., None]
+        comp = ap * bas + (1 - ap) * comp   # o cabo passa por trás do produto
     if r.get('janela'):
         xa, xb = r['janela']
         wx = np.clip((xb - (np.arange(x0, x1) + 0.5)) / (xb - xa), 0, 1)[None, :, None]
         comp = wx * comp + (1 - wx) * bas
     out = base.copy()
     out[roi] = comp
-    out[prod_duro] = original[prod_duro]   # produto intocado
+    fixo = prod_duro & (vis < 0.02) if susp else prod_duro
+    out[fixo] = original[fixo]   # produto intocado (no ar, fora da janela em que o cabo passa na frente)
     res = np.clip(out + 0.5, 0, 255).astype(np.uint8)
     Image.fromarray(res).save(saida)
 
@@ -233,6 +274,8 @@ def desenhar(foto, recorte, rota, saida):
     dif = np.abs(res.astype(int) - original.astype(int)).max(-1)
     print(saida)
     print('produto (alfa > 60): %d px, alterados: %d' % (prod_duro.sum(), (dif[prod_duro] > 0).sum()))
+    if susp:
+        print('  dos quais na janela em que o cabo passa na frente: %d' % ((dif[prod_duro & (vis >= 0.02)] > 0).sum()))
     mud3 = np.abs(res.astype(int) - np.clip(base + 0.5, 0, 255).astype(int)).max(-1) >= 3
     if mud3.any():
         ys, xs = np.where(mud3)

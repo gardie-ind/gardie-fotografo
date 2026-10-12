@@ -1,59 +1,146 @@
 {
- "metodo": "ferramentas/cabo_real.py, sem IA",
- "rota": {
-  "pontos": [
-   [
-    600,
-    836
+ "metodo": "ferramentas/cabo_real.py, sem IA | depois, o trecho no ar da traseira da cabeça até o topo do pivô (ferramentas/cabo_real.py, \"suspenso\"), na rota que o Thiago marcou na A1 em 2026-10-12",
+ "cabo_mesa": {
+  "metodo": "ferramentas/cabo_real.py, sem IA",
+  "rota": {
+   "pontos": [
+    [
+     600,
+     836
+    ],
+    [
+     700,
+     819
+    ],
+    [
+     770,
+     806
+    ],
+    [
+     835,
+     790
+    ],
+    [
+     890,
+     777
+    ],
+    [
+     950,
+     768
+    ],
+    [
+     1010,
+     764
+    ],
+    [
+     1070,
+     762
+    ]
    ],
-   [
-    700,
-    819
+   "larg": [
+    9.8,
+    9.6,
+    9.4,
+    9.15,
+    8.9,
+    8.7,
+    8.5,
+    8.4
    ],
-   [
-    770,
-    806
-   ],
-   [
-    835,
-    790
-   ],
-   [
-    890,
-    777
-   ],
-   [
-    950,
-    768
-   ],
-   [
-    1010,
-    764
-   ],
-   [
-    1070,
-    762
+   "sigma": [
+    0.45,
+    0.45,
+    0.5,
+    0.55,
+    0.65,
+    0.8,
+    0.95,
+    1.05
    ]
-  ],
-  "larg": [
-   9.8,
-   9.6,
-   9.4,
-   9.15,
-   8.9,
-   8.7,
-   8.5,
-   8.4
-  ],
+  }
+ },
+ "alca": {
   "sigma": [
    0.45,
    0.45,
-   0.5,
-   0.55,
-   0.65,
-   0.8,
-   0.95,
-   1.05
-  ]
+   0.45,
+   0.45,
+   0.45,
+   0.45,
+   0.45,
+   0.45,
+   0.45,
+   0.45,
+   0.45
+  ],
+  "ganho_pos": 1.35,
+  "ganho_neg": 1.15,
+  "ondula": 0,
+  "sombra": 3.0,
+  "semente": 7,
+  "base": "ensaios/_versoes/2026-10-11-classique-lux-cromado/retoque-cabo/A4-cabo-mesa.png",
+  "suspenso": true,
+  "visivel": "ensaios/_versoes/2026-10-11-classique-lux-cromado/retoque-cabo/A4-alca-visivel.png",
+  "pontos": [
+   [
+    603.5,
+    638
+   ],
+   [
+    603.3,
+    648
+   ],
+   [
+    602.6,
+    657
+   ],
+   [
+    599.5,
+    665
+   ],
+   [
+    592.5,
+    670.5
+   ],
+   [
+    582.0,
+    675.0
+   ],
+   [
+    570.5,
+    679.5
+   ],
+   [
+    560.0,
+    685.0
+   ],
+   [
+    552.5,
+    690.5
+   ],
+   [
+    548.0,
+    696.0
+   ],
+   [
+    545.5,
+    705.0
+   ]
+  ],
+  "larg": [
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9
+  ],
+  "foto": "lotes/2026-10-11-classique-lux-cromado/1x1-piloto/mesa-banheiro-bancada/A4.png",
+  "recorte": "/tmp/claude-0/-home-user/197f0f19-bff4-5777-90b0-63651f32a0cc/scratchpad/med/A4-recorte.png"
  }
 }

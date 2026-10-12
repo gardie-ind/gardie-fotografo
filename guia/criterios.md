@@ -17,7 +17,7 @@ confirmou. A classe de um item só muda com a palavra dele.
 | b. Acabamento igual ao da referência; cromado lê prata, nunca dourado | VETO (padrão — confirmar com o Thiago) |
 | c. LED no mesmo estado (aceso ou apagado) e na mesma cor da referência | VETO (padrão — confirmar com o Thiago) |
 | d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo não reprova (10202CR-4); com o LED aceso, ver d2. Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
-| d2. LED aceso e cabo fora de vista no produto de mesa: o cabo faz falta (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/A1` e `A4`). Acrescente o cabo real no retoque | CORRIGIR SE DER (Thiago) |
+| d2. LED aceso e cabo fora de vista no produto de mesa: o cabo faz falta (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/A1` e `A4`). Acrescente no retoque o cabo real em cada trecho que a vista mostra: na bancada, saindo de trás da base, e, de 3/4 com vão entre a cabeça e o pivô, a alça da traseira da cabeça até o topo do pivô (`placar.md` › Calibragem, 2026-10-12) | CORRIGIR SE DER (Thiago) |
 | e. Cabo na rota real do modelo: branco, fino, sem conector inventado, com folga compatível com 1,5 m | VETO (padrão — confirmar com o Thiago) |
 | f. Plug, quando aparece, fiel ao NBR 14136 da referência; mostrar o fio ligado na tomada não é exigido | VETO (Thiago) |
 | f2. Plug solto na bancada com o LED aceso (contradição física) | VETO (padrão — confirmar com o Thiago) |
@@ -90,8 +90,8 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    capa, metade dessa distância (padrão — calibrar).
 7. **Cabo e plug (d, d2, e, f):** confira a vista contra `guia/produto.md` ›
    Cabo e plug, que cita as fotos reais de cada vista. Plug visível: compare a
-   forma com `referencias/chicote-eletrico/`. LED aceso sem cabo à vista:
-   anote d2.
+   forma com `referencias/chicote-eletrico/`. LED aceso sem cabo à vista, na
+   bancada ou na alça do vão entre a cabeça e o pivô: anote d2.
 8. **Notas (g, h, j, m):** logo, reflexo, ambiente e outros espelhos.
 9. **Registro:** vetada vai para `_descartados/` com o item da tabela e a
    medida que reprovou; aprovada vira candidata ao lote, com as notas.
@@ -131,9 +131,17 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
   - Rota de `guia/produto.md` › Cabo e plug: o 1º ponto fica escondido atrás
     da base, na direção da saída, e o cabo corre rente à bancada até a borda
     do quadro, com folga (curva leve, nunca reta esticada).
+  - Alça no vão entre a cabeça e o pivô: rota com `"suspenso": true`, do 1º
+    ponto escondido atrás da borda de baixo da cabeça ao último escondido no
+    topo do pivô, descendo em curva como na marcação do Thiago na
+    `1x1-piloto/A1` (`placar.md` › Calibragem, 2026-10-12). Se o recorte do
+    produto engolir o vão (o BiRefNet preenche furos), passe em `visivel` a
+    máscara do vão e confira que os pixels "do produto" alterados são só fundo
+    (cor da parede, sem cromado).
   - Largura: 5 mm na escala do Ø da base junto dela, diminuindo para o fundo.
-  - Confira em 8× a saída de trás da base (sem ponta solta nem vão) e, em 1×,
-    se o cabo se lê como cabo.
+  - Confira em 8× a saída de trás da base (sem ponta solta nem vão), a saída
+    da alça sob a borda da cabeça e a entrada dela no pivô e, em 1×, se o cabo
+    se lê como cabo.
   - Em 2026-10-11, o FLUX Fill numa faixa da rota acertou 1 de 16 tentativas
     (a A1, e com a ponta solta a 10 px da base), e o Kontext em edição pôs
     plug solto (f2) e mexeu no enquadramento.
