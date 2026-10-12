@@ -1,0 +1,89 @@
+{
+ "sigma": [
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45,
+  0.45
+ ],
+ "ganho_pos": 1.35,
+ "ganho_neg": 1.15,
+ "ondula": 0,
+ "sombra": 3.0,
+ "semente": 7,
+ "base": "/home/user/gardie-fotografo/ensaios/_versoes/2026-10-11-classique-lux-cromado/1x1-ambientes/retoque-cabo/A5-cabo-mesa.png",
+ "suspenso": true,
+ "pontos": [
+  [
+   645.2,
+   670
+  ],
+  [
+   645.0,
+   680.3
+  ],
+  [
+   644.8,
+   689.3
+  ],
+  [
+   644.2,
+   696.6
+  ],
+  [
+   641.5,
+   702.4
+  ],
+  [
+   635.5,
+   706.1
+  ],
+  [
+   625.1,
+   709.2
+  ],
+  [
+   614.6,
+   712.0
+  ],
+  [
+   604.5,
+   715.7
+  ],
+  [
+   597.7,
+   719.6
+  ],
+  [
+   593.3,
+   723.7
+  ],
+  [
+   590.9,
+   731.8
+  ]
+ ],
+ "larg": [
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47,
+  8.47
+ ],
+ "foto": "/home/user/gardie-fotografo/ensaios/_versoes/2026-10-11-classique-lux-cromado/1x1-ambientes/mesa-banheiro-banheira/A5.png",
+ "recorte": "/tmp/claude-0/-home-user/197f0f19-bff4-5777-90b0-63651f32a0cc/scratchpad/med-amb/A5-recorte.png"
+}
