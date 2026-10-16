@@ -10,7 +10,9 @@ do piloto, em três receitas: `mesa-banheiro-banheira` (A),
 
 1. **Veredito nas duas pranchas** (banheira e penteadeira): quais você
    publicaria. Nas vetadas, marque as que publicaria: A3, A4 e B8 estão no
-   limite da faixa de proporção, e a A1 no limite da colagem.
+   limite da faixa de proporção, e a A1 no limite da colagem. **Revisão de
+   2026-10-16:** pela medida nova de altura, só a A2 passa; A5 e B7 vetam no
+   limite e B4 veta (ver Revisão de 2026-10-16).
 2. **A4 do piloto:** salvo também em `aprovadas/`?
 3. **Shopify:** `SHOPIFY_CLIENT_ID` e `SHOPIFY_CLIENT_SECRET` no ambiente da
    nuvem e a rede liberada para a loja e para `cdn.shopify.com` (o mesmo
@@ -24,6 +26,8 @@ do piloto, em três receitas: `mesa-banheiro-banheira` (A),
 - **4 de 16 passaram** nas duas receitas verificadas:
   - banheira: A2 e A5 (2 de 8);
   - penteadeira: B4 e B7 (2 de 8).
+- **Revisão de 2026-10-16: 1 de 16 passa** (A2). A medida nova de altura
+  (critério i) veta A5, B4 e B7; a penteadeira fica sem candidata.
 - **Motivos das 12 vetadas**, parando no primeiro veto:
   - proporção (i), 7: A3, A4, B2, B3, B6 e B8 pela cabeça grande para a base
     (disco ÷ cabeça de 0,621 a 0,677) e B1 pelo aro grosso (0,075);
@@ -48,10 +52,10 @@ delas está na pasta compartilhada do projeto, em
 
 | Rótulo | Receita | Situação | O que conferir |
 |---|---|---|---|
-| A2 | banheira | passou, com cabo | Logo deformado. Toalhas na mesma bancada dão a escala. |
-| A5 | banheira | passou, com cabo | Logo deformado. Colagem 0,30, perto do limite de 0,32, mas o sino reflete a cena (recorte em `_crops/hp-n-A5.png`). |
-| B4 | penteadeira | passou, com cabo | Disco ÷ cabeça 0,680, perto do limite de 0,678. Logo deformado. |
-| B7 | penteadeira | passou, com cabo | Logo deformado. |
+| A2 | banheira | passou, com cabo | Altura ÷ disco 1,811 (limite 1,82). Logo deformado. Toalhas na mesma bancada dão a escala. |
+| A5 | banheira | **vetada (i, altura) em 2026-10-16**, no limite; com cabo | Altura ÷ disco 1,826 (limite 1,82). Logo deformado. Colagem 0,30, perto do limite de 0,32, mas o sino reflete a cena (recorte em `_crops/hp-n-A5.png`). |
+| B4 | penteadeira | **vetada (i, altura) em 2026-10-16**; com cabo | Altura ÷ disco 1,883, como a CR2 (1,88). Disco ÷ cabeça 0,680, perto do limite de 0,678. Logo deformado. |
+| B7 | penteadeira | **vetada (i, altura) em 2026-10-16**, no limite; com cabo | Altura ÷ disco 1,827 (limite 1,82). Logo deformado. |
 | A1 | banheira | **vetada (h2)** | Colagem 0,354: o miolo do sino repete o arco escuro e o filete claro da capa. |
 | A3 | banheira | **vetada (i)** | Disco ÷ cabeça 0,674 (−10,5%). |
 | A4 | banheira | **vetada (i)** | Disco ÷ cabeça 0,675 (−10,4%). |
@@ -78,6 +82,33 @@ delas está na pasta compartilhada do projeto, em
   altura na escala do produto (37 cm de altura). Plausível.
 - penteadeira: os frascos na mesma penteadeira, um pouco atrás do produto,
   medem de 15 a 17 cm. Grandes para perfume, mas plausíveis.
+
+## Revisão de 2026-10-16: altura sobre a base (critério i novo)
+
+O Thiago não publicaria as fotos em uso CR1 a CR3 do Classique Lux,
+"desproporcionais, fora da realidade" (2026-10-16). A medida que pega o erro
+entrou em `guia/criterios.md` (passo 4): topo da cabeça → centro do pé ÷
+disco, VETO acima de 1,82 (`placar.md` › Calibragem, 2026-10-16, CR1 a CR3).
+Mesmo método, aplicado às quatro que tinham passado:
+
+| Rótulo | altura ÷ disco | elevação (pelo pé) | Situação |
+|---|---|---|---|
+| A2 | 1,811 | 13° | passa |
+| A5 | 1,826 | 12° | **vetada (i)**, no limite |
+| B7 | 1,827 | 13° | **vetada (i)**, no limite |
+| B4 | 1,883 | 13° | **vetada (i)** |
+
+- Âncoras: publicaria A1 1,77, CR4 1,79 e A4 1,80; não publicaria CR1 1,85,
+  CR3 1,87 e CR2 1,88; capa 1,68. O mesmo script refaz a capa, a A1 e a A4
+  do piloto (1,683, 1,769 e 1,803).
+- A5 e B7 passam do limite por 0,006 e 0,007, dentro do ruído da medida
+  (±0,01). Ficam vetadas pela regra (ver Para calibrar, item 3).
+- Topo da cabeça e bordas do disco conferidos em 4×. Prancha:
+  `prancha-altura-ambientes.png`. Medidas e recortes na pasta compartilhada
+  do projeto, em `fotografo/2026-10-11-classique-lux-cromado/1x1-ambientes/altura/`;
+  script em `fotografo/ferramentas-medicao/altura_json.py`.
+- A penteadeira fica sem candidata. Gerar mais depende de crédito no fal ou
+  no Gemini.
 
 ## Medidas
 
@@ -137,6 +168,9 @@ do miolo do sino contra a capa (`guia/criterios.md`, passo 5).
    para ±11%.
 2. **Colagem perto do limite.** A1 vetada com 0,354 e A5 aprovada com 0,30.
    O seu veredito nas duas confirma ou move o limiar de 0,32.
+3. **Altura no limite (2026-10-16).** A5 (1,826) e B7 (1,827) passam do
+   limite de 1,82 por menos que o ruído. Se publicaria alguma delas, o limite
+   sobe para 1,83.
 
 ## Pendências
 
