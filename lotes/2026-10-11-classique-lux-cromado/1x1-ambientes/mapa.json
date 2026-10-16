@@ -1,0 +1,290 @@
+{
+  "A1": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A1.png",
+    "tentativa": 1,
+    "seed": 103327335,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A2": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A2.png",
+    "tentativa": 3,
+    "seed": 2092028362,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A3": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A3.png",
+    "tentativa": 2,
+    "seed": 2134728756,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A4": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A4.png",
+    "tentativa": 4,
+    "seed": 1171383049,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A5": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A5.png",
+    "tentativa": 1,
+    "seed": 1262971371,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "A6": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A6.png",
+    "tentativa": 2,
+    "seed": 1560697626,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A7": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A7.png",
+    "tentativa": 3,
+    "seed": 1690219670,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "A8": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-banheiro-banheira",
+    "arquivo": "mesa-banheiro-banheira/A8.png",
+    "tentativa": 4,
+    "seed": 1717197019,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B1": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B1.png",
+    "tentativa": 3,
+    "seed": 1532623954,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B2": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B2.png",
+    "tentativa": 1,
+    "seed": 1403090798,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B3": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B3.png",
+    "tentativa": 2,
+    "seed": 701811007,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B4": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B4.png",
+    "tentativa": 2,
+    "seed": 1447943647,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B5": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B5.png",
+    "tentativa": 4,
+    "seed": 1066752613,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "B6": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B6.png",
+    "tentativa": 4,
+    "seed": 1460487281,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B7": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B7.png",
+    "tentativa": 3,
+    "seed": 430515526,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "B8": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-penteadeira-quarto",
+    "arquivo": "mesa-penteadeira-quarto/B8.png",
+    "tentativa": 1,
+    "seed": 1312535214,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C1": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C1.png",
+    "tentativa": 2,
+    "seed": 406901211,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C2": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C2.png",
+    "tentativa": 3,
+    "seed": 1952126977,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C3": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C3.png",
+    "tentativa": 1,
+    "seed": 610128517,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C4": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C4.png",
+    "tentativa": 2,
+    "seed": 966950100,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C5": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C5.png",
+    "tentativa": 1,
+    "seed": 16313282,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C6": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C6.png",
+    "tentativa": 3,
+    "seed": 132830045,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  },
+  "C7": {
+    "motor": "kontext",
+    "modelo": "fal-ai/flux-pro/kontext/max",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C7.png",
+    "tentativa": 4,
+    "seed": 86584225,
+    "tamanho": [
+      1024,
+      1024
+    ]
+  },
+  "C8": {
+    "motor": "seedream",
+    "modelo": "fal-ai/bytedance/seedream/v4/edit",
+    "receita": "mesa-papel-de-parede",
+    "arquivo": "mesa-papel-de-parede/C8.png",
+    "tentativa": 4,
+    "seed": 320310125,
+    "tamanho": [
+      1280,
+      1280
+    ]
+  }
+}

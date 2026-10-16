@@ -86,10 +86,10 @@ peça é sempre o da still.
 
 - **Classique Lux:** garfo em U de fita única que abraça a metade de baixo da
   cabeça, com pinos nas laterais na altura do centro. O garfo se fixa num
-  pivô cromado curto, no topo do sino; o cabo entra por trás dele. Logo
-  abaixo do pivô nasce o sino cromado, sem coluna e sem pescoço. O sino abre
-  numa cúpula sobre o disco cromado, que tem um anel fino de borracha preta
-  embaixo.
+  pivô cromado curto, no topo do sino; o cabo entra nele por cima, vindo de
+  trás da cabeça. Logo abaixo do pivô nasce o sino cromado, sem coluna e sem
+  pescoço. O sino abre numa cúpula sobre o disco cromado, que tem um anel
+  fino de borracha preta embaixo.
 - **Royale Lux:** coluna cilíndrica fina e reta com colarinhos perto do topo e
   da base, garfo em U com pinos laterais e base em cúpula rasa.
 - **Mobile Lux:** placa retangular cromada de parede com 2 tampas redondas,
@@ -107,18 +107,24 @@ peça é sempre o da still.
   aparente; cabo pendurado é invenção). Nenhum modelo sem LED tem cabo.
 - **O cabo:** branco, fino (cerca de 5 mm, tipo fio de abajur), com 1,5 m do
   espelho ao plug.
-- **Rota no Classique Lux e no Royale Lux (mesa):** sai da carcaça atrás da
-  cabeça, pelo passa-fio no centro de baixo → faz uma alça curta → entra no
-  pivô, por trás → corre por dentro do suporte → sai por um furo na traseira
-  da base, rente à mesa → segue pela superfície até a tomada.
-  - **De frente ou de 3/4 frontal:** a alça fica escondida atrás da cabeça, e
-    a junção cabeça/sino aparece sem cabo (still; `classique-lux-frontal-*`;
-    10202CR-1, -4 e -5). O que pode aparecer é o cabo sobre a superfície,
-    saindo de TRÁS da base, rente a ela (`classique-lux-frontal-*`; vídeo do
-    Royale Lux, 13 s). Sem cabo à vista também é real, quando ele segue reto
-    para trás da base.
+- **Rota no Classique Lux e no Royale Lux (mesa):** sai do meio da traseira
+  da cabeça, logo abaixo do interruptor → desce numa alça curta → entra no
+  pivô, por cima → corre por dentro do suporte → sai por um furo na traseira
+  da base, rente à mesa → segue pela superfície até a tomada
+  (`classique-lux-traseira-cabo`, `-diagonal`, `-diagonal-2`).
+  - **De frente, com a borda da cabeça quase encostada no pivô:** a alça fica
+    escondida atrás da cabeça, e a junção cabeça/sino aparece sem cabo
+    (still; `classique-lux-frontal-*`; 10202CR-1, -4 e -5).
+  - **De 3/4, com vão à vista entre a borda de baixo da cabeça e o pivô:** a
+    alça aparece nesse vão. Ela surge de trás da borda da cabeça, sem ponto
+    de saída à vista, e desce em curva até o topo do pivô, onde entra por
+    cima (Thiago, 2026-10-12, com a rota marcada na `1x1-piloto/A1`).
+  - **Sobre a superfície, de frente ou de 3/4:** o cabo sai de TRÁS da base,
+    rente a ela (`classique-lux-frontal-*`; vídeo do Royale Lux, 13 s). Sem
+    cabo à vista também é real, quando ele segue reto para trás da base, mas
+    com o LED aceso o cabo faz falta (`guia/criterios.md` › d2).
   - **De lado, de trás ou com câmera alta:** a alça cabeça → pivô aparece
-    (`classique-lux-lateral`, `-traseira-cabo`, `-virado-para-cima`).
+    inteira (`classique-lux-lateral`, `-traseira-cabo`, `-virado-para-cima`).
   - Rotas que não existem: cabo por fora do suporte até a tomada; cabo saindo
     do topo da base direto para a parede; cabo na frente do balcão.
 - **Rota nos modelos de parede (Mobile, Visage e Flex Lux):** o cabo sai de
@@ -141,6 +147,27 @@ peça é sempre o da still.
   - topo do sino ÷ disco: 0,19;
   - pivô → topo do disco (onde a cúpula encontra o disco) ÷ disco: 0,36 na
     still; ≈0,41 com a câmera mais baixa (foto frontal real).
+  - Medidas por contorno (lote 2026-10-11, método em
+    `lotes/2026-10-11-classique-lux-cromado/verificacao.md`), na capa
+    `classique-lux-cromado-ligado-capa-r1` (câmera a ≈7°) e nas três fotos
+    frontais reais de `referencias/classique-lux/` (câmera a ≈30°):
+
+    | Razão | Capa | Fotos reais |
+    |---|---|---|
+    | disco ÷ cabeça (eixo maior) | 0,753 | 0,695 a 0,697 |
+    | Ø vidro ÷ cabeça | 0,700 | 0,735 a 0,738 |
+    | difusor ÷ cabeça | 0,109 | 0,079 a 0,086 |
+    | aro ÷ cabeça | 0,041 | 0,046 a 0,052 |
+    | topo do sino (2% do disco abaixo do pivô) ÷ disco | 0,198 | 0,228 a 0,234 |
+    | pivô → disco (1ª linha com ≥97% da base) ÷ disco | 0,354 | 0,296 a 0,302 |
+    | altura dos pinos ÷ altura da cabeça | 0,51 | — |
+    | LED, B/R do halo ÷ branco neutro | 0,98 | 0,78 (4500K) e 1,16 (6000K) |
+
+    Fita do garfo e espessura do disco ainda não foram medidas. Divergências
+    com a leitura em grade, a confirmar com o Thiago: disco ÷ cabeça na still
+    (0,78 na grade, 0,753 aqui) e pivô → disco na foto real (≈0,41 na grade,
+    0,30 aqui; a elipse do disco mostra a câmera da foto real mais alta que a
+    da still, não mais baixa).
 - **Demais razões e modelos:** meça na capa no primeiro lote (vidro,
   difusor, aro, fita do garfo, pinos, espessura do disco; braço e placa nos de
   parede) e registre aqui.
