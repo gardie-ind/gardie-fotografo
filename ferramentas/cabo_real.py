@@ -34,6 +34,16 @@ rota.json:
   ondula     ondulação leve do cabo, em px (padrão 1,2).
   sombra     penumbra para o lado da câmera, em níveis (padrão 3).
   semente    sorteio da ondulação e das variações (padrão 7).
+  grao       desvio do grão somado ao corpo do cabo, em níveis (padrão 0,35);
+             use o ruído medido no fundo da foto (stills de estúdio: 1 a 3).
+             Ou um valor por ponto de controle, quando o ruído do fundo muda
+             ao longo da rota.
+  grao_mono  true: o mesmo grão nos três canais. Use quando o fundo da foto é
+             cinza neutro (R = G = B), como nas stills de estúdio; grão
+             colorido ali aparece como ruído de cor no cabo.
+  grao_depois  true: o grão entra depois do desfoque, como o ruído do sensor,
+             e "grao" passa a ser o desvio medido na foto (passa-alta de 3 px).
+             Sem isso, o desfoque amansa o grão a cerca de 1/3.
   base       desenha sobre esta imagem em vez da foto (opcional).
   janela     [xa, xb]: o cabo novo vai até xa e se funde à base até xb
              (opcional; serve para emendar um cabo que já existe na base).
@@ -41,14 +51,26 @@ rota.json:
 Trecho no ar (da traseira da cabeça até o topo do sino), com "suspenso": true:
   o cabo vira um cilindro iluminado pela luz da cena, sem sombra numa
   superfície, e só aparece na janela "visivel". Os pontos de controle começam
-  escondidos atrás da cabeça e terminam escondidos no pivô.
+  escondidos atrás da cabeça e terminam escondidos no pivô. Serve também para
+  o cabo pendente dos modelos de parede e para o cabo deitado no chão de uma
+  still de estúdio com câmera baixa (~7°): ali a sombra de contato fica
+  escondida atrás do próprio cabo, e basta a luz de cima (luz [-0.2, -0.85,
+  -0.3]).
   visivel    máscara PNG: branco = o cabo passa na frente. Padrão: o fundo do
              recorte (1 - alfa). Passe a máscara do vão quando o recorte o
              engolir (o BiRefNet preenche o vão entre a cabeça e o garfo): os
              pixels "do produto" alterados na janela têm de ser só fundo.
+  borda_mista  true: nos pixels da máscara com valor entre 0 e 1 (a borda
+             suave do objeto que esconde o cabo), o cabo entra só na parte de
+             fundo do pixel: troca o fundo puro (estimado nos vizinhos
+             visíveis) pelo cabo e mantém a parte do objeto. Sem isso, a borda
+             fica um pouco mais clara onde o cabo passa atrás dela.
   luz        direção da luz [x, y, z] (x para a direita, y para baixo, z para
              longe da câmera). Padrão [-0.75, -0.35, -0.55]: janela à esquerda.
-  brilho     [lado da sombra, lado da luz] em níveis (padrão [135, 205]).
+  brilho     [lado da sombra, lado da luz] em níveis (padrão [135, 205]). Ou um
+             par por ponto de controle, interpolado ao longo do cabo, quando a
+             luz do fundo cai ao longo da rota (cabo pendente numa still de
+             estúdio: mantenha a mesma razão com o fundo medido em cada ponto).
 
 Depois, rode `inspecao_imagem.py diff foto.png saida.png saida-mascara.png` e
 leia os recortes do cabo (saída de trás da base, trajeto e borda do quadro).
@@ -131,16 +153,47 @@ def curva(rota):
     f = s / s[-1] * dc[-1]
     larg = np.interp(f, dc, rota['larg'])
     sig = np.interp(f, dc, rota['sigma']) if rota.get('sigma') else np.full(len(s), 0.5)
-    return x, y, nx, ny, s, larg, sig
+    gr = rota.get('grao', 0.35)
+    gs = np.interp(f, dc, gr) if isinstance(gr, (list, tuple)) else np.full(len(s), float(gr))
+    br = np.array(rota.get('brilho', [135, 205]), float)
+    if br.ndim == 2:   # um par [sombra, luz] por ponto de controle
+        br = np.stack([np.interp(f, dc, br[:, 0]), np.interp(f, dc, br[:, 1])], -1)
+    else:
+        br = np.tile(br, (len(s), 1))
+    return x, y, nx, ny, s, larg, sig, br, gs
 
 
-def mais_proximo(px, py, x, y, bloco=4096):
-    idx = np.empty(len(px), int)
-    for i in range(0, len(px), bloco):
-        dx = px[i:i + bloco, None] - x[None, :]
-        dy = py[i:i + bloco, None] - y[None, :]
-        idx[i:i + bloco] = np.argmin(dx * dx + dy * dy, axis=1)
-    return idx
+def vizinhos(X, Y, x, y, k, m, lado=48):
+    """Subpixels a até m px da curva decimada (passo k) e, para eles, o índice do ponto da
+    curva mais próximo (no empate, o menor). Vai por ladrilhos de `lado` px e só compara
+    com os pontos da curva a até m px do ladrilho: dá o mesmo resultado da busca em toda a
+    curva, sem o custo dela nas stills grandes."""
+    hs, ws = X.shape
+    perto = np.zeros((hs, ws), bool)
+    idx = np.full((hs, ws), -1)
+    xd, yd = x[::k], y[::k]
+    t = lado * SS
+    for a in range(0, hs, t):
+        for b in range(0, ws, t):
+            qx, qy = X[a:a + t, b:b + t], Y[a:a + t, b:b + t]
+            sh = qx.shape
+            qx, qy = qx.ravel(), qy.ravel()
+            caixa = lambda u, v: np.where((u >= qx[0] - m) & (u <= qx[-1] + m) & (v >= qy[0] - m) & (v <= qy[-1] + m))[0]
+            cd = caixa(xd, yd)
+            if not len(cd):
+                continue
+            i0 = cd[np.argmin((qx[:, None] - xd[cd]) ** 2 + (qy[:, None] - yd[cd]) ** 2, axis=1)]
+            pt = np.hypot(qx - xd[i0], qy - yd[i0]) <= m
+            if not pt.any():
+                continue
+            cf = caixa(x, y)
+            dx = qx[pt, None] - x[None, cf]
+            dy = qy[pt, None] - y[None, cf]
+            ix = np.full(len(qx), -1)
+            ix[pt] = cf[np.argmin(dx * dx + dy * dy, axis=1)]
+            perto[a:a + t, b:b + t] = pt.reshape(sh)
+            idx[a:a + t, b:b + t] = ix.reshape(sh)
+    return perto.ravel(), idx.ravel()
 
 
 def desenhar(foto, recorte, rota, saida):
@@ -162,7 +215,7 @@ def desenhar(foto, recorte, rota, saida):
         M = iluminacao(original, alfa > 0.2)
         Ml = np.where(M @ [0.299, 0.587, 0.114] > 50, M @ [0.299, 0.587, 0.114], 200.0)
 
-    x, y, nx, ny, s, larg, sig = curva(r)
+    x, y, nx, ny, s, larg, sig, br, gs = curva(r)
     sem = int(r['semente'])
     on = r['ondula'] * ruido_suave(len(s), 70 / PASSO, sem + 3)
     x, y = x + nx * on, y + ny * on
@@ -177,13 +230,9 @@ def desenhar(foto, recorte, rota, saida):
         raise SystemExit('a rota não passa pela foto')
     # subpixels da região
     X, Y = np.meshgrid((np.arange(x0 * SS, x1 * SS) + 0.5) / SS, (np.arange(y0 * SS, y1 * SS) + 0.5) / SS)
+    # só subpixels a até m px da curva (pré-filtro na curva decimada a 2 px)
+    perto, idx = vizinhos(X, Y, x, y, max(1, int(2 / PASSO)), m)
     X, Y = X.ravel(), Y.ravel()
-    # pré-filtro barato: só subpixels a até m px da curva (curva decimada a 2 px)
-    k = max(1, int(2 / PASSO))
-    i0 = mais_proximo(X, Y, x[::k], y[::k]) * k
-    perto = np.hypot(X - x[i0], Y - y[i0]) <= m
-    idx = np.full(len(X), -1)
-    idx[perto] = mais_proximo(X[perto], Y[perto], x, y)
     perto &= (idx > 0) & (idx < len(x) - 1)  # sem tampa nas pontas (ficam escondidas ou fora do quadro)
     d = np.zeros(len(X))
     j = idx[perto]
@@ -205,7 +254,14 @@ def desenhar(foto, recorte, rota, saida):
     sigmap = reduz(sig[jj].reshape(hs, ws))
 
     roi = (slice(y0, y1), slice(x0, x1))
-    grao = np.random.default_rng(sem + 2).normal(0, 0.35, (y1 - y0, x1 - x0, 3))
+    rg = np.random.default_rng(sem + 2)
+    if isinstance(r.get('grao'), (list, tuple)):   # um desvio por ponto de controle
+        z = rg.normal(0, 1, (y1 - y0, x1 - x0, 1 if r.get('grao_mono') else 3))
+        grao = (np.repeat(z, 3, -1) if r.get('grao_mono') else z) * reduz(gs[jj].reshape(hs, ws))[..., None]
+    elif r.get('grao_mono'):
+        grao = np.repeat(rg.normal(0, float(r.get('grao', 0.35)), (y1 - y0, x1 - x0, 1)), 3, -1)
+    else:
+        grao = rg.normal(0, float(r.get('grao', 0.35)), (y1 - y0, x1 - x0, 3))
     if susp:
         # cilindro: normal = u * (normal no plano da foto) + componente para a câmera
         u = np.clip(np.where(perto, d / (larg[jj] / 2), 9), -1, 1)
@@ -214,18 +270,18 @@ def desenhar(foto, recorte, rota, saida):
         Hv = Lv + np.array([0, 0, -1.0]); Hv /= np.linalg.norm(Hv)
         N = np.stack([u * nx[jj], u * ny[jj], nz], -1)
         lam = np.clip(N @ Lv, 0, 1); esp = np.clip(N @ Hv, 0, 1) ** 25
-        b0, b1 = r.get('brilho', [135, 205])
+        b0, b1 = br[jj, 0], br[jj, 1]
         val = (b0 + (b1 - b0) * lam ** 0.8 + 15 * esp) * (0.88 + 0.12 * np.sqrt(np.clip(1 - u * u, 0, 1)))
         corpo_s = ((np.abs(np.where(perto, d / (larg[jj] / 2), 9)) <= 1) & perto).astype(float)
         A = reduz(corpo_s.reshape(hs, ws))
         Cv = reduz((corpo_s * val).reshape(hs, ws))
-        F1 = Cv[..., None] * np.array(r.get('tinta', [1.0, 1.0, 1.0])) + A[..., None] * grao
+        F1 = Cv[..., None] * np.array(r.get('tinta', [1.0, 1.0, 1.0])) + (0 if r.get('grao_depois') else A[..., None] * grao)
         F2 = np.repeat((1 - A)[..., None], 3, -1)
     else:
         Mr, Mlr = M[roi], Ml[roi]
         tinta = np.array([1.06, 1.0, 0.97])  # branco do PVC, um pouco mais quente que o mármore
         Pc3 = np.where(Pc[..., None] > 0, Pc[..., None] * tinta, Pc[..., None])
-        F1 = A[..., None] * Mr + Pc3 + A[..., None] * grao
+        F1 = A[..., None] * Mr + Pc3 + (0 if r.get('grao_depois') else A[..., None] * grao)
         F2 = (1 - A)[..., None] * (1 + (Ps / Mlr)[..., None])   # quanto do fundo real fica, já com a sombra
 
     niveis = [0.3, 0.45, 0.6, 0.8, 1.0, 1.3, 1.7]
@@ -244,7 +300,17 @@ def desenhar(foto, recorte, rota, saida):
     F1b, F2b = desfoca(F1), desfoca(F2 - 1) + 1
     bas = base[roi]
     comp = F1b + F2b * bas
-    if susp:
+    if r.get('grao_depois'):
+        comp = comp + desfoca(A)[..., None] * grao
+    if susp and r.get('borda_mista'):
+        # pixel misto = v * fundo + (1 - v) * objeto: o cabo troca só a parte de fundo
+        vr = vis[roi][..., None]
+        cheio = (vis[roi] > 0.98).astype(float)
+        den = gauss(cheio, 3) + 1e-6
+        puro = np.stack([gauss(bas[..., c] * cheio, 3) / den for c in range(3)], -1)
+        puro = np.where(cheio[..., None] > 0, bas, puro)
+        comp = bas + vr * (comp - bas + F2b * (puro - bas) - (puro - bas))
+    elif susp:
         vr = vis[roi][..., None]
         comp = vr * comp + (1 - vr) * bas   # fora da janela, o produto fica na frente
     else:
