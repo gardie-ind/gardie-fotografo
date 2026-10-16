@@ -18,7 +18,7 @@ confirmou. A classe de um item só muda com a palavra dele.
 | c. LED no mesmo estado (aceso ou apagado) e na mesma cor da referência | VETO (padrão — confirmar com o Thiago) |
 | d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo não reprova (10202CR-4); com o LED aceso, ver d2. Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
 | d2. LED aceso e cabo fora de vista no produto de mesa: o cabo faz falta (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/A1` e `A4`). Acrescente no retoque o cabo real em cada trecho que a vista mostra: na bancada, saindo de trás da base, e, de 3/4 com vão entre a cabeça e o pivô, a alça da traseira da cabeça até o topo do pivô (`placar.md` › Calibragem, 2026-10-12) | CORRIGIR SE DER (Thiago) |
-| e. Cabo na rota real do modelo: branco, fino, sem conector inventado, com folga compatível com 1,5 m. Defeito pequeno no trecho da bancada, longe do produto (a ponta num objeto cinza, uma marca escura de braçadeira), não reprova: o Thiago publicaria assim a 10202CR gardie-1 e -4 (`placar.md` › Calibragem, 2026-10-16, CR1 e CR4) | VETO (padrão — confirmar com o Thiago); defeito pequeno longe do produto: CORRIGIR SE DER (Thiago) |
+| e. Cabo na rota real do modelo: branco, fino, sem conector inventado, com folga compatível com 1,5 m. Defeito pequeno no trecho da bancada, longe do produto (uma marca escura de braçadeira na volta), não reprova: o Thiago publicaria assim a 10202CR gardie-4 (`placar.md` › Calibragem, 2026-10-16, CR4) | VETO (padrão — confirmar com o Thiago); defeito pequeno longe do produto: CORRIGIR SE DER (Thiago) |
 | f. Plug, quando aparece, fiel ao NBR 14136 da referência; mostrar o fio ligado na tomada não é exigido | VETO (Thiago) |
 | f2. Plug solto na bancada com o LED aceso (contradição física) | VETO (padrão — confirmar com o Thiago) |
 | g. Logo com a grafia errada, ou ausente (o Thiago publicaria a 10202CR-4 com "geroie") | CORRIGIR SE DER (padrão — confirmar com o Thiago) |
@@ -73,7 +73,14 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    | disco ÷ cabeça (eixo maior); espessura do disco ÷ disco | ±10% |
    | topo do sino (ou da coluna) ÷ disco | ±15% |
    | pivô → topo do disco ÷ disco (Classique Lux) | em qualquer altura de câmera, VETO acima de 0,47; abaixo de 0,31, só com câmera alta. Obrigatória na `mesa-close-base`, onde confere também que o sino abre logo abaixo do pivô, sem coluna |
+   | altura: topo da cabeça → centro do pé ÷ disco (Classique Lux, câmera baixa, até ~15°) | VETO acima de 1,82, 8% acima da capa r1 (1,68). Pega a cabeça grande somada ao garfo alto, que o disco ÷ cabeça sozinho deixa passar (`placar.md` › Calibragem, 2026-10-16, CR1 a CR3) |
    | parede: braço ou suporte ÷ cabeça, placa ÷ cabeça | ±10%, depois de medidos na capa do primeiro lote |
+
+   **Altura:** o topo é o ponto mais alto da borda da cabeça; o centro do pé
+   é o y0 da meia-elipse ajustada à borda de baixo do anel preto,
+   y = y0 + b·√(1 − ((x − xc)/a)²), com a = metade do disco. Publicaria: A1
+   1,77, CR4 1,79 e A4 1,80. Não publicaria: CR1 1,85, CR3 1,87 e CR2 1,88
+   (e A3 1,88 e A5 1,96, já vetadas pelo disco ÷ cabeça).
 
    **Escala no ambiente:** meça em px uma dimensão total do produto
    (`guia/produto.md` › Medidas) e um objeto de tamanho conhecido no MESMO
@@ -123,6 +130,10 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
 
 ## Retoque (corrigir se der)
 
+- **Foto em uso que volta para retoque** é candidata como as outras: passa
+  pelo checklist inteiro antes da prancha, não só pelo item retocado. As
+  10202CR gardie-1 a -3 ganharam a alça sem a medida de proporção, e o Thiago
+  não as publicaria (`placar.md` › Calibragem, 2026-10-16, CR1 a CR3).
 - **Só defeito local:** logo com grafia errada (corrija a grafia; remover o
   logo só depois de o Thiago confirmar que logo ausente é aceito), texto
   fantasma, objeto pequeno espúrio, um trecho do reflexo. Defeito de forma,
