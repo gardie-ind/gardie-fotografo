@@ -43,6 +43,10 @@ aprovadas pelo filtro do agente. "Publicaria" é o veredito do Thiago.
 | 2026-10-11 | Classique Lux cromado (10202CR), ligado | mesa-banheiro-bancada | 1x1-piloto | Seedream 4 | capa r1, 1 ref | 4 | 3 | 0 | proporção (i): 1 (A5) | A2 quase de frente |
 | 2026-10-11 | Classique Lux cromado (10202CR), ligado | mesa-close-base | 1x1-piloto | Kontext Max | capa r1, 1 ref | 4 | 4 | 0 | 0 | nenhuma fez o close |
 | 2026-10-11 | Classique Lux cromado (10202CR), ligado | mesa-close-base | 1x1-piloto | Seedream 4 | capa r1, 1 ref | 4 | 4 | 0 | 0 | só B5 e B7 fizeram o close, as duas com a luz de estúdio da capa |
+| 2026-10-19 | Classique Lux cromado (10202CR), ligado | mesa-banheiro-bancada | 1x1-runway | Gen-4 (Runway) | do zero: still de catálogo crua + prompt simples | 4 | 0 | 0 | forma (a): 4; proporção (i): 4 | teste do Runway pedido pelo Thiago, fora do `ensaio.py`. Pescoço ou coluna no lugar do pivô curto e do sino (pivô → disco 0,52 a 0,85); texto na cúpula na 2 |
+| 2026-10-19 | Classique Lux cromado (10202CR), ligado | mesa-banheiro-bancada | 1x1-runway | Gemini 3 Pro (`nano-banana-pro` no Runway, 1K) | do zero: still de catálogo crua + prompt simples | 4 | 1 | 1 (do-zero-gemini-4) | forma (a): 1 (2); LED (c): 1 (3); proporção (i): 2 (1 e 3; a 2 no limite, 1,821) | placa inventada no difusor (2), LED apagado (3). do-zero-gemini-4 com o cabo real no retoque (d2): `aprovadas/10202CR/` -5 |
+| 2026-10-19 | Classique Lux cromado (10202CR), ligado | mesa-banheiro-bancada | 1x1-runway | Gen-4 (Runway) | harness: capa r1, moldura e receita | 4 | 0 | 0 | forma (a): 4; proporção (i): 4 | o harness não corrige o suporte; placa ou texto na cúpula na 1 e na 4, botão e "gardie" gravado na coluna na 2 |
+| 2026-10-19 | Classique Lux cromado (10202CR), ligado | mesa-banheiro-bancada | 1x1-runway | Gemini 3 Pro (`nano-banana-pro` no Runway, 1K) | harness: capa r1, moldura e receita | 4 | 2 | 2 (harness-gemini-3, -4) | proporção (i): 2 (1 e 2: altura 1,88 e 1,92, as duas de frente) | Thiago: "melhor com o harness". As duas com o cabo real no retoque (d2): `aprovadas/10202CR/` -6 e -7 |
 
 ## Calibragem do agente
 
