@@ -72,6 +72,23 @@ Trecho no ar (da traseira da cabeça até o topo do sino), com "suspenso": true:
              luz do fundo cai ao longo da rota (cabo pendente numa still de
              estúdio: mantenha a mesma razão com o fundo medido em cada ponto).
 
+Cabo deitado na superfície, com "deitado": true. Use no lugar do perfil
+medido na A1, que sobre mármore claro lê como um risco claro e mole ("os
+cabos não estão muito nítidos", Thiago, 2026-10-19). O cabo vira um cilindro
+branco opaco de borda definida. O brilho é uma razão da luz local da
+superfície: topo mais claro, lado da câmera mais escuro, como no cabo real de
+`referencias/classique-lux/classique-lux-frontal-*`. Do lado da câmera, ele
+deixa uma sombra de contato na superfície.
+  perfil_deitado  [[u...], [razão...]]: u = -1 na borda de trás (para cima na
+             foto) e +1 na borda do lado da câmera; razão = brilho ÷ luz local
+             da superfície. Padrão: topo 1,03, brilho 1,11, meio 1,03, base 0,83.
+  contato    [força do lado da câmera, força do lado de trás, alcance em px]:
+             junto da borda, a superfície escurece por força × e^(-distância ÷
+             alcance). Padrão [0,30, 0, 2,0]: com a luz de trás (janela ao
+             fundo), a sombra cai para o lado da câmera, e o contato de trás
+             fica escondido pelo próprio cabo.
+  teto       nível máximo do corpo do cabo (padrão 250).
+
 Depois, rode `inspecao_imagem.py diff foto.png saida.png saida-mascara.png` e
 leia os recortes do cabo (saída de trás da base, trajeto e borda do quadro).
 """
@@ -87,6 +104,10 @@ PV = np.array([0.3, 0.3, 0.3, 0.3, 0.1, -0.5, -1.4, -2.2, -3.2, -4.5, -5.05, -4.
                3.33, 6.9, 10.1, 12.7, 14.3, 15.3, 15.6, 15.3, 14.1, 12.5, 9.9, 5.9, 0.77, -3.7,
                -6.3, -7.6, -7.95, -7.4, -5.2, -3.1, -2.0, -1.0, -0.4, 0.0, -0.1, 0.0, 0.0])
 PADRAO = {'sigma': None, 'ganho_pos': 1.35, 'ganho_neg': 1.15, 'ondula': 1.2, 'sombra': 3.0, 'semente': 7}
+# cabo deitado: u = -1 na borda de trás e +1 do lado da câmera; razão = brilho ÷ luz local
+PERFIL_DEITADO = [[-1.0, -0.85, -0.6, -0.35, 0.0, 0.35, 0.6, 0.85, 1.0],
+                  [1.03, 1.09, 1.11, 1.08, 1.03, 0.98, 0.93, 0.87, 0.83]]
+CONTATO = [0.30, 0.0, 2.0]
 SS = 4          # supersampling
 PASSO = 0.5     # passo da curva em px
 
@@ -206,6 +227,7 @@ def desenhar(foto, recorte, rota, saida):
     alfa = np.asarray((rec.getchannel('A') if 'A' in rec.getbands() else rec.convert('L')).resize((W, H))).astype(float) / 255
     prod_duro = alfa > 60 / 255
     susp = bool(r.get('suspenso'))
+    deit = bool(r.get('deitado')) and not susp
     if susp:
         if r.get('visivel'):
             vis = np.asarray(Image.open(r['visivel']).convert('L').resize((W, H))).astype(float) / 255
@@ -277,6 +299,21 @@ def desenhar(foto, recorte, rota, saida):
         Cv = reduz((corpo_s * val).reshape(hs, ws))
         F1 = Cv[..., None] * np.array(r.get('tinta', [1.0, 1.0, 1.0])) + (0 if r.get('grao_depois') else A[..., None] * grao)
         F2 = np.repeat((1 - A)[..., None], 3, -1)
+    elif deit:
+        # cilindro deitado: corpo opaco = razão do perfil × luz local; fora dele, sombra de contato
+        u = np.where(perto, d / (larg[jj] / 2), 9.0)
+        corpo_d = ((np.abs(u) <= 1) & perto).astype(float)
+        pu, pr = (np.array(v, float) for v in r.get('perfil_deitado', PERFIL_DEITADO))
+        razao = np.interp(u, pu, pr) * (1 + 0.3 * (g1[jj] - 1))
+        kf, kt, alc = r.get('contato', CONTATO)
+        dd = np.maximum(np.abs(d) - larg[jj] / 2, 0)
+        sh = np.where(perto & (np.abs(u) > 1), np.where(d > 0, kf, kt) * np.exp(-dd / alc), 0.0)
+        A = reduz(corpo_d.reshape(hs, ws))
+        Rc = reduz((corpo_d * razao).reshape(hs, ws))
+        S = reduz(((1 - corpo_d) * (1 - sh)).reshape(hs, ws))
+        F1 = np.minimum(Rc[..., None] * M[roi], float(r.get('teto', 250)) * A[..., None])
+        F1 = F1 + (0 if r.get('grao_depois') else A[..., None] * grao)
+        F2 = np.repeat(S[..., None], 3, -1)
     else:
         Mr, Mlr = M[roi], Ml[roi]
         tinta = np.array([1.06, 1.0, 0.97])  # branco do PVC, um pouco mais quente que o mármore

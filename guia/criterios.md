@@ -111,7 +111,9 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
 7. **Cabo e plug (d, d2, e, f):** confira a vista contra `guia/produto.md` ›
    Cabo e plug, que cita as fotos reais de cada vista. Plug visível: compare a
    forma com `referencias/chicote-eletrico/`. LED aceso sem cabo à vista, na
-   bancada ou na alça do vão entre a cabeça e o pivô: anote d2.
+   bancada ou na alça do vão entre a cabeça e o pivô: anote d2. De 3/4, o
+   cabo da bancada sai de trás da base do mesmo lado do pivô em que aparece a
+   alça (`placar.md` › Calibragem, 2026-10-19).
 8. **Notas (g, h, j, m):** logo, reflexo, ambiente e outros espelhos.
 9. **Registro:** vetada vai para `_descartados/` com o item da tabela e a
    medida que reprovou; aprovada vira candidata ao lote, com as notas.
@@ -150,11 +152,21 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
     inventar outro objeto no lugar.
 - **Reflexo (h):** `ferramentas/curva_vidro.py` curva o reflexo existente,
   sem IA, só dentro do círculo do vidro.
-- **Cabo (d2):** `ferramentas/cabo_real.py` desenha o cabo sem IA, com o
-  perfil medido no cabo da A1 de 2026-10-11, e não toca no produto.
+- **Cabo (d2):** `ferramentas/cabo_real.py` desenha o cabo sem IA e não toca
+  no produto. Na bancada, use `"deitado": true`: cilindro branco de borda
+  definida, com sombra de contato. O perfil antigo, medido no cabo da A1 de
+  2026-10-11, lia mole sobre mármore claro (`placar.md` › Calibragem,
+  2026-10-19).
   - Rota de `guia/produto.md` › Cabo e plug: o 1º ponto fica escondido atrás
     da base, na direção da saída, e o cabo corre rente à bancada até a borda
     do quadro, com folga (curva leve, nunca reta esticada).
+  - Lado: de 3/4, a saída na bancada fica do mesmo lado do pivô que a alça;
+    na vista espelhada, os dois trocam de lado juntos (`placar.md` ›
+    Calibragem, 2026-10-19). Fique no tampo: nem a borda de cima do cabo
+    encosta na linha da parede.
+  - Nitidez: a borda do cabo (sigma do degrau ajustado ao perfil) não fica
+    mais mole que as bordas da foto junto da base. No teste do Runway, o cabo
+    deitado deu 0,4 a 0,9 px, contra 0,7 a 1,1 px nas bordas da base.
   - Alça no vão entre a cabeça e o pivô: rota com `"suspenso": true`, do 1º
     ponto escondido atrás da borda de baixo da cabeça ao último escondido no
     topo do pivô, descendo em curva como na marcação do Thiago na
