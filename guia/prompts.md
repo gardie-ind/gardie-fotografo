@@ -64,7 +64,8 @@ wall"). Não pode conter:
 - negativos ("no ...", "without ..."), que plantam o objeto proibido;
 - "warm" aplicado ao produto ou à luz dele (use "daylight" ou "soft light");
 - "warm", "cozy" ou "lived-in" sem qualificação, que puxam para o rústico;
-- pedido de cabo, de plug ou do conteúdo do reflexo;
+- pedido de cabo (ele entra no retoque, `guia/criterios.md` › d2), de plug
+  ou do conteúdo do reflexo;
 - a proporção da imagem, que vai pelo parâmetro.
 
 Para um close, nomeie só a região ("upper part of the product").
