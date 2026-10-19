@@ -1,0 +1,254 @@
+{
+ "data": "2026-10-19",
+ "pedido": "Thiago, 19/10: usar o Runway numa foto de produto, primeiro do zero e depois com o harness",
+ "produto": "Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado (10202CR), LED ligado",
+ "receita": "mesa-banheiro-bancada",
+ "aspecto": "1:1",
+ "via": "conector Runway (MCP), plano grátis; fora do ensaio.py, que não chama o Runway",
+ "condicoes": {
+  "do zero": {
+   "referencia": "referencias/catalogo/espelho-de-aumento-com-ring-light-5X-cromado-gardie-classique-lux-ligado-em-fundo-cinza.jpg (crua, sem preparo)",
+   "etiqueta": "espelho",
+   "prompt": "Professional product photo of @espelho on a white marble bathroom counter next to a window, with a folded towel and an orchid, natural light."
+  },
+  "harness": {
+   "referencia": "referencias/capa/classique-lux-cromado-ligado-capa-r1.png",
+   "etiqueta": "produto",
+   "prompt": "Professional lifestyle product photo shoot. The first attached image (@produto) shows the real product: Espelho de Aumento 5x com Luz LED de Mesa Gardie Classique Lux Cromado. Photograph this exact product in a new location: the product standing on a white marble bathroom counter beside a large window, soft morning daylight, a folded white towel and a white orchid out of focus; camera at counter height, facing the product. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product.",
+   "nota": "moldura receitas/_moldura.txt + receita mesa-banheiro-bancada; \"(@produto)\" acrescentado porque o Runway só usa a imagem citada por etiqueta"
+  }
+ },
+ "motores": {
+  "Gen-4": {
+   "id": "gen-4",
+   "saida": "1088x1088 PNG",
+   "creditos_por_imagem": 8
+  },
+  "Gemini 3 Pro Image": {
+   "id": "nano-banana-pro (gemini/gemini-3-pro-image)",
+   "saida": "1024x1024 PNG (1K)",
+   "creditos_por_imagem": 20
+  }
+ },
+ "creditos": {
+  "geracao": 224,
+  "recortes_para_medir": 19,
+  "total": 243,
+  "saldo_inicial": 500
+ },
+ "recorte_para_medir": {
+  "ferramenta": "remove_image_background, modelo sam3",
+  "assunto": "the round lighted makeup mirror on its stand",
+  "creditos_por_imagem": 1
+ },
+ "itens": [
+  {
+   "rotulo": "do-zero-gen4-1",
+   "condicao": "do zero",
+   "motor": "Gen-4",
+   "task_runway": "29fbfe06-ab04-4606-ac67-3c90b07acd4f",
+   "creditos": 8,
+   "arquivo": "geradas/do-zero-gen4-1.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "pescoço entre o pivô e o sino; pivô→disco 0,52; altura 1,92",
+   "recorte_sam3_task": "57b45568-9af1-46bf-93f8-243c33e49b04",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "do-zero-gen4-2",
+   "condicao": "do zero",
+   "motor": "Gen-4",
+   "task_runway": "c4124630-7a9e-428f-acb6-c3c083dfde28",
+   "creditos": 8,
+   "arquivo": "geradas/do-zero-gen4-2.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "coluna e texto inventado na cúpula; pivô→disco 0,67; altura 2,15",
+   "recorte_sam3_task": "426b9ee8-2e3d-41f9-922b-40564ff3e17e",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "do-zero-gen4-3",
+   "condicao": "do zero",
+   "motor": "Gen-4",
+   "task_runway": "9cf1d9bc-2d9d-474e-b05a-291bea708f9a",
+   "creditos": 8,
+   "arquivo": "geradas/do-zero-gen4-3.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "coluna longa; pivô→disco 0,85; altura 2,52; disco÷cabeça 0,655",
+   "recorte_sam3_task": "d4e80b2b-3462-4fa7-ad74-4de6bd1f209c",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "do-zero-gen4-4",
+   "condicao": "do zero",
+   "motor": "Gen-4",
+   "task_runway": "d277d345-059c-456d-a228-77dc8266697f",
+   "creditos": 8,
+   "arquivo": "geradas/do-zero-gen4-4.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "pescoço; pivô→disco 0,62; altura 1,94",
+   "recorte_sam3_task": "be27bc5c-8408-412e-9138-fef853d581a3",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "do-zero-gemini-1",
+   "condicao": "do zero",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "e0d8dd01-4818-4eac-acc6-389fbe09bf84",
+   "creditos": 20,
+   "arquivo": "geradas/do-zero-gemini-1.png",
+   "veredito": "vetada",
+   "item": "i",
+   "motivo": "altura 1,94 (cabeça alta: pino→pé 13% acima da capa); sem logo",
+   "recorte_sam3_task": "6d9250d3-a574-4437-914a-b1c8e6f943dd",
+   "vista": "3/4 espelhada"
+  },
+  {
+   "rotulo": "do-zero-gemini-2",
+   "condicao": "do zero",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "8fabf2f1-7f3c-4d5d-918c-2a6d4ee19671",
+   "creditos": 20,
+   "arquivo": "geradas/do-zero-gemini-2.png",
+   "veredito": "vetada",
+   "item": "a",
+   "motivo": "placa cromada inventada no difusor, no lugar do logo",
+   "recorte_sam3_task": "3c4277a1-ef0f-4d9f-9494-5a586f6fdfee",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "do-zero-gemini-3",
+   "condicao": "do zero",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "1e88812c-8666-4227-8549-401ec59453dc",
+   "creditos": 20,
+   "arquivo": "geradas/do-zero-gemini-3.png",
+   "veredito": "vetada",
+   "item": "c",
+   "motivo": "LED apagado (referência ligada); logo \"geroie\"; altura 1,83",
+   "recorte_sam3_task": "10368520-5b9f-49f7-b934-389310efa155",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "do-zero-gemini-4",
+   "condicao": "do zero",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "d1e22d99-f037-4a90-89d0-5ac41b378bae",
+   "creditos": 20,
+   "arquivo": "geradas/do-zero-gemini-4.png",
+   "veredito": "passou",
+   "item": "",
+   "motivo": "d2: LED aceso sem cabo à vista (retoque)",
+   "recorte_sam3_task": "88699ab9-f0fa-4895-8e55-bbf66514b5e0",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "harness-gen4-1",
+   "condicao": "harness",
+   "motor": "Gen-4",
+   "task_runway": "9040d3e1-e9ff-49d2-91c6-58b3add51f37",
+   "creditos": 8,
+   "arquivo": "geradas/harness-gen4-1.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "pescoço; placa dourada com texto na cúpula; pivô→disco 0,77; altura 2,31",
+   "recorte_sam3_task": "23bd8466-cc63-4fd4-b754-b44dda9fbafb",
+   "vista": "de frente"
+  },
+  {
+   "rotulo": "harness-gen4-2",
+   "condicao": "harness",
+   "motor": "Gen-4",
+   "task_runway": "917c8fc6-492f-4d6e-a70b-0c1ddf3a97ec",
+   "creditos": 8,
+   "arquivo": "geradas/harness-gen4-2.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "coluna alta com botão inventado e \"gardie\" gravado nela; anel branco sob a base; pivô→disco 0,65; altura 2,72",
+   "recorte_sam3_task": "10d954c6-ae34-44b6-9f64-3bc2c1b0315f",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "harness-gen4-3",
+   "condicao": "harness",
+   "motor": "Gen-4",
+   "task_runway": "c8c10133-22b9-4b32-8db2-147e155ba410",
+   "creditos": 8,
+   "arquivo": "geradas/harness-gen4-3.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "pescoço; pivô→disco 0,52; altura 2,18; topo do sino 0,25",
+   "recorte_sam3_task": "9b953883-3aa1-4c61-8477-130278e495d4",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "harness-gen4-4",
+   "condicao": "harness",
+   "motor": "Gen-4",
+   "task_runway": "c6eb7c62-df03-4113-8767-bbc9fa74091b",
+   "creditos": 8,
+   "arquivo": "geradas/harness-gen4-4.png",
+   "veredito": "vetada",
+   "item": "a/i",
+   "motivo": "pescoço; texto na cúpula; pivô→disco 0,51; altura 2,30",
+   "recorte_sam3_task": "b6eeed02-f7e8-4a1b-9a52-5beaad3270cf",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "harness-gemini-1",
+   "condicao": "harness",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "79259e79-611b-4d36-be49-b4c7995d6c43",
+   "creditos": 20,
+   "arquivo": "geradas/harness-gemini-1.png",
+   "veredito": "vetada",
+   "item": "i",
+   "motivo": "altura 1,88, de frente (pino→pé 12% acima da capa)",
+   "recorte_sam3_task": "7dc9e463-a42b-4ab8-aef2-dc740266dcfa",
+   "vista": "de frente"
+  },
+  {
+   "rotulo": "harness-gemini-2",
+   "condicao": "harness",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "1be218e3-eccb-4bd2-8e09-af4bfdde78a8",
+   "creditos": 20,
+   "arquivo": "geradas/harness-gemini-2.png",
+   "veredito": "vetada",
+   "item": "i",
+   "motivo": "altura 1,92, de frente (pino→pé 14% acima da capa)",
+   "recorte_sam3_task": "1eeab7a4-003c-46e5-bb1d-457cece48ed2",
+   "vista": "de frente"
+  },
+  {
+   "rotulo": "harness-gemini-3",
+   "condicao": "harness",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "3b579118-fac6-4801-b759-6a3cb53a872a",
+   "creditos": 20,
+   "arquivo": "geradas/harness-gemini-3.png",
+   "veredito": "passou",
+   "item": "",
+   "motivo": "colagem 0,285 (limite 0,32); d2: cabo (retoque)",
+   "recorte_sam3_task": "dd7bb669-f16c-4d02-9740-ff495d003e8d",
+   "vista": "3/4 como a capa"
+  },
+  {
+   "rotulo": "harness-gemini-4",
+   "condicao": "harness",
+   "motor": "Gemini 3 Pro Image (nano-banana-pro no Runway)",
+   "task_runway": "3b4010c9-3809-4ffa-826b-dfd94ecd2a2b",
+   "creditos": 20,
+   "arquivo": "geradas/harness-gemini-4.png",
+   "veredito": "passou",
+   "item": "",
+   "motivo": "d2: cabo (retoque)",
+   "recorte_sam3_task": "42402773-6617-4e16-a1c2-71d5f825de36",
+   "vista": "3/4 espelhada"
+  }
+ ]
+}
