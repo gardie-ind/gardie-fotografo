@@ -44,3 +44,7 @@ O preparo local não usa API: modelo do fundo de estúdio + inundação + remoç
 - Produto branco em fundo claro pode sair em pedaços (Vide branco): vem AVISO "recorte suspeito".
 
 Nesses casos, use `--recorte birefnet` (fal), ou passe um PNG já recortado com transparência (o alfa do arquivo é usado direto). Confira sempre a conferência.
+
+## 3D a partir do CAD (`3d/`)
+
+Render do produto direto do STEP da fábrica, sem IA generativa (Blender 5.2 como módulo Python e OpenCascade, na CPU). Piloto: Lumière 22005, 21/10/2026. Comandos, calibragens e conferências em `lotes/2026-10-21-lumiere-cad/LEIA.md` (enquanto o lote aguarda veredito). O CAD fica fora do git.
