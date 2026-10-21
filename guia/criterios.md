@@ -16,13 +16,15 @@ confirmou. A classe de um item só muda com a palavra dele.
 | a. Forma do produto inteiro: as mesmas peças da referência, na mesma quantidade; nada inventado, faltando, entortado ou "melhorado"; cabeça circular (elipse coerente com o ângulo) | VETO (Thiago, respostas 5 e 6) |
 | b. Acabamento igual ao da referência; cromado lê prata, nunca dourado | VETO (padrão — confirmar com o Thiago) |
 | c. LED no mesmo estado (aceso ou apagado) e na mesma cor da referência | VETO (padrão — confirmar com o Thiago) |
-| d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo está certo (10202CR-4). Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
-| e. Cabo na rota real do modelo: branco, fino, sem conector inventado, com folga compatível com 1,5 m | VETO (padrão — confirmar com o Thiago) |
+| d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo não reprova (10202CR-4); com o LED aceso, ver d2. Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
+| d2. LED aceso e cabo fora de vista no produto de mesa: o cabo faz falta (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/A1` e `A4`). Acrescente no retoque o cabo real em cada trecho que a vista mostra: na bancada, saindo de trás da base, e, de 3/4 com vão entre a cabeça e o pivô, a alça da traseira da cabeça até o topo do pivô (`placar.md` › Calibragem, 2026-10-12) | CORRIGIR SE DER (Thiago) |
+| e. Cabo na rota real do modelo: branco, fino, sem conector inventado, com folga compatível com 1,5 m. Defeito pequeno no trecho da bancada, longe do produto (uma marca escura de braçadeira na volta), não reprova: o Thiago publicaria assim a 10202CR gardie-4 (`placar.md` › Calibragem, 2026-10-16, CR4) | VETO (padrão — confirmar com o Thiago); defeito pequeno longe do produto: CORRIGIR SE DER (Thiago) |
 | f. Plug, quando aparece, fiel ao NBR 14136 da referência; mostrar o fio ligado na tomada não é exigido | VETO (Thiago) |
 | f2. Plug solto na bancada com o LED aceso (contradição física) | VETO (padrão — confirmar com o Thiago) |
 | g. Logo com a grafia errada, ou ausente (o Thiago publicaria a 10202CR-4 com "geroie") | CORRIGIR SE DER (padrão — confirmar com o Thiago) |
 | g2. Logo fora da posição da capa (no aro, no vidro) | VETO, como a (padrão — confirmar com o Thiago) |
 | h. Física do reflexo (`guia/cena.md`) | CORRIGIR SE DER (Thiago) |
+| h2. Luz de colagem: o cromado repete o reflexo da capa em vez de refletir a cena, e o produto parece recortado do estúdio e colado no ambiente. Medida no passo 5: NCC do detalhe ≥ 0,32 (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/B5` e `B7`) | VETO (Thiago) |
 | i. Escala e proporções: fiel em TODAS as proporções do produto e no tamanho dele no ambiente | VETO (Thiago) |
 | j. Ambiente (`guia/cena.md`) | CORRIGIR SE DER, com liberdade criativa (Thiago) |
 | k. Montagem e uso reais (`guia/cena.md` › Lugar) | VETO (padrão — confirmar com o Thiago) |
@@ -71,15 +73,34 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    | disco ÷ cabeça (eixo maior); espessura do disco ÷ disco | ±10% |
    | topo do sino (ou da coluna) ÷ disco | ±15% |
    | pivô → topo do disco ÷ disco (Classique Lux) | em qualquer altura de câmera, VETO acima de 0,47; abaixo de 0,31, só com câmera alta. Obrigatória na `mesa-close-base`, onde confere também que o sino abre logo abaixo do pivô, sem coluna |
+   | altura: topo da cabeça → centro do pé ÷ disco (Classique Lux, câmera baixa, até ~15°) | VETO acima de 1,82, 8% acima da capa r1 (1,68). Pega a cabeça grande somada ao garfo alto, que o disco ÷ cabeça sozinho deixa passar (`placar.md` › Calibragem, 2026-10-16, CR1 a CR3) |
    | parede: braço ou suporte ÷ cabeça, placa ÷ cabeça | ±10%, depois de medidos na capa do primeiro lote |
+
+   **Altura:** o topo é o ponto mais alto da borda da cabeça; o centro do pé
+   é o y0 da meia-elipse ajustada à borda de baixo do anel preto,
+   y = y0 + b·√(1 − ((x − xc)/a)²), com a = metade do disco. Publicaria: A1
+   1,77, CR4 1,79 e A4 1,80. Não publicaria: CR1 1,85, CR3 1,87 e CR2 1,88
+   (e A3 1,88 e A5 1,96, já vetadas pelo disco ÷ cabeça).
 
    **Escala no ambiente:** meça em px uma dimensão total do produto
    (`guia/produto.md` › Medidas) e um objeto de tamanho conhecido no MESMO
    plano (sobre a mesma bancada, à mesma distância da câmera): frasco de
    perfume de 10 a 15 cm, torneira, toalha de rosto dobrada, gaveta. Compare
    com a razão em cm. Nos closes, a escala é conferida pelas proporções.
-5. **Acabamento (b):** os realces do cromado são neutros, sem puxar para
-   amarelo ou dourado. Compare com a capa no mesmo tipo de recorte.
+5. **Acabamento e luz (b, h2):** os realces do cromado são neutros, sem
+   puxar para amarelo ou dourado. Compare com a capa no mesmo tipo de recorte.
+   Depois meça se o cromado repete o reflexo da capa:
+   `python3 ferramentas/inspecao_imagem.py colagem <capa> <caixa na capa> <img> <janela> <escala> _crops/<rótulo>-colagem.png`.
+   - Caixa na capa: um trecho cromado de reflexo marcante. Na capa r1 do
+     Classique Lux cromado, o miolo do sino, `700,1110,870,1320`.
+   - Janela: o mesmo trecho na candidata, com folga, lido na grade.
+   - Escala: Ø da base na candidata ÷ Ø da base na capa (802 px na r1).
+   - A ferramenta compara o detalhe (passa-alta), não a mancha escura que
+     todo sino reflete: sem o filtro, sinos refeitos com a luz da cena deram
+     até 0,82 e se confundiam com as cópias.
+   - NCC ≥ 0,32: VETO h2. No piloto de 2026-10-11, as cópias da capa deram
+     0,40 a 0,84 (B5 0,83 e B7 0,84) e as que refletiam a cena, 0,20 a 0,25
+     (A1 0,20 e A4 0,21) (padrão — calibrar).
 6. **LED (c):** mesmo estado da capa. Para a cor, meça o B/R mediano só em
    pixels não saturados (canal máximo entre 60 e 244): no anel ou, se ele
    estourar, numa faixa de ~3% do Ø logo por dentro dele (o halo no vidro),
@@ -87,9 +108,12 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    mesma cena (toalha, parede). Por esse método, as fotos reais dão ≈0,78 em
    4500K e ≈1,07 em 6000K. VETO se a candidata se afastar mais de 0,15 da
    capa, metade dessa distância (padrão — calibrar).
-7. **Cabo e plug (d, e, f):** confira a vista contra `guia/produto.md` › Cabo
-   e plug, que cita as fotos reais de cada vista. Plug visível: compare a
-   forma com `referencias/chicote-eletrico/`.
+7. **Cabo e plug (d, d2, e, f):** confira a vista contra `guia/produto.md` ›
+   Cabo e plug, que cita as fotos reais de cada vista. Plug visível: compare a
+   forma com `referencias/chicote-eletrico/`. LED aceso sem cabo à vista, na
+   bancada ou na alça do vão entre a cabeça e o pivô: anote d2. De 3/4, o
+   cabo da bancada sai de trás da base do mesmo lado do pivô em que aparece a
+   alça (`placar.md` › Calibragem, 2026-10-19).
 8. **Notas (g, h, j, m):** logo, reflexo, ambiente e outros espelhos.
 9. **Registro:** vetada vai para `_descartados/` com o item da tabela e a
    medida que reprovou; aprovada vira candidata ao lote, com as notas.
@@ -108,6 +132,10 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
 
 ## Retoque (corrigir se der)
 
+- **Foto em uso que volta para retoque** é candidata como as outras: passa
+  pelo checklist inteiro antes da prancha, não só pelo item retocado. As
+  10202CR gardie-1 a -3 ganharam a alça sem a medida de proporção, e o Thiago
+  não as publicaria (`placar.md` › Calibragem, 2026-10-16, CR1 a CR3).
 - **Só defeito local:** logo com grafia errada (corrija a grafia; remover o
   logo só depois de o Thiago confirmar que logo ausente é aceito), texto
   fantasma, objeto pequeno espúrio, um trecho do reflexo. Defeito de forma,
@@ -124,6 +152,35 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
     inventar outro objeto no lugar.
 - **Reflexo (h):** `ferramentas/curva_vidro.py` curva o reflexo existente,
   sem IA, só dentro do círculo do vidro.
+- **Cabo (d2):** `ferramentas/cabo_real.py` desenha o cabo sem IA e não toca
+  no produto. Na bancada, use `"deitado": true`: cilindro branco de borda
+  definida, com sombra de contato. O perfil antigo, medido no cabo da A1 de
+  2026-10-11, lia mole sobre mármore claro (`placar.md` › Calibragem,
+  2026-10-19).
+  - Rota de `guia/produto.md` › Cabo e plug: o 1º ponto fica escondido atrás
+    da base, na direção da saída, e o cabo corre rente à bancada até a borda
+    do quadro, com folga (curva leve, nunca reta esticada).
+  - Lado: de 3/4, a saída na bancada fica do mesmo lado do pivô que a alça;
+    na vista espelhada, os dois trocam de lado juntos (`placar.md` ›
+    Calibragem, 2026-10-19). Fique no tampo: nem a borda de cima do cabo
+    encosta na linha da parede.
+  - Nitidez: a borda do cabo (sigma do degrau ajustado ao perfil) não fica
+    mais mole que as bordas da foto junto da base. No teste do Runway, o cabo
+    deitado deu 0,4 a 0,9 px, contra 0,7 a 1,1 px nas bordas da base.
+  - Alça no vão entre a cabeça e o pivô: rota com `"suspenso": true`, do 1º
+    ponto escondido atrás da borda de baixo da cabeça ao último escondido no
+    topo do pivô, descendo em curva como na marcação do Thiago na
+    `1x1-piloto/A1` (`placar.md` › Calibragem, 2026-10-12). Se o recorte do
+    produto engolir o vão (o BiRefNet preenche furos), passe em `visivel` a
+    máscara do vão e confira que os pixels "do produto" alterados são só fundo
+    (cor da parede, sem cromado).
+  - Largura: 5 mm na escala do Ø da base junto dela, diminuindo para o fundo.
+  - Confira em 8× a saída de trás da base (sem ponta solta nem vão), a saída
+    da alça sob a borda da cabeça e a entrada dela no pivô e, em 1×, se o cabo
+    se lê como cabo.
+  - Em 2026-10-11, o FLUX Fill numa faixa da rota acertou 1 de 16 tentativas
+    (a A1, e com a ponta solta a 10 px da base), e o Kontext em edição pôs
+    plug solto (f2) e mexeu no enquadramento.
 - **Editor de imagem inteira** (Kontext, Seedream ou Gemini em edição):
   recodifica o produto, então a candidata volta ao checklist desde o começo.
 - **Depois de toda edição:** rode
