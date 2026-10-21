@@ -12,6 +12,7 @@ capa em `guia/prompts.md`; fatos de produto em `guia/produto.md`).
 | `visage-lux/` | cabo saindo da traseira da cabeça | apoio: cabo dos modelos de parede com LED |
 | `flex-lux/` | ligado, desligado e uma foto real | apoio |
 | `flex/`, `beaute/`, `miroir/`, `royale-cristal/` | fotos reais desses modelos | apoio |
+| `branche/` | foto do Branche (10448) cromado em fundo branco, enviada pelo Thiago em 21/10/2026; o modelo ainda não tem still em `catalogo/` | base dos acabamentos do Branche |
 | `chicote-eletrico/` | plug solto, plug na tomada e o desenho com as medidas do plug | conferir o plug quando ele aparece |
 | `videos/` | vídeos reais dos modelos com LED em uso | extrair quadros quando um detalhe só aparece em movimento |
 | `benchmark-ml/` | fotos geradas pelo "Gerar fotos com IA" do Mercado Livre | padrão de qualidade e de ambiente; **nunca** referência do produto |

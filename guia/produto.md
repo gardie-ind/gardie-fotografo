@@ -15,7 +15,7 @@ peça é sempre o da still.
 | Royale Lux | LUX | mesa | sim | cromado, ligado e desligado | `royale-lux/` (cabo e traseira em dourado; `Royale Lux ON/OFF` = cromado real ambientado), vídeo (13 s: cabo saindo de trás da base) |
 | Mobile Lux | LUX | parede | sim | cromado, ligado e desligado | vídeo (13 s: aceso, cabo pendendo) |
 | Visage Lux | LUX | parede | sim | cromado, ligado e desligado | `visage-lux/` (cabo e traseira; suporte dourado), vídeo |
-| Flex Lux | LUX | parede | sim | cromado, ligado e desligado | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
+| Flex Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 21/10/2026, `aprovadas/10554*`) | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
 | Lumière | LUX | parede, articulado como o Mobile Lux | sim, fio embutido | nenhuma | nenhum (não fotografar) |
 | Flex | Clássica Premium | parede | não | cromado | `flex/` |
 | Flex Cristal | Clássica Premium | parede | não | cromado | — |
@@ -29,6 +29,7 @@ peça é sempre o da still.
 | Jolie | Essencial | mesa | não | branco, cromado | — |
 | Beauté | Essencial | mesa: de mão, apoiado no pé | não | branco, cristal, preto | `beaute/` |
 | Vide | Box/Ventosa | ventosa | não | branco | — |
+| Branche | a confirmar | parede, braço articulado simples, cabeça dupla-face num aro com dois pinos | não | nenhuma em `catalogo/` | `branche/` (foto do Thiago, cromado em fundo branco, 2043 × 1800 px, 21/10/2026: base dos acabamentos) |
 
 - **Pré-lançamento:** Doubler e Lumière.
 - **Faces:** os modelos sem LED são dupla-face (um lado normal, plano, e o
@@ -45,6 +46,13 @@ peça é sempre o da still.
   coluna Stills não lista): sem lote, até o Thiago aprovar uma referência
   real daquele acabamento. As fotos douradas do Royale Lux e do Visage Lux são
   apoio, não capa.
+- **Acabamento por recoloração** (Thiago, 21/10/2026, piloto Flex Lux:
+  "Acabamentos aprovados"): sem foto real do acabamento, a versão sai da
+  still cromada aprovada, sem IA. Só o metal muda de cor, calibrado nas
+  referências de cor Deca; vidro, anel de luz, logo, carcaça de plástico e
+  peças de nylon ou borracha ficam com o pixel original, e o cabo só muda no
+  black matte, onde fica preto. A recoloração aprovada pelo Thiago, modelo a
+  modelo, vale como still daquele acabamento (coluna Stills).
 
 ## Cabeça dos modelos LUX
 
@@ -106,7 +114,8 @@ peça é sempre o da still.
 - **Quem tem cabo à vista:** os LUX, exceto o Lumière (fio embutido, sem cabo
   aparente; cabo pendurado é invenção). Nenhum modelo sem LED tem cabo.
 - **O cabo:** branco, fino (cerca de 5 mm, tipo fio de abajur), com 1,5 m do
-  espelho ao plug.
+  espelho ao plug. No black matte (BL.MT), o cabo é preto (Thiago,
+  21/10/2026).
 - **Rota no Classique Lux e no Royale Lux (mesa):** sai do meio da traseira
   da cabeça, logo abaixo do interruptor → desce numa alça curta → entra no
   pivô, por cima → corre por dentro do suporte → sai por um furo na traseira
@@ -186,23 +195,26 @@ peça é sempre o da still.
 **Códigos, acabamentos à venda e medidas** (catálogo operacional e loja). O
 código do ML é o código-base + sufixo (10202CR = Classique Lux cromado).
 Sufixos: CR cromado, GL dourado, GL.RD red gold, BL.MT black matte, BL.NO
-black noir, BR branco, CL cristal, NK.BU brushed nickel. O Ø espelhado é o
-nominal do catálogo e pode não ser o vidro visível; para conferir a escala,
-use as dimensões totais (mesa: altura × largura × profundidade).
+black noir, BR branco, CL cristal, NK.BU brushed nickel. Nos 12 códigos com
+†, gold, red gold, brushed nickel e black matte valem para todos, à venda ou a
+lançar (Thiago, 21/10/2026: "Estes acabamentos são para todos os espelhos lux,
+se não tiver, devemos criar"). O Ø espelhado é o nominal do catálogo e pode
+não ser o vidro visível; para conferir a escala, use as dimensões totais
+(mesa: altura × largura × profundidade).
 
 | Modelo | Código | Acabamentos à venda | Ø espelhado | Dimensões totais (alcance) |
 |---|---|---|---|---|
-| Classique Lux | 10202 | CR, GL, GL.RD | 203 mm | 37 × 28 × 20,5 cm |
-| Royale Lux | 10288 | CR, GL, GL.RD | 152 mm | 32 × 22 × 14,5 cm |
-| Mobile Lux | 10455 | CR, GL, GL.RD | 152 mm | 33 × 26,5 cm (braço até 42 cm) |
-| Visage Lux | 10509 | CR, GL, GL.RD | 203 mm | 26,5 × 26,5 cm (projeção até 16 cm) |
-| Flex Lux | 10554 | CR, GL, GL.RD, BL.MT | 203 mm | 35 × 26 cm (até 56,5 cm) |
-| Lumière | 22005 | CR, GL, GL.RD, NK.BU | 152 mm | 33 × 26,5 cm |
-| Flex | 10578 | CR, GL, GL.RD | 170 mm | 35 × 26 cm (até 56,5 cm) |
-| Flex Cristal | 10639 | CR, GL, GL.RD | 145 mm | 35 × 26 cm (até 56,5 cm) |
-| Mobile | 10431 | CR, GL, GL.RD | 170 mm | 33 × 26,5 cm (até 42 cm) |
-| Royale Cristal | 10271 | CR, GL, GL.RD | 145 mm | 31 × 23,5 × 17 cm |
-| Svelte | 10479 | CR, GL, GL.RD | 175 mm | 17,5 × 25 cm (até 45 cm) |
+| Classique Lux | 10202 † | CR, GL, GL.RD, NK.BU, BL.MT | 203 mm | 37 × 28 × 20,5 cm |
+| Royale Lux | 10288 † | CR, GL, GL.RD, NK.BU, BL.MT | 152 mm | 32 × 22 × 14,5 cm |
+| Mobile Lux | 10455 † | CR, GL, GL.RD, NK.BU, BL.MT | 152 mm | 33 × 26,5 cm (braço até 42 cm) |
+| Visage Lux | 10509 † | CR, GL, GL.RD, NK.BU, BL.MT | 203 mm | 26,5 × 26,5 cm (projeção até 16 cm) |
+| Flex Lux | 10554 † | CR, GL, GL.RD, NK.BU, BL.MT | 203 mm | 35 × 26 cm (até 56,5 cm) |
+| Lumière | 22005 † | CR, GL, GL.RD, NK.BU, BL.MT | 152 mm | 33 × 26,5 cm |
+| Flex | 10578 † | CR, GL, GL.RD, NK.BU, BL.MT | 170 mm | 35 × 26 cm (até 56,5 cm) |
+| Flex Cristal | 10639 † | CR, GL, GL.RD, NK.BU, BL.MT | 145 mm | 35 × 26 cm (até 56,5 cm) |
+| Mobile | 10431 † | CR, GL, GL.RD, NK.BU, BL.MT | 170 mm | 33 × 26,5 cm (até 42 cm) |
+| Royale Cristal | 10271 † | CR, GL, GL.RD, NK.BU, BL.MT | 145 mm | 31 × 23,5 × 17 cm |
+| Svelte | 10479 † | CR, GL, GL.RD, NK.BU, BL.MT | 175 mm | 17,5 × 25 cm (até 45 cm) |
 | Classique | 10233 | CR, BL.MT, BR, GL, GL.RD | 220 mm | 37 × 28 × 20,5 cm |
 | Doubler | 10486 | CR, BL.MT | 145 mm | 20,1 × 25 cm |
 | Platine | 10240 | CR, BR, GL, GL.RD | 145 mm | 29 × 21,5 × 17 cm |
@@ -210,3 +222,4 @@ use as dimensões totais (mesa: altura × largura × profundidade).
 | Jolie | 10301 | CR, BR, GL, GL.RD | 115 mm | 20,5 × 15 × 14 cm |
 | Beauté | 20102 | CL, BR, BL.NO | 125 mm | 26 × 16 × 12,5 cm |
 | Vide | 10103 | BR, BL.NO | 120 mm | 14,5 × 14,5 × 7,5 cm |
+| Branche | 10448 † | CR, GL, GL.RD, NK.BU, BL.MT | a confirmar | a confirmar (cadastrado no Tiny) |
