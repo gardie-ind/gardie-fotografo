@@ -1,4 +1,0 @@
-{"base": "ensaios/_versoes/2026-10-11-classique-lux-cromado/retoque-cabo/A1-cabo.png",
- "pontos": [[600, 838.5], [690, 822.2], [704, 819.0], [714, 816.6], [724, 814.1], [734, 810.9], [744, 808.1]],
- "larg": [11, 11, 11, 11, 11, 11, 11], "sigma": [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
- "ganho_pos": 1.55, "ganho_neg": 0.6, "ondula": 0, "sombra": 0, "janela": [708, 720]}

@@ -123,6 +123,11 @@ peça é sempre o da still.
     rente a ela (`classique-lux-frontal-*`; vídeo do Royale Lux, 13 s). Sem
     cabo à vista também é real, quando ele segue reto para trás da base, mas
     com o LED aceso o cabo faz falta (`guia/criterios.md` › d2).
+  - **Para que lado, na superfície:** de 3/4, o cabo sai de trás da base
+    para o lado da traseira da cabeça, que é o lado em que aparece a alça
+    (`classique-lux-diagonal`, `-diagonal-2`). Numa vista espelhada, cabo e
+    alça trocam de lado juntos (Thiago, 2026-10-19, na 10202CR-7). De frente,
+    os dois lados são reais (`classique-lux-frontal-*`, para a esquerda).
   - **De lado, de trás ou com câmera alta:** a alça cabeça → pivô aparece
     inteira (`classique-lux-lateral`, `-traseira-cabo`, `-virado-para-cima`).
   - Rotas que não existem: cabo por fora do suporte até a tomada; cabo saindo
@@ -148,7 +153,8 @@ peça é sempre o da still.
   - pivô → topo do disco (onde a cúpula encontra o disco) ÷ disco: 0,36 na
     still; ≈0,41 com a câmera mais baixa (foto frontal real).
   - Medidas por contorno (lote 2026-10-11, método em
-    `lotes/2026-10-11-classique-lux-cromado/verificacao.md`), na capa
+    `/mnt/project-files/fotografo/2026-10-11-classique-lux-cromado/lote-git/verificacao.md`,
+    a cópia do lote que saiu do git), na capa
     `classique-lux-cromado-ligado-capa-r1` (câmera a ≈7°) e nas três fotos
     frontais reais de `referencias/classique-lux/` (câmera a ≈30°):
 
