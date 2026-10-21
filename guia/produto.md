@@ -153,7 +153,8 @@ peça é sempre o da still.
   - pivô → topo do disco (onde a cúpula encontra o disco) ÷ disco: 0,36 na
     still; ≈0,41 com a câmera mais baixa (foto frontal real).
   - Medidas por contorno (lote 2026-10-11, método em
-    `lotes/2026-10-11-classique-lux-cromado/verificacao.md`), na capa
+    `/mnt/project-files/fotografo/2026-10-11-classique-lux-cromado/lote-git/verificacao.md`,
+    a cópia do lote que saiu do git), na capa
     `classique-lux-cromado-ligado-capa-r1` (câmera a ≈7°) e nas três fotos
     frontais reais de `referencias/classique-lux/` (câmera a ≈30°):
 
