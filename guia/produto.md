@@ -11,11 +11,11 @@ peça é sempre o da still.
 
 | Modelo | Linha | Montagem | LED e cabo | Stills (acabamento) | Apoio em `referencias/` |
 |---|---|---|---|---|---|
-| Classique Lux | LUX | mesa | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10202*`) | `classique-lux/`, vídeo |
-| Royale Lux | LUX | mesa | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10288*`) | `royale-lux/` (cabo e traseira em dourado; `Royale Lux ON/OFF` = cromado real ambientado), vídeo (13 s: cabo saindo de trás da base) |
-| Mobile Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10455*`) | vídeo (13 s: aceso, cabo pendendo) |
-| Visage Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10509*`) | `visage-lux/` (cabo e traseira; suporte dourado), vídeo |
-| Flex Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 21/10/2026, `aprovadas/10554*`; brushed nickel refeito com escovado em 22/10/2026) | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
+| Classique Lux | LUX | mesa | sim | cromado, e gold, red gold, brushed nickel e black matte por recoloração; todos com o logo a laser, desligado e ligado nos 3 tons (aprovadas em 22/10/2026, `aprovadas/10202*`; numeração em Cabeça dos modelos LUX › Stills dos LUX) | `classique-lux/`, vídeo |
+| Royale Lux | LUX | mesa | sim | cromado, e gold, red gold, brushed nickel e black matte por recoloração; todos com o logo a laser, desligado e ligado nos 3 tons (aprovadas em 22/10/2026, `aprovadas/10288*`; numeração em Cabeça dos modelos LUX › Stills dos LUX) | `royale-lux/` (cabo e traseira em dourado; `Royale Lux ON/OFF` = cromado real ambientado), vídeo (13 s: cabo saindo de trás da base) |
+| Mobile Lux | LUX | parede | sim | cromado, e gold, red gold, brushed nickel e black matte por recoloração; todos com o logo a laser, desligado e ligado nos 3 tons (aprovadas em 22/10/2026, `aprovadas/10455*`; numeração em Cabeça dos modelos LUX › Stills dos LUX) | vídeo (13 s: aceso, cabo pendendo) |
+| Visage Lux | LUX | parede | sim | cromado, e gold, red gold, brushed nickel e black matte por recoloração; todos com o logo a laser, desligado e ligado nos 3 tons (aprovadas em 22/10/2026, `aprovadas/10509*`; numeração em Cabeça dos modelos LUX › Stills dos LUX) | `visage-lux/` (cabo e traseira; suporte dourado), vídeo |
+| Flex Lux | LUX | parede | sim | cromado, e gold, red gold, brushed nickel e black matte por recoloração; todos com o logo a laser, desligado e ligado nos 3 tons (aprovadas em 22/10/2026, `aprovadas/10554*`; numeração em Cabeça dos modelos LUX › Stills dos LUX) | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
 | Lumière | LUX | parede, articulado como o Mobile Lux | sim, fio embutido | nenhuma | nenhum (não fotografar) |
 | Flex | Clássica Premium | parede | não | cromado | `flex/` |
 | Flex Cristal | Clássica Premium | parede | não | cromado | — |
@@ -54,7 +54,20 @@ peça é sempre o da still.
   black matte, onde fica preto. A recoloração aprovada pelo Thiago, modelo a
   modelo, vale como still daquele acabamento (coluna Stills).
   - Gold, red gold e black matte: `ferramentas/acabamentos.py`, com os números
-    do piloto.
+    do piloto, menos o tom do red gold.
+  - Red gold: o tom é o de uma peça real (foto do Thiago, 22/10/2026,
+    `referencias/red-gold/foto-real-red-gold-parede-2026-10-22.jpeg`, escolhido
+    "igual à foto" no mesmo dia). O tom Deca de 21/10 lia rosa: medido em
+    CIELAB por faixa de L*, a peça real tem matiz 69 a 74° e croma 12 a 27,
+    contra 59 a 71° e 28 a 37 do Deca (`ferramentas/medir_acabamento.py tom`;
+    `ferramentas/novo_tom.py` gira o matiz e reduz o croma da tabela). A
+    claridade não foi calibrada: na still, o metal reflete o estúdio branco.
+    Medida de veto em `guia/criterios.md`, item b.
+  - Black matte: a carcaça também é pintada de preto (Thiago, 22/10/2026:
+    "Nos modelos preto fosco, nós pintamos as carcaças de preto também").
+    No Classique Lux só o anel de borracha fica como está; no Royale Lux,
+    nada; no Visage Lux, só a ponta do cabo.
+    Medida de veto em `guia/criterios.md`, item b.
   - Brushed nickel: `ferramentas/escovado.py` (22/10/2026), porque a versão de
     21/10 lia polida ("O níquel escovado não tem acabamento escovado"). O
     reflexo se espalha através da peça (gaussiana de 5 px) e o riscado segue
@@ -82,21 +95,34 @@ peça é sempre o da still.
     enquadre a traseira.
 - **Traseira dos modelos sem LED:** na dupla-face, o outro espelho; na face
   única, não há foto real. Não enquadre.
-- **LED:** duas temperaturas, quente (4500K) e fria (6000K) (catálogo; fotos
-  `classique-lux-frontal-luz-4500k/-6000k.jpeg`). A foto segue o estado e a
-  cor da still usada (cada LUX tem still ligada e desligada). Confirmar com o
-  Thiago qual temperatura as stills mostram e se o interruptor II/O/I alterna
-  as duas. A medida da cor está em `guia/criterios.md`, passo 6.
-- **Logo:** vale a posição da still. Nos LUX, "gardie" em minúsculas
-  estilizadas, cinza, impresso no difusor iluminado, na parte de baixo do anel,
-  nunca no aro. No Flex, impresso no vidro, embaixo.
-- **Mudança do logo (confirmar com o Thiago antes do próximo lote LUX):**
-  segundo ele, a marca deixa (ou já deixou) a borda de luz e passa a ser
-  gravada a laser no espelho, formando uma janela de luz no formato da marca.
-  Não está confirmado se isso já está em produção. Até a confirmação, vale a
-  still. Se já estiver em produção, as stills atuais estão desatualizadas
-  nesse ponto: é preciso uma still real nova antes de novas capas, e então se
-  atualizam este item e o critério g.
+- **LED:** três tons de divulgação, 3000K, 4500K e 6000K. A linha LUX vai sair
+  com as 3 cores e dimerizável (Thiago, 22/10/2026). Os nomes são de
+  divulgação: o 3000K é o render de 4500K, o 4500K é o de 5150K e o 6000K, o de
+  6000K, porque o 3000K real lia laranja demais para divulgação (Thiago,
+  22/10/2026). O 4500K tem a cor do difusor das stills de catálogo.
+- **Padrão de luz** (Thiago, 22/10/2026, 18:44: "O meio termo está perfeito.
+  Vamos seguir com ele como padrão para todos os outros espelhos"): sem IA,
+  `ferramentas/luz_padrao.py`. A luz do LED é a diferença entre a still ligada e
+  a apagada. Ela é recolorida pela curva de Planck, ajustada às fotos reais
+  `classique-lux-frontal-luz-4500k/-6000k.jpeg`, com +80% de brilho e metade
+  da compressão dos realces (ganho 1,8, joelho 0,8, mistura 0,5).
+- **Logo:** "gardie" gravado a laser no espelho, e não mais impresso no
+  difusor (Thiago, 22/10/2026, 19:08: "Só a logomarca da Gardi no espelho e
+  não na borda jateada. Ele brilha na cor do anel fosco de luz"; aprovado às
+  20:12). Desenho E-0001-V1 (`ferramentas/logo-laser/E-0001-V1.pdf`): 20 mm
+  de largura, 2,98 mm de altura, topo a 8,71 mm da borda de baixo da área
+  espelhada, centrado. Desligado, fica cinza escuro, da cor do difusor
+  apagado. Ligado, tem a cor do anel naquele tom e um brilho leve em volta dos
+  traços. Nas stills do Visage Lux e do Royale Lux, o vidro em volta do logo
+  já sai branco, e o logo aceso quase some. Nenhum logo no difusor nem no
+  aro. No Flex (sem LED), o logo segue impresso no vidro, embaixo.
+- **Stills dos LUX:** as de `referencias/catalogo/` mostram o logo impresso
+  antigo e servem só para a forma. Para capa e verificação, valem as
+  aprovadas de 22/10/2026, feitas sem IA (`ferramentas/lote_logo.py`): em
+  cada pasta `aprovadas/<código><acabamento>/`, -1 ligado em 4500K, -2
+  desligado, -3 ligado em 3000K e -4 ligado em 6000K. No Classique Lux
+  cromado (10202CR), por causa das ambientadas, são -3 (4500K), -4
+  (desligado), -8 (3000K) e -9 (6000K).
 
 ## Suportes (a região que mais alucina)
 
