@@ -11,11 +11,11 @@ peça é sempre o da still.
 
 | Modelo | Linha | Montagem | LED e cabo | Stills (acabamento) | Apoio em `referencias/` |
 |---|---|---|---|---|---|
-| Classique Lux | LUX | mesa | sim | cromado, ligado e desligado | `classique-lux/`, vídeo |
-| Royale Lux | LUX | mesa | sim | cromado, ligado e desligado | `royale-lux/` (cabo e traseira em dourado; `Royale Lux ON/OFF` = cromado real ambientado), vídeo (13 s: cabo saindo de trás da base) |
-| Mobile Lux | LUX | parede | sim | cromado, ligado e desligado | vídeo (13 s: aceso, cabo pendendo) |
-| Visage Lux | LUX | parede | sim | cromado, ligado e desligado | `visage-lux/` (cabo e traseira; suporte dourado), vídeo |
-| Flex Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 21/10/2026, `aprovadas/10554*`) | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
+| Classique Lux | LUX | mesa | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10202*`) | `classique-lux/`, vídeo |
+| Royale Lux | LUX | mesa | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10288*`) | `royale-lux/` (cabo e traseira em dourado; `Royale Lux ON/OFF` = cromado real ambientado), vídeo (13 s: cabo saindo de trás da base) |
+| Mobile Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10455*`) | vídeo (13 s: aceso, cabo pendendo) |
+| Visage Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 22/10/2026, `aprovadas/10509*`) | `visage-lux/` (cabo e traseira; suporte dourado), vídeo |
+| Flex Lux | LUX | parede | sim | cromado, ligado e desligado; gold, red gold, brushed nickel e black matte por recoloração (aprovadas em 21/10/2026, `aprovadas/10554*`; brushed nickel refeito com escovado em 22/10/2026) | `flex-lux/` (ambientadas: `ON/OFF`, `IMG_0623h`), vídeo (13 s: cabo pendendo) |
 | Lumière | LUX | parede, articulado como o Mobile Lux | sim, fio embutido | nenhuma | nenhum (não fotografar) |
 | Flex | Clássica Premium | parede | não | cromado | `flex/` |
 | Flex Cristal | Clássica Premium | parede | não | cromado | — |
@@ -53,6 +53,14 @@ peça é sempre o da still.
   peças de nylon ou borracha ficam com o pixel original, e o cabo só muda no
   black matte, onde fica preto. A recoloração aprovada pelo Thiago, modelo a
   modelo, vale como still daquele acabamento (coluna Stills).
+  - Gold, red gold e black matte: `ferramentas/acabamentos.py`, com os números
+    do piloto.
+  - Brushed nickel: `ferramentas/escovado.py` (22/10/2026), porque a versão de
+    21/10 lia polida ("O níquel escovado não tem acabamento escovado"). O
+    reflexo se espalha através da peça (gaussiana de 5 px) e o riscado segue
+    cada peça, em duas escalas, sumindo onde o sentido é indefinido e nos 4 px
+    junto da silhueta. O tom Deca e a faixa de luminância são os mesmos. A
+    medida está em `guia/criterios.md`, item b.
 
 ## Cabeça dos modelos LUX
 
@@ -146,6 +154,11 @@ peça é sempre o da still.
   solto, abaixo dela, até a tomada ou a borda do quadro. Aparece mesmo de
   frente (vídeos do Mobile Lux e do Flex Lux, 13 s). Não passa pela placa nem
   pelo braço. Mostrar a tomada é opcional.
+  - **Peça na frente do cabo** (no Mobile Lux, a alça do garfo, embaixo da
+    cabeça): o cabo sobe por trás dela e aparece no vão entre ela e a cabeça,
+    até sumir atrás da cabeça. Nunca termina na alça (Thiago, 22/10/2026, na
+    `aprovadas/10455CR` de 16/10; vídeo do Mobile Lux, 12 a 13 s). No Visage e
+    no Flex Lux, o cabo sai direto de baixo da cabeça, sem peça na frente.
 - **Plug** (`referencias/chicote-eletrico/`): padrão NBR 14136, 2 pinos,
   branco, corpo chato com alívio de tensão nervurado. Face hexagonal achatada
   de 35,5 × 14 mm, pinos a 19 mm, cantos R5. É fino: cerca de 14 mm de

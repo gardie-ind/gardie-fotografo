@@ -14,11 +14,11 @@ confirmou. A classe de um item só muda com a palavra dele.
 | Item | Classe |
 |---|---|
 | a. Forma do produto inteiro: as mesmas peças da referência, na mesma quantidade; nada inventado, faltando, entortado ou "melhorado"; cabeça circular (elipse coerente com o ângulo) | VETO (Thiago, respostas 5 e 6) |
-| b. Acabamento igual ao da referência; cromado lê prata, nunca dourado | VETO (padrão — confirmar com o Thiago) |
+| b. Acabamento igual ao da referência; cromado lê prata, nunca dourado. Na recoloração em brushed nickel, o metal lê escovado: `ferramentas/medir_escovado.py`, na escala da still de catálogo, dá riscado ≥ 1,2% e borda do reflexo ≥ 3,8 px (`placar.md` › Calibragem, 2026-10-22, brushed nickel: a versão vetada deu 0,8 a 1,1% e 3,0 a 3,6 px; a aprovada, 1,4 a 1,6% e 3,9 a 4,2 px; o gold polido, 0,4% e 2,4 px) | VETO (padrão — confirmar com o Thiago); a medida do brushed nickel: VETO (Thiago) |
 | c. LED no mesmo estado (aceso ou apagado) e na mesma cor da referência | VETO (padrão — confirmar com o Thiago) |
 | d. Cabo onde a vista real o mostra e ausente onde ela o esconde (`guia/produto.md` › Cabo e plug). De frente ou de 3/4, produto de mesa sem cabo não reprova (10202CR-4); com o LED aceso, ver d2. Modelo sem cabo à vista (sem LED, Lumière) com cabo também cai aqui | VETO (padrão — confirmar com o Thiago) |
 | d2. LED aceso e cabo fora de vista no produto de mesa: o cabo faz falta (`placar.md` › Calibragem, 2026-10-11, `1x1-piloto/A1` e `A4`). Acrescente no retoque o cabo real em cada trecho que a vista mostra: na bancada, saindo de trás da base, e, de 3/4 com vão entre a cabeça e o pivô, a alça da traseira da cabeça até o topo do pivô (`placar.md` › Calibragem, 2026-10-12) | CORRIGIR SE DER (Thiago) |
-| e. Cabo na rota real do modelo: branco (preto no black matte), fino, sem conector inventado, com folga compatível com 1,5 m. Defeito pequeno no trecho da bancada, longe do produto (uma marca escura de braçadeira na volta), não reprova: o Thiago publicaria assim a 10202CR gardie-4 (`placar.md` › Calibragem, 2026-10-16, CR4) | VETO (padrão — confirmar com o Thiago); defeito pequeno longe do produto: CORRIGIR SE DER (Thiago) |
+| e. Cabo na rota real do modelo: branco (preto no black matte), fino, sem conector inventado, com folga compatível com 1,5 m. Nos modelos de parede, o cabo aparece em todo vão entre a cabeça e uma peça que fica na frente dele (a alça do garfo do Mobile Lux), até sumir atrás da cabeça; cabo que termina na alça reprova (`placar.md` › Calibragem, 2026-10-22, 10455CR). Defeito pequeno no trecho da bancada, longe do produto (uma marca escura de braçadeira na volta), não reprova: o Thiago publicaria assim a 10202CR gardie-4 (`placar.md` › Calibragem, 2026-10-16, CR4) | VETO (padrão — confirmar com o Thiago); defeito pequeno longe do produto: CORRIGIR SE DER (Thiago) |
 | f. Plug, quando aparece, fiel ao NBR 14136 da referência; mostrar o fio ligado na tomada não é exigido | VETO (Thiago) |
 | f2. Plug solto na bancada com o LED aceso (contradição física) | VETO (padrão — confirmar com o Thiago) |
 | g. Logo com a grafia errada, ou ausente (o Thiago publicaria a 10202CR-4 com "geroie") | CORRIGIR SE DER (padrão — confirmar com o Thiago) |
@@ -113,7 +113,11 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    forma com `referencias/chicote-eletrico/`. LED aceso sem cabo à vista, na
    bancada ou na alça do vão entre a cabeça e o pivô: anote d2. De 3/4, o
    cabo da bancada sai de trás da base do mesmo lado do pivô em que aparece a
-   alça (`placar.md` › Calibragem, 2026-10-19).
+   alça (`placar.md` › Calibragem, 2026-10-19). Na parede, com uma peça na
+   frente do cabo (alça do garfo do Mobile Lux): conte, no vão entre essa peça
+   e a cabeça, as linhas que caem no corredor da rota do cabo; todas têm de
+   mostrar cabo. Na 10455CR de 16/10, vetada, deu 0 de 82 linhas; na
+   corrigida, 82 de 82 (`placar.md` › Calibragem, 2026-10-22).
 8. **Notas (g, h, j, m):** logo, reflexo, ambiente e outros espelhos.
 9. **Registro:** vetada vai para `_descartados/` com o item da tabela e a
    medida que reprovou; aprovada vira candidata ao lote, com as notas.
@@ -174,6 +178,12 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
     produto engolir o vão (o BiRefNet preenche furos), passe em `visivel` a
     máscara do vão e confira que os pixels "do produto" alterados são só fundo
     (cor da parede, sem cromado).
+  - Cabo pendurado na parede, com peça na frente (alça do garfo do Mobile
+    Lux): rota `"suspenso": true` cujo 1º ponto fica escondido atrás da
+    cabeça, acima da alça, e máscara `visivel` com o vão entre a alça e a
+    cabeça aberto (do alfa do produto), para o cabo aparecer nele. Começar a
+    rota na alça foi o erro da 10455CR de 16/10 (`placar.md` › Calibragem,
+    2026-10-22).
   - Largura: 5 mm na escala do Ø da base junto dela, diminuindo para o fundo.
   - Confira em 8× a saída de trás da base (sem ponta solta nem vão), a saída
     da alça sob a borda da cabeça e a entrada dela no pivô e, em 1×, se o cabo
