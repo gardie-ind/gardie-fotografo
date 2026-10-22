@@ -55,14 +55,17 @@ peça é sempre o da still.
   modelo, vale como still daquele acabamento (coluna Stills).
   - Gold, red gold e black matte: `ferramentas/acabamentos.py`, com os números
     do piloto, menos o tom do red gold.
-  - Red gold: o tom é o de uma peça real (foto do Thiago, 22/10/2026,
-    `referencias/red-gold/foto-real-red-gold-parede-2026-10-22.jpeg`, escolhido
-    "igual à foto" no mesmo dia). O tom Deca de 21/10 lia rosa: medido em
-    CIELAB por faixa de L*, a peça real tem matiz 69 a 74° e croma 12 a 27,
-    contra 59 a 71° e 28 a 37 do Deca (`ferramentas/medir_acabamento.py tom`;
-    `ferramentas/novo_tom.py` gira o matiz e reduz o croma da tabela). A
-    claridade não foi calibrada: na still, o metal reflete o estúdio branco.
-    Medida de veto em `guia/criterios.md`, item b.
+  - Red gold: o meio do caminho entre o tom Deca de 21/10 e o de uma peça real
+    (foto do Thiago, 22/10/2026,
+    `referencias/red-gold/foto-real-red-gold-parede-2026-10-22.jpeg`). O Deca
+    lia rosa: medido em CIELAB por faixa de L*, a peça real tem matiz 69 a 74°
+    e croma 12 a 27, contra 59 a 71° e 28 a 37 do Deca
+    (`ferramentas/medir_acabamento.py tom`). O Thiago aprovou o intermediário,
+    e não o igual à foto ("Você criou um intermediário, um meio do caminho
+    entre os dois. E é esse o que eu aprovei"): matiz 64 a 72° e croma 21 a 34
+    (`ferramentas/novo_tom.py`, saída `meio`). A claridade não foi calibrada:
+    na still, o metal reflete o estúdio branco. Medida de veto em
+    `guia/criterios.md`, item b.
   - Black matte: a carcaça também é pintada de preto (Thiago, 22/10/2026:
     "Nos modelos preto fosco, nós pintamos as carcaças de preto também").
     No Classique Lux só o anel de borracha fica como está; no Royale Lux,

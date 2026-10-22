@@ -7,7 +7,7 @@ Thiago mandou em 21/10:
 - gold e red gold (polidos): a luminância de cada pixel é a da foto, com a
   exposição baixada para o brilho máximo cair no da referência; a cor é a da
   referência naquele nível de luminância. O tom do red gold foi trocado em
-  22/10/2026 pelo de uma peça real (novo_tom.py).
+  22/10/2026 pelo meio do caminho até o de uma peça real (novo_tom.py).
 - brushed nickel (escovado): o tom da referência, o reflexo um pouco
   espalhado e com menos contraste e um riscado fino no sentido de cada peça.
   Vetado em 22/10/2026 por ler polido; o brushed nickel sai de escovado.py,
@@ -30,12 +30,12 @@ TONS = {  # (luminância, (R/Y, G/Y, B/Y)) por faixa da referência
              (0.43, (1.348, 0.963, 0.338)), (0.51, (1.340, 0.966, 0.340)),
              (0.57, (1.332, 0.967, 0.347)), (0.61, (1.317, 0.972, 0.344)),
              (0.655, (1.307, 0.976, 0.341)), (0.75, (1.298, 0.977, 0.348))],
-    # red gold: tom de uma peça real (foto do Thiago, 22/10/2026,
-    # referencias/red-gold/), feito por novo_tom.py a partir da tabela Deca de 21/10
-    'red-gold': [(0.035, (1.469, 0.91, 0.524)), (0.1, (1.456, 0.913, 0.542)), (0.145, (1.347, 0.938, 0.579)),
-                 (0.19, (1.417, 0.921, 0.554)), (0.24, (1.414, 0.924, 0.536)), (0.29, (1.409, 0.926, 0.526)),
-                 (0.34, (1.422, 0.923, 0.524)), (0.39, (1.427, 0.921, 0.522)), (0.47, (1.434, 0.921, 0.515)),
-                 (0.65, (1.39, 0.933, 0.534))],
+    # red gold: meio do caminho entre a tabela Deca de 21/10 e o tom de uma peça
+    # real (foto do Thiago, referencias/red-gold/), aprovado em 22/10/2026; novo_tom.py, 'meio'
+    'red-gold': [(0.035, (1.842, 0.82, 0.313)), (0.1, (1.702, 0.854, 0.401)), (0.145, (1.485, 0.907, 0.483)),
+                 (0.19, (1.554, 0.888, 0.472)), (0.24, (1.543, 0.894, 0.454)), (0.29, (1.532, 0.898, 0.445)),
+                 (0.34, (1.54, 0.895, 0.448)), (0.39, (1.537, 0.896, 0.45)), (0.47, (1.534, 0.898, 0.447)),
+                 (0.65, (1.474, 0.915, 0.471))],
     'brushed-nickel': [(0.1, (1.07, 0.995, 0.85)), (0.9, (1.07, 0.995, 0.85))],
 }
 # Exposição dos polidos: o cromado da foto estoura; a referência não (98% abaixo

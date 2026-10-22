@@ -2,7 +2,8 @@
 nó da tabela atual, o tom é girado em matiz e reduzido em croma (CIELAB, mesmo
 L*) pela diferença medida entre os aros da foto e o nosso red gold, por faixa
 de L*. 'meio' aplica metade da diferença. A tabela de partida é a Deca de
-21/10/2026, que acabamentos.py usava antes; a saída 'foto' é a de lá hoje.
+21/10/2026, que acabamentos.py usava antes; a saída 'meio', aprovada pelo
+Thiago em 22/10/2026, é a de lá hoje.
 Medidas: medir_acabamento.py tom (guia/criterios.md, item b).
 
 uso: python3 novo_tom.py  (grava tons-red-gold.json na pasta atual)"""
