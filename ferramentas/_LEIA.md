@@ -7,6 +7,7 @@ Credenciais ficam fora do repositório. Vale a variável de ambiente ou o arquiv
 |---|---|---|
 | Gemini | `GEMINI_API_KEY` | `~/.config/gardie/gemini.json` → `{"api_key": "...", "image_model": "..."}` |
 | fal.ai | `FAL_KEY` | `~/.config/gardie/fal.json` → `{"api_key": "..."}` |
+| Google Drive (backup) | `GOOGLE_SERVICE_ACCOUNT_JSON` | `~/.config/gardie/google-sa.json` (chave JSON da conta de serviço) |
 | Shopify | `SHOPIFY_*` | `~/.config/gardie/shopify.json` (detalhes em `shopify_auth.py`) |
 
 ## Scripts
@@ -28,6 +29,7 @@ Credenciais ficam fora do repositório. Vale a variável de ambiente ou o arquiv
 - **`medir_acabamento.py`**: medidas do item b de `guia/criterios.md`. `tom` dá matiz e croma do metal por faixa de L* (red gold contra a peça real de `referencias/red-gold/`; aceita foto de celular em Display P3, `--papel` e `--mascara`). `carcaca <ligada> <desligada>` dá a parte do produto fora da cabeça acima de 180 de luminância (black matte com a carcaça pintada). **`novo_tom.py`** refaz a tabela do red gold da peça real a partir da Deca de 21/10.
 - **`luz_padrao.py`** (com **`luz_anel.py`**): o padrão de luz "meio termo" dos LUX, sem IA (`guia/produto.md` › Padrão de luz). A luz do LED é a diferença entre a still ligada e a apagada, recolorida por Planck nos 3 tons (`RENDER`: 3000K = render 4500K, 4500K = 5150K, 6000K = 6000K).
 - **`logo_laser.py`**, **`lote_logo.py`**, **`prancha_logo.py`**, **`verificar_logo.py`** e **`medir_contraste_logo.py`**: o logo gravado a laser no espelho, pelo desenho `logo-laser/E-0001-V1.pdf` (máscara em `logo-laser/`). `logo_laser.py` tira o logo impresso da borda jateada e grava o novo num par ligada e apagada; `lote_logo.py` faz um LUX nos 5 acabamentos com logo e luz nos 3 tons (fontes e cuidados na docstring: não rode sobre as aprovadas atuais); `verificar_logo.py` confere que nada mudou fora da luz do LED e dos logos e que o impresso sumiu; `prancha_logo.py` monta a prancha; `medir_contraste_logo.py` mede o traço do logo contra o vidro.
+- **`backup_drive.py`**: espelha `aprovadas/` (ou `--origem`) no Google Drive, em imagens › Cloud, no drive compartilhado do marketing. Pula o que já subiu com o mesmo MD5, dá nova versão ao que mudou e não apaga nada. Usa a conta de serviço da variável `GOOGLE_SERVICE_ACCOUNT_JSON` (ou `~/.config/gardie/google-sa.json`); `--simular` só conta.
 - **`upload_shopify.py`** / **`shopify_auth.py`**: sobem imagens aprovadas para o Shopify Files e imprimem a URL CDN. Caminhos relativos também são procurados em `aprovadas/`. O lote das 100 stills LUX de 22/10/2026 está pronto em `shopify-lote-2026-10-22-lux.json` (`--lote`).
 
 ## Exemplo
