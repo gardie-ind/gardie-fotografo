@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-cal-terrazzo",
+    "arquivo": "parede-cal-terrazzo/A1.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A2": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-cal-terrazzo",
+    "arquivo": "parede-cal-terrazzo/A2.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A3": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-cal-terrazzo",
+    "arquivo": "parede-cal-terrazzo/A3.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A4": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-cal-terrazzo",
+    "arquivo": "parede-cal-terrazzo/A4.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  }
+}

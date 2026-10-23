@@ -1,0 +1,26 @@
+{
+  "A1": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "mesa-calcario-janela-fosca",
+    "arquivo": "mesa-calcario-janela-fosca/A1.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A2": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "mesa-calcario-janela-fosca",
+    "arquivo": "mesa-calcario-janela-fosca/A2.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  }
+}

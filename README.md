@@ -106,6 +106,15 @@ antes do veredito.
   h de `guia/criterios.md`).
 - `cabo_real.py`: desenha o cabo branco na rota real, sem IA e sem tocar no
   produto (retoque do item d2 de `guia/criterios.md`).
+- `recorte_local.py`: recorte do produto com o BiRefNet rodando no próprio
+  contêiner, no lugar do `estudio_fal.py recortar` quando o fal está sem
+  saldo. Também recorta um objeto da cena que fica na frente do cabo (uma
+  toalha, com `--caixa`).
+- `logo_ambiente.py`: põe o logo a laser numa ambientada, sem IA, pelo
+  desenho E-0001-V1. A escala vem das elipses do anel. Ele apaga o logo
+  errado da IA, se houver. Confira sempre a 3× se o logo caiu no espelho,
+  e não no aro. Se a detecção automática errar a borda do anel, passe
+  `--interna` e `--externa`.
 
 Se uma docstring divergir de `guia/`, vale o guia.
 

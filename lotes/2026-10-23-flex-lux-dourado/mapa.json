@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-penteadeira-quarto",
+    "arquivo": "parede-penteadeira-quarto/A1.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A2": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-penteadeira-quarto",
+    "arquivo": "parede-penteadeira-quarto/A2.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A3": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-penteadeira-quarto",
+    "arquivo": "parede-penteadeira-quarto/A3.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A4": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "parede-penteadeira-quarto",
+    "arquivo": "parede-penteadeira-quarto/A4.png",
+    "tentativa": 2,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "A1": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "mesa-penteadeira-creme",
+    "arquivo": "mesa-penteadeira-creme/A1.png",
+    "tentativa": 4,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A2": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "mesa-penteadeira-creme",
+    "arquivo": "mesa-penteadeira-creme/A2.png",
+    "tentativa": 3,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  },
+  "A3": {
+    "motor": "gemini:gemini-3-pro-image",
+    "modelo": "gemini-3-pro-image",
+    "receita": "mesa-penteadeira-creme",
+    "arquivo": "mesa-penteadeira-creme/A3.png",
+    "tentativa": 1,
+    "seed": null,
+    "tamanho": [
+      2048,
+      2048
+    ]
+  }
+}

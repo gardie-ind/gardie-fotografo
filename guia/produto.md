@@ -188,6 +188,15 @@ peça é sempre o da still.
     até sumir atrás da cabeça. Nunca termina na alça (Thiago, 22/10/2026, na
     `aprovadas/10455CR` de 16/10; vídeo do Mobile Lux, 12 a 13 s). No Visage e
     no Flex Lux, o cabo sai direto de baixo da cabeça, sem peça na frente.
+  - **Para que lado da haste, no Flex Lux:** o cabo sai de baixo da cabeça do
+    lado do braço, rente à haste (centro a ~1,2 diâmetro de cabo da borda
+    dela), passa por trás da presilha do braço e reaparece embaixo dela
+    (`aprovadas/10554*` -2; vídeo do Flex Lux, 4 s, braço espelhado). Do lado
+    do centro da cabeça não existe.
+  - **No Visage Lux:** ele aparece embaixo da cabeça do lado do pé do
+    suporte, deslocado para esse lado conforme a cabeça gira (na still
+    `aprovadas/10509*` -1, a cerca de um terço do caminho do pé à borda
+    oposta).
 - **Plug** (`referencias/chicote-eletrico/`): padrão NBR 14136, 2 pinos,
   branco, corpo chato com alívio de tensão nervurado. Face hexagonal achatada
   de 35,5 × 14 mm, pinos a 19 mm, cantos R5. É fino: cerca de 14 mm de

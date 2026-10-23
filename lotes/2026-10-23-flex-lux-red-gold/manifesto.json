@@ -1,0 +1,97 @@
+{
+  "ferramenta": "ferramentas/ensaio.py",
+  "criado_em": "2026-10-23T02:19:06",
+  "simulado": false,
+  "produto": "Espelho de Aumento 5x com Luz LED de Parede Gardie Flex Lux Red Gold",
+  "referencias": [
+    {
+      "original": "/home/user/gardie-fotografo/referencias/capa/flex-lux-red-gold-desligado-capa-r2.png",
+      "usada": "/home/user/gardie-fotografo/referencias/capa/flex-lux-red-gold-desligado-capa-r2.png",
+      "metodo": "sem preparo"
+    }
+  ],
+  "aspecto": "1:1",
+  "n_por_motor": 4,
+  "saida": "/home/user/gardie-fotografo/ensaios/_versoes/2026-10-23-flex-lux-red-gold/1x1",
+  "moldura": {
+    "arquivo": "/home/user/gardie-fotografo/receitas/_moldura.txt",
+    "texto": "Professional lifestyle product photo shoot. The first attached image shows the real product: {produto}. Photograph this exact product in a new location: {cena}. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+  },
+  "motores": [
+    {
+      "id": "gemini:gemini-3-pro-image",
+      "tipo": "gemini",
+      "modelo": "gemini-3-pro-image",
+      "params": {
+        "aspect_ratio": "1:1",
+        "refs_enviadas": 1,
+        "ordem": "imagens antes do texto",
+        "image_size": "2K"
+      },
+      "custo_unit_usd": 0.134
+    }
+  ],
+  "receitas": [
+    {
+      "rotulos": "A",
+      "nome": "parede-gesso-rosado",
+      "arquivo": "/home/user/gardie-fotografo/receitas/parede-gesso-rosado.txt",
+      "cena": "the product mounted on a dusty pink plaster wall above a pale stone vanity, a slim faucet and a small vase with a single white flower below, soft side daylight; eye-level camera facing the product",
+      "prompts": {
+        "gemini:gemini-3-pro-image": "Professional lifestyle product photo shoot. The first attached image shows the real product: Espelho de Aumento 5x com Luz LED de Parede Gardie Flex Lux Red Gold. Photograph this exact product in a new location: the product mounted on a dusty pink plaster wall above a pale stone vanity, a slim faucet and a small vase with a single white flower below, soft side daylight; eye-level camera facing the product. The product must look exactly as it does in the reference image, as if the same physical object had been taken there and photographed. Only the location, the camera position and the room lighting change. Photorealistic, sharp focus on the product."
+      },
+      "geracoes": [
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 1,
+          "ok": true,
+          "erro": null,
+          "segundos": 20.5,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/flex-lux-red-gold-desligado-capa-r2.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 2,
+          "ok": true,
+          "erro": null,
+          "segundos": 20.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/flex-lux-red-gold-desligado-capa-r2.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 3,
+          "ok": true,
+          "erro": null,
+          "segundos": 20.0,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/flex-lux-red-gold-desligado-capa-r2.png"
+          ]
+        },
+        {
+          "motor": "gemini:gemini-3-pro-image",
+          "tentativa": 4,
+          "ok": true,
+          "erro": null,
+          "segundos": 22.7,
+          "seed": null,
+          "refs": [
+            "/home/user/gardie-fotografo/referencias/capa/flex-lux-red-gold-desligado-capa-r2.png"
+          ]
+        }
+      ],
+      "candidatas": 4
+    }
+  ],
+  "custo_estimado_usd": {
+    "previsto": 0.54,
+    "gerado": 0.54
+  },
+  "aviso": "Rótulos -> motor estão em mapa.json; abrir só depois do veredito."
+}
