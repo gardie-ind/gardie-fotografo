@@ -29,11 +29,14 @@ from mathutils import Vector, Matrix
 # Metal (Metallic = 1): F0 linear, rugosidade, anisotropia. Black matte é dielétrico.
 # Cor: matiz e croma (CIELAB) da cor F0 iguais aos das referências Deca do Thiago (21/10):
 # gold h 88 C 38 (Deca 88/39), red gold h 67 C 33 (67/33), brushed nickel h 90 C 5,8 (90/6,1).
+# luz: fração das softboxes do produto. Metal a 35% e cartão da frente a 40% (22/10, Thiago: "esse
+# flash estourado está prejudicando a imagem"; com a luz cheia 19 a 23% do produto tinha canal no
+# teto, faces de frente chapadas de branco; agora 4 a 6%, só brilhos).
 ACABAMENTOS = {
-    'cromado':        dict(cor=(0.550, 0.556, 0.554), rug=0.03, ani=0.0, metal=1.0),
-    'brushed-nickel': dict(cor=(0.620, 0.585, 0.520), rug=0.26, ani=0.75, metal=1.0),
-    'gold':           dict(cor=(1.000, 0.740, 0.320), rug=0.07, ani=0.0, metal=1.0),
-    'red-gold':       dict(cor=(0.960, 0.565, 0.315), rug=0.07, ani=0.0, metal=1.0),
+    'cromado':        dict(cor=(0.550, 0.556, 0.554), rug=0.03, ani=0.0, metal=1.0, luz=0.35),
+    'brushed-nickel': dict(cor=(0.620, 0.585, 0.520), rug=0.26, ani=0.75, metal=1.0, luz=0.35),
+    'gold':           dict(cor=(1.000, 0.740, 0.320), rug=0.07, ani=0.0, metal=1.0, luz=0.35),
+    'red-gold':       dict(cor=(0.960, 0.565, 0.315), rug=0.07, ani=0.0, metal=1.0, luz=0.35),
     # Black matte: com a luz cheia o preto fosco lia cinza médio (L 47 na placa contra L 18 da
     # Deca); com as softboxes do produto a 25% lê L 25 (pixels não saturados).
     'black-matte':    dict(cor=(0.015, 0.015, 0.015), rug=0.55, ani=0.0, metal=0.0, luz=0.25),
@@ -53,22 +56,22 @@ def args():
     ap.add_argument('--so-led', action='store_true', help='apaga estúdio e ambiente (passe do LED)')
     ap.add_argument('--res', default='1080x1350')
     ap.add_argument('--amostras', type=int, default=128)
-    ap.add_argument('--azimute', type=float, default=28.0, help='graus; positivo = câmera à esquerda da normal da parede')
-    ap.add_argument('--elevacao', type=float, default=6.0)
+    ap.add_argument('--azimute', type=float, default=4.0, help='graus; positivo = câmera à esquerda da normal da parede')
+    ap.add_argument('--elevacao', type=float, default=3.0)
     ap.add_argument('--lente', type=float, default=85.0)
     ap.add_argument('--margem', type=float, default=0.95)
     ap.add_argument('--exposicao', type=float, default=0.0)
     ap.add_argument('--mundo', type=float, default=0.02, help='força do ambiente')
-    ap.add_argument('--halo', type=float, default=40.0, help='abertura do foco na parede (graus)')
-    ap.add_argument('--parede', type=float, default=0.18, help='cor da parede (linear)')
+    ap.add_argument('--halo', type=float, default=30.0, help='abertura do foco na parede (graus)')
+    ap.add_argument('--parede', type=float, default=0.10, help='cor da parede (linear)')
     ap.add_argument('--luz', type=float, default=0.4, help='multiplica a potência das luzes de estúdio')
     ap.add_argument('--orto', action='store_true', help='câmera ortográfica de frente (medição)')
     ap.add_argument('--mm-por-px', type=float, default=0.25, help='escala da vista --orto')
     ap.add_argument('--silhueta', action='store_true', help='peças em branco chapado sobre preto, sem parede')
     ap.add_argument('--vista-cor', default='Khronos PBR Neutral', help='transformação de vista (AgX, Standard...)')
-    ap.add_argument('--cartao', type=float, default=1.0, help='multiplica o cartão branco que o espelho reflete')
+    ap.add_argument('--cartao', type=float, default=0.4, help='multiplica o cartão branco que o espelho reflete')
     ap.add_argument('--recorte', help='renderiza só a região x0,y0,x1,y1 (frações do quadro, y de cima)')
-    ap.add_argument('--reflexo', type=float, default=0.4, help='brilho do rebatedor que o espelho reflete')
+    ap.add_argument('--reflexo', type=float, default=0.7, help='brilho do rebatedor que o espelho reflete')
     ap.add_argument('--apagar', default='', help='luzes a zerar, por nome (depuração): chave,preenchimento,halo...')
     ap.add_argument('--rug', type=float, help='calibração: rugosidade do acabamento')
     ap.add_argument('--espec', type=float, help='calibração: Specular IOR Level (só black matte)')
@@ -76,6 +79,15 @@ def args():
     ap.add_argument('--luz-produto', type=float, help='multiplica só as luzes do produto (padrão: o do acabamento)')
     ap.add_argument('--vidro-luz', type=float, default=0.3,
                     help='fração da luz das softboxes que atravessa o vidro até o berço (0 = barra tudo)')
+    ap.add_argument('--sombra-parede', type=float, default=1.0, help='luz da chave só na parede (sombra); 0 = sem')
+    ap.add_argument('--halo-forca', type=float, default=1.2, help='multiplica o foco da parede')
+    ap.add_argument('--halo-alvo', type=float, default=-0.18, help='altura do centro do foco na parede, em m, a partir do centro do produto')
+    ap.add_argument('--prata-diam', type=float,
+                    help='mm; diâmetro da área espelhada (E-0001-V1: 158,75; protótipo NK.BU do vídeo de 23/10: ~150)')
+    ap.add_argument('--aro-largura', type=float,
+                    help='mm; largura do aro E-0004 visto de frente (CAD V3: 12,8; protótipo NK.BU: ~10)')
+    ap.add_argument('--verso', action='store_true', help='vista de trás: sem parede, luzes espelhadas para trás')
+    ap.add_argument('--esconder', default='', help='códigos de peça a esconder, por prefixo (ex.: D-0003,E-0010)')
     ap.add_argument('--blend')
     return ap.parse_args()
 
@@ -167,6 +179,82 @@ def separar(o, grupos):
     return novos
 
 
+def recortar_prata(prata, jateado, R, cy, cz, passo=0.0006, faixa=0.002):
+    """Encolhe a área espelhada para o raio R (m, em volta do eixo da cabeça em y=cy, z=cz):
+    a faixa entre R e a borda da prata do CAD passa a ser vidro jateado (anel mais largo).
+    A malha da prata é refinada perto do círculo, os vértices voltam para a esfera do verso, e
+    as arestas que cruzam o círculo têm o vértice mais próximo puxado para ele: a borda sai
+    redonda, sem serrilhado da triangulação."""
+    M = prata.matrix_world; Mi = M.inverted()
+    bm = bmesh.new(); bm.from_mesh(prata.data)
+    C, Rs, _ = fit_esfera(np.array([(M @ v.co)[:] for v in bm.verts])); Cv = Vector(C)
+
+    def r_de(p):
+        return math.hypot(p.y - cy, p.z - cz)
+
+    def r_min_aresta(a, b):
+        ay, az, dy, dz = a.y - cy, a.z - cz, b.y - a.y, b.z - a.z
+        dd = dy * dy + dz * dz
+        t = 0.0 if dd == 0 else min(1.0, max(0.0, -(ay * dy + az * dz) / dd))
+        return math.hypot(ay + t * dy, az + t * dz)
+
+    for _ in range(16):
+        alvo = []
+        for e in bm.edges:
+            a, b = M @ e.verts[0].co, M @ e.verts[1].co
+            if (a - b).length > passo and r_min_aresta(a, b) <= R + faixa and max(r_de(a), r_de(b)) >= R - faixa:
+                alvo.append(e)
+        if not alvo:
+            break
+        bmesh.ops.subdivide_edges(bm, edges=alvo, cuts=1)
+        bmesh.ops.triangulate(bm, faces=bm.faces[:])
+        for v in bm.verts:   # o ponto médio da corda fica abaixo da esfera: volta para ela
+            p = M @ v.co; v.co = Mi @ (Cv + (p - Cv).normalized() * Rs)
+    for _ in range(8):
+        mudou = False
+        for e in bm.edges:
+            v0, v1 = e.verts; r0, r1 = r_de(M @ v0.co), r_de(M @ v1.co)
+            if (r0 - R) * (r1 - R) < 0 and min(abs(r0 - R), abs(r1 - R)) > 1e-7:
+                v = v0 if abs(r0 - R) < abs(r1 - R) else v1
+                p = M @ v.co; k = R / r_de(p)
+                q = Vector((p.x, cy + (p.y - cy) * k, cz + (p.z - cz) * k))
+                dyz = (q.y - C[1]) ** 2 + (q.z - C[2]) ** 2
+                q.x = C[0] + math.copysign(math.sqrt(Rs * Rs - dyz), p.x - C[0])
+                v.co = Mi @ q; mudou = True
+        if not mudou:
+            break
+    bm2 = bm.copy()
+    fora = lambda f: r_de(M @ f.calc_center_median()) > R
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if fora(f)], context='FACES')
+    bmesh.ops.delete(bm2, geom=[f for f in bm2.faces if not fora(f)], context='FACES')
+    n = len(bm2.faces)
+    bm.to_mesh(prata.data); bm.free()
+    me2 = bpy.data.meshes.new('faixa-jateada'); bm2.to_mesh(me2); bm2.free()
+    bj = bmesh.new(); bj.from_mesh(jateado.data); bj.from_mesh(me2)   # from_mesh acrescenta
+    bj.to_mesh(jateado.data); bj.free(); bpy.data.meshes.remove(me2)
+    borda = [r_de(M @ v.co) for v in prata.data.vertices]
+    return n, max(borda)
+
+
+def estreitar_aro(pecas, largura, cy, cz):
+    """Aro E-0004 mais estreito visto de frente: a borda de fora fica; a de dentro abre, e o
+    perfil do aro é comprimido na direção do raio (protótipo NK.BU: aro ~10 mm, CAD 12,8)."""
+    for o in pecas:
+        if codigo(o) != 'E-0004-V3':
+            continue
+        M = o.matrix_world; Mi = M.inverted()
+        P = [M @ v.co for v in o.data.vertices]
+        rs = [math.hypot(p.y - cy, p.z - cz) for p in P]
+        r_ext, r_int = max(rs), min(rs)
+        s = largura / (r_ext - r_int)
+        for v, p, r in zip(o.data.vertices, P, rs):
+            k = (r_ext - (r_ext - r) * s) / r
+            v.co = Mi @ Vector((p.x, cy + (p.y - cy) * k, cz + (p.z - cz) * k))
+        o.data.update()
+        return r_int, r_ext, r_ext - largura
+    raise SystemExit('E-0004 não encontrado')
+
+
 def caixa(objs):
     lo = Vector((1e9,) * 3); hi = Vector((-1e9,) * 3)
     for o in objs:
@@ -222,6 +310,18 @@ def main():
             g['vidro-borda'].append(p.index)
     partes = separar(vidro, g)
     pecas = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+    lo_v, hi_v = caixa([partes['vidro-frente']]); cy_c, cz_c = (lo_v.y + hi_v.y) / 2, (lo_v.z + hi_v.z) / 2
+    if A.prata_diam:
+        # 23/10: no protótipo NK.BU (vídeo e foto de frente) a prata vai até ~Ø150 e o anel é mais
+        # largo que no E-0001-V1 (Ø158,75). Só com --prata-diam; o padrão segue o desenho.
+        n, rb = recortar_prata(partes['vidro-prata'], partes['vidro-jateado'], A.prata_diam / 2000, cy_c, cz_c)
+        usados['prata'] = 'área espelhada Ø%.2f mm (borda medida; %d faces passaram a jateado)' % (rb * 2000, n)
+    if A.aro_largura:
+        ri, re_, rn = estreitar_aro(pecas, A.aro_largura / 1000, cy_c, cz_c)
+        usados['aro'] = 'E-0004 de frente: Ø%.1f a Ø%.1f (CAD: Ø%.1f a Ø%.1f)' % (rn * 2000, re_ * 2000, ri * 2000, re_ * 2000)
+    for o in list(pecas):
+        if A.esconder and codigo(o).startswith(tuple(filter(None, A.esconder.split(',')))):
+            o.hide_render = True; pecas.remove(o)
     esferas = {}
     for nome in ('vidro-frente', 'vidro-prata', 'vidro-jateado'):
         o = partes[nome]
@@ -307,7 +407,8 @@ def main():
         for p in o.data.polygons:
             p.use_smooth = True
 
-    visiveis = [o for o in bpy.context.scene.objects if o.type == 'MESH' and caixa([o])[1].x > 0.0005]
+    visiveis = [o for o in bpy.context.scene.objects if o.type == 'MESH' and not o.hide_render
+                and caixa([o])[1].x > 0.0005]
     lo, hi = caixa(visiveis); lo.x = max(lo.x, 0.0)   # parafusos e buchas entram na parede
     centro = (lo + hi) / 2; tam = (hi - lo).length
 
@@ -345,6 +446,16 @@ def main():
             co.light_linking.link_state = 'EXCLUDE'
         for lz in (chave, preench):
             lz.light_linking.receiver_collection = col
+        if A.sombra_parede > 0:
+            # Sombra na parede (22/10, veto do Thiago: "noção de profundidade"): uma cópia da chave,
+            # no mesmo lugar e tamanho, que só ilumina a parede. É a sombra da chave que mostra o
+            # quanto a cabeça e o braço saem da parede, como nas stills de catálogo.
+            som = luz_area('sombra-parede', chave.location.copy(), centro, 0.9, 0.7, 230 * k * A.sombra_parede)
+            colp = bpy.data.collections.new('so-parede-chave'); colp.objects.link(par)
+            for co in colp.collection_objects:
+                co.light_linking.link_state = 'INCLUDE'
+            som.light_linking.receiver_collection = colp
+            som.visible_glossy = False; som.visible_transmission = False
         col2 = bpy.data.collections.new('so-espelho'); col2.objects.link(partes['vidro-prata'])
         col2.objects.link(partes['vidro-frente'])
         for co in col2.collection_objects:
@@ -378,10 +489,10 @@ def main():
         for co in col3.collection_objects:
             co.light_linking.link_state = 'INCLUDE'
         reb.light_linking.receiver_collection = col3
-        sd = bpy.data.lights.new('halo', 'SPOT'); sd.energy = 900 * k; sd.spot_size = math.radians(A.halo)
+        sd = bpy.data.lights.new('halo', 'SPOT'); sd.energy = 900 * k * A.halo_forca; sd.spot_size = math.radians(A.halo)
         sd.spot_blend = 1.0; sd.shadow_soft_size = 0.4
         so = bpy.data.objects.new('halo', sd); sc.collection.objects.link(so)
-        so.location = centro + Vector((1.3, -0.2, 0.25)); alvo_h = Vector((0.0, centro.y, centro.z + 0.03))
+        so.location = centro + Vector((1.3, -0.2, 0.25)); alvo_h = Vector((0.0, centro.y, centro.z + A.halo_alvo))
         so.rotation_euler = (alvo_h - so.location).to_track_quat('-Z', 'Y').to_euler()
         # Fora do reflexo: no espelho o raio sai do vidro da frente por transmissão, então só
         # visible_glossy não basta (na vista de frente o foco aparecia como mancha branca).
@@ -391,6 +502,14 @@ def main():
         for co in col4.collection_objects:
             co.light_linking.link_state = 'INCLUDE'
         so.light_linking.receiver_collection = col4
+        if A.verso:
+            # Vista de trás (comparação com o vídeo do protótipo, 23/10): sem parede, e as luzes
+            # do estúdio vão para o lado de trás, espelhadas no plano da parede.
+            par.hide_render = True
+            for o in sc.objects:
+                if o.type == 'LIGHT':
+                    d = o.location - centro; o.location = centro + Vector((-d.x, d.y, d.z))
+                    o.rotation_euler = (centro - o.location).to_track_quat('-Z', 'Y').to_euler()
         for nome in filter(None, A.apagar.split(',')):
             sc.objects[nome].data.energy = 0.0
         if A.so_led:

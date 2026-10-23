@@ -13,7 +13,7 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 | `renders/lumiere-<acabamento>-<aceso\|apagado>.png` | os quadros em 1080×1350 (4:5), Lumière fechada, vista 3/4 em parede cinza |
 | `conferencia-desenho.png` | vista frontal do A-0001-V3, render ortográfico na mesma escala e as linhas do desenho em vermelho por cima do render |
 | `renders/orto-brushed-nickel-*.png` | render ortográfico de frente, 0,25 mm por pixel (base das medidas) |
-| `ferramentas/3d/` (na raiz do repositório) | scripts para refazer tudo (comandos abaixo) |
+| `ferramentas/` | scripts para refazer tudo (comandos abaixo) |
 
 ## O que foi medido
 
@@ -81,3 +81,31 @@ venv/bin/python -I ferramentas/medir_logo.py renders/orto-brushed-nickel-aceso.p
 
 `A-0001-V3-1.png` é a página 1 do PDF do A-0001-V3 a 110 dpi. O CAD fica fora do git e de
 qualquer serviço público de render: está no Drive (`P&D/Desenharia/Lumière.V3`).
+
+## Protótipo × CAD (vídeo do Thiago, 23/10)
+
+Pasta `perfil/`. O Thiago mandou um vídeo de dois protótipos NK.BU sobre a mesa (um de frente,
+um de costas), pedindo para ignorar o touch no espelho. `prancha-prototipo-x-cad.png` põe lado a
+lado a foto de frente do protótipo, o render atual e o render com a frente do protótipo, na mesma
+escala da cabeça, e o verso do vídeo contra o CAD visto de trás com a mesma inclinação (~27°).
+
+| Conferência | Protótipo | CAD V3 |
+|---|---|---|
+| Centro da cabeça até o eixo da placa (vídeo, braço fechado) | 116,6 mm | 116,35 mm |
+| Furos dos parafusos da placa (unidade solta, sem tampas) | ±42 mm do braço | ±42,6 mm (tampas E-0013) |
+| Aro visto de frente (foto, elipse ajustada, aro Ø204,5) | ~10 mm | 12,8 mm |
+| Anel jateado | ~17 mm | 10,1 mm |
+| Área espelhada | ~Ø150 (vídeo: Ø148,5) | Ø158,75 |
+| Tampa de trás | polida (reflete o teto) | escovada no render brushed nickel |
+
+Braço, placa, articulações e verso batem com o CAD. A frente não: o anel e a prata são do vidro
+(a mesma peça do touch) e o aro é o E-0004. Opções novas do `render_lumiere.py`, que por padrão
+seguem os desenhos: `--prata-diam 150 --aro-largura 10` (frente do protótipo), `--verso`
+(vista de trás, sem parede) e `--esconder` (peças por código).
+
+```
+venv/bin/python -I ferramentas/render_lumiere.py modelo/lumiere-Fechado.glb perfil/frente.png --prata-diam 150 --aro-largura 10
+venv/bin/python -I ferramentas/render_lumiere.py modelo/lumiere-Fechado.glb perfil/verso.png --led 0 --verso \
+    --azimute 180 --elevacao -27 --res 1080x1080 --esconder D-0003,D-0005,E-0010,E-0012,E-0013,E-0014,E-0009,E-0058,F-0008,cross,socket,flat
+venv/bin/python -I ferramentas/prancha_perfil.py perfil/prancha-prototipo-x-cad.png perfil/video-6s.jpg
+```
