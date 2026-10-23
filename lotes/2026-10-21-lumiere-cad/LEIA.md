@@ -7,12 +7,18 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 
 ## Entregas
 
+Versão atual (23/10): **frente do protótipo**, por decisão do Thiago ("Igual ao protótipo, mas a
+logomarca precisa subir proporcionalmente"). Histórico: a vista 3/4 de 28° (`renders/`,
+`prancha-acabamentos.png`) foi vetada em 22/10; a frontal (`frontal/`) estourava o flash; a
+`frontal-v2/` segue a frente do desenho V3 e foi substituída por esta.
+
 | Arquivo | O que é |
 |---|---|
-| `prancha-acabamentos.png` | os 8 quadros lado a lado: 4 acabamentos, LED aceso e apagado |
-| `renders/lumiere-<acabamento>-<aceso\|apagado>.png` | os quadros em 1080×1350 (4:5), Lumière fechada, vista 3/4 em parede cinza |
-| `conferencia-desenho.png` | vista frontal do A-0001-V3, render ortográfico na mesma escala e as linhas do desenho em vermelho por cima do render |
-| `renders/orto-brushed-nickel-*.png` | render ortográfico de frente, 0,25 mm por pixel (base das medidas) |
+| `frente-prototipo/prancha-acabamentos-prototipo.png` | os 8 quadros: 4 acabamentos, LED aceso e apagado |
+| `frente-prototipo/renders/lumiere-<acabamento>-<aceso\|apagado>.png` | os quadros em 1080×1350 (4:5), quase de frente (4°), parede cinza com sombra |
+| `frente-prototipo/orto-prototipo-aceso.png` | vista de medida de frente, 0,25 mm por pixel |
+| `perfil/` | o vídeo do protótipo contra o CAD (seção no fim) |
+| `conferencia-desenho.png` | linhas do A-0001-V3 sobre o render ortográfico |
 | `ferramentas/` | scripts para refazer tudo (comandos abaixo) |
 
 ## O que foi medido
@@ -21,11 +27,13 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 |---|---|
 | Caixa do produto no modelo | 252,6 × 270,3 mm de frente e 72,9 mm de profundidade; o A-0001 dá 252,6 × 270,3 e 73 |
 | Linhas do A-0001 sobre o render frontal | 90% dos pixels de linha do desenho têm uma borda do render a até 1 mm |
-| Logo a laser (E-0001-V1) | 20,25 × 3,25 mm no render, contra 20 × 2,98 no desenho; topo a 70,4 mm do centro do vidro (desenho 70,66) e centrado (desvio de 0,1 mm). O pixel do render tem 0,25 mm |
-| Cor do LED a 4500 K (critério do guia, passo 6, B/R normalizado pela parede) | anel com B/R 0,78; alvo 0,78, faixa da Lumière 0,63 a 0,93 |
+| Frente do protótipo (23/10) | prata Ø150,0 e aro de Ø184,5 a Ø204,5 medidos na vista de medida (pixel de 0,25 mm) |
+| Logo a laser (E-0001-V1, subido na proporção da prata, 150/158,75) | 20,0 × 3,25 mm, contra 20 × 2,98 no desenho; topo a 66,4 mm do centro (alvo 66,8; na V3 deu 70,4 contra 70,66) e centrado (desvio de 0,05 mm) |
+| Cor do LED a 4500 K (critério do guia, passo 6, B/R normalizado pela parede) | anel com B/R 0,76 (frente V3: 0,78); alvo 0,78, faixa da Lumière 0,63 a 0,93 |
+| Estouro (canal no teto, dentro da silhueta) | brushed nickel 3,3%, gold e red gold 4,8%, black matte 0%; só brilhos, nenhum pixel com os três canais em 250 |
 | Cor dos acabamentos (CIELAB da cor do metal contra as referências Deca de 21/10) | gold h 88 C 38 (Deca 88/39); red gold h 67 C 33 (67/33); brushed nickel h 90 C 5,8 (90/6,1) |
 | Black matte | placa da parede com L 25 no render, contra L 18 na bica Deca (pixels não saturados) |
-| Anel apagado | L 35 a 50 em volta do anel, contra L 45 a 51 no Flex Lux desligado do catálogo |
+| Anel apagado | L mediano 29 (p90 40) na vista de frente; na frontal-v2 era 23 |
 
 ## Como foi feito
 
@@ -49,16 +57,14 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 
 ## O que preciso do Thiago
 
-1. **Veredito dos 8 quadros**, do jeito de sempre: publicaria tudo ou as exceções.
-2. **Largura do anel.** Na V3 o aro E-0004 cobre o vidro até Ø179, então o anel aceso visível vai
-   de Ø158,75 a Ø179. No protótipo NK.BU das fotos o anel é mais largo (espelho/anel 0,81, contra
-   0,887 na V3). O render segue a V3. Se a peça de venda for outra, muda o anel.
-3. **Buchas de nylon.** As arruelas de nylon das articulações (E-0006, E-0011, E-0058, E-0061,
-   E-0062, E-0064) aparecem como linhas brancas finas nas juntas, em todos os acabamentos. No black
-   matte elas destoam: são brancas no produto real ou pretas?
+1. **Veredito dos 8 quadros da frente do protótipo**, do jeito de sempre: publicaria tudo ou as
+   exceções.
+2. **Tampa de trás.** No protótipo ela é polida (reflete o teto); no brushed nickel do render está
+   escovada. Só aparece em vista 3/4 ou de trás.
+3. **Buchas de nylon.** As arruelas de nylon das articulações aparecem como linhas brancas finas
+   nas juntas, em todos os acabamentos. No black matte elas são brancas ou pretas?
 4. **Curvatura (aberta desde 15/10).** O desenho diz R600 (foco de 30 cm); o marketing diz foco
-   de 60 cm. Na still com reflexo neutro isso não aparece, mas num vídeo com rosto refletido
-   aparece.
+   de 60 cm. Só aparece num vídeo com rosto refletido.
 
 ## Próximos passos possíveis
 
@@ -72,11 +78,12 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 python -m venv venv && venv/bin/pip install bpy==5.2.2 cadquery-ocp numpy pillow
 venv/bin/python -I ferramentas/step_para_glb.py "A-0001-V3 Fechado.STEP" modelo/lumiere-Fechado.glb
 venv/bin/python -I ferramentas/render_lumiere.py modelo/lumiere-Fechado.glb saida.png \
-    --acabamento gold --led 1            # --led 0 apaga; --orto --res 1200x1200 para a vista de medida
+    --acabamento gold --led 1 --prata-diam 150 --aro-largura 10   # frente do protótipo (decisão de 23/10)
+    # --led 0 apaga; --orto --res 1200x1200 para a vista de medida; sem --prata-diam segue o desenho V3
 venv/bin/python -I ferramentas/prancha_acabamentos.py renders prancha-acabamentos.png
 venv/bin/python -I ferramentas/casar_desenho.py A-0001-V3-1.png renders/orto-brushed-nickel-aceso.png conferencia-desenho.png
 venv/bin/python -I ferramentas/medir_anel.py renders/orto-brushed-nickel-aceso.png
-venv/bin/python -I ferramentas/medir_logo.py renders/orto-brushed-nickel-aceso.png
+venv/bin/python -I ferramentas/medir_logo.py frente-prototipo/orto-prototipo-aceso.png 503.8 468.4 0.25 150
 ```
 
 `A-0001-V3-1.png` é a página 1 do PDF do A-0001-V3 a 110 dpi. O CAD fica fora do git e de

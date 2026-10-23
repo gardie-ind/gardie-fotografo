@@ -236,6 +236,44 @@ def recortar_prata(prata, jateado, R, cy, cz, passo=0.0006, faixa=0.002):
     return n, max(borda)
 
 
+def subir_logo(prata, jateado, fator, R, cy, cz):
+    """Leva o logo a laser para o centro na proporção da prata (Thiago 23/10: "a logomarca precisa
+    subir proporcionalmente"): o centro do logo vai de r para r * fator, sem mudar o tamanho
+    (20 x 2,98 mm do E-0001-V1). O logo e os furos dele na prata andam juntos; a prata em volta
+    estica ou encolhe de leve (é uniforme, não aparece) e a borda da prata (raio R) não se mexe."""
+    M = prata.matrix_world; Mi = M.inverted()
+    P = np.array([(M @ v.co)[:] for v in prata.data.vertices]); C, Rs, _ = fit_esfera(P)
+    J = np.array([(M @ v.co)[:] for v in jateado.data.vertices])
+    rj = np.hypot(J[:, 1] - cy, J[:, 2] - cz)
+    L = J[rj < R - 0.0003]                           # vértices do logo (o anel começa em R)
+    d = np.array([L[:, 1].mean() - cy, L[:, 2].mean() - cz]); d /= np.linalg.norm(d)   # direção do logo
+    q = np.array([-d[1], d[0]])                      # tangente
+    t = (L[:, 1] - cy) * d[0] + (L[:, 2] - cz) * d[1]; u = (L[:, 1] - cy) * q[0] + (L[:, 2] - cz) * q[1]
+    t0, t1, u0, u1 = t.min(), t.max(), u.min(), u.max()
+    desl = (t0 + t1) / 2 * (1 - fator)
+    r_logo = float(np.hypot(np.r_[t0, t1, t1], np.r_[u0, u0, u1]).max())
+
+    def suave(x):
+        x = min(1.0, max(0.0, x)); return x * x * (3 - 2 * x)
+
+    def mover(o):
+        for v in o.data.vertices:
+            p = M @ v.co
+            tt = (p.y - cy) * d[0] + (p.z - cz) * d[1]; uu = (p.y - cy) * q[0] + (p.z - cz) * q[1]
+            dt = max(t0 - tt, tt - t1, 0.0); du = max(u0 - uu, uu - u1, 0.0)
+            w = suave(1 - math.hypot(dt, du) / 0.012)                 # 12 mm de transição
+            w *= suave((R - 0.0001 - math.hypot(p.y - cy, p.z - cz)) / max(R - 0.0001 - r_logo, 1e-5))
+            if w <= 0:
+                continue
+            y = p.y - desl * w * d[0]; z = p.z - desl * w * d[1]
+            dyz = (y - C[1]) ** 2 + (z - C[2]) ** 2
+            x = C[0] + math.copysign(math.sqrt(Rs * Rs - dyz), p.x - C[0])
+            v.co = Mi @ Vector((x, y, z))
+        o.data.update()
+    mover(prata); mover(jateado)
+    return t0, t1, desl
+
+
 def estreitar_aro(pecas, largura, cy, cz):
     """Aro E-0004 mais estreito visto de frente: a borda de fora fica; a de dentro abre, e o
     perfil do aro é comprimido na direção do raio (protótipo NK.BU: aro ~10 mm, CAD 12,8)."""
@@ -316,6 +354,10 @@ def main():
         # largo que no E-0001-V1 (Ø158,75). Só com --prata-diam; o padrão segue o desenho.
         n, rb = recortar_prata(partes['vidro-prata'], partes['vidro-jateado'], A.prata_diam / 2000, cy_c, cz_c)
         usados['prata'] = 'área espelhada Ø%.2f mm (borda medida; %d faces passaram a jateado)' % (rb * 2000, n)
+        lg0, lg1, desl = subir_logo(partes['vidro-prata'], partes['vidro-jateado'], A.prata_diam / 158.75,
+                                  A.prata_diam / 2000, cy_c, cz_c)
+        usados['logo'] = 'logo a %.2f-%.2f mm do centro, subiu %.2f mm (proporção da prata)' % (
+            (lg0 - desl) * 1000, (lg1 - desl) * 1000, desl * 1000)
     if A.aro_largura:
         ri, re_, rn = estreitar_aro(pecas, A.aro_largura / 1000, cy_c, cz_c)
         usados['aro'] = 'E-0004 de frente: Ø%.1f a Ø%.1f (CAD: Ø%.1f a Ø%.1f)' % (rn * 2000, re_ * 2000, ri * 2000, re_ * 2000)

@@ -1,20 +1,20 @@
 {
- "saida": "renders/final/lumiere-brushed-nickel-apagado.png",
- "preparo_s": 4.8,
- "render_s": 154.9,
+ "saida": "renders/frente-prototipo/lumiere-brushed-nickel-apagado.png",
+ "preparo_s": 7.7,
+ "render_s": 122.0,
  "res": "1080x1350",
  "amostras": 128,
  "acabamento": "brushed-nickel",
  "led": 0.0,
  "camera": {
   "orto": false,
-  "azimute": 28.0,
-  "elevacao": 6.0,
+  "azimute": 4.0,
+  "elevacao": 3.0,
   "lente": 85.0,
   "local_m": [
-   0.9829,
-   -0.5955,
-   0.188
+   1.1102,
+   -0.1674,
+   0.1318
   ]
  },
  "caixa_produto_mm": [
@@ -23,9 +23,12 @@
   270.3
  ],
  "materiais": {
+  "prata": "área espelhada Ø150.00 mm (borda medida; 60316 faces passaram a jateado)",
+  "logo": "logo a 66.63-69.72 mm do centro, subiu 3.98 mm (proporção da prata)",
+  "aro": "E-0004 de frente: Ø184.5 a Ø204.5 (CAD: Ø179.0 a Ø204.5)",
   "vidro-frente": "esfera R600.00 mm (resíduo 0.0000 mm)",
-  "vidro-prata": "esfera R604.00 mm (resíduo 0.0000 mm)",
-  "vidro-jateado": "esfera R604.00 mm (resíduo 0.0000 mm)",
+  "vidro-prata": "esfera R604.00 mm (resíduo 0.0001 mm)",
+  "vidro-jateado": "esfera R604.00 mm (resíduo 0.0001 mm)",
   "vidro-borda": "jateado",
   "NAUO41": "E-0002-V3 epóxi branco brilho",
   "NAUO42": "E-0003-V3 metal, escovado circular (eixo da cabeça)",
