@@ -33,7 +33,9 @@ from mathutils import Vector, Matrix
 # flash estourado está prejudicando a imagem"; com a luz cheia 19 a 23% do produto tinha canal no
 # teto, faces de frente chapadas de branco; agora 4 a 6%, só brilhos).
 ACABAMENTOS = {
-    'cromado':        dict(cor=(0.550, 0.556, 0.554), rug=0.03, ani=0.0, metal=1.0, luz=0.35),
+    # Cromado (24/10): espelho quase perfeito; só com as softboxes ele refletia preto e lia grafite.
+    # Como nas stills de catálogo cromadas (estúdio claro em volta), o metal também vê a cúpula cinza.
+    'cromado':        dict(cor=(0.550, 0.556, 0.554), rug=0.03, ani=0.0, metal=1.0, luz=0.35, cupula=True),
     'brushed-nickel': dict(cor=(0.620, 0.585, 0.520), rug=0.26, ani=0.75, metal=1.0, luz=0.35),
     'gold':           dict(cor=(1.000, 0.740, 0.320), rug=0.07, ani=0.0, metal=1.0, luz=0.35),
     'red-gold':       dict(cor=(0.960, 0.565, 0.315), rug=0.07, ani=0.0, metal=1.0, luz=0.35),
@@ -53,6 +55,8 @@ def args():
     ap.add_argument('--led', type=float, default=1.0, help='0 = apagado; 1 = aceso na força padrão')
     ap.add_argument('--forca-led', type=float, default=60.0)
     ap.add_argument('--kelvin', type=float, default=4500.0)
+    ap.add_argument('--anel-emissao', type=float, default=0.0,
+                    help='> 0: o jateado (anel e logo) emite por igual com essa força e os LEDs da placa apagam')
     ap.add_argument('--so-led', action='store_true', help='apaga estúdio e ambiente (passe do LED)')
     ap.add_argument('--res', default='1080x1350')
     ap.add_argument('--amostras', type=int, default=128)
@@ -82,6 +86,7 @@ def args():
     ap.add_argument('--sombra-parede', type=float, default=1.0, help='luz da chave só na parede (sombra); 0 = sem')
     ap.add_argument('--halo-forca', type=float, default=1.2, help='multiplica o foco da parede')
     ap.add_argument('--halo-alvo', type=float, default=-0.18, help='altura do centro do foco na parede, em m, a partir do centro do produto')
+    ap.add_argument('--halo-lado', type=float, default=0.0, help='desloca o foco da parede na horizontal, em m (+ = para a direita de quem vê de frente)')
     ap.add_argument('--prata-diam', type=float,
                     help='mm; diâmetro da área espelhada (E-0001-V1: 158,75; protótipo NK.BU do vídeo de 23/10: ~150)')
     ap.add_argument('--aro-largura', type=float,
@@ -392,14 +397,24 @@ def main():
                                                'Coat Weight': 0.6, 'Coat Roughness': 0.05})
         aco = principled('aco', **{'Base Color': (0.56, 0.55, 0.53, 1), 'Metallic': 1.0, 'Roughness': 0.25})
         pcb = principled('pcb', **{'Base Color': (0.03, 0.12, 0.04, 1), 'Roughness': 0.35})
+        forca = 0.0 if A.anel_emissao > 0 else A.forca_led
         led = principled('led', **{'Base Color': (0.85, 0.80, 0.55, 1), 'Roughness': 0.3,
-                                    'Emission Strength': A.forca_led * A.led})
+                                    'Emission Strength': forca * A.led})
         bb = led.node_tree.nodes.new('ShaderNodeBlackbody'); bb.inputs['Temperature'].default_value = A.kelvin
         led.node_tree.links.new(bb.outputs[0], led.node_tree.nodes['Principled BSDF'].inputs['Emission Color'])
         vidro_liso = principled('vidro-liso', **{'Base Color': (1, 1, 1, 1), 'Roughness': 0.0, 'IOR': 1.52,
                                                   'Transmission Weight': 1.0})
         jateado = principled('vidro-jateado', **{'Base Color': (1, 1, 1, 1), 'Roughness': 0.5, 'IOR': 1.52,
                                                   'Transmission Weight': 1.0})
+        if A.anel_emissao > 0 and A.led > 0:
+            # 24/10, Thiago: "A luz deve ficar uniforme, ela não fica com estas sombras internas." Com a
+            # luz saindo dos 24 LEDs e chegando ao anel pelo berço, o anel tinha manchas (11 a 22% de
+            # variação em volta e 28% de queda do centro para a borda). No produto o anel aceso é
+            # uniforme: o jateado (anel e logo a laser) passa a emitir por igual, na cor do LED.
+            jb = jateado.node_tree.nodes['Principled BSDF']
+            bb2 = jateado.node_tree.nodes.new('ShaderNodeBlackbody'); bb2.inputs['Temperature'].default_value = A.kelvin
+            jateado.node_tree.links.new(bb2.outputs[0], jb.inputs['Emission Color'])
+            jb.inputs['Emission Strength'].default_value = A.anel_emissao * A.led
         prata = principled('prata', **{'Base Color': (0.97, 0.965, 0.955, 1), 'Metallic': 1.0, 'Roughness': 0.0})
         for nome, mat in (('vidro-frente', vidro_liso), ('vidro-prata', prata), ('vidro-jateado', jateado)):
             m = mat.copy(); normal_esfera(m, esferas[nome][0])
@@ -438,7 +453,8 @@ def main():
                 o.data.materials[1] = led; o.data.materials[0] = pcb
                 for s in o.material_slots:
                     s.link = 'DATA'
-                usados[o.name] = c + ' placa + LEDs (%g K, força %g)' % (A.kelvin, A.forca_led * A.led)
+                usados[o.name] = c + ' placa + LEDs (%g K, força %g; anel emissivo %g)' % (
+                    A.kelvin, forca * A.led, A.anel_emissao * A.led)
                 continue
             elif c.startswith('F-0006'):
                 m = pcb; usados[o.name] = c + ' eletrônica'
@@ -528,13 +544,17 @@ def main():
         reb.visible_camera = False; reb.visible_diffuse = False; reb.visible_shadow = False
         col3 = bpy.data.collections.new('espelho'); col3.objects.link(partes['vidro-prata'])
         col3.objects.link(partes['vidro-frente'])
+        if acab.get('cupula'):
+            for o in pecas:
+                if o.data.materials and o.data.materials[0].name.startswith('metal-'):
+                    col3.objects.link(o)
         for co in col3.collection_objects:
             co.light_linking.link_state = 'INCLUDE'
         reb.light_linking.receiver_collection = col3
         sd = bpy.data.lights.new('halo', 'SPOT'); sd.energy = 900 * k * A.halo_forca; sd.spot_size = math.radians(A.halo)
         sd.spot_blend = 1.0; sd.shadow_soft_size = 0.4
         so = bpy.data.objects.new('halo', sd); sc.collection.objects.link(so)
-        so.location = centro + Vector((1.3, -0.2, 0.25)); alvo_h = Vector((0.0, centro.y, centro.z + A.halo_alvo))
+        so.location = centro + Vector((1.3, -0.2 + A.halo_lado, 0.25)); alvo_h = Vector((0.0, centro.y + A.halo_lado, centro.z + A.halo_alvo))
         so.rotation_euler = (alvo_h - so.location).to_track_quat('-Z', 'Y').to_euler()
         # Fora do reflexo: no espelho o raio sai do vidro da frente por transmissão, então só
         # visible_glossy não basta (na vista de frente o foco aparecia como mancha branca).
