@@ -69,7 +69,7 @@ def ref_part(path):
     return {"inline_data": {"mime_type": MIME.get(ext, "image/png"), "data": data}}
 
 
-def gerar(prompt, out, refs=None, aspect="16:9", model=None):
+def gerar(prompt, out, refs=None, aspect="16:9", model=None, size=None):
     key, default_model = load_cfg()
     model = model or default_model
     parts = [ref_part(r) for r in (refs or [])] + [{"text": prompt}]
@@ -77,6 +77,8 @@ def gerar(prompt, out, refs=None, aspect="16:9", model=None):
         "contents": [{"parts": parts}],
         "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": aspect}},
     }
+    if size:  # "1K", "2K" ou "4K"; só os modelos Pro aceitam
+        body["generationConfig"]["imageConfig"]["imageSize"] = size
     url = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent" % model
     req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST")
     req.add_header("Content-Type", "application/json")
