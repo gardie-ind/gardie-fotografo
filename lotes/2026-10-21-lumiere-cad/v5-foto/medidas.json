@@ -1,0 +1,172 @@
+{
+ "frente/cromado": {
+  "estouro_apagado_pct": 2.69,
+  "estouro_4500_fora_led_pct": 5.14,
+  "area_led_pct": 23.0,
+  "anel_variacao_max_pct_aceso": 2.6,
+  "anel_radial_min_max_aceso": 0.977,
+  "anel_variacao_max_pct_4500": 3.2,
+  "anel_radial_min_max_4500": 1.0,
+  "difusor_3000": [
+   254,
+   244,
+   228
+  ],
+  "difusor_4500": [
+   253,
+   251,
+   248
+  ],
+  "difusor_6000": [
+   239,
+   244,
+   254
+  ]
+ },
+ "frente/brushed-nickel": {
+  "estouro_apagado_pct": 0.06,
+  "estouro_4500_fora_led_pct": 2.94,
+  "area_led_pct": 23.0,
+  "anel_variacao_max_pct_aceso": 2.6,
+  "anel_radial_min_max_aceso": 0.977,
+  "anel_variacao_max_pct_4500": 3.2,
+  "anel_radial_min_max_4500": 1.0,
+  "difusor_3000": [
+   254,
+   244,
+   228
+  ],
+  "difusor_4500": [
+   253,
+   251,
+   248
+  ],
+  "difusor_6000": [
+   239,
+   244,
+   254
+  ]
+ },
+ "frente/gold": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.28,
+  "area_led_pct": 23.2,
+  "anel_variacao_max_pct_aceso": 2.6,
+  "anel_radial_min_max_aceso": 0.982,
+  "anel_variacao_max_pct_4500": 2.7,
+  "anel_radial_min_max_4500": 1.0,
+  "difusor_3000": [
+   254,
+   244,
+   228
+  ],
+  "difusor_4500": [
+   253,
+   251,
+   248
+  ],
+  "difusor_6000": [
+   239,
+   244,
+   254
+  ]
+ },
+ "frente/red-gold": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.27,
+  "area_led_pct": 23.1,
+  "anel_variacao_max_pct_aceso": 2.6,
+  "anel_radial_min_max_aceso": 0.982,
+  "anel_variacao_max_pct_4500": 2.7,
+  "anel_radial_min_max_4500": 1.0,
+  "difusor_3000": [
+   254,
+   244,
+   228
+  ],
+  "difusor_4500": [
+   253,
+   251,
+   248
+  ],
+  "difusor_6000": [
+   239,
+   244,
+   254
+  ]
+ },
+ "frente/black-matte": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.0,
+  "area_led_pct": 23.1,
+  "anel_variacao_max_pct_aceso": 2.6,
+  "anel_radial_min_max_aceso": 0.982,
+  "anel_variacao_max_pct_4500": 3.1,
+  "anel_radial_min_max_4500": 1.0,
+  "difusor_3000": [
+   254,
+   244,
+   227
+  ],
+  "difusor_4500": [
+   253,
+   251,
+   248
+  ],
+  "difusor_6000": [
+   239,
+   244,
+   254
+  ]
+ },
+ "tres-quartos/cromado": {
+  "estouro_apagado_pct": 2.07,
+  "estouro_4500_fora_led_pct": 4.48,
+  "area_led_pct": 24.1
+ },
+ "tres-quartos/brushed-nickel": {
+  "estouro_apagado_pct": 0.04,
+  "estouro_4500_fora_led_pct": 0.55,
+  "area_led_pct": 25.6
+ },
+ "tres-quartos/gold": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.0,
+  "area_led_pct": 24.2
+ },
+ "tres-quartos/red-gold": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.0,
+  "area_led_pct": 24.2
+ },
+ "tres-quartos/black-matte": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.0,
+  "area_led_pct": 24.0
+ },
+ "braco-aberto/cromado": {
+  "estouro_apagado_pct": 2.93,
+  "estouro_4500_fora_led_pct": 7.79,
+  "area_led_pct": 20.0
+ },
+ "braco-aberto/brushed-nickel": {
+  "estouro_apagado_pct": 0.05,
+  "estouro_4500_fora_led_pct": 1.82,
+  "area_led_pct": 20.6
+ },
+ "braco-aberto/gold": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.03,
+  "area_led_pct": 20.0
+ },
+ "braco-aberto/red-gold": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.02,
+  "area_led_pct": 20.1
+ },
+ "braco-aberto/black-matte": {
+  "estouro_apagado_pct": 0.0,
+  "estouro_4500_fora_led_pct": 0.0,
+  "area_led_pct": 20.1
+ }
+}

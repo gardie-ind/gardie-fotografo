@@ -48,3 +48,5 @@ Uma linha por imagem em que o agente e o Thiago discordaram, ou que serve de
 | Data | Imagem | Agente | Thiago | Motivo do Thiago | Mudança no critério |
 |---|---|---|---|---|---|
 | premissas (resposta 2) | `benchmark-ml/10202CR/10202CR-4` | — | publicaria | fidelidade do produto; o logo "geroie" e o cabo fora de vista não impedem | âncora: cabo ausente na vista frontal e grafia do logo não são veto (critérios d e g) |
+| 24/10 | `lotes/2026-10-21-lumiere-cad/frente-prototipo` (8 quadros, Lumière do CAD, anel aceso pela luz dos LEDs da placa) | entregue como aprovado | vetaria | "A luz deve ficar uniforme, ela não fica com estas sombras internas" | checagem medida de anel aceso por igual em `guia/criterios.md` passo 6 (VETO acima de 8%; os vetados davam 11 a 36%) |
+| 25/10 | `lotes/2026-10-21-lumiere-cad/v4-anel-uniforme` (60 quadros) | aprovado | aprovou a direção ("Você acertou") e pediu tirar o aspecto de render | realismo, não fidelidade do produto | nenhuma ainda: realismo não tem medida; o v5 refaz os 60 com estúdio refletido e acabamento de câmera |

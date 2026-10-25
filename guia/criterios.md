@@ -87,6 +87,14 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    mesma cena (toalha, parede). Por esse método, as fotos reais dão ≈0,78 em
    4500K e ≈1,07 em 6000K. VETO se a candidata se afastar mais de 0,15 da
    capa, metade dessa distância (padrão — calibrar).
+   **Anel aceso por igual** (calibragem de 24/10, Lumière): o difusor aceso
+   não tem manchas nem sombras internas. Meça a luminância ao longo do anel
+   em 7 raios entre a borda de dentro e a de fora, fora do setor do logo, e
+   calcule (p95 − p5) ÷ mediana em cada raio. VETO acima de 8% em qualquer
+   raio, ou se a mediana do raio mais fraco ficar abaixo de 0,9 da do mais
+   forte. Os quadros vetados pelo Thiago davam 11 a 36% e 0,72; os aprovados
+   como direção, 2,6 a 3,3% e 0,98. Ferramenta: `ferramentas/3d/medir_v4.py`
+   (vista de frente).
 7. **Cabo e plug (d, e, f):** confira a vista contra `guia/produto.md` › Cabo
    e plug, que cita as fotos reais de cada vista. Plug visível: compare a
    forma com `referencias/chicote-eletrico/`.

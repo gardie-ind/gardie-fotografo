@@ -4,6 +4,8 @@ linha por estado do anel: apagado e os três tons do padrão de 22/10 (3000K, 45
 Mais a prancha "anel antes × agora": recorte da cabeça de frente, render de 23/10 contra o v4.
 
 Uso: prancha_v4.py renders/v4 saida_dir
+     prancha_v4.py renders/v5 saida_dir final renders/v4   (v5, 25/10: quadros finais em <vista>/final/,
+     e a prancha "render × foto" contra o v4)
 """
 import sys
 from pathlib import Path
@@ -18,7 +20,12 @@ F = ImageFont.truetype('DejaVuSans.ttf', 24); FP = ImageFont.truetype('DejaVuSan
 FT = ImageFont.truetype('DejaVuSans-Bold.ttf', 30)
 
 
+SUB = None
+
+
 def arquivo(pasta, cod, linha):
+    if SUB:
+        return pasta / SUB / f'lumiere-{cod}-{linha}.png'
     if linha == 'apagado':
         return pasta / f'lumiere-{cod}-apagado.png'
     return pasta / 'tons' / f'lumiere-{cod}-{linha}.png'
@@ -62,10 +69,40 @@ def prancha_anel(base, saida, cod='brushed-nickel'):
     print(saida, out.size)
 
 
+def prancha_realismo(v4, v5, saida):
+    """25/10: o mesmo quadro no v4 (render) e no v5 (realismo + câmera), inteiro e num detalhe 1:1."""
+    casos = [('tres-quartos', 'cromado', '4500', (560, 640, 1000, 1000), '3/4, cromado, 4500K'),
+             ('frente', 'gold', '4500', (600, 560, 1040, 920), 'Frente, gold, 4500K'),
+             ('braco-aberto', 'brushed-nickel', 'apagado', (150, 640, 590, 1000), 'Braço aberto, brushed nickel, apagado')]
+    Wf, Hf, Wd, Hd = 432, 540, 440, 360
+    linha_h = 44 + Hf + M
+    out = Image.new('RGB', (M + 2 * (Wf + M) + 2 * (Wd + M), 70 + len(casos) * linha_h), 'white'); d = ImageDraw.Draw(out)
+    d.text((M, 12), 'Render (24/10) × foto (25/10): mesmo quadro, inteiro e detalhe em tamanho real', font=FT, fill=(0, 0, 0))
+    for i, (v, a, t, box, rot) in enumerate(casos):
+        y = 70 + i * linha_h
+        d.text((M, y), rot, font=F, fill=(0, 0, 0))
+        f4 = v4 / v / (f'lumiere-{a}-apagado.png' if t == 'apagado' else f'tons/lumiere-{a}-{t}.png')
+        f5 = v5 / v / 'final' / f'lumiere-{a}-{t}.png'
+        if not (f4.exists() and f5.exists()):
+            continue
+        im4, im5 = Image.open(f4).convert('RGB'), Image.open(f5).convert('RGB')
+        x = M
+        for im, r in ((im4, 'render'), (im5, 'foto')):
+            out.paste(im.resize((Wf, Hf), Image.LANCZOS), (x, y + 36)); d.text((x + 6, y + 40), r, font=FP, fill=(255, 255, 255)); x += Wf + M
+        for im, r in ((im4, 'render, detalhe'), (im5, 'foto, detalhe')):
+            out.paste(im.crop(box), (x, y + 36)); d.text((x + 6, y + 40), r, font=FP, fill=(255, 255, 255)); x += Wd + M
+    out.save(saida)
+    print(saida, out.size)
+
+
 if __name__ == '__main__':
     base, dest = Path(sys.argv[1]), Path(sys.argv[2]); dest.mkdir(parents=True, exist_ok=True)
+    if len(sys.argv) > 3:
+        SUB = sys.argv[3]
     for v, t in VISTAS:
         if (base / v).exists():
             prancha_vista(base, v, t, dest / f'prancha-{v}.png')
-    if (base / 'frente' / 'tons').exists():
+    if len(sys.argv) > 4:
+        prancha_realismo(Path(sys.argv[4]), base, dest / 'prancha-render-x-foto.png')
+    elif (base / 'frente' / 'tons').exists():
         prancha_anel(base, dest / 'prancha-anel-antes-agora.png')

@@ -93,6 +93,10 @@ def args():
                     help='mm; largura do aro E-0004 visto de frente (CAD V3: 12,8; protótipo NK.BU: ~10)')
     ap.add_argument('--verso', action='store_true', help='vista de trás: sem parede, luzes espelhadas para trás')
     ap.add_argument('--esconder', default='', help='códigos de peça a esconder, por prefixo (ex.: D-0003,E-0010)')
+    ap.add_argument('--realismo', action='store_true',
+                    help='25/10: estúdio refletido nos metais, bordas arredondadas, microvariação de brilho e parede com textura')
+    ap.add_argument('--estudio', type=float, default=1.0, help='com --realismo: força do estúdio que metais e espelho refletem')
+    ap.add_argument('--diafragma', type=float, default=0.0, help='f/número da lente (profundidade de campo); 0 = sem')
     ap.add_argument('--blend')
     return ap.parse_args()
 
@@ -165,6 +169,67 @@ def tangente(mat, eixo, centro=None):
     cr.inputs[0].default_value = tuple(eixo); L.new(sub.outputs[0], cr.inputs[1])
     nrm = N.new('ShaderNodeVectorMath'); nrm.operation = 'NORMALIZE'; L.new(cr.outputs[0], nrm.inputs[0])
     L.new(nrm.outputs[0], bsdf.inputs['Tangent'])
+
+
+def suavizar(m, rug=None, raio=0.0003):
+    """Realismo (25/10): o CAD tem quinas perfeitas, que no render saem como linha dura sem brilho.
+    Uma peça usinada e polida tem a quina levemente quebrada: o nó Bevel arredonda a normal num raio
+    de 0,3 mm (a geometria não muda). E a rugosidade varia um pouco na superfície (polimento real),
+    o que tira o reflexo perfeito de computação gráfica."""
+    nt = m.node_tree; N = nt.nodes; L = nt.links
+    b = N['Principled BSDF']
+    bv = N.new('ShaderNodeBevel'); bv.samples = 8; bv.inputs['Radius'].default_value = raio
+    L.new(bv.outputs['Normal'], b.inputs['Normal'])
+    if rug is not None:
+        tc = N.new('ShaderNodeTexCoord'); nz = N.new('ShaderNodeTexNoise')
+        nz.inputs['Scale'].default_value = 60.0; nz.inputs['Detail'].default_value = 3.0
+        L.new(tc.outputs['Object'], nz.inputs['Vector'])
+        mr = N.new('ShaderNodeMapRange')
+        mr.inputs['To Min'].default_value = max(rug * 0.9, 0.012); mr.inputs['To Max'].default_value = rug * 1.12 + 0.008
+        L.new(nz.outputs['Fac'], mr.inputs['Value']); L.new(mr.outputs['Result'], b.inputs['Roughness'])
+
+
+def estudio_img(W=1024, H=512):
+    """Realismo (25/10): o estúdio que os metais e o espelho refletem, em equiretangular (centro = +x,
+    para fora da parede). Nas stills de catálogo o cromo mostra o estúdio: fundo escuro, teto claro,
+    piso cinza e softboxes verticais, que viram as faixas claras e escuras do metal polido. Antes o
+    metal via um cinza liso e lia plástico."""
+    u = (np.arange(W) + 0.5) / W; v = (np.arange(H) + 0.5) / H
+    phi = np.degrees((0.5 - u)[None, :] * 2 * np.pi) * np.ones((H, 1))
+    lat = np.degrees((v - 0.5)[:, None] * np.pi) * np.ones((1, W))
+
+    def faixa(d, meia, macio):
+        return np.clip((meia + macio - np.abs(d)) / (2 * macio), 0, 1) ** 2 * (3 - 2 * np.clip((meia + macio - np.abs(d)) / (2 * macio), 0, 1))
+
+    def suave(x, a, b):
+        t = np.clip((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t)
+
+    def ang(a, b):
+        return (a - b + 180) % 360 - 180
+
+    # Fundo escuro, teto claro e piso cinza; um rebatedor branco grande do lado oposto ao da câmera
+    # (phi −15° a +75°, na altura do produto), que é o que o espelho reflete nas três vistas (ele
+    # reflete o lado oposto, phi = +azimute da câmera): sem ele o espelho lia preto. O resto é
+    # escuro, com duas softboxes verticais longe do eixo: o metal ganha faixas claras e escuras,
+    # como o cromo e o dourado polidos das stills, em vez de um cinza liso que lia plástico.
+    L = 0.06 + 0.8 * suave(lat, 35, 75) + 0.12 * suave(-lat, 25, 55)
+    L = L + 0.15 * faixa(lat - 8, 30, 14)
+    # rebatedor com degradê (mais claro para +phi): o espelho mostra um degradê, como na still real
+    # da Mobile Lux, em vez de um cinza chapado
+    grad = 0.7 + 0.6 * np.clip((ang(phi, -15)) / 90, 0, 1)
+    L = L + 0.45 * grad * faixa(ang(phi, 30), 45, 12) * faixa(lat + 5, 22, 10)
+    vert = faixa(lat - 10, 34, 6)
+    L = L + 2.6 * faixa(ang(phi, 100), 6, 3) * vert + 2.2 * faixa(ang(phi, -100), 8, 4) * vert
+    # frestas escuras finas entre rebatedores, teto e piso: são as linhas pretas nítidas que o
+    # cromo real mostra nos tubos e na placa
+    for c, m in ((27, 2.0), (-28, 2.5)):
+        L = L * (1 - 0.92 * faixa(lat - c, m, 1.2))
+    for c in (-22, 82):
+        L = L * (1 - 0.85 * faixa(ang(phi, c), 2.0, 1.2) * faixa(lat, 40, 8))
+    px = np.repeat(L[..., None], 4, axis=2).astype(np.float32); px[..., 3] = 1.0
+    img = bpy.data.images.new('estudio', W, H, float_buffer=True)
+    img.pixels.foreach_set(px.ravel())
+    return img
 
 
 def separar(o, grupos):
@@ -416,6 +481,8 @@ def main():
             jateado.node_tree.links.new(bb2.outputs[0], jb.inputs['Emission Color'])
             jb.inputs['Emission Strength'].default_value = A.anel_emissao * A.led
         prata = principled('prata', **{'Base Color': (0.97, 0.965, 0.955, 1), 'Metallic': 1.0, 'Roughness': 0.0})
+        if A.realismo:
+            suavizar(metal, acab['rug']); suavizar(nylon); suavizar(berco); suavizar(aco, 0.25)
         for nome, mat in (('vidro-frente', vidro_liso), ('vidro-prata', prata), ('vidro-jateado', jateado)):
             m = mat.copy(); normal_esfera(m, esferas[nome][0])
             o = partes[nome]; o.data.materials.clear(); o.data.materials.append(m)
@@ -484,6 +551,19 @@ def main():
         bm.faces.new(vs); me = bpy.data.meshes.new('parede'); bm.to_mesh(me); bm.free()
         par = bpy.data.objects.new('parede', me); sc.collection.objects.link(par)
         par.data.materials.append(principled('parede', **{'Base Color': (A.parede, A.parede, A.parede, 1), 'Roughness': 0.9}))
+        if A.realismo:
+            # Parede pintada (25/10): textura fina de rolo e manchas largas de ±3% no tom; a parede
+            # matematicamente lisa é uma das marcas de render.
+            nt = par.data.materials[0].node_tree; N = nt.nodes; L = nt.links; b = N['Principled BSDF']
+            tc = N.new('ShaderNodeTexCoord')
+            fino = N.new('ShaderNodeTexNoise'); fino.inputs['Scale'].default_value = 1400.0; fino.inputs['Detail'].default_value = 6.0
+            bp = N.new('ShaderNodeBump'); bp.inputs['Strength'].default_value = 0.18; bp.inputs['Distance'].default_value = 0.00015
+            L.new(tc.outputs['Object'], fino.inputs['Vector']); L.new(fino.outputs['Fac'], bp.inputs['Height'])
+            L.new(bp.outputs['Normal'], b.inputs['Normal'])
+            largo = N.new('ShaderNodeTexNoise'); largo.inputs['Scale'].default_value = 2.5; largo.inputs['Detail'].default_value = 2.0
+            L.new(tc.outputs['Object'], largo.inputs['Vector'])
+            mr = N.new('ShaderNodeMapRange'); mr.inputs['To Min'].default_value = A.parede * 0.97; mr.inputs['To Max'].default_value = A.parede * 1.03
+            L.new(largo.outputs['Fac'], mr.inputs['Value']); L.new(mr.outputs['Result'], b.inputs['Base Color'])
         k = A.luz
         # Luz no produto (chave, preenchimento e cartão; o foco da parede não muda). Num produto
         # preto o fotógrafo baixa as softboxes, senão o preto fosco vira cinza médio.
@@ -540,11 +620,19 @@ def main():
         em.inputs['Color'].default_value = (1, 1, 1, 1)
         nt.links.new(tc.outputs['Object'], sx.inputs[0]); nt.links.new(sx.outputs['Z'], mp.inputs['Value'])
         nt.links.new(mp.outputs['Result'], em.inputs['Strength']); nt.links.new(em.outputs[0], out.inputs['Surface'])
+        if A.realismo:
+            env = nt.nodes.new('ShaderNodeTexEnvironment'); env.image = estudio_img()
+            nv = nt.nodes.new('ShaderNodeVectorMath'); nv.operation = 'NORMALIZE'
+            nt.links.new(tc.outputs['Object'], nv.inputs[0]); nt.links.new(nv.outputs[0], env.inputs['Vector'])
+            nt.links.new(env.outputs['Color'], em.inputs['Color'])
+            for l in list(em.inputs['Strength'].links):
+                nt.links.remove(l)
+            em.inputs['Strength'].default_value = A.estudio
         reb.data.materials.append(mr)
         reb.visible_camera = False; reb.visible_diffuse = False; reb.visible_shadow = False
         col3 = bpy.data.collections.new('espelho'); col3.objects.link(partes['vidro-prata'])
         col3.objects.link(partes['vidro-frente'])
-        if acab.get('cupula'):
+        if acab.get('cupula') or A.realismo:
             for o in pecas:
                 if o.data.materials and o.data.materials[0].name.startswith('metal-'):
                     col3.objects.link(o)
@@ -595,6 +683,10 @@ def main():
         cam.location = centro + dist * Vector((math.cos(a) * math.cos(e), -math.sin(a) * math.cos(e), math.sin(e)))
         cam.rotation_euler = (centro - cam.location).to_track_quat('-Z', 'Y').to_euler()
         cd.clip_start = dist / 100; cd.clip_end = dist * 100
+        if A.diafragma > 0:
+            # Foco no centro da caixa do produto (no braço aberto, entre a cabeça e a placa).
+            cd.dof.use_dof = True; cd.dof.aperture_fstop = A.diafragma
+            cd.dof.focus_distance = (centro - cam.location).length
     sc.camera = cam
 
     sc.render.engine = 'CYCLES'; sc.cycles.device = 'CPU'

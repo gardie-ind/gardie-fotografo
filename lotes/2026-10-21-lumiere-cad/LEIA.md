@@ -7,11 +7,20 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 
 ## Entregas
 
-Versão atual (24/10): **v4, anel uniforme** (`v4-anel-uniforme/`), pedido do Thiago de 24/10 02:30:
-"A luz deve ficar uniforme, ela não fica com estas sombras internas. Acho que pode aumentar o
-brilho também, referenciado no outro trabalho de anel de luz deste mesmo projeto. Faltou a versão
-cromada e fazer outros perfis também." Frente do protótipo (decisão de 23/10), 5 acabamentos com
-cromado, 3 ângulos, e o anel aceso nos três tons do padrão aprovado em 22/10.
+Versão atual (25/10): **v5, foto** (`v5-foto/`). O Thiago aprovou a direção do v4 ("Você acertou,
+parabéns!") e pediu: "Agora remova o aspecto de render e faça mais realista." Os mesmos 60 quadros
+do v4 (frente do protótipo, 5 acabamentos, 3 ângulos, apagado e 3 tons), com o realismo descrito em
+"Como foi feito" › Realismo. As medidas do produto não mudam.
+
+| Arquivo (em `v5-foto/`) | O que é |
+|---|---|
+| `prancha-frente.png`, `prancha-tres-quartos.png`, `prancha-braco-aberto.png` | uma por ângulo: 5 acabamentos × LED apagado, 3000K, 4500K e 6000K |
+| `prancha-render-x-foto.png` | o mesmo quadro no v4 (render) e no v5 (foto), inteiro e num detalhe em tamanho real |
+| `<ângulo>/lumiere-<acabamento>-<apagado\|3000\|4500\|6000>.png` | os quadros finais, 1080×1350 (4:5) |
+| `<ângulo>/cru/` | aceso e apagado crus do render (entrada do padrão de luz e do acabamento de câmera) |
+| `medidas.json` | as medidas, por ângulo e acabamento, nos quadros finais |
+
+A v4 (`v4-anel-uniforme/`, 24/10) segue como referência do render sem o realismo, só na pasta do projeto; no git ficam a v5 e `perfil/`.
 
 Histórico: a vista 3/4 de 28° (`renders/`, `prancha-acabamentos.png`) foi vetada em 22/10; a
 frontal (`frontal/`) estourava o flash; a `frontal-v2/` segue a frente do desenho V3; a
@@ -29,7 +38,7 @@ frontal (`frontal/`) estourava o flash; a `frontal-v2/` segue a frente do desenh
 
 Ângulos: **frente** (braço fechado, câmera a 4° e 3° acima), **3/4** (braço fechado, 35° pela
 esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada do CAD, a cabeça a
-36 cm da parede, 55° e 8° acima). Os outros quadros de 23/10 continuam em `frente-prototipo/` (só na pasta do projeto; no git ficam a v4 e `perfil/`), `perfil/` e
+36 cm da parede, 55° e 8° acima). Os outros quadros de 23/10 continuam em `frente-prototipo/`, `perfil/` e
 `conferencia-desenho.png`; `ferramentas/` tem os scripts.
 
 ## O que foi medido
@@ -49,6 +58,11 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 | v4: cor do difusor, de frente (mediana do anel, r 80–88 mm) | 3000K 255,245,229 (black matte 228); 4500K 254,252,249; 6000K 240,245,255. O padrão aprovado em 22/10 dá 255,245,232, 255,253,250 e 240,245,255 |
 | v4: estouro com o LED apagado (três canais ≥ 250 na silhueta) | 0% em brushed nickel, gold, red gold e black matte; cromado 4,2% de frente, 2,2% no 3/4 e 4,8% no braço aberto (brilhos do cromo) |
 | v4: estouro no 4500K fora da área que o LED ilumina | 0% nos quatro; cromado 5,4%, 2,8% e 5,9% (o aro cromado reflete o anel aceso) |
+| **v5 (25/10), nos quadros finais:** uniformidade do anel no 4500K, de frente | 2,7 a 3,2% (o grão e a vinheta do acabamento de câmera somam ~3%; o VETO do guia é 8%); raio de dentro contra o de fora 1,00 |
+| v5: cor do difusor, de frente | 3000K 254,244,228; 4500K 253,251,248; 6000K 239,244,254 (−1 da vinheta em relação ao v4) |
+| v5: estouro com o LED apagado | 0 a 0,06% nos quatro; cromado 2,1 a 2,9% |
+| v5: estouro no 4500K fora da área do LED | gold, red gold e black matte 0 a 0,3%; brushed nickel 0,6 a 2,9%; cromado 4,5 a 7,8% (é o vazamento de luz do anel no lábio do aro, de propósito) |
+| v5: espelho apagado, de frente (cinza mediano no centro) | 196, contra 198 no v4: o estúdio refletido não escureceu o espelho |
 
 ## Como foi feito
 
@@ -72,6 +86,17 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
   cinza neutra, para o anel e o logo lerem como nas stills. No black matte as luzes do produto
   ficam a 25%: com a luz cheia o preto fosco lia cinza médio (L 47). No cromado (24/10) o metal
   também reflete a cúpula, senão ele espelhava o fundo preto e lia grafite.
+- **Realismo (v5, 25/10):** comparado com as stills reais de catálogo (Mobile Lux e Classique Lux
+  ligadas) e com a foto do protótipo. No render (`--realismo`): os metais e o espelho refletem um
+  estúdio (fundo escuro, teto claro, piso cinza, um rebatedor branco com degradê do lado oposto ao da
+  câmera, duas softboxes verticais e frestas escuras finas, que dão as linhas pretas do cromo real);
+  as quinas do CAD ficam levemente quebradas (Bevel de 0,3 mm na normal, sem mudar a geometria); a
+  rugosidade varia um pouco na superfície; a parede tem textura de pintura, manchas de ±3% e é um
+  pouco mais clara (0,13); lente a f/16 (f/22 no braço aberto, para a placa não perder nitidez).
+  Depois do padrão de luz, `foto.py`: a luz do anel vaza pelo vidro para dentro do espelho e para o
+  lábio do aro (degradê de ~1 cm, na cor do tom, como nas stills reais), brilho de lente fora da
+  fonte, vinheta de 9%, franja de cor de 0,4 px no canto, nitidez de câmera e grão com semente fixa
+  por ângulo. Nada disso muda forma, medida ou cor do produto.
 - **Acabamentos:** metal com a cor de reflexão calibrada nas referências Deca; brushed nickel com
   escovado anisotrópico na direção de cada peça (circular no aro e na tampa, ao longo dos tubos,
   vertical na placa). Black matte é pintura (dielétrico), não metal.
@@ -79,9 +104,10 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 
 ## O que preciso do Thiago
 
-1. **Veredito da v4**, do jeito de sempre: publicaria tudo ou as exceções, citando
+1. **Veredito da v5**, do jeito de sempre: publicaria tudo ou as exceções, citando
    `<ângulo>/<acabamento>-<tom>` (ex.: `braco-aberto/gold-3000`). São 60 quadros: 3 ângulos ×
-   5 acabamentos × (apagado + 3 tons).
+   5 acabamentos × (apagado + 3 tons). Se ainda parecer render, apontar onde (metal, espelho,
+   anel, parede, luz).
 2. **Tampa de trás.** No protótipo ela é polida (reflete o teto); no brushed nickel do render está
    escovada. Aparece um pouco no 3/4 e no braço aberto.
 3. **Buchas de nylon.** As arruelas de nylon das articulações aparecem como linhas brancas finas
@@ -105,6 +131,9 @@ venv/bin/python -I ferramentas/render_lumiere.py modelo/lumiere-Fechado.glb said
     # --led 0 apaga; --orto --res 1200x1200 para a vista de medida; sem --prata-diam segue o desenho V3
 venv/bin/python -I ferramentas/prancha_acabamentos.py renders prancha-acabamentos.png
 bash ferramentas/lote_v4.sh            # v4: 3 ângulos × 5 acabamentos × aceso/apagado + 3 tons (~1h35 em 4 CPUs)
+bash ferramentas/lote_v5.sh            # v5: o mesmo com --realismo e foto.py (~2h20; VISTAS=... para rodar em partes)
+venv/bin/python -I ferramentas/medir_v4.py renders/v5 renders/v5/medidas.json final
+venv/bin/python -I ferramentas/prancha_v4.py renders/v5 renders/v5/pranchas final renders/v4
 venv/bin/python -I ferramentas/medir_v4.py renders/v4 renders/v4/medidas.json
 venv/bin/python -I ferramentas/prancha_v4.py renders/v4 renders/v4/pranchas
 venv/bin/python -I ferramentas/casar_desenho.py A-0001-V3-1.png renders/orto-brushed-nickel-aceso.png conferencia-desenho.png

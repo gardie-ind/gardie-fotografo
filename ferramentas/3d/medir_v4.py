@@ -8,6 +8,8 @@
   em volta de um valor baixo, o que não aparece na foto acesa.)
 
 Uso: medir_v4.py renders/v4 saida.json
+     medir_v4.py renders/v5 saida.json final   (v5, 25/10: mede os quadros finais, depois do
+     acabamento de câmera; o aceso e o apagado crus só servem para achar a área do LED)
 """
 import sys, json, math
 from pathlib import Path
@@ -38,19 +40,21 @@ def uniformidade(img, cx=471.2, cy=577.7, k=3.0592):
 
 
 base = Path(sys.argv[1]); res = {}
+SUB = sys.argv[3] if len(sys.argv) > 3 else None
 for vista in ('frente', 'tres-quartos', 'braco-aberto'):
     d = base / vista
     if not (d / 'silhueta.png').exists():
         continue
     m = np.asarray(Image.open(d / 'silhueta.png').convert('L')) > 128
     for a in ACAB:
-        ac, ap, t45 = d / f'lumiere-{a}-aceso.png', d / f'lumiere-{a}-apagado.png', d / 'tons' / f'lumiere-{a}-4500.png'
+        ac, ap, t45 = d / f'lumiere-{a}-aceso.png', d / f'lumiere-{a}-apagado.png', d / (SUB or 'tons') / f'lumiere-{a}-4500.png'
         if not (ac.exists() and ap.exists() and t45.exists()):
             continue
         A, B, C = rgb(ac), rgb(ap), rgb(t45)
+        Bf = rgb(d / SUB / f'lumiere-{a}-apagado.png') if SUB else B
         Ey = np.clip(lin(A / 255) - lin(B / 255), 0, None) @ np.array([0.2126, 0.7152, 0.0722])
         fora_led = m & (Ey < 0.02)
-        r = {'estouro_apagado_pct': round(100 * ((B.min(2) >= 250) & m).sum() / m.sum(), 2),
+        r = {'estouro_apagado_pct': round(100 * ((Bf.min(2) >= 250) & m).sum() / m.sum(), 2),
              'estouro_4500_fora_led_pct': round(100 * ((C.min(2) >= 250) & fora_led).sum() / fora_led.sum(), 2),
              'area_led_pct': round(100 * (m & (Ey >= 0.02)).sum() / m.sum(), 1)}
         if vista == 'frente':
@@ -63,7 +67,7 @@ for vista in ('frente', 'tres-quartos', 'braco-aberto'):
             ang = (np.degrees(np.arctan2(xx - 471.2, -(yy - 577.7))) + 360) % 360
             anel = (rr > 80) & (rr < 88) & ~((ang > 160) & (ang < 200))
             for t in ('3000', '4500', '6000'):
-                T = rgb(d / 'tons' / f'lumiere-{a}-{t}.png')
+                T = rgb(d / (SUB or 'tons') / f'lumiere-{a}-{t}.png')
                 r[f'difusor_{t}'] = [int(v) for v in np.median(T[anel], axis=0)]
         res[f'{vista}/{a}'] = r
         print(vista, a, json.dumps(r, ensure_ascii=False))
