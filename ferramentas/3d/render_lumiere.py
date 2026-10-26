@@ -87,6 +87,8 @@ def args():
     ap.add_argument('--halo-forca', type=float, default=1.2, help='multiplica o foco da parede')
     ap.add_argument('--halo-alvo', type=float, default=-0.18, help='altura do centro do foco na parede, em m, a partir do centro do produto')
     ap.add_argument('--halo-lado', type=float, default=0.0, help='desloca o foco da parede na horizontal, em m (+ = para a direita de quem vê de frente)')
+    ap.add_argument('--halo-camera', type=float, default=0.0,
+                    help='leva o foco da parede para trás do produto como a câmera o vê (1 = projeção do centro do produto na parede)')
     ap.add_argument('--prata-diam', type=float,
                     help='mm; diâmetro da área espelhada (E-0001-V1: 158,75; protótipo NK.BU do vídeo de 23/10: ~150)')
     ap.add_argument('--aro-largura', type=float,
@@ -96,7 +98,12 @@ def args():
     ap.add_argument('--realismo', action='store_true',
                     help='25/10: estúdio refletido nos metais, bordas arredondadas, microvariação de brilho e parede com textura')
     ap.add_argument('--estudio', type=float, default=1.0, help='com --realismo: força do estúdio que metais e espelho refletem')
+    ap.add_argument('--estudio-inclina', type=float, default=0.0,
+                    help='com --realismo: sobe o estúdio refletido em graus, para câmera alta (o fotógrafo sobe os rebatedores junto)')
     ap.add_argument('--diafragma', type=float, default=0.0, help='f/número da lente (profundidade de campo); 0 = sem')
+    ap.add_argument('--braco', help='pose do braço a partir do modelo Fechado: t1,t2 em graus, direção de cada braço '
+                    'medida a partir da normal da parede (t1 = braço da placa, t2 = braço da cabeça). Fechado = 90,270; '
+                    'Esticado = 0,360. A cabeça só se desloca, sempre de frente para fora da parede')
     ap.add_argument('--blend')
     return ap.parse_args()
 
@@ -372,6 +379,40 @@ def caixa(objs):
     return lo, hi
 
 
+def posar(pecas, t1, t2):
+    """Braço meio aberto (25/10, Thiago: "mais dez perfis diferentes, de braço meio aberto").
+
+    O CAD vem em duas poses, Fechado e Esticado. Comparando as duas peça a peça: as articulações têm
+    eixo vertical; o braço da placa (D-0003, D-0005 e a ponteira do cotovelo) gira em volta do pino
+    da placa; o braço da cabeça (D-0006 e as duas ponteiras) gira em volta do cotovelo; arruelas,
+    buchas e pinos do cotovelo e da cabeça só se deslocam; a cabeça não gira entre as duas poses.
+    Aqui o modelo Fechado vai para qualquer pose entre as duas, com os mesmos movimentos.
+    Ângulo t: direção (cos t, −sin t) no plano da parede (x sai da parede, y lateral do mundo).
+    """
+    nome = {o.name.split('.')[0]: o for o in pecas}
+    def centro(n):
+        lo, hi = caixa([nome[n]]); c = (lo + hi) / 2; return Vector((c.x, c.y, 0))
+    J0, EA, JA = centro('NAUO36'), centro('NAUO4'), centro('NAUO5')   # pino da placa, cotovelo, cabeça (Fechado)
+    L1, L2 = (EA - J0).length, (JA - EA).length
+    d = lambda t: Vector((math.cos(math.radians(t)), -math.sin(math.radians(t)), 0))
+    E = J0 + L1 * d(t1); J2 = E + L2 * d(t2)
+    def mover(ns, M):
+        for n in ns:
+            nome[n].matrix_world = M @ nome[n].matrix_world
+    rot = lambda piv, graus, para: (Matrix.Translation(para) @ Matrix.Rotation(math.radians(-graus), 4, 'Z')
+                                    @ Matrix.Translation(-piv))
+    mover(('NAUO35', 'NAUO36', 'NAUO34'), rot(J0, t1 - 90, J0))
+    mover(('NAUO38', 'NAUO39', 'NAUO37'), rot(EA, t2 - 270, E))
+    mover(('NAUO4', 'NAUO14', 'NAUO15', 'NAUO16', 'NAUO17', 'NAUO20', 'NAUO21'), Matrix.Translation(E - EA))
+    cabeca = ['NAUO5', 'NAUO18', 'NAUO19', 'NAUO22'] + ['NAUO%d' % i for i in (40, 41, 42, 43, 45, 46, 47, 48, 49,
+                                                                             50, 51, 52, 53, 54)]
+    mover(cabeca, Matrix.Translation(J2 - JA))
+    bpy.context.view_layer.update()
+    return {'NAUO35': d(t1), 'NAUO38': d(t2)}, {
+        'braco_graus': [t1, t2], 'cotovelo_mm': [round(v * 1000, 1) for v in E[:2]],
+        'cabeca_mm': [round(v * 1000, 1) for v in J2[:2]], 'bracos_mm': [round(L1 * 1000, 1), round(L2 * 1000, 1)]}
+
+
 def luz_area(nome, pos, alvo, tam, tam_y, potencia, cor=(1, 1, 1)):
     ld = bpy.data.lights.new(nome, 'AREA'); ld.shape = 'RECTANGLE'
     ld.size = tam; ld.size_y = tam_y; ld.energy = potencia; ld.color = cor
@@ -392,6 +433,11 @@ def main():
     for o in [o for o in bpy.context.scene.objects if o.type == 'MESH']:
         mw = o.matrix_world.copy(); o.parent = None; o.matrix_world = mw
     pecas = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+    tubos = {}; usados = {}
+    if A.braco:
+        # Antes de qualquer passo que use a cabeça (vidro, prata, logo, aro, normais): ela só se
+        # desloca, então continua de frente para +x e esses passos valem como no Fechado.
+        tubos, usados['pose'] = posar(pecas, *map(float, A.braco.split(',')))
 
     acab = dict(ACABAMENTOS[A.acabamento])
     if A.rug is not None:
@@ -401,7 +447,6 @@ def main():
     if A.base is not None:
         acab['cor'] = (A.base,) * 3
     ac = A.acabamento
-    usados = {}
 
     # Vidro E-0001: separa frente, verso prateado, verso sem prata (anel e logo) e borda.
     vidro = next(o for o in pecas if codigo(o) == 'E-0001-V1')
@@ -505,7 +550,9 @@ def main():
                         tangente(m, eixo_cab, centro_cab); usados[o.name] = c + ' metal, escovado circular (eixo da cabeça)'
                     elif c.startswith(('D-0003', 'D-0006', 'C-0')):
                         ax = [abs(d.x), abs(d.y), abs(d.z)]; i = ax.index(max(ax))
-                        tangente(m, tuple(1.0 if k == i else 0.0 for k in range(3))); usados[o.name] = c + ' metal, escovado ao longo do tubo'
+                        t = tubos.get(o.name.split('.')[0])   # braço posado: a caixa não dá mais a direção
+                        tangente(m, tuple(t) if t else tuple(1.0 if k == i else 0.0 for k in range(3)))
+                        usados[o.name] = c + ' metal, escovado ao longo do tubo'
                     elif c.startswith('E-0010'):
                         tangente(m, (0, 0, 1)); usados[o.name] = c + ' metal, escovado vertical'
                     else:
@@ -565,14 +612,17 @@ def main():
             mr = N.new('ShaderNodeMapRange'); mr.inputs['To Min'].default_value = A.parede * 0.97; mr.inputs['To Max'].default_value = A.parede * 1.03
             L.new(largo.outputs['Fac'], mr.inputs['Value']); L.new(mr.outputs['Result'], b.inputs['Base Color'])
         k = A.luz
+        # Câmera do outro lado (azimute negativo, 25/10): o fotógrafo leva o estúdio junto, espelhado.
+        # Com as softboxes paradas a chave ficava atrás do produto e o espelho refletia o lado escuro.
+        sy = -1.0 if A.azimute < 0 else 1.0
         # Luz no produto (chave, preenchimento e cartão; o foco da parede não muda). Num produto
         # preto o fotógrafo baixa as softboxes, senão o preto fosco vira cinza médio.
         kp = A.luz_produto if A.luz_produto is not None else acab.get('luz', 1.0)
         # Estúdio das stills de catálogo: chave grande à esquerda e acima da câmera, preenchimento
         # fraco à direita, cartão branco grande atrás da câmera (é o que o espelho e o metal
         # refletem) e um foco suave na parede atrás do produto (o halo do fundo cinza).
-        chave = luz_area('chave', centro + Vector((0.85, -0.75, 0.70)), centro, 0.9, 0.7, 230 * k * kp)
-        preench = luz_area('preenchimento', centro + Vector((0.95, 0.85, 0.10)), centro, 1.0, 0.8, 70 * k * kp)
+        chave = luz_area('chave', centro + Vector((0.85, -0.75 * sy, 0.70)), centro, 0.9, 0.7, 230 * k * kp)
+        preench = luz_area('preenchimento', centro + Vector((0.95, 0.85 * sy, 0.10)), centro, 1.0, 0.8, 70 * k * kp)
         # A parede recebe só o foco do halo (degradê), como nas stills: chave e preenchimento
         # iluminam o produto, não a parede (light linking do Cycles).
         col = bpy.data.collections.new('excluidos'); col.objects.link(par)
@@ -598,7 +648,7 @@ def main():
         col2.objects.link(partes['vidro-frente'])
         for co in col2.collection_objects:
             co.light_linking.link_state = 'EXCLUDE'
-        cartao = luz_area('cartao-frente', centro + Vector((2.2, -0.35, 0.30)), centro, 2.2, 1.6, 260 * k * kp * A.cartao)
+        cartao = luz_area('cartao-frente', centro + Vector((2.2, -0.35 * sy, 0.30)), centro, 2.2, 1.6, 260 * k * kp * A.cartao)
         cartao.visible_diffuse = False   # só reflexo: não lava a parede
         cartao.light_linking.receiver_collection = col2
         # Cúpula cinza em volta da cena, vista só pelo espelho (light linking): o côncavo mostra
@@ -623,7 +673,14 @@ def main():
         if A.realismo:
             env = nt.nodes.new('ShaderNodeTexEnvironment'); env.image = estudio_img()
             nv = nt.nodes.new('ShaderNodeVectorMath'); nv.operation = 'NORMALIZE'
-            nt.links.new(tc.outputs['Object'], nv.inputs[0]); nt.links.new(nv.outputs[0], env.inputs['Vector'])
+            ey = nt.nodes.new('ShaderNodeVectorMath'); ey.operation = 'MULTIPLY'; ey.inputs[1].default_value = (1, sy, 1)
+            nt.links.new(tc.outputs['Object'], ey.inputs[0])
+            # Câmera alta (26/10, p09 a 22° acima): o cromo vertical reflete o estúdio abaixo do
+            # horizonte, escuro, e a articulação lia como peça preta. Girar a busca no mapa sobe o estúdio.
+            rv = nt.nodes.new('ShaderNodeVectorRotate'); rv.rotation_type = 'Y_AXIS'
+            rv.inputs['Angle'].default_value = -math.radians(A.estudio_inclina)   # medido: o sinal negativo sobe
+            nt.links.new(ey.outputs[0], rv.inputs['Vector']); nt.links.new(rv.outputs[0], nv.inputs[0])
+            nt.links.new(nv.outputs[0], env.inputs['Vector'])
             nt.links.new(env.outputs['Color'], em.inputs['Color'])
             for l in list(em.inputs['Strength'].links):
                 nt.links.remove(l)
@@ -642,7 +699,13 @@ def main():
         sd = bpy.data.lights.new('halo', 'SPOT'); sd.energy = 900 * k * A.halo_forca; sd.spot_size = math.radians(A.halo)
         sd.spot_blend = 1.0; sd.shadow_soft_size = 0.4
         so = bpy.data.objects.new('halo', sd); sc.collection.objects.link(so)
-        so.location = centro + Vector((1.3, -0.2 + A.halo_lado, 0.25)); alvo_h = Vector((0.0, centro.y + A.halo_lado, centro.z + A.halo_alvo))
+        lado, alvo = A.halo_lado * sy, A.halo_alvo
+        if A.halo_camera:
+            # 25/10, braço meio aberto: o produto sai da parede e, de lado, a parede que fica atrás dele
+            # na foto é a projeção do centro do produto na direção da câmera.
+            a_, e_ = math.radians(A.azimute), math.radians(A.elevacao)
+            lado += A.halo_camera * centro.x * math.tan(a_); alvo -= A.halo_camera * centro.x * math.tan(e_) / math.cos(a_)
+        so.location = centro + Vector((1.3, -0.2 * sy + lado, 0.25)); alvo_h = Vector((0.0, centro.y + lado, centro.z + alvo))
         so.rotation_euler = (alvo_h - so.location).to_track_quat('-Z', 'Y').to_euler()
         # Fora do reflexo: no espelho o raio sai do vidro da frente por transmissão, então só
         # visible_glossy não basta (na vista de frente o foco aparecia como mancha branca).

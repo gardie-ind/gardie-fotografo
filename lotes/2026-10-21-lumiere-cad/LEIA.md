@@ -7,7 +7,37 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 
 ## Entregas
 
-Versão atual (25/10): **v5, foto** (`v5-foto/`). O Thiago aprovou a direção do v4 ("Você acertou,
+Mais recente (26/10): **v6, braço meio aberto** (`v6-meio-aberto/`). Pedido do Thiago (25/10 23:17):
+"Crie mais dez perfis diferentes, de braço meio aberto e angulos de câmera diferentes. Faça com um
+acabamento e uma luz só, para aprovação." Dez quadros em cromado, LED aceso em 4500K, com o
+realismo do v5. O braço é articulado a partir do CAD fechado (ver "Como foi feito" › Braço meio
+aberto); a cabeça fica de frente para fora da parede.
+
+| Arquivo (em `v6-meio-aberto/`) | O que é |
+|---|---|
+| `prancha-meio-aberto.png` | os dez quadros, com o braço e a câmera de cada um |
+| `p01.png` … `p10.png` | os quadros finais, 1080×1350 (4:5) |
+| `cru/` | aceso e apagado crus de cada vista e a silhueta (entrada do padrão de luz e das medidas) |
+| `medidas.json` | estouro, folga até a borda e a pose medida, por vista |
+
+| Vista | Braço (placa / cabeça) | Câmera |
+|---|---|---|
+| p01 | 45° / dobrado para trás (270°) | 40° à esquerda, 8° acima |
+| p02 | 60° / dobrado para trás | 35° à direita, 10° acima |
+| p03 | 30° / dobrado para trás | 60° à esquerda, 5° acima |
+| p04 | 30° / 330° | 50° à direita, 8° acima |
+| p05 | 45° / 315° | 50° à esquerda, 15° acima |
+| p06 | 60° / reto para fora (360°) | 25° à direita, 4° acima |
+| p07 | 60° / 300° | 25° à esquerda, 6° abaixo |
+| p08 | 45° / dobrado para trás | 60° à direita, 12° acima |
+| p09 | 20° / dobrado para trás | 35° à esquerda, 22° acima |
+| p10 | 15° / 300° | 55° à esquerda, 4° acima |
+
+Ângulo do braço: direção de cada braço medida a partir da perpendicular à parede (0° = saindo
+reto da parede). O CAD fechado é 90° / 270° (braço da placa deitado na parede, braço da cabeça
+dobrado de volta) e o esticado é 0° / 360°. Esquerda e direita são de quem olha a parede de frente.
+
+Anterior (25/10, aguardando veredito): **v5, foto** (`v5-foto/`). O Thiago aprovou a direção do v4 ("Você acertou,
 parabéns!") e pediu: "Agora remova o aspecto de render e faça mais realista." Os mesmos 60 quadros
 do v4 (frente do protótipo, 5 acabamentos, 3 ângulos, apagado e 3 tons), com o realismo descrito em
 "Como foi feito" › Realismo. As medidas do produto não mudam.
@@ -20,7 +50,7 @@ do v4 (frente do protótipo, 5 acabamentos, 3 ângulos, apagado e 3 tons), com o
 | `<ângulo>/cru/` | aceso e apagado crus do render (entrada do padrão de luz e do acabamento de câmera) |
 | `medidas.json` | as medidas, por ângulo e acabamento, nos quadros finais |
 
-A v4 (`v4-anel-uniforme/`, 24/10) segue como referência do render sem o realismo, só na pasta do projeto; no git ficam a v5 e `perfil/`.
+A v4 (`v4-anel-uniforme/`, 24/10) segue como referência do render sem o realismo, só na pasta do projeto; no git ficam a v6, a v5 e `perfil/` (sem os crus).
 
 Histórico: a vista 3/4 de 28° (`renders/`, `prancha-acabamentos.png`) foi vetada em 22/10; a
 frontal (`frontal/`) estourava o flash; a `frontal-v2/` segue a frente do desenho V3; a
@@ -63,6 +93,12 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 | v5: estouro com o LED apagado | 0 a 0,06% nos quatro; cromado 2,1 a 2,9% |
 | v5: estouro no 4500K fora da área do LED | gold, red gold e black matte 0 a 0,3%; brushed nickel 0,6 a 2,9%; cromado 4,5 a 7,8% (é o vazamento de luz do anel no lábio do aro, de propósito) |
 | v5: espelho apagado, de frente (cinza mediano no centro) | 196, contra 198 no v4: o estúdio refletido não escureceu o espelho |
+| **v6 (26/10):** pose do braço | o CAD fechado posado em 0° / 360° bate pixel a pixel com o CAD esticado (silhueta de frente e a 55°, 0 pixels diferentes) |
+| v6: colisão entre peças (malhas, em cada uma das dez poses) | nenhum par de peças novo se tocando além dos que já se tocam no fechado e no esticado; na p04 a arruela de nylon do cotovelo encosta na ponteira, que é a facetação do furo girando em volta da arruela redonda (as duas são cilindros no mesmo eixo) |
+| v6: estouro com o LED apagado (cromado) | 1,7 a 5,3% (v5 cromado: 2,1 a 2,9%; brilhos do cromo, mais nas vistas mais de lado) |
+| v6: estouro no 4500K fora da área do LED | 4,0 a 8,5% (v5 cromado: 4,5 a 7,8%) |
+| v6: folga do produto até a borda do quadro | 75 a 197 px (nada cortado) |
+| v6: articulação do cotovelo na câmera alta (p09, 22° acima; cinza mediano) | 5/255 com o estúdio parado (o cromo refletia o piso escuro e a peça lia preta: vetada antes da entrega); 132/255 com o estúdio subido 16° |
 
 ## Como foi feito
 
@@ -97,6 +133,18 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
   lábio do aro (degradê de ~1 cm, na cor do tom, como nas stills reais), brilho de lente fora da
   fonte, vinheta de 9%, franja de cor de 0,4 px no canto, nitidez de câmera e grão com semente fixa
   por ângulo. Nada disso muda forma, medida ou cor do produto.
+- **Braço meio aberto (v6, 26/10):** o CAD vem em duas poses, fechada e esticada. Comparando
+  as duas peça a peça: as articulações têm eixo vertical; o braço da placa (D-0003, mancal D-0005
+  e a ponteira D-0004 do cotovelo) gira em volta do pino da placa; o braço da cabeça (D-0006 e as
+  duas ponteiras) gira em volta do cotovelo; arruelas, buchas e pinos das articulações só se
+  deslocam (são redondos: raio igual em todas as direções, medido); a cabeça não gira entre as
+  duas poses. `render_lumiere.py --braco t1,t2` leva o CAD fechado para qualquer pose entre as
+  duas com esses mesmos movimentos, antes de qualquer outro passo, e só usa poses no caminho entre
+  fechado e esticado (as juntas não passam do que o próprio CAD mostra). Comprimentos medidos:
+  202,6 mm da placa ao cotovelo e 86,3 mm do cotovelo à cabeça. Nas câmeras do lado direito o
+  estúdio vai espelhado junto (sem isso a chave ficava atrás do produto e o espelho refletia o
+  lado escuro); o foco da parede fica atrás do produto como a câmera o vê (`--halo-camera`); na
+  câmera alta o estúdio refletido sobe junto (`--estudio-inclina`). f/22 em todas.
 - **Acabamentos:** metal com a cor de reflexão calibrada nas referências Deca; brushed nickel com
   escovado anisotrópico na direção de cada peça (circular no aro e na tampa, ao longo dos tubos,
   vertical na placa). Black matte é pintura (dielétrico), não metal.
@@ -104,6 +152,8 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 
 ## O que preciso do Thiago
 
+0. **Veredito da v6** (braço meio aberto): publicaria tudo ou as exceções, citando a vista
+   (ex.: `p04`). Se gostar de uma pose e câmera, ela pode ser feita nos outros acabamentos e tons.
 1. **Veredito da v5**, do jeito de sempre: publicaria tudo ou as exceções, citando
    `<ângulo>/<acabamento>-<tom>` (ex.: `braco-aberto/gold-3000`). São 60 quadros: 3 ângulos ×
    5 acabamentos × (apagado + 3 tons). Se ainda parecer render, apontar onde (metal, espelho,
@@ -118,7 +168,8 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 ## Próximos passos possíveis
 
 - LED acendendo e troca de tom: câmera parada, os quadros já existem (exato).
-- Braço abrindo, entre as duas poses do CAD (fechado e esticado).
+- Braço abrindo em vídeo: com a articulação do v6 dá para gerar a sequência entre fechado e
+  esticado, quadro a quadro, sem IA.
 - Ambientadas: o mesmo modelo numa parede de banheiro.
 
 ## Como refazer
@@ -132,6 +183,9 @@ venv/bin/python -I ferramentas/render_lumiere.py modelo/lumiere-Fechado.glb said
 venv/bin/python -I ferramentas/prancha_acabamentos.py renders prancha-acabamentos.png
 bash ferramentas/lote_v4.sh            # v4: 3 ângulos × 5 acabamentos × aceso/apagado + 3 tons (~1h35 em 4 CPUs)
 bash ferramentas/lote_v5.sh            # v5: o mesmo com --realismo e foto.py (~2h20; VISTAS=... para rodar em partes)
+bash ferramentas/lote_v6.sh            # v6: 10 vistas de braço meio aberto, cromado 4500K (~1h35; VISTAS="p01 p02" para partes)
+venv/bin/python -I ferramentas/medir_v6.py renders/v6 renders/v6/medidas.json
+venv/bin/python -I ferramentas/prancha_v6.py renders/v6 renders/v6/prancha-meio-aberto.png
 venv/bin/python -I ferramentas/medir_v4.py renders/v5 renders/v5/medidas.json final
 venv/bin/python -I ferramentas/prancha_v4.py renders/v5 renders/v5/pranchas final renders/v4
 venv/bin/python -I ferramentas/medir_v4.py renders/v4 renders/v4/medidas.json

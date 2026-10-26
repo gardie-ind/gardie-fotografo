@@ -1,0 +1,282 @@
+{
+ "p01": {
+  "estouro_apagado_pct": 2.19,
+  "estouro_4500_fora_led_pct": 5.81,
+  "area_led_pct": 25.6,
+  "folga_borda_px": 125,
+  "camera": {
+   "azimute": 40.0,
+   "elevacao": 8.0
+  },
+  "pose": {
+   "braco_graus": [
+    45.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    160.5,
+    -143.3
+   ],
+   "cabeca_mm": [
+    160.5,
+    -57.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p02": {
+  "estouro_apagado_pct": 1.68,
+  "estouro_4500_fora_led_pct": 4.02,
+  "area_led_pct": 23.1,
+  "folga_borda_px": 134,
+  "camera": {
+   "azimute": -35.0,
+   "elevacao": 10.0
+  },
+  "pose": {
+   "braco_graus": [
+    60.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    118.6,
+    -175.5
+   ],
+   "cabeca_mm": [
+    118.6,
+    -89.2
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p03": {
+  "estouro_apagado_pct": 5.27,
+  "estouro_4500_fora_led_pct": 8.14,
+  "area_led_pct": 19.1,
+  "folga_borda_px": 128,
+  "camera": {
+   "azimute": 60.0,
+   "elevacao": 5.0
+  },
+  "pose": {
+   "braco_graus": [
+    30.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    192.7,
+    -101.3
+   ],
+   "cabeca_mm": [
+    192.7,
+    -15.1
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p04": {
+  "estouro_apagado_pct": 4.58,
+  "estouro_4500_fora_led_pct": 7.58,
+  "area_led_pct": 21.2,
+  "folga_borda_px": 80,
+  "camera": {
+   "azimute": -50.0,
+   "elevacao": 8.0
+  },
+  "pose": {
+   "braco_graus": [
+    30.0,
+    330.0
+   ],
+   "cotovelo_mm": [
+    192.7,
+    -101.3
+   ],
+   "cabeca_mm": [
+    267.4,
+    -58.2
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p05": {
+  "estouro_apagado_pct": 3.05,
+  "estouro_4500_fora_led_pct": 7.15,
+  "area_led_pct": 22.9,
+  "folga_borda_px": 114,
+  "camera": {
+   "azimute": 50.0,
+   "elevacao": 15.0
+  },
+  "pose": {
+   "braco_graus": [
+    45.0,
+    315.0
+   ],
+   "cotovelo_mm": [
+    160.5,
+    -143.3
+   ],
+   "cabeca_mm": [
+    221.5,
+    -82.3
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p06": {
+  "estouro_apagado_pct": 2.11,
+  "estouro_4500_fora_led_pct": 4.13,
+  "area_led_pct": 23.0,
+  "folga_borda_px": 75,
+  "camera": {
+   "azimute": -25.0,
+   "elevacao": 4.0
+  },
+  "pose": {
+   "braco_graus": [
+    60.0,
+    360.0
+   ],
+   "cotovelo_mm": [
+    118.6,
+    -175.5
+   ],
+   "cabeca_mm": [
+    204.8,
+    -175.5
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p07": {
+  "estouro_apagado_pct": 4.8,
+  "estouro_4500_fora_led_pct": 6.22,
+  "area_led_pct": 24.5,
+  "folga_borda_px": 197,
+  "camera": {
+   "azimute": 25.0,
+   "elevacao": -6.0
+  },
+  "pose": {
+   "braco_graus": [
+    60.0,
+    300.0
+   ],
+   "cotovelo_mm": [
+    118.6,
+    -175.5
+   ],
+   "cabeca_mm": [
+    161.7,
+    -100.8
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p08": {
+  "estouro_apagado_pct": 3.72,
+  "estouro_4500_fora_led_pct": 6.41,
+  "area_led_pct": 20.2,
+  "folga_borda_px": 134,
+  "camera": {
+   "azimute": -60.0,
+   "elevacao": 12.0
+  },
+  "pose": {
+   "braco_graus": [
+    45.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    160.5,
+    -143.3
+   ],
+   "cabeca_mm": [
+    160.5,
+    -57.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p09": {
+  "estouro_apagado_pct": 2.55,
+  "estouro_4500_fora_led_pct": 5.12,
+  "area_led_pct": 23.7,
+  "folga_borda_px": 107,
+  "camera": {
+   "azimute": 35.0,
+   "elevacao": 22.0
+  },
+  "pose": {
+   "braco_graus": [
+    20.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    207.6,
+    -69.3
+   ],
+   "cabeca_mm": [
+    207.6,
+    17.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ },
+ "p10": {
+  "estouro_apagado_pct": 5.28,
+  "estouro_4500_fora_led_pct": 8.53,
+  "area_led_pct": 19.9,
+  "folga_borda_px": 88,
+  "camera": {
+   "azimute": 55.0,
+   "elevacao": 4.0
+  },
+  "pose": {
+   "braco_graus": [
+    15.0,
+    300.0
+   ],
+   "cotovelo_mm": [
+    212.9,
+    -52.4
+   ],
+   "cabeca_mm": [
+    256.1,
+    22.3
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  }
+ }
+}
