@@ -1,0 +1,176 @@
+{
+ "t01": {
+  "estouro_apagado_pct": 3.28,
+  "estouro_4500_fora_led_pct": 1.68,
+  "area_led_pct": 0.6,
+  "folga_borda_px": 82,
+  "camera": {
+   "azimute": -55.0,
+   "elevacao": 8.0
+  },
+  "pose": {
+   "braco_graus": [
+    0.0,
+    360.0
+   ],
+   "cotovelo_mm": [
+    219.9,
+    -0.0
+   ],
+   "cabeca_mm": [
+    306.1,
+    -0.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  },
+  "cabeca": "cabeça girada 90° no pino (eixo em 306.1, -0.0 mm)"
+ },
+ "t02": {
+  "estouro_apagado_pct": 2.84,
+  "estouro_4500_fora_led_pct": 1.82,
+  "area_led_pct": 0.6,
+  "folga_borda_px": 158,
+  "camera": {
+   "azimute": -35.0,
+   "elevacao": 12.0
+  },
+  "pose": {
+   "braco_graus": [
+    0.0,
+    360.0
+   ],
+   "cotovelo_mm": [
+    219.9,
+    -0.0
+   ],
+   "cabeca_mm": [
+    306.1,
+    -0.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  },
+  "cabeca": "cabeça girada 90° no pino (eixo em 306.1, -0.0 mm)"
+ },
+ "t03": {
+  "estouro_apagado_pct": 3.59,
+  "estouro_4500_fora_led_pct": 2.35,
+  "area_led_pct": 0.4,
+  "folga_borda_px": 96,
+  "camera": {
+   "azimute": 55.0,
+   "elevacao": 8.0
+  },
+  "pose": {
+   "braco_graus": [
+    20.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    207.6,
+    -69.3
+   ],
+   "cabeca_mm": [
+    207.6,
+    17.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  },
+  "cabeca": "cabeça girada 270° no pino (eixo em 207.6, 17.0 mm)"
+ },
+ "t04": {
+  "estouro_apagado_pct": 3.19,
+  "estouro_4500_fora_led_pct": 2.19,
+  "area_led_pct": 0.3,
+  "folga_borda_px": 117,
+  "camera": {
+   "azimute": 40.0,
+   "elevacao": 15.0
+  },
+  "pose": {
+   "braco_graus": [
+    30.0,
+    270.0
+   ],
+   "cotovelo_mm": [
+    192.7,
+    -101.3
+   ],
+   "cabeca_mm": [
+    192.7,
+    -15.1
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  },
+  "cabeca": "cabeça girada 270° no pino (eixo em 192.7, -15.1 mm)"
+ },
+ "t05": {
+  "estouro_apagado_pct": 2.17,
+  "estouro_4500_fora_led_pct": 1.11,
+  "area_led_pct": 0.5,
+  "folga_borda_px": 95,
+  "camera": {
+   "azimute": -50.0,
+   "elevacao": 22.0
+  },
+  "pose": {
+   "braco_graus": [
+    0.0,
+    360.0
+   ],
+   "cotovelo_mm": [
+    219.9,
+    -0.0
+   ],
+   "cabeca_mm": [
+    306.1,
+    -0.0
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  },
+  "cabeca": "cabeça girada 90° no pino (eixo em 306.1, -0.0 mm)"
+ },
+ "t06": {
+  "estouro_apagado_pct": 6.9,
+  "estouro_4500_fora_led_pct": 2.53,
+  "area_led_pct": 0.5,
+  "folga_borda_px": 116,
+  "camera": {
+   "azimute": -50.0,
+   "elevacao": -5.0
+  },
+  "pose": {
+   "braco_graus": [
+    15.0,
+    345.0
+   ],
+   "cotovelo_mm": [
+    212.9,
+    -52.4
+   ],
+   "cabeca_mm": [
+    296.3,
+    -30.1
+   ],
+   "bracos_mm": [
+    202.6,
+    86.3
+   ]
+  },
+  "cabeca": "cabeça girada 75° no pino (eixo em 296.3, -30.1 mm)"
+ }
+}

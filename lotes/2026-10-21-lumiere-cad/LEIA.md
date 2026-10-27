@@ -7,7 +7,29 @@ luz, câmera e parede. Nada foi publicado nem vai ao Shopify antes do veredito.
 
 ## Entregas
 
-Mais recente (26/10): **v6, braço meio aberto** (`v6-meio-aberto/`). Pedido do Thiago (25/10 23:17):
+Mais recente (27/10): **v7, traseira** (`v7-traseira/`). Pedido do Thiago: "Consegue fazer algumas
+posições mostrando a traseira do espelho?" Seis quadros em cromado, LED aceso em 4500K, com o
+realismo do v5. A cabeça gira no pino vertical da articulação até 90° em relação ao braço da
+cabeça, que é o giro que o próprio CAD mostra entre fechado e esticado, e a câmera fica do lado
+da tampa traseira.
+
+| Arquivo (em `v7-traseira/`) | O que é |
+|---|---|
+| `prancha-traseira.png` | os seis quadros, com o braço, o giro da cabeça e a câmera de cada um |
+| `t01.png` … `t06.png` | os quadros finais, 1080×1350 (4:5) |
+| `cru/` | aceso e apagado crus e a silhueta de cada vista |
+| `medidas.json` | estouro, folga até a borda, pose e giro da cabeça, por vista |
+
+| Vista | Braço (placa / cabeça) | Cabeça | Câmera |
+|---|---|---|---|
+| t01 | esticado (0° / 360°) | virada 90° à esquerda | 55° à direita, 8° acima |
+| t02 | esticado | virada 90° à esquerda | 35° à direita, 12° acima |
+| t03 | 20° / dobrado para trás (270°) | virada 90° à direita | 55° à esquerda, 8° acima |
+| t04 | 30° / dobrado para trás | virada 90° à direita | 40° à esquerda, 15° acima |
+| t05 | esticado | virada 90° à esquerda | 50° à direita, 22° acima |
+| t06 | 15° / 345° | virada 75° à esquerda | 50° à direita, 5° abaixo |
+
+Anterior (26/10, aguardando veredito): **v6, braço meio aberto** (`v6-meio-aberto/`). Pedido do Thiago (25/10 23:17):
 "Crie mais dez perfis diferentes, de braço meio aberto e angulos de câmera diferentes. Faça com um
 acabamento e uma luz só, para aprovação." Dez quadros em cromado, LED aceso em 4500K, com o
 realismo do v5. O braço é articulado a partir do CAD fechado (ver "Como foi feito" › Braço meio
@@ -50,7 +72,7 @@ do v4 (frente do protótipo, 5 acabamentos, 3 ângulos, apagado e 3 tons), com o
 | `<ângulo>/cru/` | aceso e apagado crus do render (entrada do padrão de luz e do acabamento de câmera) |
 | `medidas.json` | as medidas, por ângulo e acabamento, nos quadros finais |
 
-A v4 (`v4-anel-uniforme/`, 24/10) segue como referência do render sem o realismo, só na pasta do projeto; no git ficam a v6, a v5 e `perfil/` (sem os crus).
+A v4 (`v4-anel-uniforme/`, 24/10) segue como referência do render sem o realismo, só na pasta do projeto; no git ficam a v7, a v6, a v5 e `perfil/` (sem os crus).
 
 Histórico: a vista 3/4 de 28° (`renders/`, `prancha-acabamentos.png`) foi vetada em 22/10; a
 frontal (`frontal/`) estourava o flash; a `frontal-v2/` segue a frente do desenho V3; a
@@ -98,6 +120,10 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 | v6: estouro com o LED apagado (cromado) | 1,7 a 5,3% (v5 cromado: 2,1 a 2,9%; brilhos do cromo, mais nas vistas mais de lado) |
 | v6: estouro no 4500K fora da área do LED | 4,0 a 8,5% (v5 cromado: 4,5 a 7,8%) |
 | v6: folga do produto até a borda do quadro | 75 a 197 px (nada cortado) |
+| **v7 (27/10):** colisão com a cabeça girada (malhas, nas seis poses) | nenhum par de peças novo se tocando (na t06 e na p04 só a facetação da arruela do cotovelo, como no v6) |
+| v7: estouro com o LED apagado (cromado) | 2,2 a 6,9% (a t06, de baixo, tem a placa refletindo o rebatedor claro) |
+| v7: estouro no 4500K fora da área do LED | 1,1 a 2,5% |
+| v7: folga do produto até a borda do quadro | 82 a 158 px |
 | v6: articulação do cotovelo na câmera alta (p09, 22° acima; cinza mediano) | 5/255 com o estúdio parado (o cromo refletia o piso escuro e a peça lia preta: vetada antes da entrega); 132/255 com o estúdio subido 16° |
 
 ## Como foi feito
@@ -145,6 +171,15 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
   estúdio vai espelhado junto (sem isso a chave ficava atrás do produto e o espelho refletia o
   lado escuro); o foco da parede fica atrás do produto como a câmera o vê (`--halo-camera`); na
   câmera alta o estúdio refletido sobe junto (`--estudio-inclina`). f/22 em todas.
+- **Traseira (v7, 27/10):** `--cabeca` gira a cabeça (vidro, berço, aro, tampa, placa de LED e a
+  haste até o pino) no pino vertical da articulação. O giro entra depois do recorte da prata, do
+  logo e do aro, que supõem a cabeça de frente, e antes das normais da esfera e do escovado, que
+  são calculados com a cabeça já girada. Só giros de 0 a 90° em relação ao braço da cabeça, os
+  que o CAD mostra. A tampa traseira em cromado é polida, como no protótipo; o círculo mais claro
+  em volta da haste é o assento plano da tampa no CAD (Ø~60 mm plano, depois a tampa abaula até
+  o aro; medido na malha do E-0003), e as curvas escuras ao lado da haste são o reflexo da haste
+  na tampa abaulada (a malha não tem nenhuma feição ali). Câmeras a 70° ou mais de lado ficaram de fora (a parede longe
+  do foco ficava preta).
 - **Acabamentos:** metal com a cor de reflexão calibrada nas referências Deca; brushed nickel com
   escovado anisotrópico na direção de cada peça (circular no aro e na tampa, ao longo dos tubos,
   vertical na placa). Black matte é pintura (dielétrico), não metal.
@@ -152,7 +187,7 @@ esquerda e 6° acima, com a sombra na parede) e **braço aberto** (pose esticada
 
 ## O que preciso do Thiago
 
-0. **Veredito da v6** (braço meio aberto): publicaria tudo ou as exceções, citando a vista
+0. **Veredito da v7** (traseira) e **da v6** (braço meio aberto): publicaria tudo ou as exceções, citando a vista
    (ex.: `p04`). Se gostar de uma pose e câmera, ela pode ser feita nos outros acabamentos e tons.
 1. **Veredito da v5**, do jeito de sempre: publicaria tudo ou as exceções, citando
    `<ângulo>/<acabamento>-<tom>` (ex.: `braco-aberto/gold-3000`). São 60 quadros: 3 ângulos ×
@@ -183,6 +218,9 @@ venv/bin/python -I ferramentas/render_lumiere.py modelo/lumiere-Fechado.glb said
 venv/bin/python -I ferramentas/prancha_acabamentos.py renders prancha-acabamentos.png
 bash ferramentas/lote_v4.sh            # v4: 3 ângulos × 5 acabamentos × aceso/apagado + 3 tons (~1h35 em 4 CPUs)
 bash ferramentas/lote_v5.sh            # v5: o mesmo com --realismo e foto.py (~2h20; VISTAS=... para rodar em partes)
+bash ferramentas/lote_v7.sh            # v7: 6 vistas da traseira, cromado 4500K (~35 min)
+venv/bin/python -I ferramentas/medir_v6.py renders/v7 renders/v7/medidas.json
+venv/bin/python -I ferramentas/prancha_v6.py renders/v7 renders/v7/prancha-traseira.png traseira
 bash ferramentas/lote_v6.sh            # v6: 10 vistas de braço meio aberto, cromado 4500K (~1h35; VISTAS="p01 p02" para partes)
 venv/bin/python -I ferramentas/medir_v6.py renders/v6 renders/v6/medidas.json
 venv/bin/python -I ferramentas/prancha_v6.py renders/v6 renders/v6/prancha-meio-aberto.png

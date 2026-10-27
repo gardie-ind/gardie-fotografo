@@ -104,6 +104,9 @@ def args():
     ap.add_argument('--braco', help='pose do braço a partir do modelo Fechado: t1,t2 em graus, direção de cada braço '
                     'medida a partir da normal da parede (t1 = braço da placa, t2 = braço da cabeça). Fechado = 90,270; '
                     'Esticado = 0,360. A cabeça só se desloca, sempre de frente para fora da parede')
+    ap.add_argument('--cabeca', type=float, default=0.0,
+                    help='giro da cabeça no pino vertical da articulação, em graus, no mesmo sentido do --braco '
+                         '(0 = de frente para fora da parede; 90 = virada para o lado da placa no CAD fechado)')
     ap.add_argument('--blend')
     return ap.parse_args()
 
@@ -479,14 +482,29 @@ def main():
     for o in list(pecas):
         if A.esconder and codigo(o).startswith(tuple(filter(None, A.esconder.split(',')))):
             o.hide_render = True; pecas.remove(o)
+    lo_v, hi_v = caixa([partes['vidro-frente']])
+    eixo_cab = Vector((1, 0, 0))
+    centro_cab = Vector((lo_v.x, (lo_v.y + hi_v.y) / 2, (lo_v.z + hi_v.z) / 2))
+    if A.cabeca:
+        # Traseira (27/10, Thiago: "algumas posições mostrando a traseira do espelho"): a cabeça gira
+        # no pino vertical da articulação da cabeça (no CAD ela gira 90° em relação ao braço entre o
+        # fechado e o esticado). O giro vem depois da prata, do logo e do aro, que supõem a cabeça de
+        # frente para +x; as normais da esfera e o escovado são calculados já com a cabeça girada.
+        cab = {'NAUO%d' % i for i in (41, 42, 43, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54)}
+        piv = next(o for o in bpy.context.scene.objects if o.name.split('.')[0] == 'NAUO5')
+        lo, hi = caixa([piv]); J = Vector(((lo.x + hi.x) / 2, (lo.y + hi.y) / 2, 0))
+        Mc = Matrix.Translation(J) @ Matrix.Rotation(math.radians(-A.cabeca), 4, 'Z') @ Matrix.Translation(-J)
+        for o in bpy.context.scene.objects:
+            if o.type == 'MESH' and (o.name.split('.')[0] in cab or o.name.startswith('vidro-')):
+                o.matrix_world = Mc @ o.matrix_world
+        bpy.context.view_layer.update()
+        eixo_cab = Mc.to_3x3() @ eixo_cab; centro_cab = Mc @ centro_cab
+        usados['cabeca'] = 'cabeça girada %g° no pino (eixo em %.1f, %.1f mm)' % (A.cabeca, J.x * 1000, J.y * 1000)
     esferas = {}
     for nome in ('vidro-frente', 'vidro-prata', 'vidro-jateado'):
         o = partes[nome]
         P = np.array([(o.matrix_world @ v.co)[:] for v in o.data.vertices])
         esferas[nome] = fit_esfera(P)
-    lo_v, hi_v = caixa([partes['vidro-frente']])
-    eixo_cab = Vector((1, 0, 0))
-    centro_cab = Vector((lo_v.x, (lo_v.y + hi_v.y) / 2, (lo_v.z + hi_v.z) / 2))
 
     if A.silhueta:
         branco = principled('chapado', **{'Base Color': (0, 0, 0, 1), 'Emission Color': (1, 1, 1, 1),

@@ -5,7 +5,7 @@
 - folga do produto até a borda do quadro (px), para não cortar placa nem cabeça;
 - pose: cotovelo e centro da cabeça (mm, x saindo da parede), lidos do registro do render.
 
-Uso: medir_v6.py renders/v6 saida.json
+Uso: medir_v6.py renders/v6 saida.json   (também o v7, traseira: anota o giro da cabeça)
 """
 import sys, json
 from pathlib import Path
@@ -33,7 +33,8 @@ for d in sorted(p for p in base.iterdir() if p.is_dir() and (p / 'final' / 'lumi
          'estouro_4500_fora_led_pct': round(100 * ((C.min(2) >= 250) & fora).sum() / fora.sum(), 2),
          'area_led_pct': round(100 * (m & (Ey >= 0.02)).sum() / m.sum(), 1),
          'folga_borda_px': int(min(xs.min(), ys.min(), w - 1 - xs.max(), h - 1 - ys.max())),
-         'camera': {k: info['camera'][k] for k in ('azimute', 'elevacao')}, 'pose': info['materiais'].get('pose')}
+         'camera': {k: info['camera'][k] for k in ('azimute', 'elevacao')}, 'pose': info['materiais'].get('pose'),
+         'cabeca': info['materiais'].get('cabeca')}
     res[d.name] = r
     print(d.name, json.dumps(r, ensure_ascii=False))
 json.dump(res, open(sys.argv[2], 'w'), ensure_ascii=False, indent=1)
