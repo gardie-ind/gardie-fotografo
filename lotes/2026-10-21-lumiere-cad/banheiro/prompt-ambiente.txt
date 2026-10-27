@@ -1,0 +1,9 @@
+The attached image is a gray clay render used only as a layout and perspective guide: a bathroom wall with a vanity countertop below it, seen by a camera standing 40 degrees to the left of the wall and 15 degrees above, 50 mm lens.
+
+Turn it into a photorealistic photograph of an elegant, modern bathroom, keeping exactly the same camera, perspective, wall plane, and countertop position and height as the guide.
+
+Wall: large-format warm light-gray porcelain tiles with thin grout lines. Countertop: white quartz, 3 cm thick edge. On the countertop, near the right edge of the image only: a white vessel sink with a short chrome deck faucet, a neatly folded white towel and a small green plant. The left half of the countertop stays almost empty.
+
+Lighting: soft natural daylight from a window on the left side, slightly in front of the wall, plus a warm ceiling downlight. Realistic soft shadows. The image must look like a real photo taken with a full-frame camera at f/8, natural colors, slight film grain.
+
+Very important: the tiled wall in the upper two thirds of the image must stay completely empty and continuous. Do not put any mirror, cabinet, shelf, lamp, sconce, artwork, hook, towel bar or any other object on that wall. No people, no text, no logos.
