@@ -43,9 +43,12 @@ em português, como no anúncio.
    - **No fundo escuro** (`ref-1-escuro.png`, também no 3º painel da
      conferência), procure mordida no cromado e fresta mantida. Onde o
      cromado tem o tom do fundo de estúdio, o recorte leva pedaço do produto
-     (ponta do disco do Classique Lux) ou mantém fundo cinza entre peças
-     (entre a cabeça e o garfo). No branco, o cromado claro esconde as duas,
-     e o matting não conserta nenhuma.
+     (ponta do disco e metade de baixo da fita do garfo do Classique Lux) ou
+     mantém fundo cinza entre peças (entre a cabeça e o garfo). No branco, o
+     cromado claro esconde as duas, e o matting não conserta nenhuma. Siga a
+     fita do garfo do pino até o pescoço: a largura não pode cair a zero no
+     meio do caminho (no Classique Lux da still de catálogo, ~36 px na capa
+     de 1536, sumia de y≈850 até o pescoço; teste de 2026-10-27).
    - A máscara tem de ser uma silhueta branca sólida, sem buracos. O cromado
      que reflete o fundo (cúpula e disco da base, fita do garfo) é onde o
      recorte local abre buracos, e esses buracos viram branco na capa.
