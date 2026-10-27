@@ -82,8 +82,8 @@ avisa o Thiago para corrigir este arquivo.
   sessão não vê a chave) ou como as variáveis `GEMINI_API_KEY` e `FAL_KEY`.
   Antes do lote, confira o acesso com `ensaio.py --listar-modelos`; se a API
   recusar, pare e avise o Thiago. Nunca peça chave no chat.
-- **Dependências:** se `import PIL` ou `import numpy` falhar, rode
-  `pip install pillow numpy` antes do ensaio.
+- **Dependências:** se `import PIL`, `import numpy` ou `import pymatting`
+  falhar, rode `pip install pillow numpy pymatting` antes do ensaio.
 - **Entrega:** envie a prancha de entrega como arquivo na própria conversa,
   para o Thiago ver no app. Isso substitui o link de revisão do Shopify.
 - **Nada pode se perder:** o contêiner é apagado depois de um tempo parado,
