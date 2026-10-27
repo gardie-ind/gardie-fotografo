@@ -35,9 +35,11 @@ em português, como no anúncio.
    - A borda do recorte local sai de um alpha matting de 2 px na resolução da
      still (`--borda matting`, o padrão): nos pixels de alfa parcial, a cor
      do fundo de estúdio é descontada, e o resto é o pixel da still. Tira a
-     linha cinza que a máscara deixava no aro cromado sobre o branco (teste
-     de 2026-10-26, `/mnt/project-files/fotografo/2026-10-26-alpha-matting/`).
-     Faixa maior apaga peça fina escura; não aumente.
+     linha cinza que a máscara deixava no aro cromado sobre o branco e fecha
+     rachadura fina dentro do aro (Visage Lux); para dentro, só refaz o 1º px
+     da máscara (testes de 2026-10-26 e 27,
+     `/mnt/project-files/fotografo/2026-10-26-alpha-matting/`). Faixa maior
+     apaga peça fina escura; não aumente.
    - **No fundo escuro** (`ref-1-escuro.png`, também no 3º painel da
      conferência), procure mordida no cromado e fresta mantida. Onde o
      cromado tem o tom do fundo de estúdio, o recorte leva pedaço do produto

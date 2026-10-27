@@ -494,9 +494,10 @@ def _alfa_local(im, alvo_lado, nativo=False):
 def _matting(rgb, alfa, raio=RAIO_MATTING, nucleo=512, folga=64):
     """Borda por alpha matting, na resolução da foto. Trimapa = a máscara (alfa > 0,5) com uma
     faixa de +-raio px de dúvida; closed-form matting (pymatting) resolve o alfa só nessa faixa,
-    em blocos. Na borda (alfa parcial) a cor sai sem o fundo do estúdio (estimate_foreground_ml);
-    onde o alfa é 1, o pixel é o original. Faixa larga apaga peça fina escura (filete da fita junto
-    ao pino, teste de 2026-10-26 com 7 px); 2 px mantém."""
+    em blocos. Para dentro, só o 1º px da máscara pode perder alfa; para fora, a faixa inteira pode
+    ganhar (fecha rachadura fina, como a do aro do Visage Lux). Na borda (alfa parcial) a cor sai
+    sem o fundo do estúdio (estimate_foreground_ml); onde o alfa é 1, o pixel é o original. Faixa
+    larga apaga peça fina escura (filete da fita junto ao pino, teste de 2026-10-26 com 7 px)."""
     try:
         from pymatting import estimate_alpha_cf, estimate_foreground_ml
     except ImportError:
@@ -520,7 +521,9 @@ def _matting(rgb, alfa, raio=RAIO_MATTING, nucleo=512, folga=64):
             r = estimate_alpha_cf(img[y0:y1, x0:x1], tri[y0:y1, x0:x1])
             yy, xx = min(H, y + nucleo), min(W, x + nucleo)
             a[y:yy, x:xx] = r[y - y0:yy - y0, x - x0:xx - x0]
-    a = np.clip(a, 0.0, 1.0)
+    # para dentro, o matting só refaz o 1º px da máscara: onde o cromado tem o tom do fundo, ele
+    # leria o produto como fundo e alargaria a mordida (lado esquerdo do sino do Classique Lux)
+    a = np.maximum(np.clip(a, 0.0, 1.0), _filtro(M, 3, False))
     a8 = (a * 255 + 0.5).astype(np.uint8)
     F = estimate_foreground_ml(img, a)
     F = np.where(a8[..., None] == 255, img, F)
