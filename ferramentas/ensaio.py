@@ -628,6 +628,10 @@ def parametros_motor(motor, aspecto, n_refs):
             p["aviso"] = "aspecto %s pode não ser aceito pelo Gemini" % aspecto
         p["refs_enviadas"] = n_refs
         p["ordem"] = "imagens antes do texto"
+        if "pro-image" in motor["modelo"].lower():
+            # 2K custa o mesmo que 1K no Gemini 3 Pro Image (US$ 0,134, preço de
+            # 22/10/2026) e chega perto dos 2048 px da página de produto
+            p["image_size"] = "2K"
     elif motor["tipo"] == "kontext":
         p["aspect_ratio"] = aspecto if aspecto in KONTEXT_ASPECTOS else mais_proximo(aspecto, KONTEXT_ASPECTOS)
         if p["aspect_ratio"] != aspecto:
@@ -690,7 +694,8 @@ def executar(job, out, simular):
     if simular:
         simular_imagem(job, out)
     elif m["tipo"] == "gemini":
-        gerar_imagem.gerar(job["prompt"], out, job["refs"], job["aspecto"], m["modelo"])
+        gerar_imagem.gerar(job["prompt"], out, job["refs"], job["aspecto"], m["modelo"],
+                           size=job["params"].get("image_size"))
     elif m["tipo"] == "kontext":
         estudio_fal.rerender_kontext(job["refs"][0], out, job["prompt"],
                                      aspect_ratio=job["params"]["aspect_ratio"], seed=job["seed"])
