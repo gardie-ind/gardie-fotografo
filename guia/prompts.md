@@ -30,16 +30,30 @@ em português, como no anúncio.
    close vai na `{cena}`.
 3. **Preparo:** o `ensaio.py` prepara a capa a partir da still passada em
    `--ref`. Rode primeiro com `--so-preparo` e abra, ampliadas, a
-   `refs/ref-1-conferencia.png` e a `refs/ref-1-mascara.png` da saída.
+   `refs/ref-1-conferencia.png`, a `refs/ref-1-mascara.png` e a
+   `refs/ref-1-escuro.png` da saída.
+   - A borda do recorte local sai de um alpha matting de 2 px na resolução da
+     still (`--borda matting`, o padrão): nos pixels de alfa parcial, a cor
+     do fundo de estúdio é descontada, e o resto é o pixel da still. Tira a
+     linha cinza que a máscara deixava no aro cromado sobre o branco (teste
+     de 2026-10-26, `/mnt/project-files/fotografo/2026-10-26-alpha-matting/`).
+     Faixa maior apaga peça fina escura; não aumente.
+   - **No fundo escuro** (`ref-1-escuro.png`, também no 3º painel da
+     conferência), procure mordida no cromado e fresta mantida. Onde o
+     cromado tem o tom do fundo de estúdio, o recorte leva pedaço do produto
+     (ponta do disco do Classique Lux) ou mantém fundo cinza entre peças
+     (entre a cabeça e o garfo). No branco, o cromado claro esconde as duas,
+     e o matting não conserta nenhuma.
    - A máscara tem de ser uma silhueta branca sólida, sem buracos. O cromado
      que reflete o fundo (cúpula e disco da base, fita do garfo) é onde o
      recorte local abre buracos, e esses buracos viram branco na capa.
    - Confira também as bordas do cromado e os pinos.
    - Confira a fronteira entre a sombra do chão e o anel de borracha preto:
      a sombra sai e o anel fica inteiro.
-4. **Se a máscara tiver buraco ou corte:** use `--recorte birefnet`. Se ainda
-   falhar, recorte à mão para um PNG com transparência (o script usa o alfa do
-   arquivo). Capa com buraco não vai para motor nenhum.
+4. **Se a máscara tiver buraco, corte, mordida ou fresta mantida:** use
+   `--recorte birefnet`. Se ainda falhar, recorte à mão para um PNG com
+   transparência (o script usa o alfa do arquivo). Capa com buraco ou mordida
+   não vai para motor nenhum.
 5. **Guardar e reutilizar:** guarde a capa conferida em
    `referencias/capa/<modelo>-<acabamento>-<ligado|desligado>-capa-r<n>.png`
    e reutilize com `--sem-preparo`. Quando o produto mudar, faça uma nova

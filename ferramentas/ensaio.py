@@ -27,6 +27,8 @@ Opções principais:
   --saida PASTA        padrão: ensaios/_versoes/<data>-<slug-do-produto>/
   --sem-preparo        manda as referências cruas (sem padronizar como capa)
   --recorte local|birefnet   como separar o produto do fundo no preparo (padrão local, sem API)
+  --borda matting|binaria    borda do recorte local: alpha matting de 2 px na resolução da foto,
+                       sem o cinza do estúdio (padrão; precisa do pymatting) ou a máscara suavizada antiga
   --paralelo N         chamadas simultâneas (padrão 4)
 
 Saída: refs/ (capa preparada + conferência), <receita>/A1.png..., prancha-<receita>.png,
@@ -68,6 +70,8 @@ GEMINI_ASPECTOS = ["1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:
 CUSTO_FAL = {"kontext": 0.08, "seedream": 0.03}
 LADO_CAPA = 1536
 OCUPACAO_CAPA = 0.93
+RAIO_MATTING = 2  # px da foto de cada lado da borda que o matting pode refazer
+FUNDO_ESCURO = (30, 30, 30)  # conferência: no branco o cromado claro esconde mordida e fresta
 
 _rand = random.SystemRandom()
 
@@ -399,10 +403,11 @@ def _ruido_faixa(D, t_min):
     return float(np.clip(3.0 * (np.median(D[faixa]) * 1.4826 + 0.5), t_min, 3 * t_min))
 
 
-def _alfa_local(im, alvo_lado):
+def _alfa_local(im, alvo_lado, nativo=False):
     """Sem API. (1) passada grossa: modelo do fundo de estúdio + caixa do produto;
     (2) segmentação com o produto a ~720 px (escala em que a inundação foi calibrada);
     (3) escala final: a máscara é ampliada e só a faixa da borda é aparada contra o fundo.
+    nativo=True: a escala final é a da própria foto (o matting trabalha nela e a capa reduz depois).
     Devolve (rgb_fino, alfa_fino, info) ou levanta ValueError."""
     W, H = im.size
     s0 = min(1.0, 900.0 / max(W, H))
@@ -437,7 +442,7 @@ def _alfa_local(im, alvo_lado):
         raise ValueError("produto não encontrado na passada de trabalho")
 
     # (3) escala final + aparo da borda (só remove fundo; nunca acrescenta)
-    s1 = alvo_lado / (max(bbw[2] - bbw[0], bbw[3] - bbw[1]) / sw)
+    s1 = 1.0 if nativo else alvo_lado / (max(bbw[2] - bbw[0], bbw[3] - bbw[1]) / sw)
     fw, fh = max(1, round((cx1 - cx0) * s1)), max(1, round((cy1 - cy0) * s1))
     fino = regiao.resize((fw, fh), Image.LANCZOS)
     a1 = np.asarray(fino).astype(np.float32)
@@ -486,6 +491,43 @@ def _alfa_local(im, alvo_lado):
     return fino, alfa, info
 
 
+def _matting(rgb, alfa, raio=RAIO_MATTING, nucleo=512, folga=64):
+    """Borda por alpha matting, na resolução da foto. Trimapa = a máscara (alfa > 0,5) com uma
+    faixa de +-raio px de dúvida; closed-form matting (pymatting) resolve o alfa só nessa faixa,
+    em blocos. Na borda (alfa parcial) a cor sai sem o fundo do estúdio (estimate_foreground_ml);
+    onde o alfa é 1, o pixel é o original. Faixa larga apaga peça fina escura (filete da fita junto
+    ao pino, teste de 2026-10-26 com 7 px); 2 px mantém."""
+    try:
+        from pymatting import estimate_alpha_cf, estimate_foreground_ml
+    except ImportError:
+        raise ValueError("a borda por matting precisa do pymatting: pip install pymatting "
+                         "(ou use --borda binaria)")
+    img = np.asarray(rgb).astype(np.float64) / 255.0
+    M = np.asarray(alfa) > 127
+    k = 2 * raio + 1
+    tri = np.full(M.shape, 0.5)
+    tri[_filtro(M, k, False)] = 1.0
+    tri[~_filtro(M, k, True)] = 0.0
+    a = (tri > 0.75).astype(np.float64)
+    duvida = tri == 0.5
+    H, W = M.shape
+    for y in range(0, H, nucleo):
+        for x in range(0, W, nucleo):
+            if not duvida[y:y + nucleo, x:x + nucleo].any():
+                continue
+            y0, x0 = max(0, y - folga), max(0, x - folga)
+            y1, x1 = min(H, y + nucleo + folga), min(W, x + nucleo + folga)
+            r = estimate_alpha_cf(img[y0:y1, x0:x1], tri[y0:y1, x0:x1])
+            yy, xx = min(H, y + nucleo), min(W, x + nucleo)
+            a[y:yy, x:xx] = r[y - y0:yy - y0, x - x0:xx - x0]
+    a = np.clip(a, 0.0, 1.0)
+    a8 = (a * 255 + 0.5).astype(np.uint8)
+    F = estimate_foreground_ml(img, a)
+    F = np.where(a8[..., None] == 255, img, F)
+    rgb_novo = Image.fromarray(np.clip(F * 255 + 0.5, 0, 255).astype(np.uint8))
+    return rgb_novo, Image.fromarray(a8)
+
+
 def _alfa_birefnet(im, pasta):
     """Recorte por IA (BiRefNet v2 no fal). Devolve o alfa na resolução original."""
     entrada = os.path.join(pasta, "_birefnet-%s.png" % uuid.uuid4().hex[:8])
@@ -525,7 +567,8 @@ def _escalar_por_alfa(im, alfa, alvo_lado):
 
 
 def _compor_capa(rgb, alfa, lado, ocupacao):
-    """Produto inteiro, centrado, sobre branco puro, maior lado = ocupacao x lado."""
+    """Produto inteiro, centrado, sobre branco puro, maior lado = ocupacao x lado.
+    Devolve também o mesmo produto sobre fundo escuro, só para a conferência."""
     m = np.asarray(alfa) > 127
     x0, y0, x1, y1 = _bbox(m)
     rgb, alfa = rgb.crop((x0, y0, x1, y1)), alfa.crop((x0, y0, x1, y1))
@@ -536,37 +579,44 @@ def _compor_capa(rgb, alfa, lado, ocupacao):
         novo = (max(1, round(rgb.size[0] * k)), max(1, round(rgb.size[1] * k)))
         rgb, alfa = rgb.resize(novo, Image.LANCZOS), alfa.resize(novo, Image.LANCZOS)
     a = np.asarray(alfa).astype(np.float32)[..., None] / 255.0
-    px = np.asarray(rgb).astype(np.float32) * a + 255.0 * (1.0 - a)
-    prod = Image.fromarray(np.clip(px + 0.5, 0, 255).astype(np.uint8))
+    cor = np.asarray(rgb).astype(np.float32) * a
+    prod = Image.fromarray(np.clip(cor + 255.0 * (1.0 - a) + 0.5, 0, 255).astype(np.uint8))
+    escuro_px = Image.fromarray(np.clip(cor + np.float32(FUNDO_ESCURO) * (1.0 - a) + 0.5, 0, 255).astype(np.uint8))
     capa = Image.new("RGB", (lado, lado), (255, 255, 255))
+    escuro = Image.new("RGB", (lado, lado), FUNDO_ESCURO)
     mascara = Image.new("L", (lado, lado), 0)
     pos = ((lado - prod.size[0]) // 2, (lado - prod.size[1]) // 2)
     capa.paste(prod, pos)
+    escuro.paste(escuro_px, pos)
     mascara.paste(alfa, pos)
-    return capa, mascara, round(max(prod.size) / lado, 3)
+    return capa, mascara, round(max(prod.size) / lado, 3), escuro
 
 
-def _conferencia(original, capa, bbox, out, altura=900):
-    """Original (com a caixa detectada em vermelho) ao lado da capa preparada."""
+def _conferencia(original, capa, escuro, bbox, out, altura=900):
+    """Original (com a caixa detectada em vermelho), capa preparada e o mesmo recorte no escuro."""
     o = original.copy()
     k = altura / o.size[1]
     o = o.resize((max(1, round(o.size[0] * k)), altura), Image.LANCZOS)
     if bbox:
         ImageDraw.Draw(o).rectangle([v * k for v in bbox], outline=(230, 0, 0), width=3)
     c = capa.resize((altura, altura), Image.LANCZOS)
-    folha = Image.new("RGB", (o.size[0] + c.size[0] + 30, altura + 50), (200, 200, 200))
+    e = escuro.resize((altura, altura), Image.LANCZOS)
+    folha = Image.new("RGB", (o.size[0] + 2 * altura + 40, altura + 50), (200, 200, 200))
     folha.paste(o, (10, 40))
     folha.paste(c, (o.size[0] + 20, 40))
+    folha.paste(e, (o.size[0] + altura + 30, 40))
     d = ImageDraw.Draw(folha)
     f = fonte(22, True)
     d.text((10, 8), "ORIGINAL (caixa detectada)", fill=(0, 0, 0), font=f)
     d.text((o.size[0] + 20, 8), "CAPA PREPARADA (fundo branco, 1:1)", fill=(0, 0, 0), font=f)
+    d.text((o.size[0] + altura + 30, 8), "NO ESCURO: mordida no cromado? fresta?", fill=(0, 0, 0), font=f)
     folha.save(out)
 
 
-def preparar_ref(path, pasta, idx, lado=LADO_CAPA, ocupacao=OCUPACAO_CAPA, recorte="local"):
+def preparar_ref(path, pasta, idx, lado=LADO_CAPA, ocupacao=OCUPACAO_CAPA, recorte="local", borda="matting"):
     """Padroniza uma referência como capa do ML. Nunca retoca pixels do produto:
-    só troca o fundo por branco, recorta, escala e centraliza."""
+    só troca o fundo por branco, recorta, escala e centraliza. Com borda="matting" (recorte
+    local), a borda sai do matting na resolução da foto e perde o cinza do estúdio."""
     os.makedirs(pasta, exist_ok=True)
     im, alfa_arquivo = abrir_imagem(path)
     alvo = round(lado * ocupacao)
@@ -578,21 +628,26 @@ def preparar_ref(path, pasta, idx, lado=LADO_CAPA, ocupacao=OCUPACAO_CAPA, recor
     elif recorte == "birefnet":
         info["metodo"] = "birefnet (fal)"
         rgb, alfa, extra = _escalar_por_alfa(im, _alfa_birefnet(im, pasta), alvo)
+    elif borda == "matting":
+        info["metodo"] = "local (modelo de fundo + inundação) + matting %d px" % RAIO_MATTING
+        rgb, alfa, extra = _alfa_local(im, alvo, nativo=True)
+        rgb, alfa = _matting(rgb, alfa)
     else:
         info["metodo"] = "local (modelo de fundo + inundação)"
         rgb, alfa, extra = _alfa_local(im, alvo)
     info.update(extra)
-    capa, mascara, ocup = _compor_capa(rgb, alfa, lado, ocupacao)
+    capa, mascara, ocup, escuro = _compor_capa(rgb, alfa, lado, ocupacao)
     info["ocupacao_medida"] = ocup
     base = "ref-%d" % idx
     info["usada"] = os.path.abspath(os.path.join(pasta, base + "-capa.png"))
     capa.save(info["usada"], optimize=True)
     mascara.save(os.path.join(pasta, base + "-mascara.png"))
+    escuro.save(os.path.join(pasta, base + "-escuro.png"), optimize=True)
     info["conferencia"] = os.path.abspath(os.path.join(pasta, base + "-conferencia.png"))
     vista = im
     if alfa_arquivo is not None:  # transparente aparece branco na conferência
         vista = Image.composite(im, Image.new("RGB", im.size, (255, 255, 255)), alfa_arquivo)
-    _conferencia(vista, capa, info.get("bbox_original"), info["conferencia"])
+    _conferencia(vista, capa, escuro, info.get("bbox_original"), info["conferencia"])
     return info
 
 
@@ -882,6 +937,7 @@ def main():
     ap.add_argument("--saida")
     ap.add_argument("--sem-preparo", action="store_true")
     ap.add_argument("--recorte", choices=["local", "birefnet"], default="local")
+    ap.add_argument("--borda", choices=["matting", "binaria"], default="matting")
     ap.add_argument("--lado", type=int, default=LADO_CAPA, help=argparse.SUPPRESS)
     ap.add_argument("--ocupacao", type=float, default=OCUPACAO_CAPA, help=argparse.SUPPRESS)
     ap.add_argument("--so-preparo", action="store_true")
@@ -951,7 +1007,7 @@ def main():
             print("  ref %d: %s (sem preparo)" % (i, r))
             continue
         try:
-            info = preparar_ref(r, pasta_refs, i, a.lado, a.ocupacao, a.recorte)
+            info = preparar_ref(r, pasta_refs, i, a.lado, a.ocupacao, a.recorte, a.borda)
         except ValueError as e:
             if not a.simular:
                 raise SystemExit("Preparo da ref %d falhou (%s): %s\n"

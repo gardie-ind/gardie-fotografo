@@ -1,6 +1,6 @@
 # ferramentas/ — scripts do Fotógrafo da Gardie
 
-Python 3, com Pillow e numpy. No Windows: `PYTHONUTF8=1 py <script> ...`; no Linux: `python3 <script> ...`.
+Python 3, com Pillow, numpy e pymatting (este só para a borda da capa no `ensaio.py`). No Windows: `PYTHONUTF8=1 py <script> ...`; no Linux: `python3 <script> ...`.
 Credenciais ficam fora do repositório. Vale a variável de ambiente ou o arquivo:
 
 | Serviço | Variável | Arquivo |
@@ -12,7 +12,8 @@ Credenciais ficam fora do repositório. Vale a variável de ambiente ou o arquiv
 ## Scripts
 
 - **`ensaio.py`**: ensaio no estilo do "Gerar fotos com IA" do Mercado Livre. Ele padroniza a referência como capa (fundo branco puro, quadrada, produto inteiro com ~93% do lado, 1536 px) e monta o prompt pela moldura (`{produto}` + `{cena}`, sem descrever o produto). Depois roda cada motor `--n` vezes por receita e grava, por receita, a prancha CEGA (`prancha-<receita>.png`, com a REF na 1ª célula e os rótulos A1, A2… embaralhados), além de `mapa.json` (rótulo → motor) e `manifesto.json` (prompt exato, refs, parâmetros, falhas e custo estimado).
-  - Primeiro passo de todo ensaio: `--so-preparo`, e abrir (Read) `refs/ref-1-conferencia.png` antes de gastar API.
+  - Primeiro passo de todo ensaio: `--so-preparo`, e abrir (Read) `refs/ref-1-conferencia.png` antes de gastar API. O 3º painel (e `refs/ref-1-escuro.png`) mostra o recorte no fundo escuro, onde aparecem mordida no cromado e fresta mantida.
+  - No recorte local, a borda sai de um alpha matting de 2 px na resolução da foto (`--borda matting`, padrão): a cor do fundo de estúdio sai dos pixels de borda, e o resto é o pixel original. `--borda binaria` volta à máscara suavizada antiga.
   - `--simular` roda o fluxo inteiro sem API. As imagens fictícias mostram o motor de propósito, para conferir o `mapa.json`.
   - `--listar-modelos` mostra os modelos Gemini que geram imagem com esta chave.
   - Motores: `gemini:<model-id>`, `kontext` (FLUX Kontext Max, usa só a 1ª ref) e `seedream` (Seedream 4 edit, aceita várias refs).
