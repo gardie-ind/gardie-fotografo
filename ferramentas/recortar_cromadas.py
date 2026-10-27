@@ -7,7 +7,7 @@ MESMO recorte já aprovado nos outros acabamentos: o alfa do PNG gold da mesma
 posição, na mesma caixa. O RGB dentro do produto é o da cromada aprovada, pixel
 a pixel; nada é redesenhado.
 
-Uso: python recortar_cromadas.py [--conferir]
+Uso: python recortar_cromadas.py
 Grava aprovadas/<base>CR/<mesmo nome da cromada>.png ao lado do .jpg.
 A caixa (posição do recorte na still) é achada pela medida: o deslocamento em
 que as peças que não mudam de cor (vidro, carcaça branca, fio) batem com o

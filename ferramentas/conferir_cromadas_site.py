@@ -9,8 +9,13 @@ leva a antiga. Este script evita a troca pelos dois lados:
   baixar   baixa as cromadas a publicar pelo link de commit fixo, confere o MD5
            (recusa o MD5 da antiga) e grava o manifesto do upload_shopify.py.
   conferir lê o catálogo público da loja, baixa cada imagem dos produtos LUX e
-           diz se ela é a cromada NOVA, a ANTIGA do repositório ou OUTRA foto,
-           medindo, não olhando.
+           diz se ela é a cromada NOVA (PNG recortada, a que vai ao site), a
+           NOVA-JPG (a nova no fundo cinza, que deve dar lugar à PNG), a ANTIGA
+           do repositório ou OUTRA foto, medindo, não olhando.
+
+Desde 27/10 a cromada vai ao site recortada, em PNG transparente, como os
+outros acabamentos (recortar_cromadas.py). O JPEG de fundo cinza fica no CSV só
+como referência da medida.
 
 Uso:
   python conferir_cromadas_site.py baixar   --csv cromadas-site-2026-10-27.csv --saida cromadas
@@ -18,7 +23,8 @@ Uso:
   python conferir_cromadas_site.py conferir --csv ... --json products.json   (catálogo salvo)
 
 Como mede (calibrado em 27/10 com recompressão JPEG/WebP a 1200 px):
-  1. família: miniatura de 200 px contra as referências do mesmo modelo; MAD
+  1. família: miniatura de 200 px contra as referências do mesmo modelo e da
+     mesma proporção (o PNG tem a da caixa do recorte, o JPEG a da still); MAD
      < 4 diz que é a mesma foto de base (acesa ou apagada). Proporção
      diferente das referências = OUTRA.
   2. versão: a 1200 px, só nos pixels em que nova e antiga diferem (anel e
@@ -111,30 +117,48 @@ def cmd_baixar(args):
 # ---------------------------------------------------------------- conferir
 
 class Modelo:
-    """Referências de um modelo: todas as cromadas novas e as antigas da main."""
+    """Referências de um modelo: as cromadas novas (JPEG de fundo cinza e PNG
+    recortado) e as antigas que estavam na main com o mesmo nome do JPEG.
+
+    Cada formato tem a sua proporção (o PNG é a caixa do recorte), então as
+    referências ficam em grupos por proporção e a imagem do site só é medida
+    contra o grupo da proporção dela.
+    """
 
     def __init__(self, base, linhas, cache):
         self.base = base
-        self.refs = {}  # rótulo -> (família, imagem a LARGURA)
+        self.grupos = []  # [{"proporcao", "refs": {rótulo: (família, imagem)}, "mascaras"}]
         for l in linhas:
             fam = "apagada" if "apagada" in l["conteudo"] else "acesa"
-            self.refs["NOVA pos%s (%s)" % (l["posicao"], l["conteudo"])] = (fam, self._ref(l["url_nova"], cache))
-            if l["url_antiga"]:
-                self.refs["ANTIGA %s (main)" % l["arquivo"].rsplit("-", 1)[1].split(".")[0]] = (fam, self._ref(l["url_antiga"], cache))
-        uma = next(iter(self.refs.values()))[1]
-        self.proporcao = uma.height / uma.width
-        self.mascaras = {}
-        for fam in ("acesa", "apagada"):
-            novas = [im for r, (f, im) in self.refs.items() if f == fam and r.startswith("NOVA")]
-            antigas = [im for r, (f, im) in self.refs.items() if f == fam and r.startswith("ANTIGA")]
-            m = np.zeros((uma.height, uma.width), bool)
-            for a in antigas:
-                for n in novas:
-                    m |= mascara(n, a)
-            if not antigas and len(novas) > 1:
-                for n in novas[1:]:
-                    m |= mascara(novas[0], n)
-            self.mascaras[fam] = m
+            fmt = l.get("formato", "")
+            tipo = "NOVA-JPG" if fmt.startswith("jpg") else "NOVA"
+            self._por(self._ref(l["url_nova"], cache), "%s pos%s (%s%s)" % (
+                tipo, l["posicao"], l["conteudo"], ", " + fmt if fmt else ""), fam)
+            if l.get("url_antiga"):
+                num = l["arquivo"].rsplit("-", 1)[1].split(".")[0]
+                self._por(self._ref(l["url_antiga"], cache), "ANTIGA %s (main até 27/10)" % num, fam)
+        for g in self.grupos:
+            uma = next(iter(g["refs"].values()))[1]
+            g["mascaras"] = {}
+            for fam in ("acesa", "apagada"):
+                novas = [im for r, (f, im) in g["refs"].items() if f == fam and r.startswith("NOVA")]
+                antigas = [im for r, (f, im) in g["refs"].items() if f == fam and r.startswith("ANTIGA")]
+                m = np.zeros((uma.height, uma.width), bool)
+                for a in antigas:
+                    for n in novas:
+                        m |= mascara(n, a)
+                if not antigas and len(novas) > 1:
+                    for n in novas[1:]:
+                        m |= mascara(novas[0], n)
+                g["mascaras"][fam] = m
+
+    def _por(self, im, rotulo, fam):
+        prop = im.height / im.width
+        for g in self.grupos:
+            if abs(prop - g["proporcao"]) <= 0.002 * g["proporcao"]:
+                g["refs"][rotulo] = (fam, im)
+                return
+        self.grupos.append({"proporcao": prop, "refs": {rotulo: (fam, im)}})
 
     @staticmethod
     def _ref(url, cache):
@@ -146,20 +170,26 @@ class Modelo:
         return im
 
     def medir(self, im):
-        if abs(im.height / im.width - self.proporcao) > 0.01 * self.proporcao:
+        prop = im.height / im.width
+        grupos = [g for g in self.grupos if abs(prop - g["proporcao"]) <= 0.01 * g["proporcao"]]
+        if not grupos:
             return {"veredito": "OUTRA", "motivo": "proporção diferente das cromadas do repositório"}
-        im = redim(im, LARGURA)
-        if im.height != next(iter(self.refs.values()))[1].height:
-            im = im.resize(next(iter(self.refs.values()))[1].size, Image.LANCZOS)
+        g = min(grupos, key=lambda g: abs(prop - g["proporcao"]))
+        tam = next(iter(g["refs"].values()))[1].size
+        im = im.resize(tam, Image.LANCZOS)
         mini = arr(redim(im, MINI))
-        fam_dist = {r: float(np.abs(mini - arr(redim(ref, MINI))).mean()) for r, (f, ref) in self.refs.items()}
+        fam_dist = {r: float(np.abs(mini - arr(redim(ref, MINI))).mean()) for r, (f, ref) in g["refs"].items()}
         melhor = min(fam_dist, key=fam_dist.get)
         if fam_dist[melhor] >= LIMIAR_FAMILIA:
             return {"veredito": "OUTRA", "motivo": "não é a mesma foto (MAD %.1f na miniatura)" % fam_dist[melhor]}
-        fam = self.refs[melhor][0]
-        m = self.mascaras[fam]
+        fam = g["refs"][melhor][0]
+        m = g["mascaras"][fam]
+        if m.sum() < 50:
+            # uma referência só nessa família (ex.: PNG apagado): vale a miniatura
+            return {"veredito": melhor.split()[0], "referencia": melhor,
+                    "distancias": {melhor: round(fam_dist[melhor], 1)}}
         a = arr(im)
-        dist = {r: float(np.abs(a - arr(ref))[m].mean()) for r, (f, ref) in self.refs.items() if f == fam}
+        dist = {r: float(np.abs(a - arr(ref))[m].mean()) for r, (f, ref) in g["refs"].items() if f == fam}
         ordem = sorted(dist, key=dist.get)
         r1 = ordem[0]
         r2 = ordem[1] if len(ordem) > 1 else None
@@ -240,7 +270,10 @@ def salvar_relatorio(resultado, modelos, saida):
     resumo = {}
     for r in limpo:
         resumo[r.get("veredito")] = resumo.get(r.get("veredito"), 0) + 1
-    md += ["", "Resumo: " + ", ".join("%s %d" % kv for kv in sorted(resumo.items()))]
+    md += ["", "Resumo: " + ", ".join("%s %d" % kv for kv in sorted(resumo.items())), "",
+           "NOVA = a PNG recortada certa. NOVA-JPG = a cromada nova, mas no fundo cinza: trocar pela PNG. "
+           "ANTIGA = trocar pela PNG. INCONCLUSIVA = conferir no olho. OUTRA = não é uma cromada LUX do "
+           "repositório (outro acabamento, ambientada, vídeo)."]
     with open(os.path.join(saida, "conferencia.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(md) + "\n")
 
@@ -248,7 +281,8 @@ def salvar_relatorio(resultado, modelos, saida):
     casadas = [r for r in resultado if r.get("referencia")]
     if not casadas:
         return
-    cores = {"NOVA": (30, 140, 60), "ANTIGA": (200, 40, 40), "INCONCLUSIVA": (200, 140, 0)}
+    cores = {"NOVA": (30, 140, 60), "NOVA-JPG": (40, 90, 170), "ANTIGA": (200, 40, 40),
+             "INCONCLUSIVA": (200, 140, 0)}
     alt = 240 * 16 // 10 + 40
     prancha = Image.new("RGB", (6 * 250, ((len(casadas) + 5) // 6) * alt), "white")
     d = ImageDraw.Draw(prancha)
