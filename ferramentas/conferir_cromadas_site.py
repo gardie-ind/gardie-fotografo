@@ -18,7 +18,7 @@ outros acabamentos (recortar_cromadas.py). O JPEG de fundo cinza fica no CSV só
 como referência da medida.
 
 Uso:
-  python conferir_cromadas_site.py baixar   --csv cromadas-site-2026-10-27.csv --saida cromadas
+  python conferir_cromadas_site.py baixar   --csv fotos-lux-centradas-2026-10-27.csv --saida fotos
   python conferir_cromadas_site.py conferir --csv cromadas-site-2026-10-27.csv --saida conferencia
   python conferir_cromadas_site.py conferir --csv ... --json products.json   (catálogo salvo)
 
@@ -101,7 +101,7 @@ def cmd_baixar(args):
             dados = baixar_bytes(l["url_nova"])
             md5 = hashlib.md5(dados).hexdigest()
             if l["md5_antiga_mesmo_nome"] and md5 == l["md5_antiga_mesmo_nome"]:
-                raise SystemExit("RECUSADA, é a cromada ANTIGA: %s" % l["url_nova"])
+                raise SystemExit("RECUSADA, é a versão ANTIGA de mesmo nome: %s" % l["url_nova"])
             if md5 != l["md5_nova"]:
                 raise SystemExit("MD5 não confere em %s: %s (esperado %s)" % (l["arquivo"], md5, l["md5_nova"]))
             with open(destino, "wb") as f:
@@ -111,7 +111,7 @@ def cmd_baixar(args):
     manifesto = os.path.join(args.saida, "shopify-lote-cromadas.json")
     with open(manifesto, "w", encoding="utf-8") as f:
         json.dump(lote, f, ensure_ascii=False, indent=1)
-    print("%d cromadas conferidas pelo MD5; manifesto: %s" % (len(lote), manifesto))
+    print("%d fotos conferidas pelo MD5; manifesto: %s" % (len(lote), manifesto))
 
 
 # ---------------------------------------------------------------- conferir
