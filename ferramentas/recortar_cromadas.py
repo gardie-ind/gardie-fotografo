@@ -9,6 +9,7 @@ a pixel; nada é redesenhado.
 
 Uso: python recortar_cromadas.py
 Grava aprovadas/<base>CR/<mesmo nome da cromada>.png ao lado do .jpg.
+Depois, centrar_recortadas.py põe o espelho no centro de um quadro 1:1.
 A caixa (posição do recorte na still) é achada pela medida: o deslocamento em
 que as peças que não mudam de cor (vidro, carcaça branca, fio) batem com o
 gold; precisa bater em pelo menos 99% dessas peças nas fotos apagadas.
