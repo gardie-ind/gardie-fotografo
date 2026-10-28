@@ -31,6 +31,7 @@ confirmou. A classe de um item só muda com a palavra dele.
 | l. O produto aparece uma vez só; nenhuma cópia dele nem espelho de aumento parecido na cena | VETO (padrão — confirmar com o Thiago) |
 | m. Outro espelho comum no ambiente (por exemplo, o espelho de parede do banheiro) | CORRIGIR SE DER (padrão — confirmar com o Thiago) |
 | n. Pessoa ou rosto sem pedido; marca de terceiros legível | VETO (padrão — confirmar com o Thiago) |
+| o. Still recortada para o site, o Tiny e as tabelas (PNG com fundo transparente, em todo acabamento, inclusive o cromo): quadro 1:1 centrado no espelho, com o fio sem destaque. `ferramentas/centrar_recortadas.py` mede e confere: o corpo (o alfa sem as partes mais finas que 81 px, o que tira o fio) fica a no máximo 1 px do centro do quadro e ocupa 0,93 do lado; só o fio cruza a borda, numa borda só e numa faixa de no máximo 70 px; os pixels do recorte são os da aprovada, só deslocados (`placar.md` › Calibragem, 2026-10-27, cromadas recortadas: na caixa da still, o corpo fora do centro e o fio até a borda; centradas, desvio ≤ 1 px e fio de 32 a 58 px na borda) | VETO (Thiago) |
 
 Liberdade criativa: cômodo, materiais, paleta, objetos de cena, hora do dia,
 lente, ângulo e enquadramento, desde que a, b, c, i e k continuem intactos.
