@@ -79,6 +79,16 @@ com a especificação oficial do canal.
 | Outros marketplaces | 1:1 | o da plataforma | imagem principal em fundo branco; confirmar com o Thiago onde a Gardie vende |
 | Banner do site | a do template do tema | | |
 
+**Still recortada:** na página de produto, no Tiny e nas tabelas de preço,
+a still de catálogo vai em PNG com fundo transparente, em todo acabamento,
+inclusive o cromo (Thiago, 27/10/2026: "Eu preciso destas fotos recortadas no
+site"). O quadro é 1:1, com o espelho no centro e o fio saindo pela borda,
+sem destaque (`guia/criterios.md` › o; `ferramentas/centrar_recortadas.py`).
+Na tabela de preços, o card corta o mesmo PNG justo no corpo do produto, e o
+fio fica cortado na borda. A lista de cada lote
+(nome, alt, posição, MD5 e link fixo) fica em `ferramentas/`; a das LUX é
+`fotos-lux-centradas-2026-10-27.csv`.
+
 **Capa branca e foto ambientada:** a capa em fundo branco vale para a capa do
 Mercado Livre, a página de produto e a imagem principal do Google Merchant e
 dos marketplaces. No blog, no Pinterest, nas redes e nos anúncios de imagem,
