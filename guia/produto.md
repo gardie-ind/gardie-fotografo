@@ -131,7 +131,8 @@ peça é sempre o da still.
   por causa das ambientadas, são -10 (4500K), -4 (desligado), -11 (3000K) e
   -9 (6000K). Os números -1 e -3 (-3 e -8 no 10202CR) foram os tons de 22/10
   e saíram de `aprovadas/` em 01/11/2026. O 3000K de 01/11 (-6; -11 no
-  10202CR) aguarda o veredito em `lotes/2026-11-01-lux-3000k/`.
+  10202CR) foi aprovado pelo Thiago no mesmo dia, em render 3800K nos 5
+  modelos.
 
 ## Suportes (a região que mais alucina)
 

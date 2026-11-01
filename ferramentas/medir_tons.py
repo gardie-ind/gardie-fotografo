@@ -11,8 +11,8 @@ apagada (luz linear, ΔY > 0,03, alfa cheio). Nela:
 - anel: os pixels que, na ligada em 4500K, passam de 0,94 no canal máximo;
 - halo: os que ficam entre 0,25 e 0,85 (o halo no vidro e os reflexos).
 Em cada uma, a mediana sRGB de cada tom e o ΔE2000 entre tons vizinhos
-(3000K × 4500K e 4500K × 6000K). Reprova (VETO c) se o ΔE do anel entre
-vizinhos ficar abaixo de LIMITE.
+(3000K × 4500K e 4500K × 6000K). Reprova (VETO c) se o ΔE do anel de um par
+ficar abaixo do LIMITE desse par.
 
 uso: python3 medir_tons.py [csv] [código ...]
      csv padrão: ferramentas/fotos-lux-centradas-2026-11-01.csv
@@ -27,7 +27,9 @@ from PIL import Image
 
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 CSV = os.path.join(RAIZ, 'ferramentas', 'fotos-lux-centradas-2026-11-01.csv')
-LIMITE = 7.5          # placar.md › Calibragem, 2026-11-01: vetado 4,8 a 6,7; aprovado 8,2 a 11,1
+# placar.md › Calibragem, 2026-11-01: 4500×6000 vetado 4,8 a 6,7, aprovado 8,2 a 11,3;
+# 3000×4500 em render 3800K aprovado pelo Thiago no Royale e no Mobile a 6,3 a 7,4 (14:20)
+LIMITE = {'3000_4500': 6.0, '4500_6000': 7.5}
 YW = np.array([0.2126, 0.7152, 0.0722])
 F = 4                 # mede em 1/4 da resolução (média por caixa)
 
@@ -88,7 +90,7 @@ def medir(f45, fapa, f30, f60):
                      'dE_3000_4500': round(de2000(L['3000'], L['4500']), 1),
                      'dE_4500_6000': round(de2000(L['4500'], L['6000']), 1), 'px': int(m.sum())}
     a = out['anel']
-    out['veto_c'] = min(a['dE_3000_4500'], a['dE_4500_6000']) < LIMITE
+    out['veto_c'] = any(a['dE_' + par] < lim for par, lim in LIMITE.items())
     return out
 
 
