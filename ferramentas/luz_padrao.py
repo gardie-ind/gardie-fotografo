@@ -3,8 +3,13 @@
 outros espelhos."): brilho +80% (ganho 1,8), joelho 0,8 e mistura 0,5, com a
 cor de Planck calibrada nas fotos reais (s 1,564, branco da câmera 5330K).
 
-Os tons têm nome de divulgação (decisão de 22/10, 14:47):
-  3000K = render 4500K · 4500K = render 5150K · 6000K = render 6000K
+Os tons têm nome de divulgação. Desde 01/11/2026 (Thiago, 13:08 e 13:09,
+depois de "no site, na prática, o 4500K e o 6000K parecem a mesma coisa"):
+  3000K = render 3800K · 4500K = render 4500K · 6000K = render 6000K
+O 4500K volta a ser o da calibragem nas fotos reais. O 3000K fica mais suave
+que o render 3000K, que saiu laranja demais em 22/10. De 22/10 a 01/11 valeu
+3000K = render 4500K e 4500K = render 5150K, e o 4500K ficou a ΔE 4,8 a 6,7 do
+6000K no anel (`medir_tons.py`, placar.md › Calibragem, 2026-11-01).
 
 Entra o par de fotos ligada e apagada do mesmo espelho, na mesma pose (still
 JPEG com fundo ou recorte PNG com alfa). Sai a versão ligada no tom pedido. O
@@ -17,7 +22,7 @@ from PIL import Image
 from luz_anel import lin, srgb, cor, YW
 
 GANHO, S, T_REF, JOELHO, MISTURA = 1.8, 1.564, 5330, 0.8, 0.5
-RENDER = {'3000': 4500, '4500': 5150, '6000': 6000}
+RENDER = {'3000': 3800, '4500': 4500, '6000': 6000}
 
 
 def ler(p):
