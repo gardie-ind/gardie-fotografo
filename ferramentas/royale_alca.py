@@ -48,7 +48,8 @@ CLASSIQUE = os.path.join(RAIZ, "aprovadas", "10202{acab}",
 NOME_ACAB = {"CR": "cromado", "GL": "dourado", "GL.RD": "red-gold", "NK.BU": "brushed-nickel",
              "BL.MT": "black-matte"}
 # posição do Royale -> posição do Classique no mesmo estado de LED (no 10202CR a numeração é outra)
-POS_CR = {"1": "3", "2": "4", "3": "8", "4": "9"}
+POS_CR = {"1": "10", "2": "4", "3": "11", "4": "9"}  # desde 01/11/2026
+POS = {"1": "5", "2": "2", "3": "6", "4": "4"}
 
 # barra 0007-AL (mm)
 RI, RO, MEIA = 103.10, 106.28, 15.9 / 2
@@ -318,5 +319,5 @@ def trocar_alca(tela, classique):
 
 
 def classique_de(acab, pos):
-    n = POS_CR[pos] if acab == "CR" else pos
+    n = POS_CR[pos] if acab == "CR" else POS[pos]
     return np.asarray(Image.open(CLASSIQUE.format(acab=acab, nome=NOME_ACAB[acab], n=n)).convert("RGBA"))

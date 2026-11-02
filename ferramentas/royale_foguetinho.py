@@ -56,6 +56,8 @@ OMBRO_MM = (5.87, 6.65)  # altura e raio do ombro (estimados no rascunho 0014-AL
 CORPO_R_MM = 9.525     # Ø3/4"
 SOMBRA_BORDA = 0.80    # a borda fica na sombra da alça
 TAMANHO = 4469         # lado dos PNG do Royale hoje
+# posição -> número do arquivo desde 01/11/2026 (fotos-lux-centradas-2026-11-01.csv)
+ARQUIVO = {"1": "5", "2": "2", "3": "6", "4": "4"}
 
 
 def eixo_e_raio(alfa):
@@ -142,7 +144,7 @@ def main():
     args = ap.parse_args()
     for acab in args.acabamentos.split(","):
         for pos in args.posicoes.split(","):
-            fs = glob.glob(os.path.join(AP, "10288" + acab, "*-%s.png" % pos))
+            fs = glob.glob(os.path.join(AP, "10288" + acab, "*-%s.png" % ARQUIVO[pos]))
             if len(fs) != 1:
                 raise SystemExit("10288%s posição %s: %d arquivos" % (acab, pos, len(fs)))
             f = fs[0]
