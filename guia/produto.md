@@ -99,10 +99,13 @@ peça é sempre o da still.
 - **Traseira dos modelos sem LED:** na dupla-face, o outro espelho; na face
   única, não há foto real. Não enquadre.
 - **LED:** três tons de divulgação, 3000K, 4500K e 6000K. A linha LUX vai sair
-  com as 3 cores e dimerizável (Thiago, 22/10/2026). Os nomes são de
-  divulgação: o 3000K é o render de 4500K, o 4500K é o de 5150K e o 6000K, o de
-  6000K, porque o 3000K real lia laranja demais para divulgação (Thiago,
-  22/10/2026). O 4500K tem a cor do difusor das stills de catálogo.
+  com as 3 cores e dimerizável (Thiago, 22/10/2026). Desde 01/11/2026, o
+  4500K é o render de 4500K, o da calibragem nas fotos reais, o 6000K é o de
+  6000K e o 3000K é o de 3800K, mais suave que o render de 3000K, que lia
+  laranja demais para divulgação (Thiago, 22/10 e 01/11/2026). Os tons
+  vizinhos têm de se separar no anel: `ferramentas/medir_tons.py`, critério c.
+  De 22/10 a 01/11, o 4500K foi o render de 5150K, e no site ele parecia o
+  6000K ("na prática, o 4500K e o 6000K parecem a mesma coisa").
 - **Padrão de luz** (Thiago, 22/10/2026, 18:44: "O meio termo está perfeito.
   Vamos seguir com ele como padrão para todos os outros espelhos"): sem IA,
   `ferramentas/luz_padrao.py`. A luz do LED é a diferença entre a still ligada e
@@ -121,11 +124,15 @@ peça é sempre o da still.
   aro. No Flex (sem LED), o logo segue impresso no vidro, embaixo.
 - **Stills dos LUX:** as de `referencias/catalogo/` mostram o logo impresso
   antigo e servem só para a forma. Para capa e verificação, valem as
-  aprovadas de 22/10/2026, feitas sem IA (`ferramentas/lote_logo.py`): em
-  cada pasta `aprovadas/<código><acabamento>/`, -1 ligado em 4500K, -2
-  desligado, -3 ligado em 3000K e -4 ligado em 6000K. No Classique Lux
-  cromado (10202CR), por causa das ambientadas, são -3 (4500K), -4
-  (desligado), -8 (3000K) e -9 (6000K).
+  aprovadas feitas sem IA (`ferramentas/lote_logo.py`) e listadas em
+  `ferramentas/fotos-lux-centradas-2026-11-01.csv`: em cada pasta
+  `aprovadas/<código><acabamento>/`, -5 ligado em 4500K, -2 desligado, -6
+  ligado em 3000K e -4 ligado em 6000K. No Classique Lux cromado (10202CR),
+  por causa das ambientadas, são -10 (4500K), -4 (desligado), -11 (3000K) e
+  -9 (6000K). Os números -1 e -3 (-3 e -8 no 10202CR) foram os tons de 22/10
+  e saíram de `aprovadas/` em 01/11/2026. O 3000K de 01/11 (-6; -11 no
+  10202CR) foi aprovado pelo Thiago no mesmo dia, em render 3800K nos 5
+  modelos.
 
 ## Suportes (a região que mais alucina)
 
