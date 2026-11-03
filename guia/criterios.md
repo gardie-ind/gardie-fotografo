@@ -73,6 +73,19 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    | pivô → topo do disco ÷ disco (Classique Lux) | em qualquer altura de câmera, VETO acima de 0,47; abaixo de 0,31, só com câmera alta. Obrigatória na `mesa-close-base`, onde confere também que o sino abre logo abaixo do pivô, sem coluna |
    | parede: braço ou suporte ÷ cabeça, placa ÷ cabeça | ±10%, depois de medidos na capa do primeiro lote |
 
+   **Lumière no ambiente** (render do CAD sobre sala gerada; calibragem de
+   02 e 03/11 no `placar.md`):
+   - centro do espelho a 1,4–1,5 m do chão na cena, com a torneira de 30 cm
+     logo abaixo e cortada na base do quadro; fora da faixa: VETO;
+   - nenhum braço esconde o outro: o cotovelo fica entre a placa e a cabeça e
+     o braço curto (8,6 cm) aparece; cotovelo do outro lado da cabeça: VETO
+     (o Thiago pede isso com "mexa-o-braço");
+   - no 1:1, a Lumière ocupa de 49 a 59% da altura do quadro (as três
+     publicadas em 03/11);
+   - a placa ampliada não muda o tom da sala: ΔE ≤ 1,0 contra o recorte
+     original em blocos de 48 × 48 px, depois de casar o tom sem IA
+     (`casar_cor.py`, kit em `/mnt/project-files/fotografo/2026-10-21-lumiere-cad/receita-1x1/`).
+
    **Escala no ambiente:** meça em px uma dimensão total do produto
    (`guia/produto.md` › Medidas) e um objeto de tamanho conhecido no MESMO
    plano (sobre a mesma bancada, à mesma distância da câmera): frasco de
