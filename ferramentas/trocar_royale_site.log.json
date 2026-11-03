@@ -68,5 +68,125 @@
    "gid://shopify/ProductVariant/50675331039335"
   ],
   "quando": "2026-11-03T01:10:05+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-8.png": {
+  "codigo": "10288CR",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 3,
+  "midia_nova": "gid://shopify/MediaImage/46632587427943",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-8.png?v=1793670809",
+  "midia_antiga": "gid://shopify/MediaImage/46574994817127",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-2.png?v=1793189468",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux cromado, luz apagada #cromo",
+  "variacoes": [],
+  "quando": "2026-11-03T01:53:30+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-10.png": {
+  "codigo": "10288CR",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 4,
+  "midia_nova": "gid://shopify/MediaImage/46632589230183",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-10.png?v=1793670815",
+  "midia_antiga": "gid://shopify/MediaImage/46574995079271",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-4.png?v=1793189477",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "quando": "2026-11-03T01:53:36+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-8.png": {
+  "codigo": "10288NK.BU",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 10,
+  "midia_nova": "gid://shopify/MediaImage/46632591720551",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-8.png?v=1793670822",
+  "midia_antiga": "gid://shopify/MediaImage/46574995538023",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-2_8714ba54-610b-4d87-97fe-b865bffc7f04.png?v=1793189488",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "quando": "2026-11-03T01:53:46+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-10.png": {
+  "codigo": "10288NK.BU",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 11,
+  "midia_nova": "gid://shopify/MediaImage/46632594538599",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-10.png?v=1793670831",
+  "midia_antiga": "gid://shopify/MediaImage/46574995800167",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-4_7ed86752-7334-4ba2-96ea-d508a2203842.png?v=1793189494",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "quando": "2026-11-03T01:53:52+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-8.png": {
+  "codigo": "10288GL",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 13,
+  "midia_nova": "gid://shopify/MediaImage/46632597848167",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-8.png?v=1793670842",
+  "midia_antiga": "gid://shopify/MediaImage/46574996521063",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-2_7c404099-6e70-4108-a5cb-f4fdc3233667.png?v=1793189507",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux gold, luz apagada #gold",
+  "variacoes": [],
+  "quando": "2026-11-03T01:54:03+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-10.png": {
+  "codigo": "10288GL",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 14,
+  "midia_nova": "gid://shopify/MediaImage/46632604237927",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-10.png?v=1793670850",
+  "midia_antiga": "gid://shopify/MediaImage/46574996553831",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-4_9458260f-5fdc-4819-b002-785a56ac5604.png?v=1793189514",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux gold, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "quando": "2026-11-03T01:54:13+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-8.png": {
+  "codigo": "10288GL.RD",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 19,
+  "midia_nova": "gid://shopify/MediaImage/46632609841255",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-8.png?v=1793670859",
+  "midia_antiga": "gid://shopify/MediaImage/46574997110887",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-2_d0cee4f5-a09f-403b-b206-dffcae586cad.png?v=1793189526",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux red gold, luz apagada #redgold",
+  "variacoes": [],
+  "quando": "2026-11-03T01:54:20+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-10.png": {
+  "codigo": "10288GL.RD",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 20,
+  "midia_nova": "gid://shopify/MediaImage/46632612692071",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-10.png?v=1793670865",
+  "midia_antiga": "gid://shopify/MediaImage/46574997340263",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-4_51f45ca9-0269-4dc3-9f9a-784a41034352.png?v=1793189533",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "quando": "2026-11-03T01:54:26+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-8.png": {
+  "codigo": "10288BL.MT",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 25,
+  "midia_nova": "gid://shopify/MediaImage/46632615673959",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-8.png?v=1793670871",
+  "midia_antiga": "gid://shopify/MediaImage/46574997536871",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-2_5eab65a4-5434-4b2b-bab6-8d1027b61b94.png?v=1793189545",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "quando": "2026-11-03T01:54:33+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-10.png": {
+  "codigo": "10288BL.MT",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 26,
+  "midia_nova": "gid://shopify/MediaImage/46632620228711",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-10.png?v=1793670877",
+  "midia_antiga": "gid://shopify/MediaImage/46574997962855",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-4_3ae8d666-7eb3-4cbb-8132-dd7104927b62.png?v=1793189550",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "quando": "2026-11-03T01:54:39+0000"
  }
 }
