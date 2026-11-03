@@ -8,8 +8,12 @@ Para cada acabamento: sobe a nova com o mesmo alt da antiga (com o #hashtag da v
 posição da galeria, liga às variações que mostravam a antiga e tira a antiga do produto. A antiga fica no
 Shopify Files, para dar para desfazer. O registro vai para `trocar_royale_site.log.json`.
 
-uso: python3 trocar_royale_site.py            # só confere (não muda nada)
-     python3 trocar_royale_site.py --trocar   # troca"""
+Depois (Thiago, 03/11/2026 01:11: "Precisam das outras cores de temperatura de luz do Royale Lux"): as
+mesmas peças na apagada (-8 no lugar da -2) e na 6000K (-10 no lugar da -4). A 3000K (-9) não vai ao site
+(publicar = nao até a versão de 3 cores estar à venda).
+
+uso: python3 trocar_royale_site.py [--posicoes 2,4]            # só confere (não muda nada)
+     python3 trocar_royale_site.py [--posicoes 2,4] --trocar   # troca (padrão: posição 1)"""
 import csv, hashlib, json, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 os.environ.setdefault("SHOPIFY_STORE", os.environ.get("SHOPIFY_FLAG_STORE", ""))
@@ -22,16 +26,17 @@ LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trocar_royale_si
 Q_FILES = 'query($q:String!){files(first:20,query:$q){nodes{id ... on MediaImage{image{url}}}}}'
 
 
-def trocas():
+def trocas(posicoes=("1",)):
     out = []
     for r in csv.DictReader(open(CSV, encoding="utf-8")):
-        if r["codigo"].startswith("10288") and r["posicao"] == "1" and r["substitui_no_site"]:
+        if r["codigo"].startswith("10288") and r["posicao"] in posicoes and r["substitui_no_site"] \
+                and r["publicar"] == "sim":
             out.append({"codigo": r["codigo"], "novo": os.path.join(RAIZ, "aprovadas", r["codigo"], r["arquivo"]),
                         "nome": r["arquivo"], "antigo": r["substitui_no_site"], "md5": r["md5"]})
     return out
 
 
-def main(trocar):
+def main(trocar, posicoes=("1",)):
     store, token = auth.get_token()
     log = json.load(open(LOG)) if os.path.exists(LOG) else {}
     ach = [p for p in auth.gql(store, token, Q_FIND, {"q": 'title:"ROYALE LUX"'})["products"]["nodes"]
@@ -41,7 +46,7 @@ def main(trocar):
     pid = ach[0]["id"]
     p = auth.gql(store, token, Q_PROD, {"id": pid})["product"]
     midias = p["media"]["nodes"]
-    for t in trocas():
+    for t in trocas(posicoes):
         if hashlib.md5(open(t["novo"], "rb").read()).hexdigest() != t["md5"]:
             raise SystemExit("MD5 diverge do CSV: " + t["nome"])
         envio = t["nome"]
@@ -98,4 +103,7 @@ def main(trocar):
 
 
 if __name__ == "__main__":
-    main("--trocar" in sys.argv)
+    pos = ("1",)
+    if "--posicoes" in sys.argv:
+        pos = tuple(sys.argv[sys.argv.index("--posicoes") + 1].split(","))
+    main("--trocar" in sys.argv, pos)

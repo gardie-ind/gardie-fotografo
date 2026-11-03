@@ -7,8 +7,12 @@ galeria, liga à variação, tira a antiga do produto e apaga o arquivo antigo d
 foram baixadas antes para /mnt/project-files/fotografo/2026-11-02-svelte-canopla/shopify-antes/ (midias.json +
 PNG), para dar para desfazer. Rodado em 02/11/2026; o registro está em trocar_svelte_site.log.json.
 
-uso: python3 trocar_svelte_site.py            # só confere
-     python3 trocar_svelte_site.py --trocar   # troca e apaga as antigas"""
+Depois (Thiago, 03/11/2026 01:12, sobre a -2: "Está com um rechupe do plástico e uma deformidade do reflexo.
+Essa peça é lisa e o reflexo é liso"): a -3, com o reflexo liso (`svelte_reflexo_liso.py`), entra no lugar
+da -2 do mesmo jeito, achando a mídia da -2 pelo registro.
+
+uso: python3 trocar_svelte_site.py [--versao 3]            # só confere
+     python3 trocar_svelte_site.py [--versao 3] --trocar   # troca e apaga as antigas (padrão: versão 2)"""
 import json, os, sys, time
 sys.path.insert(0, '/home/user/gardie-fotografo/ferramentas')
 os.environ.setdefault("SHOPIFY_STORE", os.environ.get("SHOPIFY_FLAG_STORE", ""))
@@ -27,10 +31,20 @@ Q_DEL = 'mutation($ids:[ID!]!){fileDelete(fileIds:$ids){deletedFileIds userError
 Q_FILES = 'query($q:String!){files(first:20,query:$q){nodes{id ... on MediaImage{image{url}}}}}'
 
 
-def main(trocar):
+def trocas(versao, log):
+    if versao == 2:
+        return TROCAS
+    out = []
+    for sku, _, nome in TROCAS:
+        ant = nome.replace('-gardie-2.png', '-gardie-%d.png' % (versao - 1))
+        out.append((sku, log[ant]["midia_nova"], nome.replace('-gardie-2.png', '-gardie-%d.png' % versao)))
+    return out
+
+
+def main(trocar, versao=2):
     store, token = auth.get_token()
     log = json.load(open(LOG)) if os.path.exists(LOG) else {}
-    for sku, velha_id, nome in TROCAS:
+    for sku, velha_id, nome in trocas(versao, log):
         p = auth.gql(store, token, Q_PROD, {"id": PID})["product"]
         midias = p["media"]["nodes"]
         ja = [m for m in midias if m.get("image") and m["image"]["url"].split("/files/")[-1].startswith(nome[:-4])]
@@ -81,4 +95,5 @@ def main(trocar):
 
 
 if __name__ == "__main__":
-    main("--trocar" in sys.argv)
+    v = int(sys.argv[sys.argv.index("--versao") + 1]) if "--versao" in sys.argv else 2
+    main("--trocar" in sys.argv, v)
