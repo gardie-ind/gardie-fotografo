@@ -1,0 +1,72 @@
+{
+ "espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-7.png": {
+  "codigo": "10288CR",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 1,
+  "midia_nova": "gid://shopify/MediaImage/46631885733991",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-7.png?v=1793668167",
+  "midia_antiga": "gid://shopify/MediaImage/46616018124903",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-5.png?v=1793542139",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957142631"
+  ],
+  "quando": "2026-11-03T01:09:31+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-7.png": {
+  "codigo": "10288NK.BU",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 9,
+  "midia_nova": "gid://shopify/MediaImage/46631885766759",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-7.png?v=1793668177",
+  "midia_antiga": "gid://shopify/MediaImage/46616018255975",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-5.png?v=1793542146",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675330973799"
+  ],
+  "quando": "2026-11-03T01:09:42+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-7.png": {
+  "codigo": "10288GL",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 12,
+  "midia_nova": "gid://shopify/MediaImage/46631885832295",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-7.png?v=1793668187",
+  "midia_antiga": "gid://shopify/MediaImage/46616019173479",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-5.png?v=1793542155",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux gold, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957109863"
+  ],
+  "quando": "2026-11-03T01:09:49+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-7.png": {
+  "codigo": "10288GL.RD",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 18,
+  "midia_nova": "gid://shopify/MediaImage/46631885930599",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-7.png?v=1793668194",
+  "midia_antiga": "gid://shopify/MediaImage/46616019337319",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-5.png?v=1793542165",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957175399"
+  ],
+  "quando": "2026-11-03T01:09:58+0000"
+ },
+ "espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-7.png": {
+  "codigo": "10288BL.MT",
+  "produto": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 24,
+  "midia_nova": "gid://shopify/MediaImage/46631885963367",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-7.png?v=1793668203",
+  "midia_antiga": "gid://shopify/MediaImage/46616019730535",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-5.png?v=1793542173",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675331039335"
+  ],
+  "quando": "2026-11-03T01:10:05+0000"
+ }
+}
