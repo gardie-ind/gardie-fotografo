@@ -1,0 +1,32 @@
+{
+ "espelho-de-aumento-parede-svelte-cromado-gardie-2.png": {
+  "variacao": "10479CR",
+  "posicao_galeria": 1,
+  "midia_nova": "gid://shopify/MediaImage/46631457980519",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-svelte-cromado-gardie-2.png?v=1793661541",
+  "midia_antiga_apagada": "gid://shopify/MediaImage/29271309156455",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/f02fa9ae5bce997e22dd76aa0a02eb06.png?v=1766522953",
+  "alt": "Espelho de aumento de parede, redondo com braço extensível com acabamento cromado. #cromo",
+  "quando": "2026-11-02T23:19:03+0000"
+ },
+ "espelho-de-aumento-parede-svelte-dourado-gardie-2.png": {
+  "variacao": "10479GL",
+  "posicao_galeria": 4,
+  "midia_nova": "gid://shopify/MediaImage/46631458472039",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-svelte-dourado-gardie-2.png?v=1793661549",
+  "midia_antiga_apagada": "gid://shopify/MediaImage/29271309189223",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/1bc2757225136a2c5b9d8bb0206b43dc.png?v=1766522953",
+  "alt": "Espelho de aumento de maquiagem, redondo, com braço extensível e acabamento Gold, isolado em fundo transparente. #gold",
+  "quando": "2026-11-02T23:19:11+0000"
+ },
+ "espelho-de-aumento-parede-svelte-red-gold-gardie-2.png": {
+  "variacao": "10479GL.RD",
+  "posicao_galeria": 8,
+  "midia_nova": "gid://shopify/MediaImage/46631459061863",
+  "url_nova": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-svelte-red-gold-gardie-2.png?v=1793661556",
+  "midia_antiga_apagada": "gid://shopify/MediaImage/29271309221991",
+  "url_antiga": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/2e02d5a5b2288d05f4630344ecfce4e7.png?v=1766522953",
+  "alt": "Espelho de aumento de maquiagem, redondo, com braço extensível e acabamento red gold em fundo transparente. #redgold",
+  "quando": "2026-11-02T23:19:18+0000"
+ }
+}
