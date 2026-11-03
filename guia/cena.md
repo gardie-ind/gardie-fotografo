@@ -84,6 +84,13 @@ a still de catálogo vai em PNG com fundo transparente, em todo acabamento,
 inclusive o cromo (Thiago, 27/10/2026: "Eu preciso destas fotos recortadas no
 site"). O quadro é 1:1, com o espelho no centro e o fio saindo pela borda,
 sem destaque (`guia/criterios.md` › o; `ferramentas/centrar_recortadas.py`).
+No Shopify a transparência é obrigatória: o bloco de luz das páginas LUX e da
+Lumière (TRI-LED / DUAL-LED, `snippets/gardie-luz-fotos.liquid`) põe a foto
+num painel cinza, e a foto achatada no branco vira um quadrado branco ali
+(Thiago, 03/11/2026: "Precisamos das fotos recortadas de volta"; `placar.md`
+› Calibragem, 2026-11-03). Efeito conhecido: o Google Merchant põe fundo
+preto atrás dos produtos claros com fundo transparente. A correção, se vier,
+é só para o Google (feed suplementar com a versão no branco), nunca no site.
 Na tabela de preços, o card corta o mesmo PNG justo no corpo do produto, e o
 fio fica cortado na borda. A lista de cada lote
 (nome, alt, posição, MD5 e link fixo) fica em `ferramentas/`; a das LUX é
