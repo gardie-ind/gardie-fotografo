@@ -1,0 +1,2365 @@
+{
+ "gid://shopify/MediaImage/46616024055911": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-5.png",
+  "midia": "gid://shopify/MediaImage/46616024055911",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-5.png?v=1793542294",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639856287847",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/42042149601383"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:51:10+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577550000231": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 2,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640302260327",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-2-recorte.png?v=1793717476",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639856648295",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, luz apagada #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:51:20+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616019927143": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-5.png",
+  "midia": "gid://shopify/MediaImage/46616019927143",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-5.png?v=1793542184",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639770206311",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41577861939303"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:51:52+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574982103143": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 3,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640309698663",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-2-recorte.png?v=1793717522",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639775383655",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux cromado, luz apagada #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:52:06+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574982135911": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640311926887",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-4-recorte.png?v=1793717535",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639776858215",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:52:17+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616020451431": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 6,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-brushed-nickel-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640313991271",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-brushed-nickel-gardie-5-recorte.png?v=1793717543",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639777775719",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675317211239"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:52:27+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574982725735": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 7,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-brushed-nickel-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640315138151",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-brushed-nickel-gardie-2-recorte.png?v=1793717553",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639779119207",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:52:37+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574983053415": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-brushed-nickel-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640317038695",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-brushed-nickel-gardie-4-recorte.png?v=1793717564",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639779971175",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:52:47+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616020516967": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640318840935",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-5-recorte.png?v=1793717575",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639780986983",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux gold, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41577861972071"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:52:59+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574983479399": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 10,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640320610407",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-2-recorte.png?v=1793717586",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639781970023",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux gold, luz apagada #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:53:09+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574983577703": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640323592295",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-4-recorte.png?v=1793717598",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639782789223",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux gold, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:53:20+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616020779111": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 13,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-red-gold-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640325394535",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-red-gold-gardie-5-recorte.png?v=1793717609",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639783313511",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41577862004839"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:53:31+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574984069223": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 14,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-red-gold-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640327753831",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-red-gold-gardie-2-recorte.png?v=1793717618",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639783739495",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux red gold, luz apagada #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:53:41+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574984101991": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 15,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-red-gold-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640330473575",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-red-gold-gardie-4-recorte.png?v=1793717629",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639784198247",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:53:54+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616021106791": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 18,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-matte-black-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640333750375",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-matte-black-gardie-5-recorte.png?v=1793717640",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639784886375",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675317309543"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:54:03+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574984331367": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 19,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-matte-black-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640335716455",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-matte-black-gardie-2-recorte.png?v=1793717648",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639785672807",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:54:11+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574984396903": {
+  "produto": "MOBILE LUX",
+  "pid": "gid://shopify/Product/7353186091111",
+  "posicao_galeria": 20,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-mobile-lux-matte-black-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640336994407",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-matte-black-gardie-4-recorte.png?v=1793717658",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639785967719",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Mobile Lux matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:54:21+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616023433319": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-cromado-gardie-5.png",
+  "midia": "gid://shopify/MediaImage/46616023433319",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-cromado-gardie-5.png?v=1793542262",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639786229863",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41579919835239"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:54:25+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574984986727": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 3,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-cromado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640340500583",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-cromado-gardie-2-recorte.png?v=1793717674",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639787343975",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux cromado, luz apagada #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:54:37+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574985248871": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-cromado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640343187559",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-cromado-gardie-4-recorte.png?v=1793717687",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639787802727",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:54:50+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616023597159": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 7,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-brushed-nickel-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640345481319",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-brushed-nickel-gardie-5-recorte.png?v=1793717695",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639788294247",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675323764839"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:01+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574985478247": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-brushed-nickel-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640347807847",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-brushed-nickel-gardie-2-recorte.png?v=1793717707",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639788916839",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:11+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574985871463": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-brushed-nickel-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640349544551",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-brushed-nickel-gardie-4-recorte.png?v=1793717717",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639789736039",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:20+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616023793767": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 10,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-dourado-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640351346791",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-dourado-gardie-5-recorte.png?v=1793717726",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639790555239",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux gold, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41579919868007"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:30+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574986199143": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-dourado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640353083495",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-dourado-gardie-2-recorte.png?v=1793717736",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639790882919",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux gold, luz apagada #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:39+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574986526823": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-dourado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640354754663",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-dourado-gardie-4-recorte.png?v=1793717744",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639791308903",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux gold, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:47+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616023892071": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 16,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-red-gold-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640356491367",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-red-gold-gardie-5-recorte.png?v=1793717751",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639791734887",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41579919900775"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:55:53+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574987247719": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 17,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-red-gold-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640357408871",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-red-gold-gardie-2-recorte.png?v=1793717757",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639792259175",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux red gold, luz apagada #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:01+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574987444327": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 18,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-red-gold-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640359473255",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-red-gold-gardie-4-recorte.png?v=1793717766",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639792619623",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:08+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616024023143": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 22,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-matte-black-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640360751207",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-matte-black-gardie-5-recorte.png?v=1793717772",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639792914535",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/42042127876199"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:15+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574987673703": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 23,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-matte-black-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640361898087",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-matte-black-gardie-2-recorte.png?v=1793717779",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639793176679",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:21+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574988066919": {
+  "produto": "FLEX LUX",
+  "pid": "gid://shopify/Product/7354004373607",
+  "posicao_galeria": 24,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-flex-lux-matte-black-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640363077735",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-flex-lux-matte-black-gardie-4-recorte.png?v=1793717784",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639793668199",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Flex Lux matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:27+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616016978023": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-10.png",
+  "midia": "gid://shopify/MediaImage/46616016978023",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-10.png?v=1793542100",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639794094183",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956618343"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:29+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574989607015": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 3,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640364978279",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-4-recorte.png?v=1793717796",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639794290791",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux cromado, luz apagada #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:39+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574989672551": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-9-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640367108199",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-9-recorte.png?v=1793717807",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639794749543",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:48+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616017404007": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-brushed-nickel-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640369696871",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-brushed-nickel-gardie-5-recorte.png?v=1793717814",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639794847847",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675327369319"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:56:58+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574990196839": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 10,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-brushed-nickel-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640371859559",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-brushed-nickel-gardie-2-recorte.png?v=1793717824",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639795339367",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:57:08+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574990229607": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-brushed-nickel-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640373563495",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-brushed-nickel-gardie-4-recorte.png?v=1793717833",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639795961959",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:57:17+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616017535079": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-dourado-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640375234663",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-dourado-gardie-5-recorte.png?v=1793717842",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639796519015",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux gold, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956651111"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:57:27+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574990950503": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 13,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-dourado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640376610919",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-dourado-gardie-2-recorte.png?v=1793717852",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639797272679",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux gold, luz apagada #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:57:37+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574991310951": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 14,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-dourado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640378282087",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-dourado-gardie-4-recorte.png?v=1793717863",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639800057959",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux gold, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:57:46+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616017633383": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 18,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640379625575",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-5-recorte.png?v=1793717873",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639800483943",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956683879"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:57:57+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574992851047": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 19,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640381493351",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-2-recorte.png?v=1793717883",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639800877159",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux red gold, luz apagada #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:58:06+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574992916583": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 20,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640383623271",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-4-recorte.png?v=1793717892",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639801663591",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:58:16+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616017797223": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 23,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-matte-black-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640385425511",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-matte-black-gardie-5-recorte.png?v=1793717902",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639801991271",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675327402087"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:58:27+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574993211495": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 24,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-matte-black-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640388079719",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-matte-black-gardie-2-recorte.png?v=1793717911",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639802351719",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:58:33+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574993408103": {
+  "produto": "CLASSIQUE LUX",
+  "pid": "gid://shopify/Product/7355777679463",
+  "posicao_galeria": 25,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-classique-lux-matte-black-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640389455975",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-classique-lux-matte-black-gardie-4-recorte.png?v=1793717917",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639802515559",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Classique Lux matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:58:39+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308435559": {
+  "produto": "FLEX CRISTAL",
+  "pid": "gid://shopify/Product/7355777712231",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "b943c7fab5d2db1af58d7d2a0ae6e217.png",
+  "midia": "gid://shopify/MediaImage/29271308435559",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/b943c7fab5d2db1af58d7d2a0ae6e217.png?v=1766523753",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639803039847",
+  "alt": "Espelho de aumento de maquiagem, redondo com moldura em acrílico, braço pantográfico modelo sanfona de parede, com acabamento cromado em fundo transparente. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956716647"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956716647"
+  ],
+  "quando": "2026-11-03T14:58:41+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308468327": {
+  "produto": "FLEX CRISTAL",
+  "pid": "gid://shopify/Product/7355777712231",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "e0eba2c42e1cda157ae3e67b653ebba3-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640390864999",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/e0eba2c42e1cda157ae3e67b653ebba3-recorte.png?v=1793717924",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639803760743",
+  "alt": "Espelho de aumento de maquiagem, redondo com moldura em acrílico, braço pantográfico modelo sanfona de parede, com acabamento gold em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956749415"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956749415"
+  ],
+  "quando": "2026-11-03T14:58:48+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308501095": {
+  "produto": "FLEX CRISTAL",
+  "pid": "gid://shopify/Product/7355777712231",
+  "posicao_galeria": 10,
+  "modo": "subida de novo",
+  "nome": "6b1774fdb7458b67ba0f9fda405b0f2a-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640392568935",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/6b1774fdb7458b67ba0f9fda405b0f2a-recorte.png?v=1793717931",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639804416103",
+  "alt": "Espelho de aumento de maquiagem, redondo com moldura em acrílico, braço pantográfico modelo sanfona de parede, com acabamento red gold em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956782183"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956782183"
+  ],
+  "quando": "2026-11-03T14:58:54+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308566631": {
+  "produto": "FLEX",
+  "pid": "gid://shopify/Product/7355777744999",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "c72d6e2d1f05823eadc7d379f818e948.png",
+  "midia": "gid://shopify/MediaImage/29271308566631",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/c72d6e2d1f05823eadc7d379f818e948.png?v=1766524315",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639805071463",
+  "alt": "Espelho de aumento de maquiagem, redondo com acabamento cromado, braço pantográfico modelo sanfona, de parede, em fundo transparente. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956814951"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956814951"
+  ],
+  "quando": "2026-11-03T14:58:57+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308599399": {
+  "produto": "FLEX",
+  "pid": "gid://shopify/Product/7355777744999",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "435a15f8a0dd314943df272e658b15e8-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640394043495",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/435a15f8a0dd314943df272e658b15e8-recorte.png?v=1793717939",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639805890663",
+  "alt": "Espelho de aumento de maquiagem, redondo com acabamento gold, braço pantográfico modelo sanfona, de parede, em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956847719"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956847719"
+  ],
+  "quando": "2026-11-03T14:59:03+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308632167": {
+  "produto": "FLEX",
+  "pid": "gid://shopify/Product/7355777744999",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "f5d14a4bf2992db575f619e194e9bf7d-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640395452519",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/f5d14a4bf2992db575f619e194e9bf7d-recorte.png?v=1793717946",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639806578791",
+  "alt": "Espelho de aumento para maquiagem, dupla-face, redondo com acabamento red gold, com braço pantográfico extensível em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956880487"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956880487"
+  ],
+  "quando": "2026-11-03T14:59:10+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308697703": {
+  "produto": "MOBILE",
+  "pid": "gid://shopify/Product/7355777777767",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "1f99cd18fd3f057da46f7ff79f5d48c4.png",
+  "midia": "gid://shopify/MediaImage/29271308697703",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/1f99cd18fd3f057da46f7ff79f5d48c4.png?v=1766523295",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639807168615",
+  "alt": "Espelho com aumento para maquiagem,  redondo com braço extensível, de parede, com acabamento cromado, isolado em fundo cinza. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956913255"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956913255"
+  ],
+  "quando": "2026-11-03T14:59:12+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308730471": {
+  "produto": "MOBILE",
+  "pid": "gid://shopify/Product/7355777777767",
+  "posicao_galeria": 4,
+  "modo": "religada",
+  "nome": "2e55784feab08e92b38d3098b539e13a.png",
+  "midia": "gid://shopify/MediaImage/29271308730471",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/2e55784feab08e92b38d3098b539e13a.png?v=1766523295",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639807987815",
+  "alt": "Espelho com aumento para maquiagem,  redondo com braço extensível, de parede, com acabamento gold, em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956946023"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956946023"
+  ],
+  "quando": "2026-11-03T14:59:17+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308763239": {
+  "produto": "MOBILE",
+  "pid": "gid://shopify/Product/7355777777767",
+  "posicao_galeria": 7,
+  "modo": "subida de novo",
+  "nome": "5b7d91c647a8a368ac4718452344a531-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640397418599",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/5b7d91c647a8a368ac4718452344a531-recorte.png?v=1793717959",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639808905319",
+  "alt": "Espelho com aumento para maquiagem,  redondo com braço extensível, de parede, com acabamento red gold. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585956978791"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585956978791"
+  ],
+  "quando": "2026-11-03T14:59:23+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308828775": {
+  "produto": "ROYALE CRISTAL",
+  "pid": "gid://shopify/Product/7355777810535",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "e4fd8a1a10dcf7cf70dc78362c5f8ca1.png",
+  "midia": "gid://shopify/MediaImage/29271308828775",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/e4fd8a1a10dcf7cf70dc78362c5f8ca1.png?v=1766523457",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639809790055",
+  "alt": "Espelho de aumento de maquiagem, redondo com acabamento cromado, base para balcão, em fundo transparente. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957011559"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585957011559"
+  ],
+  "quando": "2026-11-03T14:59:26+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308861543": {
+  "produto": "ROYALE CRISTAL",
+  "pid": "gid://shopify/Product/7355777810535",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "7d7004e9991c8b7359ecb5cd75f5296f-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640398958695",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/7d7004e9991c8b7359ecb5cd75f5296f-recorte.png?v=1793717969",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639810412647",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, acabamento em gold com aro em acrílico transparente, isolado em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957044327"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585957044327"
+  ],
+  "quando": "2026-11-03T14:59:32+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29271308894311": {
+  "produto": "ROYALE CRISTAL",
+  "pid": "gid://shopify/Product/7355777810535",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "e3d1f6db6876690108c42c99edcaa636-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640400171111",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/e3d1f6db6876690108c42c99edcaa636-recorte.png?v=1793717976",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639811199079",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, red gold com aro em acrílico transparente, isolado em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957077095"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41585957077095"
+  ],
+  "quando": "2026-11-03T14:59:39+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46631885733991": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-7.png",
+  "midia": "gid://shopify/MediaImage/46631885733991",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-7.png?v=1793668167",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639811887207",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957142631"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T14:59:41+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632587427943": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 3,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-8-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640402038887",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-8-recorte.png?v=1793717987",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639812608103",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux cromado, luz apagada #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:59:50+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632589230183": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640403644519",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-cromado-gardie-10-recorte.png?v=1793717995",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639813591143",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T14:59:57+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46631885766759": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640405151847",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-7-recorte.png?v=1793718004",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639814213735",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675330973799"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:00:07+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632591720551": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 10,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-8-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640406986855",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-8-recorte.png?v=1793718012",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639815295079",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:00:16+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632594538599": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640408461415",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-brushed-nickel-gardie-10-recorte.png?v=1793718022",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639816409191",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:00:26+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46631885832295": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640409346151",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-7-recorte.png?v=1793718034",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639816999015",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux gold, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957109863"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:00:39+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632597848167": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 13,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-8-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640411836519",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-8-recorte.png?v=1793718044",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639819685991",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux gold, luz apagada #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:00:48+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632604237927": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 14,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640414392423",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-dourado-gardie-10-recorte.png?v=1793718054",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639820275815",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux gold, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:00:58+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46631885930599": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 18,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640416129127",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-7-recorte.png?v=1793718065",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639821324391",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957175399"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:07+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632609841255": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 19,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-8-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640418324583",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-8-recorte.png?v=1793718073",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639822241895",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux red gold, luz apagada #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:19+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632612692071": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 20,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640420749415",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-red-gold-gardie-10-recorte.png?v=1793718085",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639823028327",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:29+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46631885963367": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 24,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640422453351",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-7-recorte.png?v=1793718093",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639823749223",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675331039335"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:35+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632615673959": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 25,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-8-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640423927911",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-8-recorte.png?v=1793718100",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639824502887",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:41+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632620228711": {
+  "produto": "ROYALE LUX",
+  "pid": "gid://shopify/Product/7355777843303",
+  "posicao_galeria": 26,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640424878183",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-mesa-led-royale-lux-matte-black-gardie-10-recorte.png?v=1793718105",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639825059943",
+  "alt": "Espelho de aumento de mesa com luz LED Gardie Royale Lux matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:47+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632645361767": {
+  "produto": "SVELTE",
+  "pid": "gid://shopify/Product/7355777876071",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-parede-svelte-cromado-gardie-3.png",
+  "midia": "gid://shopify/MediaImage/46632645361767",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-svelte-cromado-gardie-3.png?v=1793670920",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639825518695",
+  "alt": "Espelho de aumento de parede, redondo com braço extensível com acabamento cromado. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957208167"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:49+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632648966247": {
+  "produto": "SVELTE",
+  "pid": "gid://shopify/Product/7355777876071",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-svelte-dourado-gardie-3-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640427303015",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-svelte-dourado-gardie-3-recorte.png?v=1793718115",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639826010215",
+  "alt": "Espelho de aumento de maquiagem, redondo, com braço extensível e acabamento Gold, isolado em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957240935"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:01:59+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46632652341351": {
+  "produto": "SVELTE",
+  "pid": "gid://shopify/Product/7355777876071",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-svelte-red-gold-gardie-3-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640429662311",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-svelte-red-gold-gardie-3-recorte.png?v=1793718126",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639826731111",
+  "alt": "Espelho de aumento de maquiagem, redondo, com braço extensível e acabamento red gold em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957273703"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:11+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616021368935": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-cromado-gardie-5.png",
+  "midia": "gid://shopify/MediaImage/46616021368935",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-cromado-gardie-5.png?v=1793542229",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639827681383",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux cromado, luz acesa em 4500K #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957306471"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:13+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574976106599": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 3,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-cromado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640432087143",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-cromado-gardie-2-recorte.png?v=1793718138",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639828402279",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux cromado, luz apagada #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:22+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574976401511": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-cromado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640434675815",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-cromado-gardie-4-recorte.png?v=1793718148",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639829024871",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:31+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616022220903": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 7,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-brushed-nickel-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640436478055",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-brushed-nickel-gardie-5-recorte.png?v=1793718156",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639829680231",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675336314983"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:41+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574976630887": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-brushed-nickel-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640439361639",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-brushed-nickel-gardie-2-recorte.png?v=1793718165",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639830401127",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:47+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574977351783": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-brushed-nickel-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640440574055",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-brushed-nickel-gardie-4-recorte.png?v=1793718172",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639831842919",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:02:56+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616022450279": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 10,
+  "modo": "religada",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-dourado-gardie-5.png",
+  "midia": "gid://shopify/MediaImage/46616022450279",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-dourado-gardie-5.png?v=1793542242",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639833186407",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux gold, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957339239"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:00+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574977581159": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-dourado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640443326567",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-dourado-gardie-2-recorte.png?v=1793718185",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639834005607",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux gold, luz apagada #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:06+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574978105447": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-dourado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640445194343",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-dourado-gardie-4-recorte.png?v=1793718191",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639834398823",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux gold, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:15+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616022679655": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 15,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-red-gold-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640447357031",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-red-gold-gardie-5-recorte.png?v=1793718199",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639834726503",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41585957372007"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:22+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574978826343": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 16,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-red-gold-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640449159271",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-red-gold-gardie-2-recorte.png?v=1793718207",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639835611239",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux red gold, luz apagada #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:31+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574978859111": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 17,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-red-gold-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640450568295",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-red-gold-gardie-4-recorte.png?v=1793718215",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639836201063",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:37+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616023302247": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 19,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-matte-black-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640452206695",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-matte-black-gardie-5-recorte.png?v=1793718221",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639837085799",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50675336413287"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:45+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574979612775": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 20,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-matte-black-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640453812327",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-matte-black-gardie-2-recorte.png?v=1793718230",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639838068839",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:03:57+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46574979711079": {
+  "produto": "VISAGE LUX",
+  "pid": "gid://shopify/Product/7355777908839",
+  "posicao_galeria": 21,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-visage-lux-matte-black-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640456499303",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-visage-lux-matte-black-gardie-4-recorte.png?v=1793718240",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639838953575",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Visage Lux matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:04:03+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568363623": {
+  "produto": "BEAUTÉ",
+  "pid": "gid://shopify/Product/7356998877287",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "c37e4833b4c5dc3cc3ccb9777174239e.png",
+  "midia": "gid://shopify/MediaImage/29279568363623",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/c37e4833b4c5dc3cc3ccb9777174239e.png?v=1766522692",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639839772775",
+  "alt": "Espelho de aumento, redondo, acabamento cristal, portátil com base dobrável, em fundo transparente. #cristal",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614130791"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:04:05+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568396391": {
+  "produto": "BEAUTÉ",
+  "pid": "gid://shopify/Product/7356998877287",
+  "posicao_galeria": 5,
+  "modo": "religada",
+  "nome": "1ab6a01d193c3eb9dc67996767204893.png",
+  "midia": "gid://shopify/MediaImage/29279568396391",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/1ab6a01d193c3eb9dc67996767204893.png?v=1766522692",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639841149031",
+  "alt": "Espelho de aumento para maquiagem, redondo  com acabamento branco, detalhe da alça dobrável, isolado em fundo transparente. #branco",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614163559"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:04:08+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568429159": {
+  "produto": "BEAUTÉ",
+  "pid": "gid://shopify/Product/7356998877287",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "61546f2cae8cd367681bd7651ab77d58-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640459808871",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/61546f2cae8cd367681bd7651ab77d58-recorte.png?v=1793718250",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639841935463",
+  "alt": "Espelho de aumento para maquiagem, redondo preto, detalhe da alça dobrável servindo de base, em fundo transparente. #blacknoir",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614196327"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:04:14+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568494695": {
+  "produto": "CLASSIQUE",
+  "pid": "gid://shopify/Product/7356998910055",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "fa2e0adc798a9c220ebb9975d2fcf90f.png",
+  "midia": "gid://shopify/MediaImage/29279568494695",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/fa2e0adc798a9c220ebb9975d2fcf90f.png?v=1766522529",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639842787431",
+  "alt": "Espelho de aumento para maquiagem, redondo com acabamento cromado, dupla-face em fundo transparente. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614229095"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614229095"
+  ],
+  "quando": "2026-11-03T15:04:16+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568527463": {
+  "produto": "CLASSIQUE",
+  "pid": "gid://shopify/Product/7356998910055",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "10233BL.NO-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640461676647",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10233BL.NO-recorte.png?v=1793718260",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639844098151",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, preto, isolado em fundo transparente. #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614261863"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614261863"
+  ],
+  "quando": "2026-11-03T15:04:24+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568592999": {
+  "produto": "CLASSIQUE",
+  "pid": "gid://shopify/Product/7356998910055",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "c55b2d197358b48913edde58a8bc2a35-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640462266471",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/c55b2d197358b48913edde58a8bc2a35-recorte.png?v=1793718267",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639844819047",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, acabamento gold, isolado em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614327399"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614327399"
+  ],
+  "quando": "2026-11-03T15:04:31+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568625767": {
+  "produto": "CLASSIQUE",
+  "pid": "gid://shopify/Product/7356998910055",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "Classique_10233GL.RD-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640464035943",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/Classique_10233GL.RD-recorte.png?v=1793718274",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639846096999",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, acabamento red gold, isolado em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614360167"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614360167"
+  ],
+  "quando": "2026-11-03T15:04:37+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568724071": {
+  "produto": "JOLIE",
+  "pid": "gid://shopify/Product/7356998942823",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "a10788112185ae014451bdfb73b91d43.png",
+  "midia": "gid://shopify/MediaImage/29279568724071",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/a10788112185ae014451bdfb73b91d43.png?v=1766522288",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639846850663",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, acabamento cromado, isolado em fundo transparente. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614392935"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614392935"
+  ],
+  "quando": "2026-11-03T15:04:40+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568756839": {
+  "produto": "JOLIE",
+  "pid": "gid://shopify/Product/7356998942823",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "451aa1cf068a3299c92904fa2374e4ba-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640465281127",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/451aa1cf068a3299c92904fa2374e4ba-recorte.png?v=1793718283",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639847637095",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa com base alta, branco, isolado em fundo transparente. #branco",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614425703"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614425703"
+  ],
+  "quando": "2026-11-03T15:04:46+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568789607": {
+  "produto": "JOLIE",
+  "pid": "gid://shopify/Product/7356998942823",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "fc7bc97d98f39b7db3a0ae4948aa8786-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640467116135",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/fc7bc97d98f39b7db3a0ae4948aa8786-recorte.png?v=1793718289",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639848685671",
+  "alt": "Espelho de aumento dupla-face, com acabamento Gold em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614458471"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614458471"
+  ],
+  "quando": "2026-11-03T15:04:53+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568822375": {
+  "produto": "JOLIE",
+  "pid": "gid://shopify/Product/7356998942823",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "7b911f9ed9efb73e1e439a5d99cbf252-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640468033639",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/7b911f9ed9efb73e1e439a5d99cbf252-recorte.png?v=1793718296",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639849439335",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, acabamento red gold, isolado em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614491239"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614491239"
+  ],
+  "quando": "2026-11-03T15:04:59+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279568986215": {
+  "produto": "MIROIR",
+  "pid": "gid://shopify/Product/7356998975591",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "d2b2233dfa4b4ea8292214b049375a06.png",
+  "midia": "gid://shopify/MediaImage/29279568986215",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/d2b2233dfa4b4ea8292214b049375a06.png?v=1766522003",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639850094695",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa com base curva, acabamento na cor branca, isolado em fundo transparente. #branco",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614524007"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614524007"
+  ],
+  "quando": "2026-11-03T15:05:04+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569018983": {
+  "produto": "MIROIR",
+  "pid": "gid://shopify/Product/7356998975591",
+  "posicao_galeria": 7,
+  "modo": "subida de novo",
+  "nome": "4b9b34f7ec49cba28e678b624478fd1a-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640470163559",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/4b9b34f7ec49cba28e678b624478fd1a-recorte.png?v=1793718307",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639851077735",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa com base curva, preto, posicionado em fundo transparente. #blacknoir",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614556775"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614556775"
+  ],
+  "quando": "2026-11-03T15:05:10+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569051751": {
+  "produto": "MIROIR",
+  "pid": "gid://shopify/Product/7356998975591",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "01b77270f1c6a9047814c02f6249dec4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640471375975",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/01b77270f1c6a9047814c02f6249dec4-recorte.png?v=1793718313",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639851831399",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa com base curva, cristal transparente, isolado em fundo transparente. #cristal",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614589543"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614589543"
+  ],
+  "quando": "2026-11-03T15:05:17+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569117287": {
+  "produto": "PLATINE",
+  "pid": "gid://shopify/Product/7356999008359",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "f3dbf9f579aa20b43405188af8c12d3a.png",
+  "midia": "gid://shopify/MediaImage/29279569117287",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/f3dbf9f579aa20b43405188af8c12d3a.png?v=1766521733",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639852781671",
+  "alt": "Espelho de aumento para maquiagem, redondo, com acabamento cromado, dupla-face em fundo transparente. #cromo",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614622311"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614622311"
+  ],
+  "quando": "2026-11-03T15:05:19+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569150055": {
+  "produto": "PLATINE",
+  "pid": "gid://shopify/Product/7356999008359",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "0b746a0c4b672d094ef46d637caeafa5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640473997415",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/0b746a0c4b672d094ef46d637caeafa5-recorte.png?v=1793718322",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639853305959",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, red gold, isolado em fundo transparente. #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614655079"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614655079"
+  ],
+  "quando": "2026-11-03T15:05:26+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569182823": {
+  "produto": "PLATINE",
+  "pid": "gid://shopify/Product/7356999008359",
+  "posicao_galeria": 6,
+  "modo": "subida de novo",
+  "nome": "e40cf335d97d26ad43639739b797db73-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640475537511",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/e40cf335d97d26ad43639739b797db73-recorte.png?v=1793718329",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639853895783",
+  "alt": "Espelho de aumento para maquiagem, redondo, de mesa, com o acabamento gold, isolado em fundo transparente. #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614687847"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614687847"
+  ],
+  "quando": "2026-11-03T15:05:33+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569215591": {
+  "produto": "PLATINE",
+  "pid": "gid://shopify/Product/7356999008359",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "fdf8c635ed54e03a9b0e3842c3620b31-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640477012071",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/fdf8c635ed54e03a9b0e3842c3620b31-recorte.png?v=1793718335",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639854518375",
+  "alt": "Espelho de aumento para maquiagem, redondo, com acabamento branco, dupla-face em fundo transparente. #branco",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614720615"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614720615"
+  ],
+  "quando": "2026-11-03T15:05:40+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/29279569248359": {
+  "produto": "VIDE",
+  "pid": "gid://shopify/Product/7356999073895",
+  "posicao_galeria": 1,
+  "modo": "religada",
+  "nome": "1949717e3cb0e1e4af0ca62fe0e80377.png",
+  "midia": "gid://shopify/MediaImage/29279569248359",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/1949717e3cb0e1e4af0ca62fe0e80377.png?v=1768585058",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639855009895",
+  "alt": "Espelho de aumento com ventosa fixadora Vide (cor branca), ideal para auxiliar sua visão na hora de se barbear. #branco",
+  "variacoes": [
+   "gid://shopify/ProductVariant/41590614786151"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/41590614786151"
+  ],
+  "quando": "2026-11-03T15:05:44+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/30003444121703": {
+  "produto": "VIDE",
+  "pid": "gid://shopify/Product/7356999073895",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "Espelho_de_Aumento_Ventosa_-_Gardie_Vide_-_Preto-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640479928423",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/Espelho_de_Aumento_Ventosa_-_Gardie_Vide_-_Preto-recorte.png?v=1793718347",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639855599719",
+  "alt": "Espelho de aumento com ventosa, redondo e com moldura preta, visto em fundo transparente, mostrando a parte traseira com a ventosa transparente, ideal para fixação em superfícies lisas. #blacknoir",
+  "variacoes": [
+   "gid://shopify/ProductVariant/42102022766695"
+  ],
+  "amostras": [
+   "gid://shopify/ProductVariant/42102022766695"
+  ],
+  "quando": "2026-11-03T15:05:51+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616587501671": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 3,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-6-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640481468519",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-6-recorte.png?v=1793718357",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639857369191",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, luz acesa em 3000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:00+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577550229607": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 4,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640484221031",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-4-recorte.png?v=1793718366",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639858057319",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, luz acesa em 6000K #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:10+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46618120454247": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 5,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640486383719",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-7-recorte.png?v=1793718377",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639858876519",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, de costas, com o braço meio aberto #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:20+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46625690976359": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 6,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640488579175",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-10-recorte.png?v=1793718386",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639859728487",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, luz acesa em 4500K, com o braço aberto, visto pela esquerda #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:29+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46625691205735": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 7,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-cromado-gardie-11-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640490938471",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-cromado-gardie-11-recorte.png?v=1793718394",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639860449383",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière cromado, luz acesa em 4500K, com o braço aberto e o espelho virado, visto pela direita #cromo",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:35+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616024186983": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 8,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640492019815",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-5-recorte.png?v=1793718401",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639861071975",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, luz acesa em 4500K #brushednickel",
+  "variacoes": [
+   "gid://shopify/ProductVariant/42042149699687"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:45+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577550688359": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 9,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640493789287",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-2-recorte.png?v=1793718412",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639862513767",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, luz apagada #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:06:54+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616587731047": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 10,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-6-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640496246887",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-6-recorte.png?v=1793718420",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639863398503",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, luz acesa em 3000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:03+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577550786663": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 11,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640498966631",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-4-recorte.png?v=1793718429",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639864152167",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, luz acesa em 6000K #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:12+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46619168342119": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 12,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640500277351",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-7-recorte.png?v=1793718439",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639865266279",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, de costas, com o braço meio aberto #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:21+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630986219623": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 13,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640502308967",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-10-recorte.png?v=1793718447",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639865856103",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, luz acesa em 4500K, com o braço aberto, visto pela esquerda #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:31+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630986416231": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 14,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-11-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640504012903",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-brushed-nickel-gardie-11-recorte.png?v=1793718456",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639866675303",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière brushed nickel, luz acesa em 4500K, com o braço aberto e o espelho virado, visto pela direita #brushednickel",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:40+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616024612967": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 15,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640506339431",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-5-recorte.png?v=1793718466",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639867494503",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, luz acesa em 4500K #gold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/42042149634151"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:49+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577550884967": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 16,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640509091943",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-2-recorte.png?v=1793718476",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639868182631",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, luz apagada #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:07:59+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616587960423": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 17,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-6-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640511090791",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-6-recorte.png?v=1793718484",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639869100135",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, luz acesa em 3000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:08:08+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577550950503": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 18,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640513515623",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-4-recorte.png?v=1793718494",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639870050407",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, luz acesa em 6000K #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:08:17+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46619169587303": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 19,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640515678311",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-7-recorte.png?v=1793718503",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639870902375",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, de costas, com o braço meio aberto #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:08:27+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630986514535": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 20,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640517218407",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-10-recorte.png?v=1793718512",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639872114791",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, luz acesa em 4500K, com o braço aberto, visto pela esquerda #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:08:36+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630986612839": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 21,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-dourado-gardie-11-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640519512167",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-dourado-gardie-11-recorte.png?v=1793718521",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639872770151",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière dourado, luz acesa em 4500K, com o braço aberto e o espelho virado, visto pela direita #gold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:08:45+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616024776807": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 22,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640521379943",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-5-recorte.png?v=1793718530",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639873622119",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, luz acesa em 4500K #redgold",
+  "variacoes": [
+   "gid://shopify/ProductVariant/42042149666919"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:08:51+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577551147111": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 23,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640523051111",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-2-recorte.png?v=1793718537",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639874343015",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, luz apagada #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:00+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616588288103": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 24,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-6-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640525049959",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-6-recorte.png?v=1793718548",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639874768999",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, luz acesa em 3000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:09+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577551376487": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 25,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640527081575",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-4-recorte.png?v=1793718555",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639875948647",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, luz acesa em 6000K #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:18+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46619170275431": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 26,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640529080423",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-7-recorte.png?v=1793718564",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639876767847",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, de costas, com o braço meio aberto #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:27+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630986678375": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 27,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640531046503",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-10-recorte.png?v=1793718572",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639878111335",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, luz acesa em 4500K, com o braço aberto, visto pela esquerda #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:33+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630986940519": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 28,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-red-gold-gardie-11-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640532029543",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-red-gold-gardie-11-recorte.png?v=1793718578",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639879094375",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière red gold, luz acesa em 4500K, com o braço aberto e o espelho virado, visto pela direita #redgold",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:42+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616025006183": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 29,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-5-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640534192231",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-5-recorte.png?v=1793718589",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639880175719",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, luz acesa em 4500K #matteblack",
+  "variacoes": [
+   "gid://shopify/ProductVariant/50704970121319"
+  ],
+  "amostras": [],
+  "quando": "2026-11-03T15:09:52+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577785733223": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 30,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-2-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640536453223",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-2-recorte.png?v=1793718599",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639881224295",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, luz apagada #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:10:01+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46616588419175": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 31,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-6-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640539304039",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-6-recorte.png?v=1793718608",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639881945191",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, luz acesa em 3000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:10:11+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46577785929831": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 32,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-4-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640541565031",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-4-recorte.png?v=1793718617",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639883124839",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, luz acesa em 6000K #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:10:20+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46619170472039": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 33,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-7-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640543957095",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-7-recorte.png?v=1793718626",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639884238951",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, de costas, com o braço meio aberto #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:10:30+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630987563111": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 34,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-10-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640545955943",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-10-recorte.png?v=1793718635",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639884992615",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, luz acesa em 4500K, com o braço aberto, visto pela esquerda #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:10:39+0000",
+  "cdn_identico": true
+ },
+ "gid://shopify/MediaImage/46630987956327": {
+  "produto": "LUMIÈRE",
+  "pid": "gid://shopify/Product/7481506070631",
+  "posicao_galeria": 35,
+  "modo": "subida de novo",
+  "nome": "espelho-de-aumento-parede-led-lumiere-black-matte-gardie-11-recorte.png",
+  "midia": "gid://shopify/MediaImage/46640548872295",
+  "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-lumiere-black-matte-gardie-11-recorte.png?v=1793718644",
+  "midia_branca_tirada": "gid://shopify/MediaImage/46639886172263",
+  "alt": "Espelho de aumento de parede com luz LED Gardie Lumière matte black, luz acesa em 4500K, com o braço aberto e o espelho virado, visto pela direita #matteblack",
+  "variacoes": [],
+  "amostras": [],
+  "quando": "2026-11-03T15:10:48+0000",
+  "cdn_identico": true
+ }
+}

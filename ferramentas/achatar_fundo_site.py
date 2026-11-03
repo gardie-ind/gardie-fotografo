@@ -1,5 +1,9 @@
 """Troca no site as fotos de fundo transparente pela mesma foto achatada no branco (03/11/2026).
 
+DESFEITO no mesmo dia (Thiago, 14h47 UTC: "Precisamos das fotos recortadas de volta"):
+o bloco de luz das páginas LUX põe a foto num painel cinza, e a branca vira um
+quadrado. Não rodar de novo no site; a volta é o `restaurar_recorte_site.py`.
+
 Pedido do Thiago (03/11/2026): no Merchant Center, as fotos recortadas dos
 produtos claros aparecem com fundo preto, e a galeria pisca preto ao carregar.
 O Google escolhe sozinho o fundo de uma foto transparente: preto para
