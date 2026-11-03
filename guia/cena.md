@@ -80,10 +80,16 @@ com a especificação oficial do canal.
 | Banner do site | a do template do tema | | |
 
 **Still recortada:** na página de produto, no Tiny e nas tabelas de preço,
-a still de catálogo vai em PNG com fundo transparente, em todo acabamento,
+a still de catálogo vai recortada, sem o fundo do estúdio, em todo acabamento,
 inclusive o cromo (Thiago, 27/10/2026: "Eu preciso destas fotos recortadas no
 site"). O quadro é 1:1, com o espelho no centro e o fio saindo pela borda,
 sem destaque (`guia/criterios.md` › o; `ferramentas/centrar_recortadas.py`).
+O mestre em `aprovadas/` é o PNG com fundo transparente. No Shopify e no Tiny
+sobe a mesma foto achatada no branco 255, sem transparência, com o nome do
+mestre mais `-fundo-branco` (Thiago, 03/11/2026, no cartão "Todas as 145
+transparentes"). Com fundo transparente, o Google põe fundo preto atrás dos
+produtos claros, e Tiny e JPS também viram a transparência em preto
+(`ferramentas/achatar_fundo_site.py`; `placar.md` › Calibragem, 2026-11-03).
 Na tabela de preços, o card corta o mesmo PNG justo no corpo do produto, e o
 fio fica cortado na borda. A lista de cada lote
 (nome, alt, posição, MD5 e link fixo) fica em `ferramentas/`; a das LUX é
