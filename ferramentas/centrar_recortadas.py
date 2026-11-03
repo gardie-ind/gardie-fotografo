@@ -23,7 +23,10 @@ borda do quadro.
 - Confere, em cada saída, que só o fio cruza a borda do quadro, numa faixa
   única da largura dele, e que o centro do corpo é o centro do quadro.
 
-Uso: python centrar_recortadas.py [--acabamentos CR,GL,GL.RD,NK.BU,BL.MT] [--modelos 10202,...] [--saida DIR]
+- Modelo sem fio (sem LED, 30/10/2026): com --sem-fio, o corpo é o alfa
+  inteiro, nada é estendido e nada pode tocar a borda do quadro.
+
+Uso: python centrar_recortadas.py [--acabamentos CR,GL,GL.RD,NK.BU,BL.MT] [--modelos 10202,...] [--sem-fio] [--saida DIR]
 Sem --saida, regrava os PNG no lugar.
 """
 import argparse
@@ -49,9 +52,9 @@ def corpo(alfa):
     return cv2.morphologyEx(m, cv2.MORPH_OPEN, k) > 0
 
 
-def quadro(alfa):
+def quadro(alfa, sem_fio=False):
     """(esquerda, topo, lado) do quadro em coordenadas da caixa."""
-    ys, xs = np.nonzero(corpo(alfa))
+    ys, xs = np.nonzero(alfa > 128 if sem_fio else corpo(alfa))
     x0, x1, y0, y1 = xs.min(), xs.max() + 1, ys.min(), ys.max() + 1
     lado = math.ceil(max(x1 - x0, y1 - y0) / OCUPACAO)
     lado += (lado - (x1 - x0)) % 2  # folga par: centro exato na horizontal
@@ -97,12 +100,14 @@ def estender_fio(rgba, n, bloco=120):
     return np.concatenate([rgba, ext], axis=1)
 
 
-def centrar(rgba):
+def centrar(rgba, sem_fio=False):
     alfa = rgba[..., 3]
-    saida = saida_do_fio(alfa)
-    esq, topo, lado, caixa_corpo = quadro(alfa)
+    saida = None if sem_fio else saida_do_fio(alfa)
+    esq, topo, lado, caixa_corpo = quadro(alfa, sem_fio)
     h, w = alfa.shape
-    if saida == "baixo":
+    if saida is None:
+        pass
+    elif saida == "baixo":
         if topo + lado > h:
             raise SystemExit("o quadro passa da borda de baixo da foto (fio cortado no ar)")
     else:
@@ -124,14 +129,18 @@ def conferir(original, tela, info):
     # 1) pixels do recorte, onde caem no quadro, iguais
     sx0, sy0, sx1, sy1 = max(esq, 0), max(topo, 0), min(esq + lado, w), min(topo + lado, h)
     assert np.array_equal(tela[sy0 - topo:sy1 - topo, sx0 - esq:sx1 - esq], original[sy0:sy1, sx0:sx1])
-    # 2) só o fio cruza a borda: uma faixa, numa borda só
+    # 2) só o fio cruza a borda: uma faixa, numa borda só (sem fio, nada a toca)
     a = tela[..., 3] > 0
     bordas = {"topo": a[0], "baixo": a[-1], "esquerda": a[:, 0], "direita": a[:, -1]}
     com = {b: v for b, v in bordas.items() if v.any()}
-    assert list(com) == [info["saida"]], com.keys()
-    v = com[info["saida"]].astype(int)
-    faixas = np.count_nonzero(np.diff(np.concatenate([[0], v, [0]])) == 1)
-    assert faixas == 1 and v.sum() <= FIO_MAX, (faixas, v.sum())
+    if info["saida"] is None:
+        assert not com, com.keys()
+        v = np.zeros(1, int)
+    else:
+        assert list(com) == [info["saida"]], com.keys()
+        v = com[info["saida"]].astype(int)
+        faixas = np.count_nonzero(np.diff(np.concatenate([[0], v, [0]])) == 1)
+        assert faixas == 1 and v.sum() <= FIO_MAX, (faixas, v.sum())
     # 3) corpo centrado
     x0, y0, x1, y1 = info["corpo"]
     dx = (x0 + x1) / 2 - esq - lado / 2
@@ -145,6 +154,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--acabamentos", default="CR")
     ap.add_argument("--modelos", default=",".join(BASES))
+    ap.add_argument("--sem-fio", action="store_true", help="modelo sem fio: corpo = alfa inteiro, nada toca a borda")
     ap.add_argument("--saida", help="pasta de saída (espelha aprovadas/); sem ela, regrava no lugar")
     args = ap.parse_args()
     for base in args.modelos.split(","):
@@ -154,13 +164,13 @@ def main():
                 if im.mode != "RGBA" or im.size[0] == im.size[1]:
                     continue  # ambientada ou já quadrada
                 original = np.asarray(im)
-                tela, info = centrar(original)
+                tela, info = centrar(original, args.sem_fio)
                 med = conferir(original, tela, info)
                 destino = f if not args.saida else os.path.join(args.saida, base + acab, os.path.basename(f))
                 os.makedirs(os.path.dirname(destino), exist_ok=True)
                 Image.fromarray(tela, "RGBA").save(destino, optimize=True)
                 print("%s%s %s  quadro %d px  fio sai por %s (%d px, +%d px estendidos)  ocupação %.3f" % (
-                    base, acab, os.path.basename(f)[-6:], info["quadro"][2], info["saida"],
+                    base, acab, os.path.basename(f)[-6:], info["quadro"][2], info["saida"] or "nenhuma borda",
                     med["largura_do_fio_na_borda"], info["fio_estendido"], med["ocupacao"]))
 
 

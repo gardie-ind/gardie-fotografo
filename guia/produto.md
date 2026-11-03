@@ -142,8 +142,18 @@ peça é sempre o da still.
   trás da cabeça. Logo abaixo do pivô nasce o sino cromado, sem coluna e sem
   pescoço. O sino abre numa cúpula sobre o disco cromado, que tem um anel
   fino de borracha preta embaixo.
-- **Royale Lux:** coluna cilíndrica fina e reta com colarinhos perto do topo e
-  da base, garfo em U com pinos laterais e base em cúpula rasa.
+- **Royale Lux:** coluna cilíndrica fina e reta (hoje o foguetinho 0014-AL:
+  corpo Ø19 até a alça, ombro arredondado e borda Ø12 em cima; a cabeça fica
+  7 mm mais baixa que nas stills antigas, Thiago 28/10/2026), garfo em U de
+  barra chata de alumínio, igual à do Classique Lux (Thiago, 28/10 e
+  02/11/2026; as stills antigas mostram vareta meia-cana), e base em cúpula
+  rasa. Embaixo, a barra desce num degrau até um assento reto sobre a borda
+  do foguetinho (vídeo do Royale Lux, 14 s: assento ≈ 26 mm, degrau ≈ 3 mm),
+  e em cima do assento vai o niple aberto 0011-AL, como o do Classique Lux;
+  o cabo sai do furo dele para a traseira da cabeça (Thiago, 02/11/2026).
+- **Svelte:** a canopla é lisa, sem os dois furos de parafuso que a still de
+  catálogo mostra (Thiago, 02/11/2026). O vidro tem a borda azulada do
+  cristal.
 - **Mobile Lux:** placa retangular cromada de parede com 2 tampas redondas,
   braço articulado duplo de dois segmentos tubulares e garfo com pinos
   laterais.
@@ -157,9 +167,9 @@ peça é sempre o da still.
 
 - **Quem tem cabo à vista:** os LUX, exceto o Lumière (fio embutido, sem cabo
   aparente; cabo pendurado é invenção). Nenhum modelo sem LED tem cabo.
-- **O cabo:** branco, fino (cerca de 5 mm, tipo fio de abajur), com 1,5 m do
-  espelho ao plug. No black matte (BL.MT), o cabo é preto (Thiago,
-  21/10/2026).
+- **O cabo:** branco, fino (cerca de 5 mm, tipo fio de abajur), com 1,6 m do
+  espelho ao plug (Thiago, 02/11/2026; antes constava 1,5 m). No black
+  matte (BL.MT), o cabo é preto (Thiago, 21/10/2026).
 - **Rota no Classique Lux e no Royale Lux (mesa):** sai do meio da traseira
   da cabeça, logo abaixo do interruptor → desce numa alça curta → entra no
   pivô, por cima → corre por dentro do suporte → sai por um furo na traseira
