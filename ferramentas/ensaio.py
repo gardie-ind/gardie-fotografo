@@ -858,14 +858,16 @@ def listar_modelos():
 LADO_CEGO = 1024  # todas as candidatas saem com o mesmo lado curto e sem metadados
 
 
-def _cegar_arquivo(origem, destino):
+def _cegar_arquivo(origem, destino, cegar=True):
     """Padroniza a candidata para o julgamento cego: o Seedream devolve 1280 px
     e os outros motores 1024, e o tamanho ou os metadados do arquivo
-    revelariam o motor. O tamanho original fica só no mapa.json."""
+    revelariam o motor. O tamanho original fica só no mapa.json. Com um motor
+    só, não há o que cegar, e a candidata fica no tamanho em que o motor a
+    devolveu (o 2K do Gemini 3 Pro Image)."""
     im = Image.open(origem)
     im.load()
     curto = min(im.size)
-    if curto != LADO_CEGO:
+    if cegar and curto != LADO_CEGO:
         k = LADO_CEGO / float(curto)
         im = im.resize((max(1, round(im.width * k)), max(1, round(im.height * k))), Image.LANCZOS)
     im.convert("RGB").save(destino, "PNG")
@@ -1065,7 +1067,7 @@ def main():
             for pos, (j, r) in enumerate(ok, 1):
                 rot = "%s%d" % (letra, pos)
                 final = os.path.join(pasta, rot + ".png")
-                _cegar_arquivo(j["tmp"], final)
+                _cegar_arquivo(j["tmp"], final, cegar=len({m["id"] for m in motores}) > 1)
                 os.utime(final, (agora, agora))  # a hora de término (ls -t) revelaria o motor
                 mapa[rot] = {"motor": j["motor"]["id"], "modelo": j["motor"]["modelo"], "receita": nome,
                              "arquivo": os.path.relpath(final, saida).replace(os.sep, "/"),

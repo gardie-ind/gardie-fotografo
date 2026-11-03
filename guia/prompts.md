@@ -80,6 +80,12 @@ Para um close, nomeie só a região ("upper part of the product").
 - **Candidatos atuais:** `gemini-2.5-flash-image`, `gemini-3-pro-image`, FLUX
   Kontext Max e Seedream 4 edit (os dois últimos no fal). São o padrão do
   `ensaio.py` (sem `--motores`). Confira os IDs e os preços no dia.
+- **Ambientadas da linha LUX: geração suspensa** (Thiago, 03/11/2026: "ele
+  alucina demais no design do produto"). Das 73 geradas em 1x1 em 23/10, as
+  11 que passaram no checklist e no retoque foram todas reprovadas
+  (`placar.md` › Calibragem, 2026-11-03). Ambientada de LUX segue pelo render
+  do CAD, como a Lumière: o produto sai do desenho da fábrica, e a IA faz só a
+  sala. Não rode o `ensaio.py` num LUX sem novo pedido do Thiago.
 - **Gemini:** a imagem vai antes do texto.
 - **Kontext:** aceita uma imagem só. Recebe a proporção do `--aspecto`;
   quando não a tem, recebe a mais próxima, com aviso no manifesto.
