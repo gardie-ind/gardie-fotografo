@@ -82,6 +82,9 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
      (o Thiago pede isso com "mexa-o-braço");
    - no 1:1, a Lumière ocupa de 49 a 59% da altura do quadro (as três
      publicadas em 03/11);
+   - black matte: o metal, medido sem o espelho, fica entre L* 1,6 e 9, com
+     croma ≤ 1,3 (as duas publicadas em 04/11; o piso desceu de 4 para 1,6
+     com o mármore cinza, `placar.md` › linha de 04/11);
    - a placa ampliada não muda o tom da sala: ΔE ≤ 1,0 contra o recorte
      original em blocos de 48 × 48 px, depois de casar o tom sem IA
      (`casar_cor.py`, kit em `/mnt/project-files/fotografo/2026-10-21-lumiere-cad/receita-1x1/`).
