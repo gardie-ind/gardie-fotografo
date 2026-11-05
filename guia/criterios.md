@@ -85,6 +85,13 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    - black matte: o metal, medido sem o espelho, fica entre L* 1,6 e 9, com
      croma ≤ 1,3 (as duas publicadas em 04/11; o piso desceu de 4 para 1,6
      com o mármore cinza, `placar.md` › linha de 04/11);
+   - cromado: o metal, medido sem o espelho, fica em L* ≥ 45 (vetado em 05/11
+     com L* 29,9 no mármore grafite, "parece outra cor, tipo ônix",
+     `placar.md` › linha de 05/11); gold: L* ≤ 55 (vetado em 05/11 com 63 no
+     ônix, "muito claro"; publicado com 41,7 no mármore marrom). Para mudar o
+     metal, mude só o reflexo do metal (`placa_ambiente_ganho`); o vidro do
+     espelho fica com o reflexo da sala e o logo legível: VETO se o vidro
+     estourar ou o logo sumir;
    - a placa ampliada não muda o tom da sala: ΔE ≤ 1,0 contra o recorte
      original em blocos de 48 × 48 px, depois de casar o tom sem IA
      (`casar_cor.py`, kit em `/mnt/project-files/fotografo/2026-10-21-lumiere-cad/receita-1x1/`).
