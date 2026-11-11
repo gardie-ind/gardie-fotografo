@@ -121,7 +121,13 @@ peça é sempre o da still.
   apagado. Ligado, tem a cor do anel naquele tom e um brilho leve em volta dos
   traços. Nas stills do Visage Lux e do Royale Lux, o vidro em volta do logo
   já sai branco, e o logo aceso quase some. Nenhum logo no difusor nem no
-  aro. No Flex (sem LED), o logo segue impresso no vidro, embaixo.
+  aro.
+- **Espelhos sem luz: nenhuma marca no vidro** (Thiago, 09/11/2026: "Nós
+  também não fazemos mais essa gravação de marca nos espelhos"). O "gardie"
+  impresso no vidro, embaixo, que o Flex e o Mobile mostravam, saiu das fotos
+  sem IA (`ferramentas/sem-gardie/`): site, aprovadas, encartes, catálogo e as
+  stills de `referencias/catalogo/`. As fotos reais de `referencias/flex/` são
+  de uma unidade antiga e valem só para a forma.
 - **Stills dos LUX:** as de `referencias/catalogo/` mostram o logo impresso
   antigo e servem só para a forma. Para capa e verificação, valem as
   aprovadas feitas sem IA (`ferramentas/lote_logo.py`) e listadas em
