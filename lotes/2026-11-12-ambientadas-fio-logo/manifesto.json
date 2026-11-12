@@ -48,13 +48,15 @@
    "borda_cabo_px": 2.5,
    "borda_produto_px": 1.36
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10202CR-AMB-01.png",
-   "md5": "fc7d051e94ea2ed7943ea037d6535a5f",
+   "md5": "fa43c02d2cd633c700096c23a6b8d8aa",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "5c2457de93a89068e6cbc606f82c3755"
   },
   "caixa_detalhe": [
    0,
@@ -112,13 +114,15 @@
    "borda_cabo_px": 2.81,
    "borda_produto_px": 1.96
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10202CR-AMB-02.png",
-   "md5": "f8c779f33a0e6ad3cc103a5a5fdb6225",
+   "md5": "91044146c1278749b494a638c4f4df94",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "8fb32647efa937f213c93b5e0f8ccb74"
   },
   "caixa_detalhe": [
    0,
@@ -176,13 +180,15 @@
    "borda_cabo_px": 1.81,
    "borda_produto_px": 1.28
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10202CR-AMB-03.png",
-   "md5": "1514c99719f8949a9e8e3e9bfbd77852",
+   "md5": "7bb55be7c2943eed9705dc30802c4cf3",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "29df86745ae7f55bd5ff6bf1c2a54197"
   },
   "caixa_detalhe": [
    324,
@@ -232,13 +238,15 @@
   },
   "cabo": "sem cabo novo: cabo fora da vista (a base está fora do quadro)",
   "conferencia": {},
+  "tom": null,
   "final": {
    "arquivo": "final/10202CR-DET-01.png",
    "md5": "817bd4f0400a064443b09f9dd65c7003",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "7cd5da5834b4dd228f3adac9abe0b80c"
   },
   "caixa_detalhe": [
    60,
@@ -298,13 +306,15 @@
    "borda_cabo_px": 2.48,
    "borda_produto_px": 1.73
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10202CR-DET-02.png",
-   "md5": "aa210d28ab059bcfa9cedcd5ff0464ae",
+   "md5": "a4fc8d25624b60560b0d622b8dfc151f",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "4e9e18fbe92747d7ed87b7a2b1052f3d"
   },
   "caixa_detalhe": [
    179,
@@ -362,13 +372,102 @@
    "borda_cabo_px": 1.74,
    "borda_produto_px": 1.86
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 76.7,
+     "croma": 32.5,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -4.2,
+     "croma_x": 1.61,
+     "n": 7151
+    },
+    "L40-55": {
+     "matiz": 81.5,
+     "croma": 38.8,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -1.3,
+     "croma_x": 1.41,
+     "n": 10417
+    },
+    "L55-70": {
+     "matiz": 86.2,
+     "croma": 42.4,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.9,
+     "croma_x": 1.22,
+     "n": 20676
+    },
+    "L70-85": {
+     "matiz": 89.5,
+     "croma": 34.1,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 1.2,
+     "croma_x": 0.85,
+     "n": 8170
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.1,
+     "croma": 20.8,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.8,
+     "croma_x": 1.03,
+     "n": 7164
+    },
+    "L40-55": {
+     "matiz": 82.6,
+     "croma": 27.7,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.01,
+     "n": 10406
+    },
+    "L55-70": {
+     "matiz": 85.4,
+     "croma": 36.5,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.1,
+     "croma_x": 1.05,
+     "n": 20516
+    },
+    "L70-85": {
+     "matiz": 88.3,
+     "croma": 37.7,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": -0.1,
+     "croma_x": 0.94,
+     "n": 8349
+    }
+   },
+   "pixels": {
+    "mudados": 49297,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10202GL-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10202GL-AMB-01.png",
-   "md5": "5d202fc680125acbd809a7f128418e62",
+   "md5": "a7a645f9d467367e726f019d13107f29",
    "tamanho": [
     808,
     804
-   ]
+   ],
+   "md5_pixels": "b832a14456c1eeb3230d6c9720d1858c"
   },
   "caixa_detalhe": [
    355,
@@ -427,13 +526,102 @@
    "borda_cabo_px": 2.28,
    "borda_produto_px": 1.7
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 78.7,
+     "croma": 27.9,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -2.3,
+     "croma_x": 1.39,
+     "n": 4143
+    },
+    "L40-55": {
+     "matiz": 83.3,
+     "croma": 35.4,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 0.5,
+     "croma_x": 1.29,
+     "n": 7050
+    },
+    "L55-70": {
+     "matiz": 87.6,
+     "croma": 33.6,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 2.3,
+     "croma_x": 0.97,
+     "n": 10503
+    },
+    "L70-85": {
+     "matiz": 93.3,
+     "croma": 31.0,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 5.0,
+     "croma_x": 0.78,
+     "n": 10724
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.4,
+     "croma": 20.5,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.5,
+     "croma_x": 1.02,
+     "n": 4115
+    },
+    "L40-55": {
+     "matiz": 82.7,
+     "croma": 28.1,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.02,
+     "n": 7003
+    },
+    "L55-70": {
+     "matiz": 85.2,
+     "croma": 33.7,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": -0.1,
+     "croma_x": 0.97,
+     "n": 10556
+    },
+    "L70-85": {
+     "matiz": 88.5,
+     "croma": 39.5,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.2,
+     "croma_x": 0.99,
+     "n": 10723
+    }
+   },
+   "pixels": {
+    "mudados": 52325,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10202GL-AMB-02.png"
+  },
   "final": {
    "arquivo": "final/10202GL-AMB-02.png",
-   "md5": "8b11c0184c9988867a6632e82f01339a",
+   "md5": "36592957e5458f92cdc59d5edadc4971",
    "tamanho": [
     811,
     807
-   ]
+   ],
+   "md5_pixels": "1c11a10466a3d24c7150da6dd21a2e60"
   },
   "caixa_detalhe": [
    213,
@@ -491,13 +679,102 @@
    "borda_cabo_px": 2.73,
    "borda_produto_px": 2.59
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 78.6,
+     "croma": 33.5,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -2.3,
+     "croma_x": 1.66,
+     "n": 2789
+    },
+    "L40-55": {
+     "matiz": 85.3,
+     "croma": 39.1,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 2.5,
+     "croma_x": 1.42,
+     "n": 9773
+    },
+    "L55-70": {
+     "matiz": 90.0,
+     "croma": 37.4,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 4.8,
+     "croma_x": 1.08,
+     "n": 30913
+    },
+    "L70-85": {
+     "matiz": 96.6,
+     "croma": 32.4,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 8.2,
+     "croma_x": 0.81,
+     "n": 30801
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.9,
+     "croma": 19.9,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.0,
+     "croma_x": 0.99,
+     "n": 2790
+    },
+    "L40-55": {
+     "matiz": 82.7,
+     "croma": 28.7,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.04,
+     "n": 9798
+    },
+    "L55-70": {
+     "matiz": 85.3,
+     "croma": 34.0,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": -0.0,
+     "croma_x": 0.98,
+     "n": 30964
+    },
+    "L70-85": {
+     "matiz": 88.4,
+     "croma": 40.0,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.0,
+     "n": 30906
+    }
+   },
+   "pixels": {
+    "mudados": 84374,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10202GL-DET-01.png"
+  },
   "final": {
    "arquivo": "final/10202GL-DET-01.png",
-   "md5": "33468710b399dae58f60ed8cba11b868",
+   "md5": "6f3576f5a645bc4cbeed8c94ccdff411",
    "tamanho": [
     811,
     809
-   ]
+   ],
+   "md5_pixels": "67cbcaf5f54ba3771c96cb890ea03a2f"
   },
   "caixa_detalhe": [
    0,
@@ -555,13 +832,102 @@
    "borda_cabo_px": 1.97,
    "borda_produto_px": 1.71
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 47.6,
+     "croma": 18.5,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -16.2,
+     "croma_x": 0.83,
+     "n": 7788
+    },
+    "L40-55": {
+     "matiz": 48.3,
+     "croma": 21.9,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -19.9,
+     "croma_x": 0.99,
+     "n": 9039
+    },
+    "L55-70": {
+     "matiz": 53.9,
+     "croma": 20.9,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -15.9,
+     "croma_x": 0.73,
+     "n": 21596
+    },
+    "L70-85": {
+     "matiz": 58.6,
+     "croma": 14.4,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -12.5,
+     "croma_x": 0.43,
+     "n": 39315
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 64.2,
+     "croma": 21.9,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.3,
+     "croma_x": 0.99,
+     "n": 7787
+    },
+    "L40-55": {
+     "matiz": 67.9,
+     "croma": 22.8,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.03,
+     "n": 9042
+    },
+    "L55-70": {
+     "matiz": 70.0,
+     "croma": 28.7,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": 0.2,
+     "croma_x": 1.0,
+     "n": 21595
+    },
+    "L70-85": {
+     "matiz": 71.0,
+     "croma": 33.2,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.0,
+     "n": 39388
+    }
+   },
+   "pixels": {
+    "mudados": 91638,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10202GL.RD-DET-01.png"
+  },
   "final": {
    "arquivo": "final/10202GL.RD-DET-01.png",
-   "md5": "916784e5c785085d08fc38c8c912f16f",
+   "md5": "ec5912eb492b72c5bf002b09f098f9e8",
    "tamanho": [
     808,
     808
-   ]
+   ],
+   "md5_pixels": "f8c4923d5b5986865eabbe372d094f69"
   },
   "caixa_detalhe": [
    231,
@@ -619,13 +985,15 @@
    "borda_cabo_px": 2.1,
    "borda_produto_px": 1.78
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10288CR-AMB-01.png",
-   "md5": "c2ac7f027461d301e041128ce3ed3440",
+   "md5": "c48a6af615d2fe9683d592938dbbe49e",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "c1748a79b83c2ed84dbfea4d5823fd18"
   },
   "caixa_detalhe": [
    194,
@@ -683,13 +1051,15 @@
    "borda_cabo_px": 2.83,
    "borda_produto_px": 1.63
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10288CR-AMB-02.png",
-   "md5": "1f73a0186b2b0f4ed98ac462f258af7d",
+   "md5": "20beaf61d0b14676f4fd30b2ddccb295",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "6eadffaf3e6cf0e3f24dce833d41d4f3"
   },
   "caixa_detalhe": [
    114,
@@ -747,13 +1117,15 @@
    "borda_cabo_px": 2.12,
    "borda_produto_px": 1.84
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10288CR-AMB-03.png",
-   "md5": "776f5cce4bb30f49399837abfd7ce5b4",
+   "md5": "90958df735663aa8af673cc7bfb6ba8c",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "6012bf05a025a8f38d91c870aa00d604"
   },
   "caixa_detalhe": [
    249,
@@ -811,13 +1183,15 @@
    "borda_cabo_px": 2.72,
    "borda_produto_px": 1.57
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10288CR-AMB-04.png",
-   "md5": "74b6a0be512e980e018aca0f0102189e",
+   "md5": "731f4398b92b3c143ad55d90df3c9571",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "9e94bba9b01ac08ec714a582a552a6ba"
   },
   "caixa_detalhe": [
    354,
@@ -867,13 +1241,15 @@
   },
   "cabo": "sem cabo novo: foto real: o cabo e a alça já são os de verdade",
   "conferencia": {},
+  "tom": null,
   "final": {
    "arquivo": "final/10288CR-AMB-05.png",
    "md5": "f01bf08cd4d3c064fe7b1f1f8734b243",
    "tamanho": [
     2912,
     2912
-   ]
+   ],
+   "md5_pixels": "99ee4bf4b10b17a37e1d88e6161c090e"
   },
   "caixa_detalhe": [
    889,
@@ -931,13 +1307,102 @@
    "borda_cabo_px": 2.36,
    "borda_produto_px": 1.59
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 76.4,
+     "croma": 28.0,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -4.5,
+     "croma_x": 1.39,
+     "n": 5689
+    },
+    "L40-55": {
+     "matiz": 82.0,
+     "croma": 32.8,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.8,
+     "croma_x": 1.19,
+     "n": 9712
+    },
+    "L55-70": {
+     "matiz": 86.9,
+     "croma": 34.7,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 1.6,
+     "croma_x": 1.0,
+     "n": 14981
+    },
+    "L70-85": {
+     "matiz": 90.2,
+     "croma": 31.5,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 1.8,
+     "croma_x": 0.79,
+     "n": 11132
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.1,
+     "croma": 20.7,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.8,
+     "croma_x": 1.02,
+     "n": 5685
+    },
+    "L40-55": {
+     "matiz": 82.8,
+     "croma": 27.8,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.0,
+     "croma_x": 1.01,
+     "n": 9728
+    },
+    "L55-70": {
+     "matiz": 85.4,
+     "croma": 35.5,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.1,
+     "croma_x": 1.02,
+     "n": 14993
+    },
+    "L70-85": {
+     "matiz": 88.4,
+     "croma": 38.3,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.1,
+     "croma_x": 0.96,
+     "n": 11135
+    }
+   },
+   "pixels": {
+    "mudados": 42007,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10288GL-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10288GL-AMB-01.png",
-   "md5": "344bde92a1792cc4295c7b7865795e6f",
+   "md5": "03865d9f67694a5c9cd4ab449b8b53b7",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "28c35af5582853bfe055c14e25e58b03"
   },
   "caixa_detalhe": [
    290,
@@ -995,13 +1460,102 @@
    "borda_cabo_px": 2.43,
    "borda_produto_px": 1.83
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 73.4,
+     "croma": 32.8,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -7.6,
+     "croma_x": 1.62,
+     "n": 3936
+    },
+    "L40-55": {
+     "matiz": 78.1,
+     "croma": 33.7,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -4.8,
+     "croma_x": 1.23,
+     "n": 14383
+    },
+    "L55-70": {
+     "matiz": 82.7,
+     "croma": 33.3,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": -2.6,
+     "croma_x": 0.96,
+     "n": 32273
+    },
+    "L70-85": {
+     "matiz": 85.7,
+     "croma": 24.6,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": -2.6,
+     "croma_x": 0.62,
+     "n": 7583
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.8,
+     "croma": 20.6,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.02,
+     "n": 3927
+    },
+    "L40-55": {
+     "matiz": 82.7,
+     "croma": 27.5,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.0,
+     "n": 14339
+    },
+    "L55-70": {
+     "matiz": 85.4,
+     "croma": 34.7,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.1,
+     "croma_x": 1.0,
+     "n": 32333
+    },
+    "L70-85": {
+     "matiz": 88.2,
+     "croma": 39.5,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": -0.1,
+     "croma_x": 0.99,
+     "n": 7584
+    }
+   },
+   "pixels": {
+    "mudados": 59017,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10288GL-AMB-02.png"
+  },
   "final": {
    "arquivo": "final/10288GL-AMB-02.png",
-   "md5": "2894a714d67d67aac31b49f4a86b44bf",
+   "md5": "7505818b548c5255c74bee2167f37c3f",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "830c7e2c8c98dabe8dc00347bec41492"
   },
   "caixa_detalhe": [
    312,
@@ -1059,13 +1613,84 @@
    "borda_cabo_px": 2.48,
    "borda_produto_px": 2.41
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L40-55": {
+     "matiz": 84.3,
+     "croma": 30.5,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 1.5,
+     "croma_x": 1.11,
+     "n": 3885
+    },
+    "L55-70": {
+     "matiz": 88.2,
+     "croma": 27.4,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 2.9,
+     "croma_x": 0.79,
+     "n": 30247
+    },
+    "L70-85": {
+     "matiz": 90.0,
+     "croma": 24.7,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 1.7,
+     "croma_x": 0.62,
+     "n": 24287
+    }
+   },
+   "depois": {
+    "L40-55": {
+     "matiz": 82.8,
+     "croma": 28.3,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.03,
+     "n": 3921
+    },
+    "L55-70": {
+     "matiz": 85.5,
+     "croma": 36.0,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.2,
+     "croma_x": 1.04,
+     "n": 30325
+    },
+    "L70-85": {
+     "matiz": 88.0,
+     "croma": 38.3,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": -0.4,
+     "croma_x": 0.96,
+     "n": 24380
+    }
+   },
+   "pixels": {
+    "mudados": 65019,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10288GL-AMB-03.png"
+  },
   "final": {
    "arquivo": "final/10288GL-AMB-03.png",
-   "md5": "6346b3f3b0d80afa7201bf25cb6cab6e",
+   "md5": "38ec4c8c6caf1628eaac3771a1462289",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "fe0ef005bb8de5a669ef1f5dcf3b5126"
   },
   "caixa_detalhe": [
    223,
@@ -1123,13 +1748,102 @@
    "borda_cabo_px": 2.68,
    "borda_produto_px": 5.08
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 43.0,
+     "croma": 21.3,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -20.8,
+     "croma_x": 0.96,
+     "n": 57397
+    },
+    "L40-55": {
+     "matiz": 43.6,
+     "croma": 23.0,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -24.5,
+     "croma_x": 1.04,
+     "n": 27972
+    },
+    "L55-70": {
+     "matiz": 48.0,
+     "croma": 20.9,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -21.8,
+     "croma_x": 0.73,
+     "n": 39255
+    },
+    "L70-85": {
+     "matiz": 53.6,
+     "croma": 17.5,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -17.6,
+     "croma_x": 0.52,
+     "n": 54006
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 63.9,
+     "croma": 22.0,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.1,
+     "croma_x": 0.99,
+     "n": 57301
+    },
+    "L40-55": {
+     "matiz": 67.4,
+     "croma": 23.4,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.7,
+     "croma_x": 1.05,
+     "n": 27990
+    },
+    "L55-70": {
+     "matiz": 68.6,
+     "croma": 29.2,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -1.2,
+     "croma_x": 1.01,
+     "n": 43432
+    },
+    "L70-85": {
+     "matiz": 70.9,
+     "croma": 31.5,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -0.2,
+     "croma_x": 0.95,
+     "n": 60808
+    }
+   },
+   "pixels": {
+    "mudados": 340705,
+    "fora_produto": 0,
+    "reflexo_tampo": 37425,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10288GL.RD-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10288GL.RD-AMB-01.png",
-   "md5": "97083d776bd474142398bc3a11fd2680",
+   "md5": "160df2d451a4cd4d7dbc6056ce65edc4",
    "tamanho": [
     2048,
     2048
-   ]
+   ],
+   "md5_pixels": "4d7432aec691a1ec3d4d38ce775c4fd9"
   },
   "caixa_detalhe": [
    580,
@@ -1187,13 +1901,102 @@
    "borda_cabo_px": 3.98,
    "borda_produto_px": 5.31
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 43.0,
+     "croma": 16.8,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -20.8,
+     "croma_x": 0.76,
+     "n": 10525
+    },
+    "L40-55": {
+     "matiz": 44.8,
+     "croma": 19.4,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -23.4,
+     "croma_x": 0.88,
+     "n": 146558
+    },
+    "L55-70": {
+     "matiz": 46.1,
+     "croma": 16.3,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -23.7,
+     "croma_x": 0.57,
+     "n": 296187
+    },
+    "L70-85": {
+     "matiz": 46.4,
+     "croma": 12.3,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -24.7,
+     "croma_x": 0.37,
+     "n": 187806
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 64.0,
+     "croma": 22.1,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.1,
+     "croma_x": 0.99,
+     "n": 10547
+    },
+    "L40-55": {
+     "matiz": 68.0,
+     "croma": 23.3,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.05,
+     "n": 147705
+    },
+    "L55-70": {
+     "matiz": 69.9,
+     "croma": 28.6,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": 0.0,
+     "croma_x": 0.99,
+     "n": 296383
+    },
+    "L70-85": {
+     "matiz": 70.9,
+     "croma": 33.4,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.0,
+     "n": 190972
+    }
+   },
+   "pixels": {
+    "mudados": 781533,
+    "fora_produto": 0,
+    "reflexo_tampo": 48678,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10288GL.RD-DET-01.png"
+  },
   "final": {
    "arquivo": "final/10288GL.RD-DET-01.png",
-   "md5": "72608e59b89bb95ba2387e56d8e85c71",
+   "md5": "0abb76c29ae734feb9d58b709c598fce",
    "tamanho": [
     2048,
     2048
-   ]
+   ],
+   "md5_pixels": "47eaeba5d96eb6444359a37132010fa8"
   },
   "caixa_detalhe": [
    415,
@@ -1243,13 +2046,15 @@
   },
   "cabo": "sem cabo novo: o cabo que já estava na foto segue a rota real (vão → atrás do anel → ao lado do pivô → atrás dos braços); ficou",
   "conferencia": {},
+  "tom": null,
   "final": {
    "arquivo": "final/10455CR-AMB-02.png",
    "md5": "ee3f63664a765efdcecddb2eebd74898",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "09a1ac8fa8fad1b0aa677a7bc6cdd921"
   },
   "caixa_detalhe": [
    381,
@@ -1307,13 +2112,102 @@
    "borda_cabo_px": 1.83,
    "borda_produto_px": 2.44
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 44.3,
+     "croma": 18.4,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -19.6,
+     "croma_x": 0.83,
+     "n": 4763
+    },
+    "L40-55": {
+     "matiz": 43.0,
+     "croma": 21.4,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -25.2,
+     "croma_x": 0.97,
+     "n": 6807
+    },
+    "L55-70": {
+     "matiz": 43.9,
+     "croma": 19.7,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -25.9,
+     "croma_x": 0.68,
+     "n": 15748
+    },
+    "L70-85": {
+     "matiz": 47.6,
+     "croma": 16.5,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -23.5,
+     "croma_x": 0.49,
+     "n": 11537
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 64.0,
+     "croma": 21.6,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.2,
+     "croma_x": 0.97,
+     "n": 4775
+    },
+    "L40-55": {
+     "matiz": 68.0,
+     "croma": 22.7,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.02,
+     "n": 6783
+    },
+    "L55-70": {
+     "matiz": 69.8,
+     "croma": 29.0,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.01,
+     "n": 15790
+    },
+    "L70-85": {
+     "matiz": 71.5,
+     "croma": 33.0,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": 0.4,
+     "croma_x": 0.99,
+     "n": 11763
+    }
+   },
+   "pixels": {
+    "mudados": 58390,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10455GL.RD-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10455GL.RD-AMB-01.png",
-   "md5": "dad3e5f694a2d282cb74b54971b826ff",
+   "md5": "05f8e20351d73f50d69d4d09810c4aeb",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "3f610514f7d17a163bfb9d4987c87b35"
   },
   "caixa_detalhe": [
    148,
@@ -1371,19 +2265,222 @@
    "borda_cabo_px": 1.95,
    "borda_produto_px": 2.28
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 48.4,
+     "croma": 25.2,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -15.4,
+     "croma_x": 1.14,
+     "n": 4549
+    },
+    "L40-55": {
+     "matiz": 50.6,
+     "croma": 20.5,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -17.5,
+     "croma_x": 0.92,
+     "n": 20756
+    },
+    "L55-70": {
+     "matiz": 53.7,
+     "croma": 18.4,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -16.1,
+     "croma_x": 0.64,
+     "n": 50783
+    },
+    "L70-85": {
+     "matiz": 56.3,
+     "croma": 15.8,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -14.8,
+     "croma_x": 0.47,
+     "n": 40770
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 63.8,
+     "croma": 21.9,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.0,
+     "croma_x": 0.99,
+     "n": 4541
+    },
+    "L40-55": {
+     "matiz": 68.0,
+     "croma": 22.8,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.03,
+     "n": 20689
+    },
+    "L55-70": {
+     "matiz": 69.8,
+     "croma": 29.5,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -0.0,
+     "croma_x": 1.02,
+     "n": 50883
+    },
+    "L70-85": {
+     "matiz": 71.4,
+     "croma": 33.0,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": 0.3,
+     "croma_x": 0.99,
+     "n": 40794
+    }
+   },
+   "pixels": {
+    "mudados": 129036,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10455GL.RD-DET-01.png"
+  },
   "final": {
    "arquivo": "final/10455GL.RD-DET-01.png",
-   "md5": "d652306a13700a64bea3a620ca7117aa",
+   "md5": "0df5ae99ee413fa9e3255fd8a620d6d3",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "87f601a213f2f303ef7d29005cf07eee"
   },
   "caixa_detalhe": [
    0,
    1,
    798,
    799
+  ]
+ },
+ "10455GL-AMB-01": {
+  "rotulo": "M4",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-dourado-gardie-2_368bf900-87ec-4842-94a9-f543083e6e86.png?v=1783708151",
+   "md5_cdn": "f92036316c9a299dfbd5735becec0cda",
+   "arquivo": "originais/10455GL-AMB-01.png"
+  },
+  "logo": "já estava na foto publicada (22/10)",
+  "cabo": "sem cabo novo: já tinha o fio real e o logo desde 22/10; entrou só pelo tom do gold",
+  "conferencia": {},
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 73.3,
+     "croma": 36.7,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -7.6,
+     "croma_x": 1.82,
+     "n": 2466
+    },
+    "L40-55": {
+     "matiz": 78.8,
+     "croma": 34.8,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -4.0,
+     "croma_x": 1.26,
+     "n": 19929
+    },
+    "L55-70": {
+     "matiz": 83.1,
+     "croma": 31.8,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": -2.2,
+     "croma_x": 0.92,
+     "n": 48164
+    },
+    "L70-85": {
+     "matiz": 86.6,
+     "croma": 28.8,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": -1.7,
+     "croma_x": 0.72,
+     "n": 14813
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.6,
+     "croma": 20.8,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.4,
+     "croma_x": 1.03,
+     "n": 2475
+    },
+    "L40-55": {
+     "matiz": 82.8,
+     "croma": 28.0,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.02,
+     "n": 19998
+    },
+    "L55-70": {
+     "matiz": 85.2,
+     "croma": 34.5,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": -0.1,
+     "croma_x": 0.99,
+     "n": 48086
+    },
+    "L70-85": {
+     "matiz": 88.4,
+     "croma": 39.8,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.1,
+     "croma_x": 1.0,
+     "n": 14942
+    }
+   },
+   "pixels": {
+    "mudados": 104383,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10455GL-AMB-01.png"
+  },
+  "final": {
+   "arquivo": "final/10455GL-AMB-01.png",
+   "md5": "fe3e107c5547747c2eb12e3da364daf6",
+   "tamanho": [
+    1024,
+    1024
+   ],
+   "md5_pixels": "73f5a33ce66b10d5eaab420b5cd263c7"
+  },
+  "caixa_detalhe": [
+   0,
+   43,
+   980,
+   1023
   ]
  },
  "10509CR-AMB-01": {
@@ -1435,13 +2532,15 @@
    "borda_cabo_px": 2.15,
    "borda_produto_px": 2.02
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10509CR-AMB-01.png",
-   "md5": "07d1eda148f3b1f2027b7fab1e48ff5c",
+   "md5": "f82d972aa41ead746bfc4dac56f21271",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "1c52981f978e81dece973e1c7ec954c0"
   },
   "caixa_detalhe": [
    124,
@@ -1499,13 +2598,15 @@
    "borda_cabo_px": 1.54,
    "borda_produto_px": 1.78
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10509CR-AMB-02.png",
-   "md5": "b42104d44c0d20ea65c50db50902ae06",
+   "md5": "895efb00e18ee0a4e142c759a1661087",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "04c2b3776a517041ed5d5f05a888d858"
   },
   "caixa_detalhe": [
    39,
@@ -1564,13 +2665,15 @@
    "borda_cabo_px": 1.76,
    "borda_produto_px": 1.26
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10509CR-AMB-03.png",
-   "md5": "1e5ebb59a17156d9c9b0e02c08ae6f26",
+   "md5": "900b61af6fb71596864941364e3c0b1e",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "bfbce6f74c6c0f0775808880387b0add"
   },
   "caixa_detalhe": [
    233,
@@ -1629,13 +2732,102 @@
    "borda_cabo_px": 1.63,
    "borda_produto_px": 1.09
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 79.8,
+     "croma": 28.6,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -1.2,
+     "croma_x": 1.42,
+     "n": 1598
+    },
+    "L40-55": {
+     "matiz": 83.1,
+     "croma": 32.2,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 0.2,
+     "croma_x": 1.17,
+     "n": 2680
+    },
+    "L55-70": {
+     "matiz": 87.2,
+     "croma": 41.6,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 1.9,
+     "croma_x": 1.2,
+     "n": 6444
+    },
+    "L70-85": {
+     "matiz": 89.6,
+     "croma": 48.3,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 1.2,
+     "croma_x": 1.21,
+     "n": 11697
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.6,
+     "croma": 21.1,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.3,
+     "croma_x": 1.04,
+     "n": 1584
+    },
+    "L40-55": {
+     "matiz": 82.5,
+     "croma": 27.0,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.3,
+     "croma_x": 0.98,
+     "n": 2657
+    },
+    "L55-70": {
+     "matiz": 85.6,
+     "croma": 34.6,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.4,
+     "croma_x": 1.0,
+     "n": 6405
+    },
+    "L70-85": {
+     "matiz": 88.4,
+     "croma": 39.9,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.0,
+     "n": 11685
+    }
+   },
+   "pixels": {
+    "mudados": 26230,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10509GL-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10509GL-AMB-01.png",
-   "md5": "242caf9ce35763dc64b7538e2e8f1be6",
+   "md5": "6fdbda60f84bf33932fcd1bd86edf5ce",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "a62a8792e2f42727e738e9fec0254651"
   },
   "caixa_detalhe": [
    233,
@@ -1694,13 +2886,102 @@
    "borda_cabo_px": 1.66,
    "borda_produto_px": 1.17
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 53.0,
+     "croma": 15.0,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -10.9,
+     "croma_x": 0.68,
+     "n": 1775
+    },
+    "L40-55": {
+     "matiz": 56.3,
+     "croma": 16.4,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -11.9,
+     "croma_x": 0.74,
+     "n": 2810
+    },
+    "L55-70": {
+     "matiz": 53.1,
+     "croma": 17.2,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -16.7,
+     "croma_x": 0.6,
+     "n": 2473
+    },
+    "L70-85": {
+     "matiz": 54.6,
+     "croma": 20.4,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -16.6,
+     "croma_x": 0.61,
+     "n": 15326
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 63.8,
+     "croma": 21.0,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.0,
+     "croma_x": 0.95,
+     "n": 1811
+    },
+    "L40-55": {
+     "matiz": 67.9,
+     "croma": 22.4,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.01,
+     "n": 2870
+    },
+    "L55-70": {
+     "matiz": 69.9,
+     "croma": 27.2,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": 0.1,
+     "croma_x": 0.94,
+     "n": 2571
+    },
+    "L70-85": {
+     "matiz": 71.2,
+     "croma": 33.3,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.0,
+     "n": 15467
+    }
+   },
+   "pixels": {
+    "mudados": 27558,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10509GL.RD-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10509GL.RD-AMB-01.png",
-   "md5": "215e555f2f3181ee76f6db12ee874f82",
+   "md5": "7d2736ac412f5b94fd087e406c543d4a",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "ead33cdd3125e1513e8ee54b3c421e02"
   },
   "caixa_detalhe": [
    233,
@@ -1758,13 +3039,15 @@
    "borda_cabo_px": 1.89,
    "borda_produto_px": 1.6
   },
+  "tom": null,
   "final": {
    "arquivo": "final/10554CR-AMB-01.png",
-   "md5": "e89c31e5c86a063072345862fe6d5558",
+   "md5": "ba7e73e859c7cc51653a0ad05a7966fc",
    "tamanho": [
     800,
     800
-   ]
+   ],
+   "md5_pixels": "6bc21138a3001c2abf3525be0b78e3ae"
   },
   "caixa_detalhe": [
    249,
@@ -1822,13 +3105,102 @@
    "borda_cabo_px": 2.4,
    "borda_produto_px": 4.5
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 73.7,
+     "croma": 33.1,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -7.3,
+     "croma_x": 1.64,
+     "n": 50256
+    },
+    "L40-55": {
+     "matiz": 81.8,
+     "croma": 40.2,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -1.0,
+     "croma_x": 1.46,
+     "n": 47679
+    },
+    "L55-70": {
+     "matiz": 88.4,
+     "croma": 33.0,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 3.2,
+     "croma_x": 0.95,
+     "n": 39201
+    },
+    "L70-85": {
+     "matiz": 94.9,
+     "croma": 24.6,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 6.5,
+     "croma_x": 0.62,
+     "n": 33933
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 79.7,
+     "croma": 20.3,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -1.2,
+     "croma_x": 1.01,
+     "n": 50258
+    },
+    "L40-55": {
+     "matiz": 82.7,
+     "croma": 28.5,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.1,
+     "croma_x": 1.03,
+     "n": 47679
+    },
+    "L55-70": {
+     "matiz": 85.6,
+     "croma": 35.0,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.4,
+     "croma_x": 1.01,
+     "n": 39185
+    },
+    "L70-85": {
+     "matiz": 88.8,
+     "croma": 38.3,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.5,
+     "croma_x": 0.96,
+     "n": 34447
+    }
+   },
+   "pixels": {
+    "mudados": 578380,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10554GL-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10554GL-AMB-01.png",
-   "md5": "9721ecaca44031ea2cf27f513dce32f2",
+   "md5": "fdfe976efeae1554b0d05626d5d29be3",
    "tamanho": [
     2048,
     2048
-   ]
+   ],
+   "md5_pixels": "9667e69a5ef6a1992aed90bb2d69d554"
   },
   "caixa_detalhe": [
    727,
@@ -1886,13 +3258,102 @@
    "borda_cabo_px": 2.03,
    "borda_produto_px": 3.89
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 68.1,
+     "croma": 36.8,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -12.8,
+     "croma_x": 1.83,
+     "n": 1686
+    },
+    "L40-55": {
+     "matiz": 83.4,
+     "croma": 34.9,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": 0.6,
+     "croma_x": 1.27,
+     "n": 6103
+    },
+    "L55-70": {
+     "matiz": 88.0,
+     "croma": 32.8,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 2.8,
+     "croma_x": 0.95,
+     "n": 74231
+    },
+    "L70-85": {
+     "matiz": 91.9,
+     "croma": 28.8,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 3.6,
+     "croma_x": 0.72,
+     "n": 115779
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.5,
+     "croma": 20.0,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.4,
+     "croma_x": 0.99,
+     "n": 1686
+    },
+    "L40-55": {
+     "matiz": 82.6,
+     "croma": 28.9,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.05,
+     "n": 6071
+    },
+    "L55-70": {
+     "matiz": 85.4,
+     "croma": 34.5,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.2,
+     "croma_x": 1.0,
+     "n": 74272
+    },
+    "L70-85": {
+     "matiz": 88.4,
+     "croma": 39.7,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.0,
+     "n": 115776
+    }
+   },
+   "pixels": {
+    "mudados": 239018,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10554GL-AMB-02.png"
+  },
   "final": {
    "arquivo": "final/10554GL-AMB-02.png",
-   "md5": "97a0217a668fed836955c264ffe955c2",
+   "md5": "a68eb7df930c5dabecd3e0fe03f9908f",
    "tamanho": [
     2048,
     2048
-   ]
+   ],
+   "md5_pixels": "2bc608924d144e0d892138e949efdd33"
   },
   "caixa_detalhe": [
    707,
@@ -1950,13 +3411,102 @@
    "borda_cabo_px": 2.69,
    "borda_produto_px": 4.19
   },
+  "tom": {
+   "acabamento": "gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 74.7,
+     "croma": 27.8,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -6.3,
+     "croma_x": 1.38,
+     "n": 29511
+    },
+    "L40-55": {
+     "matiz": 80.0,
+     "croma": 33.5,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -2.8,
+     "croma_x": 1.22,
+     "n": 48903
+    },
+    "L55-70": {
+     "matiz": 85.3,
+     "croma": 35.4,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.0,
+     "croma_x": 1.02,
+     "n": 350257
+    },
+    "L70-85": {
+     "matiz": 89.1,
+     "croma": 24.8,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.7,
+     "croma_x": 0.62,
+     "n": 18393
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 80.2,
+     "croma": 20.5,
+     "alvo_matiz": 80.9,
+     "alvo_croma": 20.2,
+     "desvio_matiz": -0.7,
+     "croma_x": 1.02,
+     "n": 29500
+    },
+    "L40-55": {
+     "matiz": 82.6,
+     "croma": 28.3,
+     "alvo_matiz": 82.8,
+     "alvo_croma": 27.5,
+     "desvio_matiz": -0.2,
+     "croma_x": 1.03,
+     "n": 48699
+    },
+    "L55-70": {
+     "matiz": 85.3,
+     "croma": 36.6,
+     "alvo_matiz": 85.3,
+     "alvo_croma": 34.7,
+     "desvio_matiz": 0.1,
+     "croma_x": 1.06,
+     "n": 350431
+    },
+    "L70-85": {
+     "matiz": 88.5,
+     "croma": 37.8,
+     "alvo_matiz": 88.3,
+     "alvo_croma": 39.9,
+     "desvio_matiz": 0.1,
+     "croma_x": 0.95,
+     "n": 18931
+    }
+   },
+   "pixels": {
+    "mudados": 466938,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10554GL-DET-01.png"
+  },
   "final": {
    "arquivo": "final/10554GL-DET-01.png",
-   "md5": "d5ee4b8cfd348fdcd7e7e836a3d153b3",
+   "md5": "fdeaa32081d6c1f0063b6ac36fb2e6bf",
    "tamanho": [
     2048,
     2048
-   ]
+   ],
+   "md5_pixels": "1a4fabe7e502b5152c00d38f77f05dac"
   },
   "caixa_detalhe": [
    471,
@@ -2015,13 +3565,102 @@
    "borda_cabo_px": 3.57,
    "borda_produto_px": 4.85
   },
+  "tom": {
+   "acabamento": "red gold",
+   "metodo": "LCh por faixa de L*, só no metal (tom/corrigir.py), sem IA",
+   "antes": {
+    "L20-40": {
+     "matiz": 48.7,
+     "croma": 22.7,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -15.1,
+     "croma_x": 1.02,
+     "n": 18787
+    },
+    "L40-55": {
+     "matiz": 51.8,
+     "croma": 22.0,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -16.4,
+     "croma_x": 0.99,
+     "n": 266630
+    },
+    "L55-70": {
+     "matiz": 55.8,
+     "croma": 17.7,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -14.0,
+     "croma_x": 0.61,
+     "n": 19257
+    },
+    "L70-85": {
+     "matiz": 62.8,
+     "croma": 12.5,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -8.3,
+     "croma_x": 0.37,
+     "n": 77409
+    }
+   },
+   "depois": {
+    "L20-40": {
+     "matiz": 64.2,
+     "croma": 21.1,
+     "alvo_matiz": 63.8,
+     "alvo_croma": 22.2,
+     "desvio_matiz": 0.4,
+     "croma_x": 0.95,
+     "n": 18780
+    },
+    "L40-55": {
+     "matiz": 67.8,
+     "croma": 23.2,
+     "alvo_matiz": 68.1,
+     "alvo_croma": 22.2,
+     "desvio_matiz": -0.3,
+     "croma_x": 1.05,
+     "n": 266613
+    },
+    "L55-70": {
+     "matiz": 69.8,
+     "croma": 28.3,
+     "alvo_matiz": 69.8,
+     "alvo_croma": 28.8,
+     "desvio_matiz": -0.0,
+     "croma_x": 0.98,
+     "n": 19256
+    },
+    "L70-85": {
+     "matiz": 71.1,
+     "croma": 33.5,
+     "alvo_matiz": 71.1,
+     "alvo_croma": 33.3,
+     "desvio_matiz": -0.0,
+     "croma_x": 1.0,
+     "n": 78291
+    }
+   },
+   "pixels": {
+    "mudados": 527894,
+    "fora_produto": 0,
+    "reflexo_tampo": 0,
+    "cabeca": 0,
+    "fio": 0
+   },
+   "sem_tom": "final/_sem-tom/10554GL.RD-AMB-01.png"
+  },
   "final": {
    "arquivo": "final/10554GL.RD-AMB-01.png",
-   "md5": "4936e55811fad14715221d8c6d234694",
+   "md5": "979622aa3f19494a3ea34fabc55cccb0",
    "tamanho": [
     2048,
     2048
-   ]
+   ],
+   "md5_pixels": "1cfdf41e73ceb529f410e240ccafec08"
   },
   "caixa_detalhe": [
    733,

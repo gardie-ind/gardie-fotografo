@@ -1,7 +1,8 @@
-# Fio real e "gardie" a laser nas ambientadas LUX publicadas
+# Fio real, "gardie" a laser e tom do metal nas ambientadas LUX publicadas
 
-Lote 2026-11-12, pedido do Thiago: "Precisamos colocar o fio nas fotos
-ambientadas que já existem e o Gardie gravado à laser".
+Lote 2026-11-12, pedidos do Thiago: "Precisamos colocar o fio nas fotos
+ambientadas que já existem e o Gardie gravado à laser" e, no mesmo dia,
+"Consegue ajustar os tons dos espelhos coloridos também?".
 
 ## Resultado
 
@@ -16,16 +17,22 @@ Visage 10509 e Flex 10554. A Lumière ficou fora.
 - **7 reprovadas**: estão publicadas, mas não passam no critério, por defeito
   do produto que já estava na foto. Não retoquei nenhuma. O motivo medido
   está abaixo, e a prancha é `reprovadas.png`.
-- **3 sem nada a fazer**:
+- **3 sem fio nem logo a fazer**:
   - 10455CR-AMB-01 e 10455GL-AMB-01 já têm o logo e o fio real (aprovadas em
-    22/10);
+    22/10). A 10455GL-AMB-01 entrou no lote como **M4** só pelo tom do gold;
   - 10288CR-DET-01 não mostra o vidro com o logo nem o fio.
+- **18 coloridas no tom aprovado**: 11 gold (incluindo a M4) e 7 red gold.
+  As reprovadas ficaram como estão. Ver "Tom do gold e do red gold" abaixo.
+
+Ao todo, `final/` tem 33 fotos: as 32 que passaram e a M4.
 
 Nada foi gerado por IA no produto:
 - o fio sai do `ferramentas/cabo_real.py`, que desenha um cilindro branco com
   a luz e a cor da cena e não toca nos pixels do espelho;
 - o logo é o mesmo "gardie" a laser das stills, na cor do anel (aceso) ou
-  cinza escuro (LED apagado).
+  cinza escuro (LED apagado);
+- o tom troca só a cor dos pixels do metal (`ferramentas/tom/corrigir.py`),
+  mantendo a luz e o desenho de cada pixel.
 
 **Aviso:** a chave do fal no ambiente devolveu 401 (recusada). As máscaras do
 produto (BiRefNet, que só recorta e não muda pixel) saíram pelo conector do
@@ -42,8 +49,14 @@ Por modelo, uma letra (C, R, M, V, F), duas pranchas:
 
 O arquivo final de cada rótulo é `final/<ID>.png`, com o mesmo ID da foto
 canônica do site. O `mapa.json` liga rótulo e ID. O `manifesto.json` guarda,
-por foto, o original (link do CDN e md5), o logo, a conferência e o md5 do
-arquivo final.
+por foto, o original (link do CDN e md5), o logo, a conferência, o tom antes e
+depois (nas coloridas) e o md5 do arquivo final. A pasta do projeto acrescenta
+um bloco de procedência ao PNG, sem mudar pixel: o `md5` é do arquivo como
+está na pasta, e o `md5_pixels` confere só os pixels.
+
+Para o tom, `tons-gold.png` e `tons-red-gold.png` mostram, por foto, a still
+aprovada do mesmo acabamento, o antes e o depois. As versões só com o fio e o
+logo, sem o tom, ficaram em `final/_sem-tom/`.
 
 ### Classique Lux 10202 (C)
 
@@ -76,6 +89,7 @@ arquivo final.
 | M1 | 10455CR-AMB-02 | Só o logo: o fio da foto já segue a rota real (vão, atrás do anel, ao lado do pivô, atrás dos braços) e ficou. Vidro ÷ difusor dá 0,88, contra 0,79 a 0,85 nas outras Mobile: o difusor está mais fino |
 | M2 | 10455GL.RD-AMB-01 | Fio pendurado: aparece no vão entre a alça do garfo e a cabeça e desce pela parede |
 | M3 | 10455GL.RD-DET-01 | Igual à M2, com o LED apagado (logo cinza escuro) |
+| M4 | 10455GL-AMB-01 | Só o tom do gold: o fio e o logo já estavam (22/10) |
 
 ### Visage Lux 10509 (V)
 
@@ -142,10 +156,48 @@ Duas medidas estão sem regra no guia:
 Depois do seu veredito, registro as duas no `placar.md` e no
 `guia/criterios.md`.
 
+## Tom do gold e do red gold
+
+Medi o tom do metal em cada foto colorida, por faixa de luz (L* 20-40, 40-55,
+55-70 e 70-85), contra o tom aprovado do acabamento (`acabamentos.py`, o mesmo
+das stills; critério b). O tom de referência é a mediana da matiz e do croma
+dos pixels do metal em cada faixa.
+
+| | Antes | Depois |
+|---|---|---|
+| Red gold (7) | Matiz 8° a 26° abaixo do aprovado (puxado para o rosa). Croma de 0,37 a 0,73 do aprovado nas faixas claras | Matiz a no máximo 1,2° do aprovado. Croma de 0,94 a 1,06 |
+| Gold (11) | Faixas escuras até 1,83 vez mais saturadas, claras até 0,62. Matiz de -13° a +8° | Matiz a no máximo 1,2°. Croma de 0,94 a 1,06 |
+
+A tolerância do critério é ±2,5° de matiz e 0,85 a 1,15 de croma. Antes,
+nenhuma das 18 passava em todas as faixas; depois, passam todas, com folga.
+
+Como foi feito, sem IA: cada pixel do metal guarda a luminosidade e a
+variação de cor dele; só a matiz gira e o croma escala, por faixa de luz, até
+a mediana bater com o aprovado. O que mudou, conferido pixel a pixel:
+- fora do produto, nada (0 pixel), menos em R9 e R10;
+- R9 e R10: o tampo polido reflete a base. O reflexo também foi acertado
+  (37 mil e 49 mil pixels), senão a base ficaria dourada sobre um reflexo
+  rosa;
+- dentro do anel de luz e do vidro, nada;
+- no fio, nada;
+- carcaça branca e anel de LED (Classique e Visage) ficaram como estavam.
+
+No gold a mudança é sutil (tira a saturação a mais das sombras). No red gold
+ela se vê: as fotos publicadas estão rosa, e as stills aprovadas não.
+
+**Contraponto:** em 09/11 você escolheu o "tom do site" para os PDFs, contra o
+red gold retocado. Aqui a medida mostra que o tom do site é o que está fora do
+aprovado. Se você aprovar estas, o site passa a mostrar o tom aprovado, e o
+que usa a foto do site segue junto. Se preferir o tom de hoje em alguma, use a
+de `final/_sem-tom/` (fio e logo, sem o tom).
+
 ## O que preciso de você
 
 1. **Veredito** por rótulo, ou só as exceções ("publicaria tudo, menos V3").
-2. **As 7 reprovadas**: tiro do site, ou ficam até haver substitutas?
+   Vale para o fio, o logo e o tom juntos; se quiser alguma sem o tom, diga
+   qual.
+2. **As 7 reprovadas**: tiro do site, ou ficam até haver substitutas? Não
+   mexi no tom delas.
 
 Com o veredito, monto um zip só com as aprovadas, com os nomes `<ID>.png`.
 Você solta os arquivos na pasta Fotos canônicas e o robô troca no site.
