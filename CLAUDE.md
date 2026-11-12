@@ -119,6 +119,10 @@ qualquer que seja a idade. Antes de apagar, o que precisa durar vai para o
 Nome de arquivo aprovado: kebab-case, sem acento, no padrão
 `espelho-de-aumento-<tipo>-<modelo>-<acabamento>-gardie-<n>.png`.
 Exemplo: `aprovadas/10202CR/espelho-de-aumento-mesa-led-classique-lux-cromado-gardie-1.png`.
+Foto do site que já tem ID canônico (`<SKU>-<TIPO>-<NN>`) leva o tipo e o
+número do ID no lugar do `<n>`: `10202GL.RD-DET-01` vira
+`aprovadas/10202GL.RD/espelho-de-aumento-mesa-led-classique-lux-red-gold-gardie-det-01.png`.
+Assim o nome não colide com o `<n>` de outro lote aberto.
 
 ## Tom com o Thiago
 
