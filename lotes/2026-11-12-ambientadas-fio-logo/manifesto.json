@@ -1,0 +1,2033 @@
+{
+ "10202CR-AMB-01": {
+  "rotulo": "C1",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202-1.png?v=1766765669",
+   "md5_cdn": "abd5e8ca16ded1bded407ed6975e97e9",
+   "arquivo": "originais/10202CR-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    380.14,
+    370.45,
+    115.61,
+    131.05,
+    75.06
+   ],
+   "externa": [
+    380.02,
+    369.04,
+    141.09,
+    161.0,
+    75.36
+   ],
+   "mm_px": 0.63045,
+   "raio_espelhado_mm": 82.62,
+   "psi": -73.18,
+   "logo_centro": [
+    372.7,
+    477.0
+   ],
+   "logo_largura_px": 31.7,
+   "cor": [
+    250.0,
+    250.0,
+    240.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.533,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "253/253",
+   "borda_cabo_px": 2.5,
+   "borda_produto_px": 1.36
+  },
+  "final": {
+   "arquivo": "final/10202CR-AMB-01.png",
+   "md5": "fc7d051e94ea2ed7943ea037d6535a5f",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   0,
+   306,
+   493,
+   799
+  ]
+ },
+ "10202CR-AMB-02": {
+  "rotulo": "C2",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202-3.png?v=1766765669",
+   "md5_cdn": "930b048edc526e4a57f50a490352d7b0",
+   "arquivo": "originais/10202CR-AMB-02.png"
+  },
+  "logo": {
+   "interna": [
+    201.97,
+    206.64,
+    79.52,
+    95.28,
+    130.5
+   ],
+   "externa": [
+    202.99,
+    204.58,
+    96.86,
+    117.65,
+    130.4
+   ],
+   "mm_px": 0.86276,
+   "raio_espelhado_mm": 82.2,
+   "psi": -135.66,
+   "logo_centro": [
+    216.3,
+    285.6
+   ],
+   "logo_largura_px": 23.2,
+   "cor": [
+    247.0,
+    244.0,
+    232.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.186,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "110/110",
+   "borda_cabo_px": 2.81,
+   "borda_produto_px": 1.96
+  },
+  "final": {
+   "arquivo": "final/10202CR-AMB-02.png",
+   "md5": "f8c779f33a0e6ad3cc103a5a5fdb6225",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   0,
+   190,
+   325,
+   515
+  ]
+ },
+ "10202CR-AMB-03": {
+  "rotulo": "C3",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202-2.png?v=1766765669",
+   "md5_cdn": "029d164c28c1a2cf70585eec1eb6457d",
+   "arquivo": "originais/10202CR-AMB-03.png"
+  },
+  "logo": {
+   "interna": [
+    419.38,
+    370.78,
+    123.74,
+    142.23,
+    52.99
+   ],
+   "externa": [
+    419.02,
+    369.43,
+    153.14,
+    177.76,
+    53.29
+   ],
+   "mm_px": 0.571,
+   "raio_espelhado_mm": 81.21,
+   "psi": -49.09,
+   "logo_centro": [
+    402.9,
+    489.9
+   ],
+   "logo_largura_px": 35.0,
+   "cor": [
+    250.0,
+    250.0,
+    240.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.533,
+   "prod_borda": 36,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "260/260",
+   "borda_cabo_px": 1.81,
+   "borda_produto_px": 1.28
+  },
+  "final": {
+   "arquivo": "final/10202CR-AMB-03.png",
+   "md5": "1514c99719f8949a9e8e3e9bfbd77852",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   324,
+   344,
+   779,
+   799
+  ]
+ },
+ "10202CR-DET-01": {
+  "rotulo": "C4",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202-4.png?v=1766765669",
+   "md5_cdn": "529fafcc7db006cfb2475ebfb118361d",
+   "arquivo": "originais/10202CR-DET-01.png"
+  },
+  "logo": {
+   "interna": [
+    161.9,
+    338.89,
+    240.76,
+    256.62,
+    64.17
+   ],
+   "externa": [
+    158.74,
+    339.51,
+    296.92,
+    320.59,
+    62.57
+   ],
+   "mm_px": 0.3166,
+   "raio_espelhado_mm": 81.24,
+   "psi": -62.71,
+   "logo_centro": [
+    150.3,
+    561.1
+   ],
+   "logo_largura_px": 63.2,
+   "cor": [
+    252.0,
+    252.0,
+    244.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "sem cabo novo: cabo fora da vista (a base está fora do quadro)",
+  "conferencia": {},
+  "final": {
+   "arquivo": "final/10202CR-DET-01.png",
+   "md5": "817bd4f0400a064443b09f9dd65c7003",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   60,
+   521,
+   212,
+   673
+  ]
+ },
+ "10202CR-DET-02": {
+  "rotulo": "C5",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202-5.png?v=1766765669",
+   "md5_cdn": "54f1d6e895433206483f946a7bf64489",
+   "arquivo": "originais/10202CR-DET-02.png"
+  },
+  "logo": {
+   "interna": [
+    385.71,
+    9.92,
+    199.61,
+    262.12,
+    45.55
+   ],
+   "externa": [
+    385.32,
+    8.12,
+    243.6,
+    325.94,
+    46.19
+   ],
+   "mm_px": 0.31141,
+   "raio_espelhado_mm": 81.63,
+   "psi": -37.82,
+   "logo_centro": [
+    329.1,
+    221.7
+   ],
+   "logo_largura_px": 64.2,
+   "cor": [
+    249.0,
+    248.0,
+    244.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.643,
+   "prod_borda": 4,
+   "prod_solido": 10,
+   "vao": 1232,
+   "solido_max_dif": 6,
+   "vao_p95_desvio_parede": 16,
+   "corredor": "224/224",
+   "borda_cabo_px": 2.48,
+   "borda_produto_px": 1.73
+  },
+  "final": {
+   "arquivo": "final/10202CR-DET-02.png",
+   "md5": "aa210d28ab059bcfa9cedcd5ff0464ae",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   179,
+   117,
+   799,
+   737
+  ]
+ },
+ "10202GL-AMB-01": {
+  "rotulo": "C6",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202GL_-_01.png?v=1766765669",
+   "md5_cdn": "3b4b868a98afa8edc0ba4778c92476fe",
+   "arquivo": "originais/10202GL-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    447.5,
+    357.31,
+    134.23,
+    155.21,
+    52.9
+   ],
+   "externa": [
+    446.35,
+    355.27,
+    164.12,
+    191.0,
+    53.02
+   ],
+   "mm_px": 0.53142,
+   "raio_espelhado_mm": 82.48,
+   "psi": -48.83,
+   "logo_centro": [
+    428.8,
+    487.1
+   ],
+   "logo_largura_px": 37.6,
+   "cor": [
+    250.0,
+    249.0,
+    245.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.351,
+   "prod_borda": 36,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "168/168",
+   "borda_cabo_px": 1.74,
+   "borda_produto_px": 1.86
+  },
+  "final": {
+   "arquivo": "final/10202GL-AMB-01.png",
+   "md5": "5d202fc680125acbd809a7f128418e62",
+   "tamanho": [
+    808,
+    804
+   ]
+  },
+  "caixa_detalhe": [
+   355,
+   382,
+   772,
+   799
+  ]
+ },
+ "10202GL-AMB-02": {
+  "rotulo": "C7",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202GL_-_02.png?v=1766765669",
+   "md5_cdn": "ecf644ea705637a66590a2cbe0408552",
+   "arquivo": "originais/10202GL-AMB-02.png"
+  },
+  "logo": {
+   "interna": [
+    400.27,
+    314.59,
+    115.66,
+    154.72,
+    43.86
+   ],
+   "externa": [
+    398.7,
+    313.02,
+    142.89,
+    191.96,
+    44.15
+   ],
+   "mm_px": 0.52877,
+   "raio_espelhado_mm": 81.81,
+   "psi": -35.69,
+   "logo_centro": [
+    365.2,
+    439.8
+   ],
+   "logo_largura_px": 37.8,
+   "cor": [
+    253.0,
+    252.0,
+    247.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.645,
+   "prod_borda": 47,
+   "prod_solido": 1,
+   "vao": 0,
+   "solido_max_dif": 3,
+   "corredor": "298/298",
+   "borda_cabo_px": 2.28,
+   "borda_produto_px": 1.7
+  },
+  "final": {
+   "arquivo": "final/10202GL-AMB-02.png",
+   "md5": "8b11c0184c9988867a6632e82f01339a",
+   "tamanho": [
+    811,
+    807
+   ]
+  },
+  "caixa_detalhe": [
+   213,
+   209,
+   810,
+   806
+  ]
+ },
+ "10202GL-DET-01": {
+  "rotulo": "C8",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202GL_-_03.png?v=1766765669",
+   "md5_cdn": "56ab16567a3ed1c1d35d6e2918356e06",
+   "arquivo": "originais/10202GL-DET-01.png"
+  },
+  "logo": {
+   "interna": [
+    146.66,
+    298.59,
+    245.1,
+    333.08,
+    38.25
+   ],
+   "externa": [
+    146.38,
+    284.94,
+    306.73,
+    415.1,
+    36.59
+   ],
+   "mm_px": 0.24452,
+   "raio_espelhado_mm": 81.44,
+   "psi": -30.12,
+   "logo_centro": [
+    72.1,
+    574.2
+   ],
+   "logo_largura_px": 81.8,
+   "cor": [
+    245.0,
+    245.0,
+    245.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.408,
+   "prod_borda": 90,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "139/139",
+   "borda_cabo_px": 2.73,
+   "borda_produto_px": 2.59
+  },
+  "final": {
+   "arquivo": "final/10202GL-DET-01.png",
+   "md5": "33468710b399dae58f60ed8cba11b868",
+   "tamanho": [
+    811,
+    809
+   ]
+  },
+  "caixa_detalhe": [
+   0,
+   424,
+   384,
+   808
+  ]
+ },
+ "10202GL.RD-DET-01": {
+  "rotulo": "C9",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10202GL.RD_-_1.png?v=1766765669",
+   "md5_cdn": "de6657e1c909502f01f46ca87f57627c",
+   "arquivo": "originais/10202GL.RD-DET-01.png"
+  },
+  "logo": {
+   "interna": [
+    397.29,
+    386.41,
+    189.97,
+    260.25,
+    41.69
+   ],
+   "externa": [
+    394.75,
+    384.58,
+    235.36,
+    324.76,
+    41.31
+   ],
+   "mm_px": 0.31254,
+   "raio_espelhado_mm": 81.34,
+   "psi": -33.03,
+   "logo_centro": [
+    335.5,
+    597.6
+   ],
+   "logo_largura_px": 64.0,
+   "cor": [
+    252.0,
+    251.0,
+    245.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.385,
+   "prod_borda": 70,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "158/158",
+   "borda_cabo_px": 1.97,
+   "borda_produto_px": 1.71
+  },
+  "final": {
+   "arquivo": "final/10202GL.RD-DET-01.png",
+   "md5": "916784e5c785085d08fc38c8c912f16f",
+   "tamanho": [
+    808,
+    808
+   ]
+  },
+  "caixa_detalhe": [
+   231,
+   442,
+   596,
+   807
+  ]
+ },
+ "10288CR-AMB-01": {
+  "rotulo": "R1",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288-4.png?v=1766526877",
+   "md5_cdn": "05305572b247d302eb5d065814565184",
+   "arquivo": "originais/10288CR-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    330.49,
+    289.86,
+    135.94,
+    146.3,
+    115.66
+   ],
+   "externa": [
+    330.64,
+    288.79,
+    170.07,
+    183.92,
+    115.15
+   ],
+   "mm_px": 0.41322,
+   "raio_espelhado_mm": 60.45,
+   "psi": -117.34,
+   "logo_centro": [
+    337.8,
+    411.3
+   ],
+   "logo_largura_px": 48.4,
+   "cor": [
+    249.0,
+    247.0,
+    238.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.824,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "349/349",
+   "borda_cabo_px": 2.1,
+   "borda_produto_px": 1.78
+  },
+  "final": {
+   "arquivo": "final/10288CR-AMB-01.png",
+   "md5": "c2ac7f027461d301e041128ce3ed3440",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   194,
+   194,
+   799,
+   799
+  ]
+ },
+ "10288CR-AMB-02": {
+  "rotulo": "R2",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288-5.png?v=1766526877",
+   "md5_cdn": "498244797d827ac0a678f53b4681c3a0",
+   "arquivo": "originais/10288CR-AMB-02.png"
+  },
+  "logo": {
+   "interna": [
+    384.58,
+    312.54,
+    97.6,
+    117.16,
+    55.83
+   ],
+   "externa": [
+    384.48,
+    311.77,
+    120.71,
+    145.99,
+    56.13
+   ],
+   "mm_px": 0.52058,
+   "raio_espelhado_mm": 60.99,
+   "psi": -50.83,
+   "logo_centro": [
+    368.1,
+    404.4
+   ],
+   "logo_largura_px": 38.4,
+   "cor": [
+    249.0,
+    247.0,
+    235.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.3,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "140/140",
+   "borda_cabo_px": 2.83,
+   "borda_produto_px": 1.63
+  },
+  "final": {
+   "arquivo": "final/10288CR-AMB-02.png",
+   "md5": "1f73a0186b2b0f4ed98ac462f258af7d",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   114,
+   358,
+   425,
+   669
+  ]
+ },
+ "10288CR-AMB-03": {
+  "rotulo": "R3",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288-2.png?v=1766526877",
+   "md5_cdn": "8bb69bc79eb0c95db965fbac9cec209c",
+   "arquivo": "originais/10288CR-AMB-03.png"
+  },
+  "logo": {
+   "interna": [
+    367.61,
+    327.81,
+    91.5,
+    110.68,
+    132.37
+   ],
+   "externa": [
+    368.01,
+    326.64,
+    113.52,
+    137.9,
+    132.25
+   ],
+   "mm_px": 0.55114,
+   "raio_espelhado_mm": 61.0,
+   "psi": -137.81,
+   "logo_centro": [
+    384.5,
+    416.6
+   ],
+   "logo_largura_px": 36.3,
+   "cor": [
+    251.0,
+    249.0,
+    237.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.559,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "236/236",
+   "borda_cabo_px": 2.12,
+   "borda_produto_px": 1.84
+  },
+  "final": {
+   "arquivo": "final/10288CR-AMB-03.png",
+   "md5": "776f5cce4bb30f49399837abfd7ce5b4",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   249,
+   309,
+   739,
+   799
+  ]
+ },
+ "10288CR-AMB-04": {
+  "rotulo": "R4",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288-1.png?v=1766526877",
+   "md5_cdn": "aeac16ffe284c031340dc7d97060e050",
+   "arquivo": "originais/10288CR-AMB-04.png"
+  },
+  "logo": {
+   "interna": [
+    494.02,
+    290.29,
+    136.35,
+    149.14,
+    55.35
+   ],
+   "externa": [
+    494.75,
+    289.76,
+    169.41,
+    185.25,
+    55.25
+   ],
+   "mm_px": 0.41025,
+   "raio_espelhado_mm": 61.18,
+   "psi": -52.91,
+   "logo_centro": [
+    483.3,
+    414.3
+   ],
+   "logo_largura_px": 48.8,
+   "cor": [
+    249.0,
+    250.0,
+    244.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.401,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "166/166",
+   "borda_cabo_px": 2.72,
+   "borda_produto_px": 1.57
+  },
+  "final": {
+   "arquivo": "final/10288CR-AMB-04.png",
+   "md5": "74b6a0be512e980e018aca0f0102189e",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   354,
+   342,
+   799,
+   787
+  ]
+ },
+ "10288CR-AMB-05": {
+  "rotulo": "R5",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/Royale_Lux_ON.jpg?v=1754337995",
+   "md5_cdn": "5709e00700a9eb6db4d958488a80fdc5",
+   "arquivo": "originais/10288CR-AMB-05.png"
+  },
+  "logo": {
+   "interna": [
+    968.1,
+    1006.88,
+    374.4,
+    496.49,
+    145.55
+   ],
+   "externa": [
+    967.09,
+    990.37,
+    493.95,
+    649.59,
+    144.68
+   ],
+   "mm_px": 0.117,
+   "raio_espelhado_mm": 58.09,
+   "psi": -152.65,
+   "logo_centro": [
+    1062.3,
+    1410.5
+   ],
+   "logo_largura_px": 170.9,
+   "cor": [
+    253.0,
+    230.0,
+    196.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "sem cabo novo: foto real: o cabo e a alça já são os de verdade",
+  "conferencia": {},
+  "final": {
+   "arquivo": "final/10288CR-AMB-05.png",
+   "md5": "f01bf08cd4d3c064fe7b1f1f8734b243",
+   "tamanho": [
+    2912,
+    2912
+   ]
+  },
+  "caixa_detalhe": [
+   889,
+   1239,
+   1229,
+   1579
+  ]
+ },
+ "10288GL-AMB-01": {
+  "rotulo": "R6",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288GL-1.webp?v=1766526877",
+   "md5_cdn": "f1daa90587633cac7aabdffa9db4048a",
+   "arquivo": "originais/10288GL-AMB-01.webp"
+  },
+  "logo": {
+   "interna": [
+    438.73,
+    329.07,
+    116.93,
+    136.02,
+    50.49
+   ],
+   "externa": [
+    438.84,
+    327.89,
+    145.55,
+    169.38,
+    50.9
+   ],
+   "mm_px": 0.4487,
+   "raio_espelhado_mm": 61.03,
+   "psi": -46.19,
+   "logo_centro": [
+    422.0,
+    439.3
+   ],
+   "logo_largura_px": 44.6,
+   "cor": [
+    253.0,
+    250.0,
+    239.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.557,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "230/230",
+   "borda_cabo_px": 2.36,
+   "borda_produto_px": 1.59
+  },
+  "final": {
+   "arquivo": "final/10288GL-AMB-01.png",
+   "md5": "344bde92a1792cc4295c7b7865795e6f",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   290,
+   290,
+   799,
+   799
+  ]
+ },
+ "10288GL-AMB-02": {
+  "rotulo": "R7",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288GL-2.webp?v=1766526877",
+   "md5_cdn": "1f6bc29da49dd3997714d4c098039a95",
+   "arquivo": "originais/10288GL-AMB-02.webp"
+  },
+  "logo": {
+   "interna": [
+    462.5,
+    278.07,
+    129.8,
+    152.16,
+    48.89
+   ],
+   "externa": [
+    462.18,
+    276.35,
+    161.59,
+    189.84,
+    49.65
+   ],
+   "mm_px": 0.40033,
+   "raio_espelhado_mm": 60.91,
+   "psi": -44.35,
+   "logo_centro": [
+    442.8,
+    401.4
+   ],
+   "logo_largura_px": 50.0,
+   "cor": [
+    248.0,
+    243.0,
+    234.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.482,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "190/190",
+   "borda_cabo_px": 2.43,
+   "borda_produto_px": 1.83
+  },
+  "final": {
+   "arquivo": "final/10288GL-AMB-02.png",
+   "md5": "2894a714d67d67aac31b49f4a86b44bf",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   312,
+   312,
+   799,
+   799
+  ]
+ },
+ "10288GL-AMB-03": {
+  "rotulo": "R8",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288GL-3.webp?v=1766526877",
+   "md5_cdn": "fec9bca03cf04cf88956f148313a576e",
+   "arquivo": "originais/10288GL-AMB-03.webp"
+  },
+  "logo": {
+   "interna": [
+    395.16,
+    289.1,
+    117.08,
+    149.18,
+    44.31
+   ],
+   "externa": [
+    394.62,
+    287.17,
+    145.12,
+    186.16,
+    44.46
+   ],
+   "mm_px": 0.40824,
+   "raio_espelhado_mm": 60.9,
+   "psi": -37.46,
+   "logo_centro": [
+    367.2,
+    407.6
+   ],
+   "logo_largura_px": 49.0,
+   "cor": [
+    247.0,
+    243.0,
+    234.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.65,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "257/257",
+   "borda_cabo_px": 2.48,
+   "borda_produto_px": 2.41
+  },
+  "final": {
+   "arquivo": "final/10288GL-AMB-03.png",
+   "md5": "6346b3f3b0d80afa7201bf25cb6cab6e",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   223,
+   223,
+   800,
+   800
+  ]
+ },
+ "10288GL.RD-AMB-01": {
+  "rotulo": "R9",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288GL.RD-2.png?v=1766526877",
+   "md5_cdn": "64de0061b1fcdc421db4bd7176fa565e",
+   "arquivo": "originais/10288GL.RD-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    1015.02,
+    780.9,
+    252.91,
+    337.67,
+    40.43
+   ],
+   "externa": [
+    1010.95,
+    780.16,
+    317.17,
+    425.54,
+    40.76
+   ],
+   "mm_px": 0.17859,
+   "raio_espelhado_mm": 60.31,
+   "psi": -32.54,
+   "logo_centro": [
+    943.7,
+    1049.3
+   ],
+   "logo_largura_px": 112.0,
+   "cor": [
+    252.0,
+    248.0,
+    236.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.809,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "687/687",
+   "borda_cabo_px": 2.68,
+   "borda_produto_px": 5.08
+  },
+  "final": {
+   "arquivo": "final/10288GL.RD-AMB-01.png",
+   "md5": "97083d776bd474142398bc3a11fd2680",
+   "tamanho": [
+    2048,
+    2048
+   ]
+  },
+  "caixa_detalhe": [
+   580,
+   580,
+   2047,
+   2047
+  ]
+ },
+ "10288GL.RD-DET-01": {
+  "rotulo": "R10",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10288GL.RD-1.png?v=1766526877",
+   "md5_cdn": "4bd2ef22ee1fb488c2756f63b6aafd4d",
+   "arquivo": "originais/10288GL.RD-DET-01.png"
+  },
+  "logo": {
+   "interna": [
+    926.53,
+    -187.05,
+    496.0,
+    585.65,
+    37.12
+   ],
+   "externa": [
+    925.73,
+    -157.49,
+    585.49,
+    700.42,
+    43.62
+   ],
+   "mm_px": 0.10851,
+   "raio_espelhado_mm": 63.55,
+   "psi": -32.66,
+   "logo_centro": [
+    852.0,
+    304.6
+   ],
+   "logo_largura_px": 184.3,
+   "cor": [
+    247.0,
+    241.0,
+    234.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.545,
+   "prod_borda": 0,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "478/478",
+   "borda_cabo_px": 3.98,
+   "borda_produto_px": 5.31
+  },
+  "final": {
+   "arquivo": "final/10288GL.RD-DET-01.png",
+   "md5": "72608e59b89bb95ba2387e56d8e85c71",
+   "tamanho": [
+    2048,
+    2048
+   ]
+  },
+  "caixa_detalhe": [
+   415,
+   127,
+   2047,
+   1759
+  ]
+ },
+ "10455CR-AMB-02": {
+  "rotulo": "M1",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/espelho-de-aumento-parede-led-mobile-lux-cromado-gardie-2.png?v=1783706518",
+   "md5_cdn": "b94348dd531f48d31b673cff4198bec2",
+   "arquivo": "originais/10455CR-AMB-02.png"
+  },
+  "logo": {
+   "interna": [
+    431.73,
+    25.19,
+    167.43,
+    189.29,
+    171.52
+   ],
+   "externa": [
+    432.63,
+    33.2,
+    208.73,
+    215.15,
+    154.67
+   ],
+   "mm_px": 0.35324,
+   "raio_espelhado_mm": 66.86,
+   "psi": -172.49,
+   "logo_centro": [
+    437.1,
+    193.6
+   ],
+   "logo_largura_px": 56.6,
+   "cor": [
+    246.0,
+    246.0,
+    246.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "sem cabo novo: o cabo que já estava na foto segue a rota real (vão → atrás do anel → ao lado do pivô → atrás dos braços); ficou",
+  "conferencia": {},
+  "final": {
+   "arquivo": "final/10455CR-AMB-02.png",
+   "md5": "ee3f63664a765efdcecddb2eebd74898",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   381,
+   152,
+   494,
+   265
+  ]
+ },
+ "10455GL.RD-AMB-01": {
+  "rotulo": "M2",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10455GL.RD-2.png?v=1766526842",
+   "md5_cdn": "528243f3071f8faaef5c68073cce5c7e",
+   "arquivo": "originais/10455GL.RD-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    418.8,
+    301.25,
+    115.28,
+    121.72,
+    39.89
+   ],
+   "externa": [
+    418.44,
+    299.87,
+    146.16,
+    154.85,
+    40.43
+   ],
+   "mm_px": 0.49081,
+   "raio_espelhado_mm": 59.74,
+   "psi": -38.37,
+   "logo_centro": [
+    413.3,
+    406.0
+   ],
+   "logo_largura_px": 40.7,
+   "cor": [
+    255.0,
+    255.0,
+    255.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.368,
+   "prod_borda": 48,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "292/292",
+   "borda_cabo_px": 1.83,
+   "borda_produto_px": 2.44
+  },
+  "final": {
+   "arquivo": "final/10455GL.RD-AMB-01.png",
+   "md5": "dad3e5f694a2d282cb74b54971b826ff",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   148,
+   295,
+   652,
+   799
+  ]
+ },
+ "10455GL.RD-DET-01": {
+  "rotulo": "M3",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10455GL.RD-1.png?v=1766526842",
+   "md5_cdn": "9d944c2a733877480ae158e4ca10f31d",
+   "arquivo": "originais/10455GL.RD-DET-01.png"
+  },
+  "logo": {
+   "interna": [
+    435.53,
+    -23.9,
+    171.73,
+    210.24,
+    39.21
+   ],
+   "externa": [
+    436.11,
+    -6.64,
+    204.76,
+    248.72,
+    48.73
+   ],
+   "mm_px": 0.30556,
+   "raio_espelhado_mm": 64.24,
+   "psi": -33.68,
+   "logo_centro": [
+    402.9,
+    149.9
+   ],
+   "logo_largura_px": 65.5,
+   "cor": [
+    193.0,
+    194.0,
+    188.0
+   ],
+   "apagado_px": 0,
+   "estado": "desligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.974,
+   "prod_borda": 59,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "489/489",
+   "borda_cabo_px": 1.95,
+   "borda_produto_px": 2.28
+  },
+  "final": {
+   "arquivo": "final/10455GL.RD-DET-01.png",
+   "md5": "d652306a13700a64bea3a620ca7117aa",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   0,
+   1,
+   798,
+   799
+  ]
+ },
+ "10509CR-AMB-01": {
+  "rotulo": "V1",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10509-2.png?v=1766525768",
+   "md5_cdn": "bbc97055617511fe5c7c99edc58171d9",
+   "arquivo": "originais/10509CR-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    392.35,
+    401.62,
+    117.41,
+    206.12,
+    169.81
+   ],
+   "externa": [
+    398.84,
+    403.17,
+    137.44,
+    249.85,
+    170.3
+   ],
+   "mm_px": 0.40625,
+   "raio_espelhado_mm": 83.73,
+   "psi": -174.15,
+   "logo_centro": [
+    414.7,
+    588.0
+   ],
+   "logo_largura_px": 49.2,
+   "cor": [
+    242.0,
+    238.0,
+    229.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 1.696,
+   "prod_borda": 24,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "208/208",
+   "borda_cabo_px": 2.15,
+   "borda_produto_px": 2.02
+  },
+  "final": {
+   "arquivo": "final/10509CR-AMB-01.png",
+   "md5": "07d1eda148f3b1f2027b7fab1e48ff5c",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   124,
+   426,
+   497,
+   799
+  ]
+ },
+ "10509CR-AMB-02": {
+  "rotulo": "V2",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10509-1.png?v=1766525768",
+   "md5_cdn": "9dbb455ce5abe88df7903430bf5d8ecc",
+   "arquivo": "originais/10509CR-AMB-02.png"
+  },
+  "logo": {
+   "interna": [
+    337.53,
+    241.58,
+    68.38,
+    99.2,
+    173.31
+   ],
+   "externa": [
+    337.85,
+    241.92,
+    84.0,
+    122.14,
+    173.11
+   ],
+   "mm_px": 0.83105,
+   "raio_espelhado_mm": 82.44,
+   "psi": -175.38,
+   "logo_centro": [
+    343.1,
+    331.8
+   ],
+   "logo_largura_px": 24.1,
+   "cor": [
+    247.0,
+    244.0,
+    232.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 1.995,
+   "prod_borda": 13,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "331/331",
+   "borda_cabo_px": 1.54,
+   "borda_produto_px": 1.78
+  },
+  "final": {
+   "arquivo": "final/10509CR-AMB-02.png",
+   "md5": "b42104d44c0d20ea65c50db50902ae06",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   39,
+   279,
+   491,
+   731
+  ]
+ },
+ "10509CR-AMB-03": {
+  "rotulo": "V3",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10509-3.png?v=1766525768",
+   "md5_cdn": "4a3d445615f04da773d10d7959c7d45e",
+   "arquivo": "originais/10509CR-AMB-03.png"
+  },
+  "logo": {
+   "interna": [
+    408.09,
+    408.06,
+    183.12,
+    183.54,
+    2.08
+   ],
+   "externa": [
+    407.52,
+    408.09,
+    227.32,
+    228.78,
+    0.17
+   ],
+   "mm_px": 0.44365,
+   "raio_espelhado_mm": 81.43,
+   "psi": -2.07,
+   "logo_centro": [
+    408.1,
+    575.3
+   ],
+   "logo_largura_px": 45.1,
+   "cor": [
+    253.0,
+    246.0,
+    238.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.971,
+   "prod_borda": 14,
+   "prod_solido": 1,
+   "vao": 0,
+   "solido_max_dif": 3,
+   "corredor": "146/146",
+   "borda_cabo_px": 1.76,
+   "borda_produto_px": 1.26
+  },
+  "final": {
+   "arquivo": "final/10509CR-AMB-03.png",
+   "md5": "1e5ebb59a17156d9c9b0e02c08ae6f26",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   233,
+   489,
+   543,
+   799
+  ]
+ },
+ "10509GL-AMB-01": {
+  "rotulo": "V4",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10509GL-1.png?v=1766525768",
+   "md5_cdn": "671ef2d5d448c4e68533594261a1a33e",
+   "arquivo": "originais/10509GL-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    408.08,
+    408.07,
+    183.12,
+    183.54,
+    2.76
+   ],
+   "externa": [
+    407.51,
+    407.98,
+    227.77,
+    229.12,
+    178.51
+   ],
+   "mm_px": 0.44301,
+   "raio_espelhado_mm": 81.31,
+   "psi": -2.76,
+   "logo_centro": [
+    408.0,
+    575.3
+   ],
+   "logo_largura_px": 45.1,
+   "cor": [
+    254.0,
+    246.0,
+    236.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.968,
+   "prod_borda": 15,
+   "prod_solido": 1,
+   "vao": 0,
+   "solido_max_dif": 3,
+   "corredor": "148/148",
+   "borda_cabo_px": 1.63,
+   "borda_produto_px": 1.09
+  },
+  "final": {
+   "arquivo": "final/10509GL-AMB-01.png",
+   "md5": "242caf9ce35763dc64b7538e2e8f1be6",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   233,
+   489,
+   543,
+   799
+  ]
+ },
+ "10509GL.RD-AMB-01": {
+  "rotulo": "V5",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10509GL.RD-1.png?v=1766525768",
+   "md5_cdn": "c5c530a8a3d415dbc584b4a0ede55975",
+   "arquivo": "originais/10509GL.RD-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    408.09,
+    408.06,
+    183.12,
+    183.54,
+    1.74
+   ],
+   "externa": [
+    407.09,
+    408.05,
+    227.71,
+    229.04,
+    176.04
+   ],
+   "mm_px": 0.44315,
+   "raio_espelhado_mm": 81.33,
+   "psi": -1.74,
+   "logo_centro": [
+    408.1,
+    575.3
+   ],
+   "logo_largura_px": 45.1,
+   "cor": [
+    254.0,
+    246.0,
+    236.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.977,
+   "prod_borda": 20,
+   "prod_solido": 1,
+   "vao": 0,
+   "solido_max_dif": 4,
+   "corredor": "147/147",
+   "borda_cabo_px": 1.66,
+   "borda_produto_px": 1.17
+  },
+  "final": {
+   "arquivo": "final/10509GL.RD-AMB-01.png",
+   "md5": "215e555f2f3181ee76f6db12ee874f82",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   233,
+   489,
+   543,
+   799
+  ]
+ },
+ "10554CR-AMB-01": {
+  "rotulo": "F1",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10554-2.png?v=1766524815",
+   "md5_cdn": "53d7e209449d7de9d2943e6e8f9a4f27",
+   "arquivo": "originais/10554CR-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    445.68,
+    276.51,
+    109.32,
+    110.77,
+    6.09
+   ],
+   "externa": [
+    445.92,
+    275.82,
+    138.02,
+    139.87,
+    4.99
+   ],
+   "mm_px": 0.7257,
+   "raio_espelhado_mm": 80.39,
+   "psi": -6.01,
+   "logo_centro": [
+    445.4,
+    377.3
+   ],
+   "logo_largura_px": 27.6,
+   "cor": [
+    247.0,
+    247.0,
+    247.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.191,
+   "prod_borda": 19,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "160/160",
+   "borda_cabo_px": 1.89,
+   "borda_produto_px": 1.6
+  },
+  "final": {
+   "arquivo": "final/10554CR-AMB-01.png",
+   "md5": "e89c31e5c86a063072345862fe6d5558",
+   "tamanho": [
+    800,
+    800
+   ]
+  },
+  "caixa_detalhe": [
+   249,
+   319,
+   564,
+   634
+  ]
+ },
+ "10554GL-AMB-01": {
+  "rotulo": "F2",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10554GL-1.png?v=1766524815",
+   "md5_cdn": "2f26ffe5e83d454c75faa077acf2d3cf",
+   "arquivo": "originais/10554GL-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    1376,
+    720,
+    380,
+    380,
+    0
+   ],
+   "externa": [
+    1355.5,
+    709,
+    482.5,
+    479,
+    0
+   ],
+   "mm_px": 0.21036,
+   "raio_espelhado_mm": 79.94,
+   "psi": 0.0,
+   "logo_centro": [
+    1376.0,
+    1065.7
+   ],
+   "logo_largura_px": 95.1,
+   "cor": [
+    251.0,
+    249.0,
+    245.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.245,
+   "prod_borda": 100,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "705/705",
+   "borda_cabo_px": 2.4,
+   "borda_produto_px": 4.5
+  },
+  "final": {
+   "arquivo": "final/10554GL-AMB-01.png",
+   "md5": "9721ecaca44031ea2cf27f513dce32f2",
+   "tamanho": [
+    2048,
+    2048
+   ]
+  },
+  "caixa_detalhe": [
+   727,
+   788,
+   1986,
+   2047
+  ]
+ },
+ "10554GL-AMB-02": {
+  "rotulo": "F3",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10554GL-3.png?v=1766524815",
+   "md5_cdn": "3a9dee0ef693bd187d3afd1adf317b35",
+   "arquivo": "originais/10554GL-AMB-02.png"
+  },
+  "logo": {
+   "interna": [
+    1134.76,
+    742.03,
+    260.43,
+    276.72,
+    22.18
+   ],
+   "externa": [
+    1134.08,
+    741.28,
+    314.45,
+    330.23,
+    22.18
+   ],
+   "mm_px": 0.30736,
+   "raio_espelhado_mm": 85.05,
+   "psi": -21.0,
+   "logo_centro": [
+    1124.6,
+    993.2
+   ],
+   "logo_largura_px": 65.1,
+   "cor": [
+    246.0,
+    245.0,
+    235.0
+   ],
+   "apagado_px": 0,
+   "estado": "ligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.645,
+   "prod_borda": 117,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "873/873",
+   "borda_cabo_px": 2.03,
+   "borda_produto_px": 3.89
+  },
+  "final": {
+   "arquivo": "final/10554GL-AMB-02.png",
+   "md5": "97a0217a668fed836955c264ffe955c2",
+   "tamanho": [
+    2048,
+    2048
+   ]
+  },
+  "caixa_detalhe": [
+   707,
+   707,
+   2047,
+   2047
+  ]
+ },
+ "10554GL-DET-01": {
+  "rotulo": "F4",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10554GL-2.png?v=1766524815",
+   "md5_cdn": "2c444029deef0b0ce1eeedef64e22a8a",
+   "arquivo": "originais/10554GL-DET-01.png"
+  },
+  "logo": {
+   "interna": [
+    1726.05,
+    365.49,
+    422.73,
+    472.2,
+    158.77
+   ],
+   "externa": [
+    1695.37,
+    385.2,
+    495.33,
+    597.18,
+    143.13
+   ],
+   "mm_px": 0.16997,
+   "raio_espelhado_mm": 80.26,
+   "psi": -160.82,
+   "logo_centro": [
+    1755.2,
+    789.6
+   ],
+   "logo_largura_px": 117.7,
+   "cor": [
+    214.0,
+    220.0,
+    220.0
+   ],
+   "apagado_px": 0,
+   "estado": "desligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.428,
+   "prod_borda": 222,
+   "prod_solido": 0,
+   "vao": 0,
+   "corredor": "923/923",
+   "borda_cabo_px": 2.69,
+   "borda_produto_px": 4.19
+  },
+  "final": {
+   "arquivo": "final/10554GL-DET-01.png",
+   "md5": "d5ee4b8cfd348fdcd7e7e836a3d153b3",
+   "tamanho": [
+    2048,
+    2048
+   ]
+  },
+  "caixa_detalhe": [
+   471,
+   471,
+   2047,
+   2047
+  ]
+ },
+ "10554GL.RD-AMB-01": {
+  "rotulo": "F5",
+  "original": {
+   "url": "https://cdn.shopify.com/s/files/1/0609/9065/2519/files/10554GL.RD-2.png?v=1766524815",
+   "md5_cdn": "98e9f1ca663ee56ac59f9c60018a5fca",
+   "arquivo": "originais/10554GL.RD-AMB-01.png"
+  },
+  "logo": {
+   "interna": [
+    1387.4,
+    723.71,
+    360.96,
+    388.05,
+    162.77
+   ],
+   "externa": [
+    1406.12,
+    714.79,
+    473.85,
+    512.66,
+    159.68
+   ],
+   "mm_px": 0.19799,
+   "raio_espelhado_mm": 76.83,
+   "psi": -163.91,
+   "logo_centro": [
+    1400.9,
+    1073.2
+   ],
+   "logo_largura_px": 101.0,
+   "cor": [
+    146.0,
+    142.0,
+    137.0
+   ],
+   "apagado_px": 0,
+   "estado": "desligado",
+   "raios_usados": null
+  },
+  "cabo": "desenhado sem IA (cabo_real.py)",
+  "conferencia": {
+   "area_pct": 0.288,
+   "prod_borda": 194,
+   "prod_solido": 2,
+   "vao": 0,
+   "solido_max_dif": 3,
+   "corredor": "714/714",
+   "borda_cabo_px": 3.57,
+   "borda_produto_px": 4.85
+  },
+  "final": {
+   "arquivo": "final/10554GL.RD-AMB-01.png",
+   "md5": "4936e55811fad14715221d8c6d234694",
+   "tamanho": [
+    2048,
+    2048
+   ]
+  },
+  "caixa_detalhe": [
+   733,
+   796,
+   1984,
+   2047
+  ]
+ }
+}
