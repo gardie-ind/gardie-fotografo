@@ -23,8 +23,9 @@ Para usar, abra o Claude Code nesta pasta: a sessão já é o fotógrafo (veja
 
 ## Requisitos e credenciais
 
-Python 3 com `pip install pillow numpy` (e `imageio-ffmpeg` para extrair
-frames de vídeo).
+Python 3 com `pip install pillow numpy pymatting` (e `imageio-ffmpeg` para
+extrair frames de vídeo). O `pymatting` faz a borda da capa
+(`--borda matting`).
 
 As credenciais ficam fora do repositório, em `~/.config/gardie/` (no Windows,
 `%USERPROFILE%\.config\gardie\`):
@@ -72,6 +73,7 @@ receitas compatíveis com a montagem (`receitas/_LEIA.md`).
 | `--so-preparo` | só prepara e confere a capa, sem chamar API |
 | `--simular` | fluxo inteiro sem API, com imagens fictícias |
 | `--recorte birefnet` | recorte pelo fal, quando o recorte local falha |
+| `--borda binaria` | volta à borda antiga do recorte local (máscara suavizada). O padrão, `matting`, refaz 2 px de cada lado da borda na resolução da foto e tira dela o cinza do estúdio |
 | `--sem-preparo` | usa a referência como está (capa já conferida) |
 
 Exemplo, conferindo a capa antes de gastar:
