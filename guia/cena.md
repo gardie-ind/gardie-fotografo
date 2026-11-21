@@ -21,6 +21,13 @@
     causar incêndio.
 - **Luz perto do produto:** luz do dia, neutra. Luz âmbar forte faz o cromado
   parecer dourado.
+- **Metais da cena na cor do acabamento do espelho** (Thiago, 28/10/2026: "o
+  restante dos metais de banheiro devem seguir a mesma cor"). Torneira, ralo,
+  toalheiro, placa de arandela, bandeja, tampa de frasco, puxador: tudo no
+  acabamento do espelho. Espelho cromado com bandeja ou arandela em latão
+  reprova (`guia/criterios.md`, item s). Se a referência de ambiente já traz
+  um metal, escolha o acabamento do espelho por ele, ou troque o metal na
+  cena.
 - **Escala:** pelo menos um objeto de tamanho conhecido perto do produto, no
   mesmo plano (torneira, frasco, toalha dobrada, gaveta). É com ele que se
   confere a escala (`guia/criterios.md`, passo 4). Os closes dispensam.
@@ -37,6 +44,10 @@ referências obrigatórias são `classique-lux/IMG_0858`, `IMG_0891`,
 `IMG_1039`, `IMG_1151` e `classique-lux/frames-video/` (o frame de 8 s é o
 alvo). Nelas se confere a distância menor que 60 cm, o reflexo do rosto
 direito e ampliado e a escala produto × rosto.
+
+A pessoa nasce junto com o ambiente, na mesma imagem e com a mesma luz; o
+espelho do CAD é que vai por cima. Pessoa feita à parte e colada sobre um
+render ou uma placa de ambiente reprova (`guia/criterios.md`, item t).
 
 ## Física do reflexo (corrigir se der)
 
