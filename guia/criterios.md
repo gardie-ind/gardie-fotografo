@@ -35,6 +35,8 @@ confirmou. A classe de um item só muda com a palavra dele.
 | p. Still de catálogo (sem ambiente): o vidro não mostra mancha escura de reflexo. `ferramentas/medir_mancha_vidro.py`, no vidro a 8% da borda para dentro, dá no máximo 1% dos pixels com luminância sRGB abaixo de 60. Para limpar, só vale trocar o reflexo pelo da mesma foto retocada, registrada na still, mantendo a borda real do vidro e o metal da still (`placar.md` › Calibragem, 2026-10-30, Svelte 10479: vetada com 23%; as outras 7 stills sem LED, 0 a 0,1%) | VETO (Thiago) |
 | q. Peça lisa (canopla, base, aro) com reflexo liso: sem rechupe, amassado ou remendo dentro do reflexo. `ferramentas/medir_reflexo_liso.py`, numa caixa no miolo de um reflexo largo, longe das bordas da peça, dá ondulação (passa-faixa σ 4−16 px ÷ nível da caixa) de no máximo 0,02, em qualquer acabamento. Para corrigir, refaça o reflexo como a superfície mais lisa presa nos pixels em volta (`ferramentas/svelte_reflexo_liso.py`), nunca com IA (`placar.md` › Calibragem, 2026-11-03, Svelte 10479: a -2 vetada deu 0,036 a 0,070; a -3 refeita, 0,003 a 0,010) | VETO (Thiago); o limite de 0,02: padrão — calibrar |
 | r. Vidro refeito por IA sem reflexo inventado: a IA às vezes desenha no vidro um arco ou uma mancha grande de reflexo, que lê como cúpula. Na vista de frente, `ferramentas/medir_vidro_ia.py` dá a faixa de luminância do vidro (L* suavizado, p98 − p2, sem a caixa do logo) de no máximo 14. Para corrigir, sem IA nova, troque o vidro pelo de outra versão aprovada no mesmo enquadramento (`ferramentas/vidro_de.py`, com o nível igualado no miolo) (`placar.md` › Calibragem, 2026-11-19, Matte Black de frente: a vetada deu 16,4; as outras 4 aprovadas, 3,9 a 12,1; a corrigida, 3,9; o render, 2,2 a 3,2) | VETO (Thiago); o limite de 14: padrão — calibrar |
+| s. Metais da cena na cor do acabamento do espelho (`guia/cena.md` › Direção). No passo 8, liste cada objeto de metal visível (torneira, ralo, toalheiro, placa de arandela, bandeja, tampa de frasco, puxador) com a cor dele; um só de outra cor reprova. Com o cromo e o brushed nickel, nenhum metal amarelado (latão, dourado, cobre); com o gold e o red gold, nenhum prata; com o matte black, nenhum metal polido (`placar.md` › Calibragem, 2026-11-21, Lumière cromada na sala 9; a regra é do Thiago, de 28/10/2026) | VETO (Thiago) |
+| t. Pessoa colada: na cena com pessoa, ela e o ambiente têm a mesma luz. A pessoa faz sombra na parede ou na bancada, na direção da luz principal da cena (se a arandela e os objetos fazem sombra, ela também faz), e não tem brilho de contorno sem uma fonte de luz no quadro que o explique. Pessoa feita à parte e colada sobre um render ou uma placa de ambiente falha por construção: o acabamento por IA que mantém tudo no lugar não corrige (`placar.md` › Calibragem, 2026-11-21, modelo 9 na sala 9) | VETO (Thiago) |
 
 Liberdade criativa: cômodo, materiais, paleta, objetos de cena, hora do dia,
 lente, ângulo e enquadramento, desde que a, b, c, i e k continuem intactos.
@@ -128,7 +130,10 @@ fotos reais. Se uma foto real reprova, a faixa está errada.
    e a cabeça, as linhas que caem no corredor da rota do cabo; todas têm de
    mostrar cabo. Na 10455CR de 16/10, vetada, deu 0 de 82 linhas; na
    corrigida, 82 de 82 (`placar.md` › Calibragem, 2026-10-22).
-8. **Notas (g, h, j, m):** logo, reflexo, ambiente e outros espelhos.
+8. **Notas (g, h, j, m, s, t):** logo, reflexo, ambiente, outros espelhos,
+   metais da cena e pessoa. Para o s, liste no registro cada objeto de metal
+   e a cor dele. Para o t, recorte a pessoa com a parede atrás e a bancada:
+   sem sombra dela onde os objetos da cena fazem sombra, reprova.
 9. **Registro:** vetada vai para `_descartados/` com o item da tabela e a
    medida que reprovou; aprovada vira candidata ao lote, com as notas.
 
